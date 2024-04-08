@@ -18,6 +18,8 @@ collections:
       - {label: "CardDescription", name: "cardDescription", widget: "string"}
       - {label: "PreviewDesctiption", name: "previewDescription", widget: "string"}
       - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "Tags", name: "tags", widget: "hidden", default: "project"}
+      - {label: "Layout", name: "layout", widget: "hidden", default: "base.njk"}
   - name: "articles"
     label: "Articles"
     folder: "src/projects"
