@@ -1,0 +1,16 @@
+:root {
+  --color-primary: #6e0b0b;
+  --color-secondary: #e5f0ea;
+  --color-borders: #828282;
+  --color-black: #000000;
+  --color-white: #ffffff;
+
+  --font-family-base: 'IBM Plex Mono', monospace;
+  --font-weight-regular: 400;
+  --font-weight-semibold: 600;
+
+  --font-size-base: 17px;
+  --font-size-alternative: 20px;
+  --font-size-heading: 33px;
+  
+}

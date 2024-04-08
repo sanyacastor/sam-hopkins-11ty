@@ -1,0 +1,14 @@
+.ibm-plex mono-regular {
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: 400;
+}
+
+.ibm-plex mono-semibold {
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: 600;
+}
+
+.ibm-plex mono-bold {
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: 700;
+}
