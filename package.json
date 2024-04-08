@@ -1,14 +1,15 @@
 {
-  "name": "eleventy-sample",
+  "name": "sam-hopkins-website",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "npx eleventy --serve",
+    "build": "npx eleventy"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "@11ty/eleventy": "^2.0.1",
     "prettier": "3.2.5"
