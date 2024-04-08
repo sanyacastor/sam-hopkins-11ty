@@ -1,0 +1,3 @@
+---
+layout: css-bundle.njk
+---
