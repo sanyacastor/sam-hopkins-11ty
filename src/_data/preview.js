@@ -10,9 +10,12 @@ const readFiles = async filePaths => {
     filePaths.map(async filePath => {
       if (path.extname(filePath) !== '.md') return
       try {
-        const markdown = await fs.readFile(projectsPath+filePath, 'utf8')
+        const markdown = await fs.readFile(projectsPath + filePath, 'utf8')
         const content = fm(markdown)
-        arr.push(content.attributes)
+        arr.push({
+          ...content.attributes,
+          fileName: filePath.replace('.md', ''),
+        })
       } catch (err) {
         console.error(`Error reading file ${filePath}:`, err)
       }

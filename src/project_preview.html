@@ -4,7 +4,8 @@ tags: preview
 permalink: '/preview/{{ preview.title | slug }}/'
 templateEngineOverride: md, njk
 eleventyComputed:
-  title: { { preview.title } }
+  title: {{ preview.title }}
+  fileName: {{ preview.fileName }}
 pagination:
   data: preview
   alias: preview
@@ -13,10 +14,9 @@ pagination:
 ---
 
 <article>
-  {% set projectURL = preview.title | slug %}
   <h1>{{ preview.title }}</h1>
   <div>{{ preview.summary }}</div>
-  <a href={{ "/projects/" ~ projectURL }}>
-    <b>FULL ARTICLE</b>
+  <a href={{ "/projects/" ~ preview.fileName  }}>
+    <b>full project →</b>
   </a>
 </article>

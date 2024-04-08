@@ -6,7 +6,7 @@ slug: projects
 
 {% for project in collections.project %}
 {% assign previewURL = project.data.title | slug  %}
-  <a href={{ "/preview/" | append: previewURL }}>
+  <a href={{ "/preview/" | append: previewURL }}><br/>
     {{ project.data.title }}
   </a>
 {% endfor %}

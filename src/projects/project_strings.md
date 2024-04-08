@@ -1,6 +1,8 @@
 ---
 title: Strings
 dates: "2006"
+tags: project
+layout: base.njk
 cardDescription: Sisal string structures built in the forest which try to evoke
   shafts of light coming through the trees.
 previewDescription: The initial idea for this came from an old photo I saw of
