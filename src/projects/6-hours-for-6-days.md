@@ -1,11 +1,19 @@
 ---
-layout: 'base.njk'
+dates: "2006"
+summary: From 06.09.06 until 11.09.06 for 6 hours a day I sat on a bench in
+  Kuznicza Street in Wroclaw
+layout: base.njk
+title: 6 hours for 6 days
+cardDescription: My idea for this project was to explore the state of being
+  stationary within a city that is in constant flux.
+previewDescription: My idea for this project was to explore the state of being
+  stationary within a city that is in constant flux. From 06.09.06 until
+  11.09.06 for 6 hours a day I sat on a bench in Kuznicza Street in Wroclaw. I
+  wanted to see whether, for that small section of the city, there were
+  patterns/routines that I could identify, and try to learn them, as one would
+  learn a song.
 tags: project
 year: 2006
-title: 6 hours for 6 days
-summary:
-  From 06.09.06 until 11.09.06 for 6 hours a day I sat on a bench in Kuznicza
-  Street in Wroclaw
 ---
 
 My idea for this project was to explore the state of being stationary within a
