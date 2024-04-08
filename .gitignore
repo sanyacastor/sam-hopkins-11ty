@@ -2,3 +2,6 @@ public/
 node_modules/
 package-lock.json
 .DS_Store
+.vs/
+package.json
+package-lock.json
