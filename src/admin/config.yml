@@ -4,7 +4,7 @@ backend:
 #publish_mode: editorial_workflow
 
 media_folder: "public/assets/data"
-public_folder: "assets/data"
+public_folder: "/assets/data"
 
 collections:
   - name: "project"
