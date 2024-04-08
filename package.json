@@ -15,6 +15,7 @@
     "prettier": "3.2.5"
   },
   "dependencies": {
-    "decap-cms-app": "^3.1.6"
+    "decap-cms-app": "^3.1.6",
+    "front-matter": "^4.0.2"
   }
 }

@@ -1,0 +1,22 @@
+---
+layout: base.njk
+tags: preview
+permalink: '/preview/{{ preview.title | slug }}/'
+templateEngineOverride: md, njk
+eleventyComputed:
+  title: { { preview.title } }
+pagination:
+  data: preview
+  alias: preview
+  size: 1
+  addAllPagesToCollection: true
+---
+
+<article>
+  {% set projectURL = preview.title | slug %}
+  <h1>{{ preview.title }}</h1>
+  <div>{{ preview.summary }}</div>
+  <a href={{ "/project/" ~ projectURL }}>
+    <b>FULL ARTICLE</b>
+  </a>
+</article>
