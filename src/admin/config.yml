@@ -18,6 +18,17 @@ collections:
       - {label: "CardDescription", name: "cardDescription", widget: "string"}
       - {label: "PreviewDesctiption", name: "previewDescription", widget: "string"}
       - {label: "Body", name: "body", widget: "markdown"}
-	
-  
-  
+  - name: "articles"
+    label: "Articles"
+    folder: "src/projects"
+    create: true
+    slug: "article_{{title|slugify}}_{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+    - {label: "Title", name: "title", widget: "string"}
+    - {label: "Summary", name: "summary", widget: "string"}
+    - {label: "Collaborators", name: "collaborators", widget: "string", required: false}
+    - {label: "Date", name: "date", widget: "datetime"}
+    - {label: "Tags", name: "tags", widget: "list", default: ["article"]}
+    - {label: "Body", name: "body", widget: "markdown"}
+    - {label: "Featured Image", name: "image", widget: "image", required: false}
+    - {label: "Image caption", name: "imageAlt", widget: "string", required: false}
