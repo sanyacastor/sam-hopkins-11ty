@@ -1,7 +1,7 @@
 backend:
   name: git-gateway
   branch: master
-publish_mode: editorial_workflow
+#publish_mode: editorial_workflow
 
 media_folder: "public/assets/data"
 public_folder: "assets/data"
@@ -11,7 +11,7 @@ collections:
     label: "Project"
     folder: "src/projects"
     create: true
-    slug: "project_{{title|slugify}}_{{year}}-{{month}}-{{day}}-{{slug}}"
+    slug: "project_{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Dates", name: "dates", widget: "string"}
