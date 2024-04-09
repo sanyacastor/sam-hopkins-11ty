@@ -20,4 +20,4 @@ collections:
       - {label: "PreviewDesctiption", name: "previewDescription", widget: "string"}
       - {label: "Body", name: "body", widget: "markdown"}
       - {label: "Tags", name: "tags", widget: "hidden", default: "project"}
-      - {label: "Layout", name: "layout", widget: "hidden", default: "base.njk"}
+      - {label: "Layout", name: "layout", widget: "hidden", default: "project.njk"}

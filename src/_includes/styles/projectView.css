@@ -1,0 +1,64 @@
+#projectView_outer {
+    width: 100%;
+    height: 100%;
+    overflow-x: auto;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.projectView_ScrollArticle {
+    column-fill: auto;
+    column-width: 416px;
+    column-gap: 80px;
+
+    height: 500px;
+    padding: 50px;
+    word-break: break-word;
+    white-space: normal;
+}
+
+.projectView_ScrollArticle > p > img{
+    display: none;
+}
+
+.projectView_ScrollArticle > img{
+    display: none;
+}
+
+.projectView_Grid {
+    display: grid;
+    width: 100%;
+    height: 600px;
+    grid-template-areas:
+        "card main"
+        "pictures main"
+        "caption main";
+    grid-template-rows: 203px 305px 27px;
+    grid-template-columns: 443px 1000px;
+}
+.projectView_Grid > card {
+    grid-area: card;
+    background-color: #f0f0f0;
+}
+
+.projectView_Grid > pictures {
+    grid-area: pictures;
+    background-color: #4cff00;
+}
+
+.projectView_Grid > navigation {
+    grid-area: navigation;
+    background-color: #ff0000;
+}
+
+.projectView_Grid > imgcaption {
+    grid-area: caption;
+    background-color: #ff6a00;
+}
+
+.projectView_Grid > main {
+    grid-area: main;
+    background-color: #0000ff;
+}

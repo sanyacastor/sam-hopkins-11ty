@@ -13,10 +13,47 @@ pagination:
   addAllPagesToCollection: true
 ---
 
+{% set project = {
+  data: {
+      title: preview.title,
+      dates: preview.dates,
+      collaborators: preview.collaborators,
+      cardDescription: preview.cardDescription
+  }
+} %}
+
+<link rel="stylesheet" href="bundle.css">
 <article>
+  <div class="projectPreview_Grid">
+    asd
+    <card>
+      {% include 'summary-card.njk' %}
+    </card>
+    <pictures>df</pictures>
+    <navigation>df</navigation>
+    <imgcaption>asd</imgcaption>
+    <main>
+        <div id="projectPreview_outer">
+            <div class="projectPreview_ScrollArticle">
+                {{preview.previewDescription}}
+            </div>
+        </div>
+    </main>
+</div>
+
+
   <h1>{{ preview.title }}</h1>
   <div>{{ preview.previewDescription }}</div>
   <a href={{ "/projects/" ~ preview.fileName  }}>
     <b>full project →</b>
   </a>
 </article>
+
+<script>
+  document.getElementById('projectPreview_outer').addEventListener('wheel', function (e) {
+      // Cross-browser wheel delta
+      var delta = e.wheelDelta ? e.wheelDelta : -e.deltaY;
+      this.scrollLeft -= (delta);
+      e.preventDefault();
+  }, false);
+</script>

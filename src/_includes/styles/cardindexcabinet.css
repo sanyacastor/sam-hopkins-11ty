@@ -10,6 +10,51 @@
     text-overflow: ellipsis;
     white-space: nowrap;
     
-    height: 300px;
-    width: 90%;
+    height: 203px;
+    width: 443px;
+}
+
+.cardcabinet_cardTitle{
+    font-size: 33px;
+    font-weight: bold;
+    margin: 0;
+    text-decoration: none;
+}
+
+.cardcabinet_cardTitle > a {
+    text-decoration: none;
+}
+
+.cardcabinet_cardTitle > a > font{
+    font-family: 'IBM Plex Mono', monospace;
+    color: #6D0B0A;
+}
+
+.cardcabinet_dates{
+    font-size: 14px;
+    word-break: break-all;
+    white-space: normal;
+}
+
+.cardcabinet_collaborators{
+    font-size: 14px;
+    word-break: break-all;
+    white-space: normal;
+}
+
+.cardcabinet_cardDescription{
+    font-size: 14px;
+    word-break: break-all;
+    white-space: normal;
+}
+
+.cardcabinet_dividerLine{
+    border-top: dotted 1px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.cardcabinet_bottomLine{
+    border-top: dotted 3px;
+    background-color: transparent;
 }
