@@ -2,8 +2,8 @@
 dates: "2006"
 summary: From 06.09.06 until 11.09.06 for 6 hours a day I sat on a bench in
   Kuznicza Street in Wroclaw
-layout: base.njk
 title: 6 hours for 6 days
+collaborators: Karolina Freino, Usually4, Zosia Jarosz, Marius Jodko
 cardDescription: My idea for this project was to explore the state of being
   stationary within a city that is in constant flux.
 previewDescription: "The initial idea for this came from an old photo I saw of
@@ -19,6 +19,7 @@ previewDescription: "The initial idea for this came from an old photo I saw of
   base to the top, and back again. They are temporary and at some stage will
   decay and fade away. "
 tags: project
+layout: base.njk
 year: 2006
 ---
 My idea for this project was to explore the state of being stationary within a
