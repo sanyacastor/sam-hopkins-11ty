@@ -1,8 +1,7 @@
 ---
 title: Strings
 dates: "2006"
-tags: project
-layout: base.njk
+collaborators: Mutheu Mbondo
 cardDescription: Sisal string structures built in the forest which try to evoke
   shafts of light coming through the trees.
 previewDescription: The initial idea for this came from an old photo I saw of
@@ -17,6 +16,8 @@ previewDescription: The initial idea for this came from an old photo I saw of
   first. They are made from one piece of string, which goes from the base to the
   top, and back again. They are temporary and at some stage will decay and fade
   away.
+tags: project
+layout: base.njk
 ---
 ![](/assets/data/strings_documentation_2006_-c-hopkins-1-1-.jpg)
 
