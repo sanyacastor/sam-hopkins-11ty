@@ -9,11 +9,12 @@ slug: projects
   {% for project in collections.project %}
   {% assign previewURL = project.data.title | slug %}
   {% assign previewURL = '/preview/' | append: previewURL %}
+
   <div class="cardcabinet_summaryCard">
     <div style="height: 90%;">
         <!--write full object-->
-        <p style="word-break: break-all; white-space: normal;"> {{project.url}} </p>
-        <p style="word-break: break-all; white-space: normal;"> {{previewURL}} </p>
+        <p style="word-break: break-all; white-space: normal;"> {{project.url}} qq</p>
+        <p style="word-break: break-all; white-space: normal;"> {{previewURL}} ww</p>
 
         <h2 A><a href="{{previewURL}}"> <font color=#6D0B0A> {{project.data.title}} </font> </a></h2>
         <hr style="border-top: dotted 1px;" />
@@ -21,13 +22,12 @@ slug: projects
         <p style="word-break: break-all; white-space: normal;"> <font color=#6D0B0A> {{project.data.date}} </font> </p>
         <hr style="border-top: dotted 1px;" />
 
-
         {% if project.data.collaborators %}
         <p style="word-break: break-word; white-space: normal;"> <font color=#6D0B0A> with: {{project.data.collaborators}} </font> </p>
         <hr style="border-top: dotted 1px; background-color: transparent" />
         {% endif %}
 
-        <p style="word-break: break-word; white-space: normal; color =#6D0B0A; "> {{project.data.summary}} </font> </p>
+        <p style="word-break: break-word; white-space: normal; color =#6D0B0A; "> {{project.data.cardDescription}} </font> </p>
     </div>
     <div style="height: 10%; position: relative;">
     <hr style="border-top: dotted 3px; background-color: transparent" />
