@@ -1,0 +1,15 @@
+.cardcabinet_grid{
+    margin: 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+    grid-gap: 1px;
+}
+
+.cardcabinet_summaryCard{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    
+    height: 300px;
+    width: 90%;
+}
