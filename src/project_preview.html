@@ -12,13 +12,14 @@ pagination:
   size: 1
   addAllPagesToCollection: true
 ---
-
+<!-- !!! remove this part!!! */-->
 {% set project = {
   data: {
       title: preview.title,
       dates: preview.dates,
       collaborators: preview.collaborators,
-      cardDescription: preview.cardDescription
+      cardDescription: preview.cardDescription,
+      body: preview.body 
   }
 } %}
 

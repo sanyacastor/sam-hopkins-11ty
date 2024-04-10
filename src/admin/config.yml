@@ -1,7 +1,7 @@
 backend:
   name: git-gateway
   branch: master
-#publish_mode: editorial_workflow
+publish_mode: editorial_workflow
 
 media_folder: "/assets/data"
 public_folder: "/assets/data"
@@ -9,7 +9,9 @@ public_folder: "/assets/data"
 collections:
   - name: "project"
     label: "Project"
-    folder: "src/projects"
+    folder: "assets/data/projects"
+    media_folder: ""
+    public_folder: ""
     create: true
     slug: "project_{{slug}}"
     fields:
