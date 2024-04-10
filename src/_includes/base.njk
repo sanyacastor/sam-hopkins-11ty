@@ -13,8 +13,10 @@
         <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
     </head>
     <body>
-        {% include 'header.njk' %}
-        {{ content | safe }}
+        <div class="baseHorizontalLimiter">
+            {% include 'header.njk' %}
+            {{ content | safe }}
+        </div>
 
         <script>
 		    if (window.netlifyIdentity) {

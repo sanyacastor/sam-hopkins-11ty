@@ -45,7 +45,7 @@
 
 .projectView_Grid > pictures {
     grid-area: pictures;
-    background-color: #4cff00;
+    background-color: transparent;
 }
 
 .projectView_Grid > navigation {
