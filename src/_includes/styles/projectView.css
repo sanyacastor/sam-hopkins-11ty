@@ -11,10 +11,11 @@
 .projectView_ScrollArticle {
     column-fill: auto;
     column-width: 416px;
-    column-gap: 80px;
+    column-gap: 30px;
 
-    height: 500px;
-    padding: 50px;
+    height: 90%;
+    padding-top: 10px;
+    padding-left: 30px;
     word-break: break-word;
     white-space: normal;
 }
@@ -27,6 +28,53 @@
     display: none;
 }
 
+
+.projectView_container {
+    display: flex;
+    background-color: aqua;
+    height: calc(100vh - 120px);
+    position: relative;
+}
+
+.projectView_sideBar {
+    display: flex;
+    width: 443px; /* Adjust the width as needed */
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    height: 100%;
+
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+.projectView_blockText {
+    flex-grow: 1;
+    border: 1px solid #ccc;
+    padding: 20px;
+    box-sizing: border-box;
+    height: 100%;
+}
+
+.projectView_cardSlot{
+    width: 443px;
+    height: 203px;
+    background-color: red;
+}
+.projectView_photoSlot{
+    width: 443px;
+    height: 305px;
+    background-color: green;
+}
+.projectView_navigation{
+    width: 150px;
+    height: 15px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    background-color: yellow;
+}
+
+
 .projectView_Grid {
     display: grid;
     width: 100%;
@@ -38,6 +86,7 @@
     grid-template-rows: 203px 305px 27px;
     grid-template-columns: 443px 1000px;
 }
+
 .projectView_Grid > card {
     grid-area: card;
     background-color: #f0f0f0;

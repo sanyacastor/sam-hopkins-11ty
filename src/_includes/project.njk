@@ -14,13 +14,55 @@ style: bundle.css
             cardDescription: cardDescription
         }
     } %}
-
-    <p> this is a project </p>
-
     <link rel="stylesheet" href="bundle.css">
     <article>
 
-    <div class="projectView_Grid">
+      <div class="projectView_container">
+        <div class="projectView_sideBar">
+            <div class="projectView_cardSlot">
+                       {% include 'summary-card.njk'  %}
+            </div>
+            <div class="projectView_photoSlot">
+                      <div class="swiper mySwiper">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide">
+                            <img src="/assets/data/Strings_Documentation_2006_(c)Hopkins-1.JPG" alt="Image 1" class="swiper-slide">
+                          </div>
+                          <div class="swiper-slide">
+                            <img src="/assets/data/Strings_Documentation_2006_(c)Hopkins-2.JPG" alt="Image 2" class="swiper-slide">
+                          </div>
+                          <div class="swiper-slide">
+                            <img src="/assets/data/Strings_Documentation_2006_(c)Hopkins-3.JPG" alt="Image 2" class="swiper-slide">
+                          </div>
+                          <div class="swiper-slide">
+                            <img src="/assets/data/Strings_Documentation_2006_(c)Hopkins-4.JPG" alt="Image 2" class="swiper-slide">
+                          </div>
+                          <div class="swiper-slide">
+                            <img src="/assets/data/Strings_Documentation_2006_(c)Hopkins-5.JPG" alt="Image 2" class="swiper-slide">
+                          </div>
+                        </div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-pagination"></div>
+                      </div>
+            </div>
+        </div>
+        <div class="projectView_blockText">
+          <div id="projectView_outer">
+            <div class="projectView_ScrollArticle">
+                {{content | safe}}
+            </div>
+        </div>
+        </div>
+
+        <div class="projectView_navigation">
+            0 1 2 3 4
+        <div>
+      </div>
+
+      <hr>
+
+      <div class="projectView_Grid">
         <card>
             {% include 'summary-card.njk'  %}
         </card>
@@ -54,12 +96,19 @@ style: bundle.css
         <imgcaption>asd</imgcaption>
         <main>
             <div id="projectView_outer">
-                <div class="projectView_ScrollArticle">
+                <div class="projectView_ScrollArticle" id="scrollArticle">
+                    <!-- Your content here -->
+                  </div>
+                    <!--script>
+                      const scrollArticle = document.getElementById('scrollArticle');
+                      console.log(scrollArticle.scroll.length);
+                      console.log(scrollArticle.clientHeight);
+                    </script-->
                     {{content | safe}}
                 </div>
             </div>
         </main>
-    </div>
+      </div>
 
     </article>
 
@@ -69,6 +118,7 @@ style: bundle.css
             var delta = e.wheelDelta ? e.wheelDelta : -e.deltaY;
             this.scrollLeft -= (delta);
             e.preventDefault();
+            console.log(this.scrollWidth / 416);
         }, false);
     </script>
 
