@@ -6,9 +6,9 @@ media_folder: "/assets/data"
 public_folder: "/assets/data"
 
 collections:
-  - name: "project"
-    label: "Project"
-    folder: "assets/data/projects"
+  - name: project
+    label: Project
+    folder: assets/data/projects/project
     media_folder: ""
     public_folder: ""
     create: true
@@ -22,5 +22,21 @@ collections:
       - {label: "Body", name: "body", widget: "markdown"}
       - {label: "Tags", name: "tags", widget: "hidden", default: "project"}
       - {label: "Layout", name: "layout", widget: "hidden", default: "project.njk"}
-
-
+  - label: "Blog in English"
+    name: "english_posts"
+    folder: "_posts"
+    create: true
+    filter: {field: "language", value: "en"}
+    fields:
+      - {label: "Language", name: "language", widget: "select", options: ["en", "es"]}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Content", name: "body", widget: "markdown"}
+  - label: "Blog en Español"
+    name: "spanish_posts"
+    folder: "_posts"
+    create: true
+    filter: {field: "language", value: "es"}
+    fields:
+      - {label: "Lenguaje", name: "language", widget: "select", options: ["en", "es"]}
+      - {label: "Titulo", name: "title", widget: "string"}
+      - {label: "Contenido", name: "body", widget: "markdown"}
