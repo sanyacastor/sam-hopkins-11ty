@@ -55,14 +55,140 @@ style: bundle.css
         </div>
         </div>
 
-        <div class="projectView_navigation">
+        <div class="projectView_navigation" id="projectView_scrollNavBar">
             0 1 2 3 4
         <div>
       </div>
 
       <hr>
+    </article>
 
-      <div class="projectView_Grid">
+    <script>
+
+        const setScrollFraction = (newFrac) => {
+          newFrac = Math.max(0, Math.min(newFrac, 1));
+
+          window.targetScrollFraction = newFrac;
+          window.currentScrollFraction = newFrac;
+
+          document.getElementById('projectView_outer').scrollLeft = newFrac * document.getElementById('projectView_outer').scrollWidth;
+        }
+
+        const scrollStep = (pages) =>{
+          console.log("scrollStep( " + parseInt( pages ) + ")");
+
+          frac = window.currentScrollFraction;
+          frac = Math.min(1, frac + pages*window.scrollStep / 100);
+          frac = Math.max(0, frac);
+
+          setScrollFraction(frac);
+        }
+
+        const scrollStepRight = () => {
+          scrollStep(2);
+        }
+        const scrollStepLeft = () => {
+          scrollStep(-2);
+        }
+
+        document.getElementById('projectView_outer').addEventListener('wheel', function (e) {
+            var delta = e.wheelDelta ? e.wheelDelta : -e.deltaY;
+
+            console.log("delta: " + delta );
+            if(delta > 0){
+                scrollStepRight();
+            } else {
+                scrollStepLeft();
+            }
+        }, false);
+
+
+        window.addEventListener('load', function() {
+          console.log('loaded');
+          onResize();
+          processSlug();
+        });
+
+      window.addEventListener('resize', function() {
+        onResize();
+      });
+
+      function onResize() {
+        numberOfColumns = document.getElementById('projectView_outer').scrollWidth / (416+30);
+        numberOfColumns = Math.floor(numberOfColumns);
+        window.numberOfColumns = numberOfColumns;
+        window.scrollStep = 100 / numberOfColumns;
+        console.log("number of columns: " + numberOfColumns);
+
+        document.getElementById('projectView_scrollNavBar').innerHTML = '';
+
+        newNav = '';
+        for (let i = 0; i < numberOfColumns; i++) {
+          targetFraction = i*100 / numberOfColumns;
+          targetFraction = parseFloat((i * 100 / numberOfColumns).toFixed(2));
+          newNav = newNav + '<a href="?persent=' + targetFraction + '">' + i + '</a> ';
+        }
+        document.getElementById('projectView_scrollNavBar').innerHTML = newNav;
+      }
+
+      function processSlug(){
+        // Get the current URL
+        var currentUrl = window.location.href;
+
+        console.log(currentUrl);
+        // Extract the slug from the URL
+        var slug = currentUrl.substring(currentUrl.lastIndexOf('/') + 1);
+        console.log("slug: " + slug);
+
+        // Extract the parameter from the slug
+        
+        var parameter = slug.split('=')[1];
+        if (typeof parameter === 'undefined') {
+          parameter = 0;
+        }
+
+        console.log("parameter: " + parameter);
+        frac = parseFloat(parameter) / 100;
+        
+        setScrollFraction(frac);
+
+        console.log("target scroll: " + frac + "; scrollStep: " + window.scrollStep);
+      }
+    </script>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      slidesPerView: 1,
+      pagination: {
+          el: ".swiper-pagination",
+          type: "progressbar",
+      },
+      navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+      },
+    });
+  </script>
+
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <!--div class="projectView_Grid">
         <card>
             {% include 'summary-card.njk'  %}
         </card>
@@ -97,47 +223,15 @@ style: bundle.css
         <main>
             <div id="projectView_outer">
                 <div class="projectView_ScrollArticle" id="scrollArticle">
-                    <!-- Your content here -->
+                    <!-- Your content here>
                   </div>
                     <!--script>
                       const scrollArticle = document.getElementById('scrollArticle');
                       console.log(scrollArticle.scroll.length);
                       console.log(scrollArticle.clientHeight);
-                    </script-->
+                    </script>
                     {{content | safe}}
                 </div>
             </div>
         </main>
-      </div>
-
-    </article>
-
-    <script>
-        document.getElementById('projectView_outer').addEventListener('wheel', function (e) {
-            // Cross-browser wheel delta
-            var delta = e.wheelDelta ? e.wheelDelta : -e.deltaY;
-            this.scrollLeft -= (delta);
-            e.preventDefault();
-            console.log(this.scrollWidth / 416);
-        }, false);
-    </script>
-
-  <!-- Swiper JS -->
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  
-  <!-- Initialize Swiper -->
-  <script>
-    var swiper = new Swiper(".mySwiper", {
-      slidesPerView: 1,
-      pagination: {
-          el: ".swiper-pagination",
-          type: "progressbar",
-      },
-      navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
-      },
-    });
-  </script>
-
-</body>
+      </div-->
