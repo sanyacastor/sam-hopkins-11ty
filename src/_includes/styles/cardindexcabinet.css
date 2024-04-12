@@ -1,22 +1,22 @@
-.cardcabinet_grid{
-    margin: 50px;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
-    grid-gap: 1px;
+.cardcabinet_grid {
+  margin: 50px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+  grid-gap: 1px;
 }
 
-.cardcabinet_summaryCard{
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    
-    height: 203px;
-    width: 443px;
+.cardcabinet_summaryCard {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+
+  height: 203px;
+  width: 443px;
 }
 
-.cardcabinet_oulineBox{
-    height: 99%;
-    border-bottom: 1px solid #6D0B0A;
+.cardcabinet_oulineBox {
+  height: 99%;
+  border-bottom: 1px solid #6d0b0a;
 }
 
 .cardcabinet_cardTitle{
@@ -28,41 +28,41 @@
 }
 
 .cardcabinet_cardTitle > a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
-.cardcabinet_cardTitle > a > font{
-    font-family: 'IBM Plex Mono', monospace;
-    color: #6D0B0A;
+.cardcabinet_cardTitle > a > font {
+  font-family: 'IBM Plex Mono', monospace;
+  color: #6d0b0a;
 }
 
-.cardcabinet_dates{
-    font-size: 14px;
-    word-break: break-all;
-    white-space: normal;
-    border-bottom: 1px solid #6D0B0A;
+.cardcabinet_dates {
+  font-size: 14px;
+  word-break: break-all;
+  white-space: normal;
+  border-bottom: 1px solid #6d0b0a;
 }
 
-.cardcabinet_collaborators{
-    font-size: 14px;
-    word-break: break-all;
-    white-space: normal;
-    border-bottom: 1px solid #6D0B0A;
+.cardcabinet_collaborators {
+  font-size: 14px;
+  word-break: break-all;
+  white-space: normal;
+  border-bottom: 1px solid #6d0b0a;
 }
 
-.cardcabinet_cardDescription{
-    font-size: 14px;
-    word-break: break-all;
-    white-space: normal;
+.cardcabinet_cardDescription {
+  font-size: 14px;
+  word-break: break-all;
+  white-space: normal;
 }
 
-.cardcabinet_dividerLine{
-    border-top: dotted 1px;
-    margin-top: 10px;
-    margin-bottom: 10px;
+.cardcabinet_dividerLine {
+  border-top: dotted 1px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
-.cardcabinet_bottomLine{
-    border-top: dotted 3px;
-    background-color: transparent;
+.cardcabinet_bottomLine {
+  border-top: dotted 3px;
+  background-color: transparent;
 }
