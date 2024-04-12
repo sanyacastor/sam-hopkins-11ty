@@ -50,7 +50,7 @@ style: bundle.css
         </div>
         <div class="projectView_blockText">
           <div id="projectView_outer">
-            <div class="projectView_ScrollArticle">
+            <div class="projectView_ScrollArticle" id="scrollArticle">
                 {{content | safe}}
             </div>
         </div>
@@ -80,7 +80,6 @@ style: bundle.css
           //window.currentScrollFraction = newFrac;
 
           history.pushState(null, null, "?persent=" + newFrac * 100);
-
           gsap.to(document.getElementById('projectView_outer'), {scrollLeft: newFrac * document.getElementById('projectView_outer').scrollWidth, duration: 0.5, ease: "power2.inOut"});
           //document.getElementById('projectView_outer').scrollLeft = newFrac * document.getElementById('projectView_outer').scrollWidth;
         }
@@ -95,8 +94,8 @@ style: bundle.css
           setScrollFraction(frac);
         }
 
-        const scrollStepRight = () => {scrollStep(2);}
-        const scrollStepLeft = () => {scrollStep(-2);}
+        const scrollStepRight = () => {scrollStep(window.columnsPerPage);}
+        const scrollStepLeft = () => {scrollStep(-1*window.columnsPerPage);}
 
         document.getElementById('projectView_outer').addEventListener('wheel', function (e) {
             var delta = e.wheelDelta ? e.wheelDelta : -e.deltaY;
@@ -120,28 +119,92 @@ style: bundle.css
         onResize();
       });
 
-      function onResize() {
-        numberOfColumns = document.getElementById('projectView_outer').scrollWidth / (416+30);
+      function recalcNumberOfColumns(){
+        numberOfColumns = document.getElementById('projectView_outer').scrollWidth / (window.columnWidth+30); //!!!PELIGRO!!! magic numbers
         numberOfColumns = Math.floor(numberOfColumns);
         window.numberOfColumns = numberOfColumns;
+        
+        console.log("number of columns: " + numberOfColumns);
+      }
+
+      function recalcScrollStep(){
         window.scrollStep = 1/numberOfColumns;
         window.scrollStepPercent = 100 / numberOfColumns;
-        console.log("number of columns: " + numberOfColumns);
+      }
 
+      function recalcColumnsPerPage(){
+        var projectViewOuter = document.getElementById('projectView_outer');
+        var elementWidth = projectViewOuter.offsetWidth;
+        window.columnsPerPage = parseInt( elementWidth/(416+15) ); //!!!PELIGRO!!! wrong magic numbers, parseint
+        console.log("columnsPerPage: " + window.columnsPerPage);
+      }
+
+      function recalcColumnWidth(){
+        if(window.columnsPerPage == 2){
+          window.columnWidth = 416; //!!!PELIGRO!!! magic numbers
+          
+          document.getElementById('scrollArticle').style.columnWidth = window.columnWidth + 'px';
+          return;  
+        }
+        
+        if(window.columnsPerPage > 2){
+          console.log("window.columnsPerPage > 2: " + window.columnsPerPage);
+          window.columnWidth = 416; //!!!PELIGRO!!! magic numbers
+          
+          document.getElementById('scrollArticle').style.columnWidth = window.columnWidth + 'px';
+          return; 
+        }
+
+        var projectViewOuter = document.getElementById('projectView_outer');
+        var elementWidth = projectViewOuter.offsetWidth;
+        window.columnWidth = elementWidth-50;
+
+        document.getElementById('scrollArticle').style.columnWidth = window.columnWidth + 'px';
+
+      }
+
+      function redrawNavButtons(){
         document.getElementById('projectView_scrollNavBar').innerHTML = '';
-
         newNav = '';
-        for (let i = numberOfColumns-1; i >= 0; i--) {
-          targetFraction = i*100 / numberOfColumns;
-          targetFraction = parseFloat((i * 100 / numberOfColumns).toFixed(2));
+        
+        numberOfButtons = numberOfColumns/window.columnsPerPage;
+        numberOfButtons = Math.ceil(numberOfButtons);
+
+        console.log("numberOfColumns: " + numberOfColumns);
+        console.log("window.columnsPerPage: " + window.columnsPerPage);
+        console.log("numberOfButtons: " + numberOfButtons);
+
+        for (let i = numberOfButtons-1; i >= 0; i--) {
+          targetFraction = parseFloat((  (i*window.columnsPerPage) * 100 / numberOfColumns).toFixed(2));
           
           newNav += `<button class="projectView_navigationDigit"
                              id="navButton${i}"
+                             targetFraction="${targetFraction}"
                              onclick="setScrollFraction(${targetFraction/100})">
                              ${i}
                     </button>`;
         }
         document.getElementById('projectView_scrollNavBar').innerHTML = newNav;
+      }
+
+      function attractScrollToNearestColumn(){
+        //!!!!PELIGRO!!!! !!!todo!!!
+
+        // var scrollFraction = window.targetScrollFraction;
+        // var columnNumber = parseInt(scrollFraction/window.scrollStep);
+        // var newPosition = columnNumber*window.scrollStep;
+
+        // setScrollFraction(newPosition);
+      }
+
+      function onResize() {
+        recalcColumnsPerPage();
+        recalcColumnWidth();
+        recalcNumberOfColumns();
+        recalcScrollStep();
+
+        redrawNavButtons();
+        attractScrollToNearestColumn();
       }
 
       function processSlug(){
@@ -190,63 +253,3 @@ style: bundle.css
   </script>
 
 </body>
-
-
-
-
-
-
-
-
-
-
-
-
-
-      <!--div class="projectView_Grid">
-        <card>
-            {% include 'summary-card.njk'  %}
-        </card>
-        <pictures>
-
-            <div class="swiper mySwiper">
-                <div class="swiper-wrapper">
-                  <div class="swiper-slide">
-                    <img src="/assets/data/Strings_Documentation_2006_(c)Hopkins-1.JPG" alt="Image 1" class="swiper-slide">
-                  </div>
-                  <div class="swiper-slide">
-                    <img src="/assets/data/Strings_Documentation_2006_(c)Hopkins-2.JPG" alt="Image 2" class="swiper-slide">
-                  </div>
-                  <div class="swiper-slide">
-                    <img src="/assets/data/Strings_Documentation_2006_(c)Hopkins-3.JPG" alt="Image 2" class="swiper-slide">
-                  </div>
-                  <div class="swiper-slide">
-                    <img src="/assets/data/Strings_Documentation_2006_(c)Hopkins-4.JPG" alt="Image 2" class="swiper-slide">
-                  </div>
-                  <div class="swiper-slide">
-                    <img src="/assets/data/Strings_Documentation_2006_(c)Hopkins-5.JPG" alt="Image 2" class="swiper-slide">
-                  </div>
-                </div>
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-pagination"></div>
-              </div>
-
-        </pictures>
-        <navigation>df</navigation>
-        <imgcaption>asd</imgcaption>
-        <main>
-            <div id="projectView_outer">
-                <div class="projectView_ScrollArticle" id="scrollArticle">
-                    <!-- Your content here>
-                  </div>
-                    <!--script>
-                      const scrollArticle = document.getElementById('scrollArticle');
-                      console.log(scrollArticle.scroll.length);
-                      console.log(scrollArticle.clientHeight);
-                    </script>
-                    {{content | safe}}
-                </div>
-            </div>
-        </main>
-      </div-->
