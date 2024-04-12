@@ -47,6 +47,18 @@
     justify-content: flex-start;
     align-items: center;
 }
+.projectView_cardSlot{
+    width: 443px;
+    height: 203px;
+    background-color: red;
+}
+
+.projectView_photoSlot{
+    width: 443px;
+    height: 305px;
+    background-color: green;
+}
+
 .projectView_blockText {
     flex-grow: 1;
     border: 1px solid #ccc;
@@ -55,18 +67,8 @@
     height: 100%;
 }
 
-.projectView_cardSlot{
-    width: 443px;
-    height: 203px;
-    background-color: red;
-}
-.projectView_photoSlot{
-    width: 443px;
-    height: 305px;
-    background-color: green;
-}
 .projectView_navigation{
-    width: 150px;
+    width: 800px;
     height: 15px;
     position: absolute;
     right: 0;
@@ -74,6 +76,10 @@
     background-color: yellow;
 }
 
+.projectView_navigationDigit{
+    right: 0;
+    float: right;
+}
 
 .projectView_Grid {
     display: grid;
