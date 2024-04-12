@@ -4,6 +4,7 @@ style: bundle.css
 ---
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
 
 <body>
     {% set project = {
@@ -64,41 +65,45 @@ style: bundle.css
     </article>
 
     <script>
+      // use a script tag or an external JS file
+      document.addEventListener("DOMContentLoaded", (event) => {
+       // gsap code here!
+      });
+     
+    </script>
 
+    <script>
         const setScrollFraction = (newFrac) => {
           newFrac = Math.max(0, Math.min(newFrac, 1));
 
           window.targetScrollFraction = newFrac;
-          window.currentScrollFraction = newFrac;
+          //window.currentScrollFraction = newFrac;
 
-          document.getElementById('projectView_outer').scrollLeft = newFrac * document.getElementById('projectView_outer').scrollWidth;
+          gsap.to(document.getElementById('projectView_outer'), {scrollLeft: newFrac * document.getElementById('projectView_outer').scrollWidth, duration: 0.5, ease: "power2.inOut"});
+          //document.getElementById('projectView_outer').scrollLeft = newFrac * document.getElementById('projectView_outer').scrollWidth;
         }
 
         const scrollStep = (pages) =>{
           console.log("scrollStep( " + parseInt( pages ) + ")");
 
-          frac = window.currentScrollFraction;
+          frac = window.targetScrollFraction;
           frac = Math.min(1, frac + pages*window.scrollStep / 100);
           frac = Math.max(0, frac);
 
           setScrollFraction(frac);
         }
 
-        const scrollStepRight = () => {
-          scrollStep(2);
-        }
-        const scrollStepLeft = () => {
-          scrollStep(-2);
-        }
+        const scrollStepRight = () => {scrollStep(2);}
+        const scrollStepLeft = () => {scrollStep(-2);}
 
         document.getElementById('projectView_outer').addEventListener('wheel', function (e) {
             var delta = e.wheelDelta ? e.wheelDelta : -e.deltaY;
 
             console.log("delta: " + delta );
             if(delta > 0){
-                scrollStepRight();
-            } else {
                 scrollStepLeft();
+            } else {
+                scrollStepRight();
             }
         }, false);
 
