@@ -3,7 +3,7 @@ backend:
   branch: master
 #publish_mode: editorial_workflow
 
-media_folder: "/assets/data"
+media_folder: "public/assets/data"
 public_folder: "/assets/data"
 
 collections:
@@ -21,5 +21,3 @@ collections:
       - {label: "Body", name: "body", widget: "markdown"}
       - {label: "Tags", name: "tags", widget: "hidden", default: "project"}
       - {label: "Layout", name: "layout", widget: "hidden", default: "project.njk"}
-
-
