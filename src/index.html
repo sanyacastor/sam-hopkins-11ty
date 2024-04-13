@@ -6,7 +6,6 @@ slug: projects
 <link rel="stylesheet" href="bundle.css">
 
 <div class="cardcabinet_grid">
-  <p> iteration1 </p>
   {% for project in collections.project %}
     {% assign previewURL = project.data.title | slug %}
     {% assign previewURL = '/preview/' | append: previewURL %}
