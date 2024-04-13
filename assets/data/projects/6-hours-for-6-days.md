@@ -23,20 +23,21 @@ layout: project.njk
 year: 2006
 ---
 # Concept
-
 My idea for this project was to explore the state of being stationary within a
 city that is in constant flux. From 06.09.06 until 11.09.06 for 6 hours a day I
 sat on a bench in Kuznicza Street in Wroclaw. I wanted to see whether, for that
 small section of the city, there were patterns/routines that I could identify,
 and try to learn them, as one would learn a song.
 
-![altText](6-hours-for-6-day_01_video-documentation_still_2006_-c-hopkins-0.jpg "ImageTitle")
+![altText](/assets/data/6-hours-for-6-day_01_video-documentation_still_2006_-c-hopkins-0.jpg "ImageTitle")
 
 However I soon realized that by merely being in the space for extended periods
 of time I began to attract people’s curiosity. Although I had set out to watch
 and learn the space I began to feel that it was in fact me that was being
 observed. As the days passed I felt this mutual curiosity mount. But was it
 actually mutual?
+
+![humanalt](/assets/data/6-hours-for-6-day_01_video-documentation_still_2006_-c-hopkins-9.jpg "humantitle")
 
 To explore this further, when I had finished the action, I asked Zosia Jarosz
 and Marius Jodko to interview people in that particular space about ‘the guy on
@@ -46,6 +47,8 @@ do not look.
 
 Thanks to: Karolina Freino, Usually4, Zosia Jarosz, Marius Jodko Supported by:
 Gallery Entropia
+
+![manalt](/assets/data/6-hours-for-6-day_01_video-documentation_still_2006_-c-hopkins-5.jpg "mantitle")
 
 However, as I delved deeper into this exploration, I realized that my mere presence on the bench began to alter the dynamics of the space itself. Passersby, initially indifferent to my presence, gradually became intrigued by the sight of someone sitting for prolonged periods in what seemed like an inconsequential spot. Their glances turned into stares, and before long, I felt like a spectacle, a feature of the street that they couldn't quite decipher.
 
@@ -60,29 +63,19 @@ As I reflect on this experience, I realize that my initial quest to understand t
 # Exploring the Dynamics of Stationarity in a City of Flux
 
 ## Introduction
-
 My project aimed to explore the state of being stationary within a city that is in constant flux. From 06.09.06 until 11.09.06, for six hours a day, I sat on a bench in Kuznicza Street in Wroclaw. My goal was to observe and identify patterns or routines within this small section of the city.
 
-![manalt](6-hours-for-6-day_01_video-documentation_still_2006_-c-hopkins-2.jpg "mantitle")
-
 ## Initial Observations
-
 However, I quickly realized that my presence on the bench began to attract the curiosity of passersby. Instead of being the observer, I felt like I was the one being observed. This mutual curiosity began to mount, prompting me to question its nature and whether it was truly reciprocal.
 
 ## The Shift in Dynamics
-
 As days passed, I found myself becoming the subject of speculation and conjecture. The line between observer and observed blurred, and my experiment evolved into an exploration of human perception and connection in urban spaces.
 
 ## Enlisting Assistance
-
 To delve deeper into this phenomenon, I enlisted the help of Zosia Jarosz and Marius Jodko. Their task was to interview people in the space about "the guy on the bench," capturing a spectrum of perspectives on my presence.
 
 ## Results and Analysis
-
 The resulting video material revealed a range of responses, from wildly inaccurate assumptions to remarkably perceptive insights. It became evident that my experiment had illuminated the fluidity of urban life and the intricate dance between visibility and invisibility in public spaces.
 
 ## Conclusion
-
 In conclusion, my project transcended its initial aim of understanding city rhythms to become an exploration of human connection and perception. Through the lens of a simple bench on Kuznicza Street, I witnessed the power of presence to shape our understanding of space and the profound impact of shared experiences amidst constant change.
-
-![humanalt](6-hours-for-6-day_01_video-documentation_still_2006_-c-hopkins-1.jpg "humantitle")
