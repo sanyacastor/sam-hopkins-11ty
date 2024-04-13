@@ -3,8 +3,6 @@ layout: base.njk
 style: bundle.css
 ---
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-
 <body>
     {% set project = {
         data: {
@@ -24,32 +22,7 @@ style: bundle.css
         <card>
             {% include 'summary-card.njk'  %}
         </card>
-        <pictures>
-
-            <div class="swiper mySwiper">
-                <div class="swiper-wrapper">
-                  <div class="swiper-slide">
-                    <img src="/assets/data/Strings_Documentation_2006_(c)Hopkins-1.JPG" alt="Image 1" class="swiper-slide">
-                  </div>
-                  <div class="swiper-slide">
-                    <img src="/assets/data/Strings_Documentation_2006_(c)Hopkins-2.JPG" alt="Image 2" class="swiper-slide">
-                  </div>
-                  <div class="swiper-slide">
-                    <img src="/assets/data/Strings_Documentation_2006_(c)Hopkins-3.JPG" alt="Image 2" class="swiper-slide">
-                  </div>
-                  <div class="swiper-slide">
-                    <img src="/assets/data/Strings_Documentation_2006_(c)Hopkins-4.JPG" alt="Image 2" class="swiper-slide">
-                  </div>
-                  <div class="swiper-slide">
-                    <img src="/assets/data/Strings_Documentation_2006_(c)Hopkins-5.JPG" alt="Image 2" class="swiper-slide">
-                  </div>
-                </div>
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-pagination"></div>
-              </div>
-
-        </pictures>
+        <pictures>df</pictures>
         <navigation>df</navigation>
         <imgcaption>asd</imgcaption>
         <main>
@@ -71,23 +44,5 @@ style: bundle.css
             e.preventDefault();
         }, false);
     </script>
-
-  <!-- Swiper JS -->
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  
-  <!-- Initialize Swiper -->
-  <script>
-    var swiper = new Swiper(".mySwiper", {
-      slidesPerView: 1,
-      pagination: {
-          el: ".swiper-pagination",
-          type: "progressbar",
-      },
-      navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
-      },
-    });
-  </script>
 
 </body>
