@@ -6,6 +6,6 @@ slug: news
 
 <ul>
   {% for n in collections.news %}
-    <li>{{ n.data.title }}</li>
+    <li>{{ n.data.title }}: {{ n.data.description }}</li>
   {% endfor %}
 </ul>

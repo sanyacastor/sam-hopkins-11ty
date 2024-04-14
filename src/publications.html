@@ -6,6 +6,7 @@ slug: publications
 
 <ul>
   {% for p in collections.publications %}
-    <li>{{ p.data.title }}</li>
+    <li>{{ p.data.title }}: {{ p.data.description }}</li>
+    <a href={{ p.data.link}}> origina link </a>
   {% endfor %}
 </ul>
