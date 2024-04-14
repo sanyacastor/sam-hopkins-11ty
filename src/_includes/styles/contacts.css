@@ -1,0 +1,154 @@
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 30px;
+
+  width: 100%;
+}
+
+.contacts {
+  padding-top: 106px;
+}
+
+.contacts h2 {
+  font-size: 14px;
+  color: var(--color-black);
+  padding: 0;
+  margin: 0;
+  padding-left: 13px;
+  padding-bottom: 11px;
+}
+
+.contacts__list {
+  list-style: none;
+  padding: 0;
+  border-bottom: 1px solid var(--color-black);
+}
+
+.contacts__listItem {
+  border-top: 1px solid var(--color-black);
+}
+
+.contacts__listItem a {
+  color: var(--color-black);
+  text-decoration: none;
+  display: block;
+
+  padding-left: 12px;
+  padding-top: 6px;
+  padding-bottom: 10px;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.contacts__listItem--underlined a {
+  text-decoration: underline;
+}
+
+.contacts__info {
+  margin-top: 50px;
+}
+
+.contacts__cv {
+  margin-top: 50px;
+}
+
+.contacts__cvList {
+  margin-top: 64px;
+}
+
+.contacts__cvListItem {
+  display: block;
+  position: relative;
+  height: 60px;
+
+  background: var(--color-white);
+  max-width: 210px;
+  padding-left: 16px;
+  padding-top: 20px;
+  padding-bottom: 22px;
+  margin-bottom: 10px;
+
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+.cvListItem__arrow-right {
+  position: absolute;
+  right: -20px;
+  top: 0;
+
+  width: 0; 
+  height: 0; 
+  border-top: 30px solid transparent;
+  border-bottom: 30px solid transparent;
+  
+  border-left: 20px solid var(--color-white);
+}
+
+/* Core styles/functionality */
+.tab input {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+}
+.tab__content {
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.35s;
+}
+.tab input:checked ~ .tab__content {
+  max-height: 4000px;
+}
+.tab__content ul {
+  padding: 0;
+  margin: 0;
+  padding-left: 16px;
+  margin-bottom: 16px;
+}
+
+.tab input:checked ~ .tab__label {
+  font-weight: 600;
+}
+
+.list__subtitle {
+  display: block;
+  margin-top: 20px;
+  margin-left: -14px;
+}
+
+/* Visual styles */
+.accordion {
+  overflow: hidden;
+}
+.tab__label,
+.tab__close {
+  display: flex;
+  cursor: pointer;
+}
+.tab__label {
+  justify-content: space-between;
+  margin-bottom: 14px;
+}
+
+.tab__content p {
+  margin: 0;
+}
+.tab__close {
+  justify-content: flex-end;
+  padding: 0.5rem 1rem;
+  font-size: 0.75rem;
+}
+
+.tab__label:hover {
+  font-weight: 600;
+}
+
+@keyframes bounce {
+  25% {
+    transform: rotate(90deg) translate(0.25rem);
+  }
+  75% {
+    transform: rotate(90deg) translate(-0.25rem);
+  }
+}

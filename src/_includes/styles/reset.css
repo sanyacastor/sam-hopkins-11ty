@@ -8,3 +8,9 @@ body {
 
   background-color: var(--color-secondary);
 }
+
+html,
+body,
+* {
+  box-sizing: border-box;
+}
