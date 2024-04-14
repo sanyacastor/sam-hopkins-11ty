@@ -1,0 +1,11 @@
+---
+title: Sam Hopkins | News
+layout: base.njk
+slug: news
+---
+
+<ul>
+  {% for n in collections.news %}
+    <li>{{ n.data.title }}</li>
+  {% endfor %}
+</ul>

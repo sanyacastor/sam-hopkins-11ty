@@ -1,0 +1,11 @@
+---
+title: Sam Hopkins | Publications
+layout: base.njk
+slug: publications
+---
+
+<ul>
+  {% for p in collections.publications %}
+    <li>{{ p.data.title }}</li>
+  {% endfor %}
+</ul>
