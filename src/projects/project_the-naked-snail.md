@@ -1,8 +1,6 @@
 ---
 title: The naked snail
 dates: "2006"
-tags: project
-layout: project.njk
 cardDescription: A slug moustache moves across my face.
 previewDescription: "Having studied History before studying Visual Art I find
   the issue of a ‘legitimate’ history a compelling one. Spending 2006 studying

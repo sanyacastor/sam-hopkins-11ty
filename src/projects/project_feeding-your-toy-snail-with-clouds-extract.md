@@ -10,8 +10,6 @@ previewDescription: Toy snails, while not requiring traditional sustenance like
   real animals, can still benefit from creative and imaginative feeding methods.
   In this article, we'll explore the whimsical idea of feeding your toy snail
   with an extract from clouds, bringing a touch of magic to playtime.
-tags: project
-layout: project.njk
 ---
 Feeding Your Toy Snail with Clouds Extract
 

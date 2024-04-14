@@ -52,7 +52,6 @@ header {
   background: var(--color-secondary);
 }
 
-
 .header-nav__links-list-item--active a {
   color: var(--color-primary);
 }

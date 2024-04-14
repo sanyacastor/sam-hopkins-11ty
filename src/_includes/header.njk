@@ -1,37 +1,17 @@
-{% set links = [
-    {
-        title: "Projects",
-        slug: "projects"
-    }, {
-        title: "Images",
-        slug: "images"
-    }, {
-        title: "Vide",
-        slug: "video"
-    }, {
-        title: "Publications",
-        slug: "publications"
-    }, {
-        title: "News",
-        slug: "news"
-    }, {
-        title: "About & Contact",
-        slug: "about"
-    }
-] %}
-
 <header>
+  <div class="container">
     <nav class="header-nav">
-        <ul class="header-nav__links-list">
-            <li class="header-nav__links-list-item header-nav__links-list-item--logo">
-                <a class="header-nav__link" href="/">Sam Hopkins</a>
-            </li>
-            {% for link in links %}
-                {% set linkSlug = "/" ~ link.slug %}
-                <li class="header-nav__links-list-item {%if linkSlug in page.url %}header-nav__links-list-item--active{% endif %}" >
-                    <a class="header-nav__link" href={{ linkSlug }}>{{ link.title }}</a>
-                </li>
-            {% endfor %}
-        </ul>
+      <ul class="header-nav__links-list">
+        <li class="header-nav__links-list-item header-nav__links-list-item--logo">
+          <a class="header-nav__link" href="/">Sam Hopkins</a>
+        </li>
+        {% for link in constants.menuItems %}
+          {% set linkSlug = "/" ~ link.slug %}
+          <li class="header-nav__links-list-item {%if linkSlug in page.url %}header-nav__links-list-item--active{% endif %}" >
+            <a class="header-nav__link" href={{ linkSlug }}>{{ link.title }}</a>
+          </li>
+        {% endfor %}
+      </ul>
     </nav>
+  </div>
 </header>
