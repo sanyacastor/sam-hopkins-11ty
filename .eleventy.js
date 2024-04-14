@@ -5,7 +5,8 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("./assets/data");
   eleventyConfig.addPassthroughCopy("./src/admin");
 
-  eleventyConfig.addPassthroughCopy('**/*.woff2');
+  eleventyConfig.addPassthroughCopy('KareliaWeb-Bold.woff2');
+  eleventyConfig.addPassthroughCopy('KareliaWeb-Regular.woff2');
   
   return {
     dir: {
