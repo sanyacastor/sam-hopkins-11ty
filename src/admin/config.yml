@@ -28,16 +28,16 @@ collections:
         fields:
           - {label: "Project", name: "project", widget: "relation", collection: "project", value_field: "title"}
   - name: "publication"
-      label: "Publication"
-      folder: "src/publications"
-      create: true
-      slug: "publication-{{slug}}"
-      fields:
-        - {label: "Title", name: "title", widget: "string"}
-        - {label: "Year", name: "year", widget: "string"}
-        - {label: "ISBN", name: "isbn", widget: "string"}
-        - {label: "Thumbnail description", name: "description", widget: "string"}
-        - {label: "Link to publication", name: "link", widget: "string", required: false}
+    label: "Publication"
+    folder: "src/publications"
+    create: true
+    slug: "publication-{{slug}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Year", name: "year", widget: "string"}
+      - {label: "ISBN", name: "isbn", widget: "string"}
+      - {label: "Thumbnail description", name: "description", widget: "string"}
+      - {label: "Link to publication", name: "link", widget: "string", required: false}
   - name: "news"
     label: "News"
     folder: "src/news"
