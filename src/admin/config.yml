@@ -46,7 +46,6 @@ collections:
     fields:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Thumbnail description", name: "description", widget: "string"}
-      - {label: "Link to publication", name: "link", widget: "string", required: false}
   - name: "video"
     label: "Video"
     folder: "src/video"
