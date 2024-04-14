@@ -15,8 +15,6 @@ previewDescription: The initial idea for this came from an old photo I saw of
   first. They are made from one piece of string, which goes from the base to the
   top, and back again. They are temporary and at some stage will decay and fade
   away.
-tags: project
-layout: project.njk
 ---
 ![](/assets/data/strings_documentation_2006_-c-hopkins-1-1-.jpg)
 

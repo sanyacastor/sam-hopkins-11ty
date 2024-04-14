@@ -1,5 +1,5 @@
 ---
-dates: "2006"
+year: "2006"
 summary: From 06.09.06 until 11.09.06 for 6 hours a day I sat on a bench in
   Kuznicza Street in Wroclaw
 title: 6 hours for 6 days
@@ -18,9 +18,6 @@ previewDescription: "The initial idea for this came from an old photo I saw of
   prototypes first. They are made from one piece of string, which goes from the
   base to the top, and back again. They are temporary and at some stage will
   decay and fade away. "
-tags: project
-layout: project.njk
-year: 2006
 ---
 # Concept
 My idea for this project was to explore the state of being stationary within a
