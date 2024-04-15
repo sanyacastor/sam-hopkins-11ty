@@ -15,7 +15,7 @@
 
     height: 90%;
     padding-top: 10px;
-    padding-left: 30px;
+    padding-left: 10px;
     word-break: break-word;
     white-space: normal;
 }
@@ -58,6 +58,10 @@
     width: 443px;
     height: 305px;
     background-color: green;
+}
+
+.swiper{
+  height: 100%;
 }
 
 .projectView_blockText {

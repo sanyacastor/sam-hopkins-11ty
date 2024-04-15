@@ -15,53 +15,37 @@ layout: base.njk
             cardDescription: cardDescription
         }
     } %}
-    <link rel="stylesheet" href="bundle.css">
+    <!--link rel="stylesheet" href="bundle.css"-->
     <article>
-
-      <div class="projectView_container">
-        <div class="projectView_sideBar">
-            <div class="projectView_cardSlot">
-                       {% include 'summary-card.njk'  %}
-            </div>
-            <div class="projectView_photoSlot">
-                      <div class="swiper mySwiper">
-                        <div class="swiper-wrapper">
-                          <div class="swiper-slide">
-                            <img src="/assets/data/Strings_Documentation_2006_(c)Hopkins-1.JPG" alt="Image 1" class="swiper-slide">
+      <div class='container'>
+        <div class="projectView_container">
+          <div class="projectView_sideBar">
+              <div class="projectView_cardSlot">
+                        {% include 'summary-card.njk'  %}
+              </div>
+              <div class="projectView_photoSlot">
+                        <div class="swiper mySwiper">
+                          <div class="swiper-wrapper" id="projectView_swiperWrapper">
                           </div>
-                          <div class="swiper-slide">
-                            <img src="/assets/data/Strings_Documentation_2006_(c)Hopkins-2.JPG" alt="Image 2" class="swiper-slide">
-                          </div>
-                          <div class="swiper-slide">
-                            <img src="/assets/data/Strings_Documentation_2006_(c)Hopkins-3.JPG" alt="Image 2" class="swiper-slide">
-                          </div>
-                          <div class="swiper-slide">
-                            <img src="/assets/data/Strings_Documentation_2006_(c)Hopkins-4.JPG" alt="Image 2" class="swiper-slide">
-                          </div>
-                          <div class="swiper-slide">
-                            <img src="/assets/data/Strings_Documentation_2006_(c)Hopkins-5.JPG" alt="Image 2" class="swiper-slide">
-                          </div>
+                          <div class="swiper-button-next"></div>
+                          <div class="swiper-button-prev"></div>
+                          <div class="swiper-pagination"></div>
                         </div>
-                        <div class="swiper-button-next"></div>
-                        <div class="swiper-button-prev"></div>
-                        <div class="swiper-pagination"></div>
-                      </div>
-            </div>
-        </div>
-        <div class="projectView_blockText">
-          <div id="projectView_outer">
-            <div class="projectView_ScrollArticle" id="scrollArticle">
-                {{content | safe}}
-            </div>
-        </div>
-        </div>
+              </div>
+          </div>
+          <div class="projectView_blockText">
+            <div id="projectView_outer">
+              <div class="projectView_ScrollArticle" id="scrollArticle">
+                  {{content | safe}}
+              </div>
+          </div>
+          </div>
 
-        <div class="projectView_navigation" id="projectView_scrollNavBar">
-            0 1 2 3 4
-        <div>
+          <div class="projectView_navigation" id="projectView_scrollNavBar">
+              0 1 2 3 4
+          <div>
+        </div>
       </div>
-
-      <hr>
     </article>
 
     <script>
@@ -109,7 +93,38 @@ layout: base.njk
             }
         }, false);
 
+        function getListOfImages() {
+          str = document.getElementById('scrollArticle').innerHTML;   
+
+          let images = [];
+          let regex = /<img\s+src="([^"]+)"\s+alt="([^"]+)"/g;
+
+          let match;
+          while ((match = regex.exec(str)) !== null) {
+            let image = {
+              src: match[1],
+              alt: match[2]
+            };
+            images.push(image);
+          }
+          console.log(images);
+
+          //put images into swiper-wrapper
+          let swiperWrapper = document.getElementById('projectView_swiperWrapper');
+          swiperWrapper.innerHTML = '';
+          images.forEach(image => {
+            swiperWrapper.innerHTML += `<div class="swiper-slide">
+                                          <img src="${image.src}" alt="${image.alt}" class="swiper-slide">
+                                        </div>`;
+          }); 
+          swiper.update();
+        }
+
         window.addEventListener('load', function() {
+          console.log("get list of images")
+          getListOfImages();
+          console.log("/get list of images")
+
           onResize();
           processSlug();
           //window.history.pushState({"html":html,"pageTitle":"fdsfsdf"},"", "somePath");
@@ -120,7 +135,7 @@ layout: base.njk
       });
 
       function recalcNumberOfColumns(){
-        numberOfColumns = document.getElementById('projectView_outer').scrollWidth / (window.columnWidth+30); //!!!PELIGRO!!! magic numbers
+        numberOfColumns = document.getElementById('projectView_outer').scrollWidth / (window.columnWidth+10); //!!!PELIGRO!!! magic number for padding
         numberOfColumns = Math.floor(numberOfColumns);
         window.numberOfColumns = numberOfColumns;
         
@@ -144,6 +159,7 @@ layout: base.njk
           window.columnWidth = 416; //!!!PELIGRO!!! magic numbers
           
           document.getElementById('scrollArticle').style.columnWidth = window.columnWidth + 'px';
+          console.log(">>>>>columnWidth: " + window.columnWidth);
           return;  
         }
         
@@ -152,6 +168,7 @@ layout: base.njk
           window.columnWidth = 416; //!!!PELIGRO!!! magic numbers
           
           document.getElementById('scrollArticle').style.columnWidth = window.columnWidth + 'px';
+          console.log(">>>>>columnWidth: " + window.columnWidth);
           return; 
         }
 
@@ -160,7 +177,7 @@ layout: base.njk
         window.columnWidth = elementWidth-50;
 
         document.getElementById('scrollArticle').style.columnWidth = window.columnWidth + 'px';
-
+        console.log(">>>>>columnWidth: " + window.columnWidth);
       }
 
       function redrawNavButtons(){
