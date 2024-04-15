@@ -93,13 +93,18 @@ pagination:
 <script>
   var swiper = new Swiper(".mySwiper", {
     slidesPerView: 2,
+    speed: 1000,
+    autoplay: {
+      delay: 3000,
+      pauseOnMouseEnter: true,
+    },
     pagination: {
-        el: ".swiper-pagination",
-        type: "progressbar",
+      el: ".swiper-pagination",
+      type: "progressbar",
     },
     navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
     },
   });
 </script>

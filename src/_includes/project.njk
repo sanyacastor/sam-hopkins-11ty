@@ -75,6 +75,8 @@ style: bundle.css
     <script>
         const setScrollFraction = (newFrac) => {
           newFrac = Math.max(0, Math.min(newFrac, 1));
+          
+          swipeToFraction(newFrac);
 
           window.targetScrollFraction = newFrac;
           //window.currentScrollFraction = newFrac;
@@ -100,7 +102,6 @@ style: bundle.css
         document.getElementById('projectView_outer').addEventListener('wheel', function (e) {
             var delta = e.wheelDelta ? e.wheelDelta : -e.deltaY;
 
-            console.log("delta: " + delta );
             if(delta > 0){
                 scrollStepLeft();
             } else {
@@ -109,7 +110,6 @@ style: bundle.css
         }, false);
 
         window.addEventListener('load', function() {
-          console.log('loaded');
           onResize();
           processSlug();
           //window.history.pushState({"html":html,"pageTitle":"fdsfsdf"},"", "somePath");
@@ -210,26 +210,19 @@ style: bundle.css
       function processSlug(){
         // Get the current URL
         var currentUrl = window.location.href;
-
-        console.log(currentUrl);
         var slug = currentUrl.substring(currentUrl.lastIndexOf('/') + 1);
-        console.log("slug: " + slug);
 
-        // Extract the parameter from the slug
-        
         var parameter = slug.split('=')[1];
         if (typeof parameter === 'undefined') {
           parameter = 0;
         }
 
-        console.log("parameter: " + parameter);
         frac = parseFloat(parameter) / 100;
         
         columnNumber = parseInt(frac/window.scrollStep);
         newPosition = columnNumber*window.scrollStep;
 
-        console.log("frac: "+ frac + " scrollStep:" + window.scrollStep + " number: " + columnNumber + " newPosition: " + newPosition);
-
+        //console.log("frac: "+ frac + " scrollStep:" + window.scrollStep + " number: " + columnNumber + " newPosition: " + newPosition);
         setScrollFraction(newPosition);
       }
     </script>
@@ -250,6 +243,29 @@ style: bundle.css
           prevEl: ".swiper-button-prev",
       },
     });
+
+    function swipeToFraction(persent){
+      nSlides = swiper.slides.length;
+
+      if(nSlides == 0)
+        return;
+
+      targetSlideNumber = parseInt(nSlides * persent);
+
+      swiper.slideTo(targetSlideNumber);
+    }
+
+    function printSwiper(){
+      console.log("current index:" + swiper.realIndex);
+      console.log("number of slides:" + swiper.slides.length);
+      
+      if(swiper.slides.length == 0)
+        return;
+
+      console.log("current persent:" + swiper.realIndex/swiper.slides.length);
+      
+      swipeToFraction(0.99);
+    }
   </script>
 
 </body>
