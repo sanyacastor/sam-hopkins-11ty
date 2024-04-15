@@ -5,33 +5,13 @@ slug: projects
 ---
 <link rel="stylesheet" href="bundle.css">
 
-<div class="cardcabinet_grid">
-  {% for project in collections.project %}
-    {% assign previewURL = project.data.title | slug %}
-    {% assign previewURL = '/preview/' | append: previewURL %}
+<div class='container' >
+  <div class="cardcabinet_grid">
+    {% for project in collections.project %}
+      {% assign previewURL = project.data.title | slug %}
+      {% assign previewURL = '/preview/' | append: previewURL %}
 
-    {% include "summary-card.njk" with project %}
-    <!--div class="cardcabinet_summaryCard">
-      <div style="height: 90%;">
-          <h2 class="cardcabinet_cardTitle"><a href="{{previewURL}}"> <font> {{project.data.title}} </font> </a></h2>
-          <hr class="cardcabinet_dividerLine" />
-
-          {% if project.data.dates %}
-            <p class="cardcabinet_dates"> <font color=#6D0B0A> {{project.data.dates}} </font> </p>
-            <hr class="cardcabinet_dividerLine" />
-          {% endif %}
-
-          {% if project.data.collaborators %}
-            <p class="cardcabinet_collaborators"> <font color=#6D0B0A> with: {{project.data.collaborators}} </font> </p>
-            <hr style="border-top: dotted 1px; background-color: transparent" />
-          {% endif %}
-
-          <p class="cardcabinet_cardDescription"> <font color=#6D0B0A> {{project.data.cardDescription}} </font> </p>
-      </div>
-      
-      <div style="height: 10%; position: relative;">
-        <hr class="cardcabinet_bottomLine" />
-      </div>
-    </div-->
-  {% endfor %}
+      {% include "summary-card.njk" with project %}
+    {% endfor %}
+  </div>
 </div>

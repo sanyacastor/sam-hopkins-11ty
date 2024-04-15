@@ -13,6 +13,19 @@ pagination:
   addAllPagesToCollection: true
 ---
 
+{% set project = {
+  data: {
+      title: preview.title,
+      dates: preview.dates,
+      collaborators: preview.collaborators,
+      cardDescription: preview.cardDescription
+  }
+} %} <!--!!!Peligro!!! Deleteme-->
+
+<link rel="stylesheet" href="bundle.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+
 <article>
   <div class='container' >
     <div class="projectPreview_Grid">
@@ -70,7 +83,7 @@ pagination:
     slidesPerView: 2,
     speed: 1000,
     autoplay: {
-      delay: 3000,
+      delay: 2000,
       pauseOnMouseEnter: true,
     },
     pagination: {
