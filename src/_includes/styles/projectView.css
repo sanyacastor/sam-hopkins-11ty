@@ -9,15 +9,19 @@
 }
 
 .projectView_ScrollArticle {
-    column-fill: auto;
-    column-width: 416px;
-    column-gap: 30px;
+  column-fill: auto;
+  column-width: 416px;
+  column-gap: 30px;
+  height: 90%;
+  padding-top: 10px;
+  padding-left: 10px;
+  word-break: break-word;
+  white-space: normal;
+}
 
-    height: 90%;
-    padding-top: 10px;
-    padding-left: 10px;
-    word-break: break-word;
-    white-space: normal;
+.projectView_phantomColumn{
+  height: 100%;
+  width: 416px;
 }
 
 .projectView_ScrollArticle > p > img {

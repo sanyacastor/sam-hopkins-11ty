@@ -37,6 +37,7 @@ layout: base.njk
             <div id="projectView_outer">
               <div class="projectView_ScrollArticle" id="scrollArticle">
                   {{content | safe}}
+                  <div class="projectView_phantomColumn"> <!--!!!PELIGRO!!! column width--></div>
               </div>
           </div>
           </div>
@@ -143,11 +144,31 @@ layout: base.njk
       });
 
       function recalcNumberOfColumns(){
+        hidePhantomColumn();
+
         numberOfColumns = document.getElementById('projectView_outer').scrollWidth / (window.columnWidth+10); //!!!PELIGRO!!! magic number for padding
         numberOfColumns = Math.floor(numberOfColumns);
         window.numberOfColumns = numberOfColumns;
         
-        console.log("number of columns: " + numberOfColumns);
+        updatePhantomColumn();
+      }
+
+      function hidePhantomColumn(){
+        document.querySelector('.projectView_phantomColumn').style.display = 'none';
+      }
+
+      function updatePhantomColumn(){
+        if(window.columnsPerPage == 1){
+          hidePhantomColumn();
+          return;
+        }
+
+        if (window.numberOfColumns % 2 === 0) {
+          hidePhantomColumn();
+        } else {
+          document.querySelector('.projectView_phantomColumn').style.display = 'block';
+          window.numberOfColumns = numberOfColumns+1;
+        }
       }
 
       function recalcScrollStep(){
