@@ -1,8 +1,10 @@
 .cardcabinet_grid {
-  margin: 50px;
+  margin-top: 50px;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
-  grid-gap: 1px;
+  grid-template-columns: repeat(auto-fill, minmax(416px, 1fr));
+  grid-gap: 50px;
+  width: 100%;
+  height: 100%;
 }
 
 .cardcabinet_summaryCard {

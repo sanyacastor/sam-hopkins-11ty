@@ -96,9 +96,17 @@ layout: base.njk
         function getListOfImages() {
           str = document.getElementById('scrollArticle').innerHTML;   
 
+          console.log(str)
+
           let images = [];
           let regex = /<img\s+src="([^"]+)"\s+alt="([^"]+)"/g;
-
+          const imgCollection = document.getElementsByTagName('img');
+          for (let item of imgCollection) {
+            console.log('src :', item.src)
+            console.log('alt :', item.alt)
+            images.push({src: item.src, alt: item.alt});
+          }
+          /*
           let match;
           while ((match = regex.exec(str)) !== null) {
             let image = {
@@ -107,7 +115,7 @@ layout: base.njk
             };
             images.push(image);
           }
-          console.log(images);
+          console.log(images);*/
 
           //put images into swiper-wrapper
           let swiperWrapper = document.getElementById('projectView_swiperWrapper');
