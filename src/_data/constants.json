@@ -1,0 +1,28 @@
+{
+  "menuItems": [
+    {
+      "title": "Projects",
+      "slug": "projects"
+    },
+    {
+      "title": "Images",
+      "slug": "images"
+    },
+    {
+      "title": "Video",
+      "slug": "video"
+    },
+    {
+      "title": "Publications",
+      "slug": "publications"
+    },
+    {
+      "title": "News",
+      "slug": "news"
+    },
+    {
+      "title": "About & Contact",
+      "slug": "about"
+    }
+  ]
+}

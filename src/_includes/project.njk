@@ -1,6 +1,6 @@
 ---
+title: Sam Hopkins | Projects {{ project.title}}
 layout: base.njk
-style: bundle.css
 ---
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
@@ -232,16 +232,16 @@ style: bundle.css
   
   <!-- Initialize Swiper -->
   <script>
-    var swiper = new Swiper(".mySwiper", {
+    const swiper = new Swiper(".mySwiper", {
       slidesPerView: 1,
       pagination: {
-          el: ".swiper-pagination",
-          type: "progressbar",
+        el: ".swiper-pagination",
+        type: "progressbar"
       },
       navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
-      },
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev"
+      }
     });
 
     function swipeToFraction(persent){
@@ -267,5 +267,3 @@ style: bundle.css
       swipeToFraction(0.99);
     }
   </script>
-
-</body>

@@ -6,8 +6,6 @@ cardDescription: "Feeling down and need a pick-me-up? These trash jokes might
   just do the trick! Warning: the puns are strong with these ones."
 previewDescription: "Feeling down and need a pick-me-up? These trash jokes might
   just do the trick! Warning: the puns are strong with these ones."
-tags: project
-layout: project.njk
 ---
 Cyclist problems in sociourban subarea
 

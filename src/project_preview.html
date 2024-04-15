@@ -5,91 +5,66 @@ permalink: '/preview/{{ preview.title | slug }}/'
 templateEngineOverride: md, njk
 eleventyComputed:
   title: {{ preview.title }}
-  fileName: {{ preview.fileName }}
+  slug: {{ preview.title | slug }}
 pagination:
-  data: preview
+  data: projectWithImages
   alias: preview
   size: 1
   addAllPagesToCollection: true
 ---
 
-{% set project = {
-  data: {
-      title: preview.title,
-      dates: preview.dates,
-      collaborators: preview.collaborators,
-      cardDescription: preview.cardDescription
-  }
-} %}
-
-
-
-
-<link rel="stylesheet" href="bundle.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-
 <article>
-  <div class="projectPreview_Grid">
-    asd
-    <card>
-      {% include 'summary-card.njk' %}
-    </card>
-    <pictures>
-      <div class="swiper mySwiper">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <img src="/assets/data/Strings_Documentation_2006_(c)Hopkins-1.JPG" alt="Image 1" class="swiper-slide">
+  <div class='container' >
+    <div class="projectPreview_Grid">
+      <card>
+        {% include 'summary-card.njk' %}
+      </card>
+      <pictures>
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            {% for image in preview.images %}
+              <div class="swiper-slide">
+                <img src='{{ image.url }}' alt='{{ image.alt }}' class="swiper-slide" >
+              </div>
+            {% endfor %}
           </div>
-          <div class="swiper-slide">
-            <img src="/assets/data/Strings_Documentation_2006_(c)Hopkins-2.JPG" alt="Image 2" class="swiper-slide">
-          </div>
-          <div class="swiper-slide">
-            <img src="/assets/data/Strings_Documentation_2006_(c)Hopkins-3.JPG" alt="Image 2" class="swiper-slide">
-          </div>
-          <div class="swiper-slide">
-            <img src="/assets/data/Strings_Documentation_2006_(c)Hopkins-4.JPG" alt="Image 2" class="swiper-slide">
-          </div>
-          <div class="swiper-slide">
-            <img src="/assets/data/Strings_Documentation_2006_(c)Hopkins-5.JPG" alt="Image 2" class="swiper-slide">
-          </div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-pagination"></div>
         </div>
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-pagination"></div>
-      </div>
-    </pictures>
+      </pictures>
 
-    <navigation>df</navigation>
-    <!--imgcaption>asd</imgcaption-->
-    <main>
+      <navigation>df</navigation>
+      <!--imgcaption>asd</imgcaption-->
+      <main>
         <div id="projectPreview_outer">
-            <div class="projectPreview_ScrollArticle">
-                {{preview.previewDescription}}
-            </div>
+          <div class="projectPreview_ScrollArticle">
+            {{preview.previewDescription}}
+          </div>
         </div>
-    </main>
-</div>
+      </main>
+    </div>
 
-  <a href={{ "/projects/" ~ preview.fileName  }}>
-    <b>full project →</b>
-  </a>
+    <a href={{ "/projects/" ~ preview.title | slug }}>
+      <b>full project →</b>
+    </a>
+  </div>
 </article>
-
 
 <!-- Horisontal scroll-->
 <script>
-  document.getElementById('projectPreview_outer').addEventListener('wheel', function (e) {
+  document
+    .getElementById('projectPreview_outer')
+    .addEventListener('wheel', function (e) {
       // Cross-browser wheel delta
-      var delta = e.wheelDelta ? e.wheelDelta : -e.deltaY;
+      var delta = e.wheelDelta
+        ? e.wheelDelta
+        : -e.deltaY;
       this.scrollLeft -= (delta);
       e.preventDefault();
-  }, false);
+    }, false);
 </script>
 
-<!-- Swiper JS -->
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-<!-- Initialize Swiper -->
 <script>
   var swiper = new Swiper(".mySwiper", {
     slidesPerView: 2,
