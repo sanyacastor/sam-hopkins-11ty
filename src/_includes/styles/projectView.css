@@ -31,7 +31,7 @@
 
 .projectView_container {
     display: flex;
-    background-color: aqua;
+    background-color: transparent;
     height: calc(100vh - 120px);
     position: relative;
 }
@@ -42,6 +42,7 @@
     border: 1px solid #ccc;
     box-sizing: border-box;
     height: 100%;
+    background-color: transparent;
 
     flex-direction: column;
     justify-content: flex-start;
