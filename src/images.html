@@ -1,0 +1,13 @@
+---
+title: Sam Hopkins | Images
+layout: base.njk
+tags: images
+---
+
+<div class='container'>
+    {% for project in projectWithImages %}
+        {% for image in project.images %}
+            <img src='{{ image.url }}' alt='{{ image.alt }}' width='200' height='128'/>
+        {% endfor %}
+    {% endfor %}
+</div>

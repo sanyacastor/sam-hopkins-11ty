@@ -1,48 +1,77 @@
 ---
+title: Sam Hopkins | Projects {{ project.title}}
 layout: base.njk
-style: bundle.css
 ---
 
-<body>
-    {% set project = {
-        data: {
-            title: title,
-            dates: dates,
-            collaborators: collaborators,
-            cardDescription: cardDescription
-        }
-    } %}
-
-    <p> this is a project </p>
-
-    <link rel="stylesheet" href="bundle.css">
-    <article>
-
+<article>
+  <div class="container">
+  I AM HERE
+    {%- for image in project.images -%}
+      <li>{{ image.url }}</li>
+    {%- endfor -%}
     <div class="projectView_Grid">
-        <card>
-            {% include 'summary-card.njk'  %}
-        </card>
-        <pictures>df</pictures>
-        <navigation>df</navigation>
-        <imgcaption>asd</imgcaption>
-        <main>
-            <div id="projectView_outer">
-                <div class="projectView_ScrollArticle">
-                    {{content | safe}}
-                </div>
+      <card>
+        {% include 'summary-card.njk'  %}
+      </card>
+      <pictures>
+
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="/assets/data/Strings_Documentation_2006_(c)Hopkins-1.JPG" alt="Image 1" class="swiper-slide">
             </div>
-        </main>
-    </div>
+            <div class="swiper-slide">
+              <img src="/assets/data/Strings_Documentation_2006_(c)Hopkins-2.JPG" alt="Image 2" class="swiper-slide">
+            </div>
+            <div class="swiper-slide">
+              <img src="/assets/data/Strings_Documentation_2006_(c)Hopkins-3.JPG" alt="Image 2" class="swiper-slide">
+            </div>
+            <div class="swiper-slide">
+              <img src="/assets/data/Strings_Documentation_2006_(c)Hopkins-4.JPG" alt="Image 2" class="swiper-slide">
+            </div>
+            <div class="swiper-slide">
+              <img src="/assets/data/Strings_Documentation_2006_(c)Hopkins-5.JPG" alt="Image 2" class="swiper-slide">
+            </div>
+          </div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-pagination"></div>
+        </div>
 
+      </pictures>
+      <navigation>df</navigation>
+      <imgcaption>asd</imgcaption>
+      <main>
+        <div id="projectView_outer">
+          <div class="projectView_ScrollArticle">
+            {{content | safe}}
+          </div>
+        </div>
+      </main>
     </article>
+  </div>
 
-    <script>
-        document.getElementById('projectView_outer').addEventListener('wheel', function (e) {
-            // Cross-browser wheel delta
-            var delta = e.wheelDelta ? e.wheelDelta : -e.deltaY;
-            this.scrollLeft -= (delta);
-            e.preventDefault();
-        }, false);
-    </script>
+  <script>
+    const swiper = new Swiper(".mySwiper", {
+      slidesPerView: 1,
+      pagination: {
+        el: ".swiper-pagination",
+        type: "progressbar"
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev"
+      }
+    });
 
-</body>
+    document
+      .getElementById('projectView_outer')
+      .addEventListener('wheel', function (e) {
+        // Cross-browser wheel delta
+        var delta = e.wheelDelta
+          ? e.wheelDelta
+          : -e.deltaY;
+        this.scrollLeft -= (delta);
+        e.preventDefault();
+      }, false);
+  </script>

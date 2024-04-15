@@ -5,55 +5,76 @@ permalink: '/preview/{{ preview.title | slug }}/'
 templateEngineOverride: md, njk
 eleventyComputed:
   title: {{ preview.title }}
-  fileName: {{ preview.fileName }}
+  slug: {{ preview.title | slug }}
 pagination:
-  data: preview
+  data: projectWithImages
   alias: preview
   size: 1
   addAllPagesToCollection: true
 ---
 
-{% set project = {
-  data: {
-      title: preview.title,
-      dates: preview.dates,
-      collaborators: preview.collaborators,
-      cardDescription: preview.cardDescription
-  }
-} %}
-
-<link rel="stylesheet" href="bundle.css">
 <article>
-  <div class="projectPreview_Grid">
-    asd
-    <card>
-      {% include 'summary-card.njk' %}
-    </card>
-    <pictures>df</pictures>
-    <navigation>df</navigation>
-    <imgcaption>asd</imgcaption>
-    <main>
-        <div id="projectPreview_outer">
-            <div class="projectPreview_ScrollArticle">
-                {{preview.previewDescription}}
-            </div>
+  <div class='container' >
+    <div class="projectPreview_Grid">
+      <card>
+        {% include 'summary-card.njk' %}
+      </card>
+      <pictures>
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            {% for image in preview.images %}
+              <div class="swiper-slide">
+                <img src='{{ image.url }}' alt='{{ image.alt }}' class="swiper-slide" >
+              </div>
+            {% endfor %}
+          </div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-pagination"></div>
         </div>
-    </main>
-</div>
+      </pictures>
 
+      <navigation>df</navigation>
+      <!--imgcaption>asd</imgcaption-->
+      <main>
+        <div id="projectPreview_outer">
+          <div class="projectPreview_ScrollArticle">
+            {{preview.previewDescription}}
+          </div>
+        </div>
+      </main>
+    </div>
 
-  <h1>{{ preview.title }}</h1>
-  <div>{{ preview.previewDescription }}</div>
-  <a href={{ "/projects/" ~ preview.fileName  }}>
-    <b>full project →</b>
-  </a>
+    <a href={{ "/projects/" ~ preview.title | slug }}>
+      <b>full project →</b>
+    </a>
+  </div>
 </article>
 
+<!-- Horisontal scroll-->
 <script>
-  document.getElementById('projectPreview_outer').addEventListener('wheel', function (e) {
+  document
+    .getElementById('projectPreview_outer')
+    .addEventListener('wheel', function (e) {
       // Cross-browser wheel delta
-      var delta = e.wheelDelta ? e.wheelDelta : -e.deltaY;
+      var delta = e.wheelDelta
+        ? e.wheelDelta
+        : -e.deltaY;
       this.scrollLeft -= (delta);
       e.preventDefault();
-  }, false);
+    }, false);
+</script>
+
+<script>
+  var swiper = new Swiper(".mySwiper", {
+    slidesPerView: 1,
+    pagination: {
+      el: ".swiper-pagination",
+      type: "progressbar"
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev"
+    }
+  });
 </script>
