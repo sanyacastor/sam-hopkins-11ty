@@ -46,23 +46,49 @@ pagination:
           <div class="swiper-pagination"></div>
         </div>
       </pictures>
-
-      <navigation>df</navigation>
       <!--imgcaption>asd</imgcaption-->
       <main>
-        <div id="projectPreview_outer">
-          <div class="projectPreview_ScrollArticle">
-            {{preview.previewDescription}}
+        <div class = "projectPreview_mainTextContainer">
+          <div class="projectPreview_textContainer">
+            <div id="projectPreview_outer">
+              <div class="projectPreview_ScrollArticle">
+                {{preview.previewDescription}}
+              </div>
+              <div class="projectPreview_phantomColumn" id = "buttontrigger">trigger</div>
+            </div>
+          </div>
+
+          <div class="projectPreview_buttonFullProject_container" id="preview_buttonFullProject" >
+            <a href={{ "/projects/project_" ~ preview.title | slug }}>
+            full project →
+            </a>
+            <div class="projectPreview_buttonFullProject_arrowRight">
+            </div>  
           </div>
         </div>
-      </main>
+      </main>  
     </div>
 
-    <a href={{ "/projects/project_" ~ preview.title | slug }}>
-      <b>full project →</b>
-    </a>
+
   </div>
 </article>
+
+<script>
+  const observer = new IntersectionObserver(entries => {
+    let buttonFullProject = document.getElementById("preview_buttonFullProject");
+
+    const isIntersectingValue = entries[0].isIntersecting;
+    if(isIntersectingValue){
+      console.log("Intersecting Start")
+      buttonFullProject.style.height = "288px";
+    }
+    else{
+      buttonFullProject.style.height = "61px";
+    }
+  })
+
+  observer.observe(document.getElementById("buttontrigger"))
+</script>
 
 <!-- Horisontal scroll-->
 <script>
@@ -77,6 +103,34 @@ pagination:
       e.preventDefault();
     }, false);
 </script>
+
+<script>
+  function recalcPosition(){
+    document.getElementById('buttontrigger').style.display = "none"
+    const scrollLength = document.getElementById('projectPreview_outer').scrollWidth;
+    console.log(scrollLength)
+
+    if(scrollLength<=1366){
+      document.getElementById('buttontrigger').style.left = (1365 - 200-50) + "px"; //!!!!PELIGRO!!!! recalculate it
+      document.getElementById('buttontrigger').style.display = "block"
+      
+      console.log(document.getElementById('buttontrigger').style.left)
+    }
+    else{
+      document.getElementById('buttontrigger').style.left = (scrollLength) + 50 + "px"; //!!!!PELIGRO!!!! recalculate it
+      document.getElementById('buttontrigger').style.display = "block"
+    }
+  }
+    
+
+  window.addEventListener('resize', function() {
+    recalcPosition();
+  });
+  window.addEventListener('load', function() {
+    recalcPosition();
+  });
+</script>
+
 
 <script>
   var swiper = new Swiper(".mySwiper", {
