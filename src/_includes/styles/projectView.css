@@ -15,6 +15,7 @@
   height: 90%;
   padding-top: 10px;
   padding-left: 10px;
+
   word-break: break-word;
   white-space: normal;
 }
@@ -82,12 +83,34 @@
     position: absolute;
     right: 0;
     bottom: 0;
-    background-color: yellow;
+    background-color: transparent;
 }
 
 .projectView_navigationDigit{
-    right: 0;
-    float: right;
+  display: inline;
+  background-color: transparent;
+  border: none;
+  float: right;
+  color:#818181;
+  font-weight:lighter;
+}
+
+.projectView_navigationDigit:hover {
+  background-color: aqua;
+}
+
+.active {
+  font-weight: bold;
+  color: var(--color-primary);
+}
+
+.projectView_navigationButtonNextCheckpoint{
+  display: inline;
+  background-color: transparent;
+  border: none;
+  float: right;
+  color: var(--color-primary);
+  font-weight:bold;
 }
 
 .projectView_Grid {

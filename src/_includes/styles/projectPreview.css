@@ -33,6 +33,13 @@
   white-space: normal;
 
   position:relative;
+
+  /*
+  @media screen and (max-width: 800px) {
+    column-gap: 100px;
+    column-width: 50%;
+    background: #0000ff;
+  }*/
 }
 
 .projectPreview_phantomColumn{
