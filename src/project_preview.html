@@ -27,7 +27,7 @@ pagination:
 
 
 <article>
-  <div class='container' >
+  <div class='container'>
     <div class="projectPreview_Grid">
       <card>
         {% include 'summary-card.njk' %}
@@ -37,7 +37,7 @@ pagination:
           <div class="swiper-wrapper">
             {% for image in preview.images %}
               <div class="swiper-slide">
-                <img src='{{ image.url }}' alt='{{ image.alt }}' class="swiper-slide" >
+                <img src='{{ image.url }}' alt='{{ image.alt }}' style='width: 100%; display: block; object-fit: cover; margin: auto;'></img> <!--style='object-fit: cover;'-->
               </div>
             {% endfor %}
           </div>
@@ -51,10 +51,12 @@ pagination:
         <div class = "projectPreview_mainTextContainer">
           <div class="projectPreview_textContainer">
             <div id="projectPreview_outer">
-              <div class="projectPreview_ScrollArticle">
+              <div class="projectPreview_ScrollArticle" id= "preview_scrollableContent">
                 {{preview.previewDescription}}
               </div>
-              <div class="projectPreview_phantomColumn" id = "buttontrigger">trigger</div>
+              <div class="projectPreview_phantomColumn" id = "phantomColumn">
+                <div class="projectPreview_phantomTrigger"  id = "phantomTrigger"></div>
+              </div>
             </div>
           </div>
 
@@ -62,8 +64,7 @@ pagination:
             <a href={{ "/projects/project_" ~ preview.title | slug }}>
             full project →
             </a>
-            <div class="projectPreview_buttonFullProject_arrowRight">
-            </div>  
+            <div class="projectPreview_buttonFullProject_arrowRight" id="iddqd101"></div>  
           </div>
         </div>
       </main>  
@@ -73,24 +74,7 @@ pagination:
   </div>
 </article>
 
-<script>
-  const observer = new IntersectionObserver(entries => {
-    let buttonFullProject = document.getElementById("preview_buttonFullProject");
-
-    const isIntersectingValue = entries[0].isIntersecting;
-    if(isIntersectingValue){
-      console.log("Intersecting Start")
-      buttonFullProject.style.height = "288px";
-    }
-    else{
-      buttonFullProject.style.height = "61px";
-    }
-  })
-
-  observer.observe(document.getElementById("buttontrigger"))
-</script>
-
-<!-- Horisontal scroll-->
+<!-- Horisontal scroll -->
 <script>
   document
     .getElementById('projectPreview_outer')
@@ -104,38 +88,13 @@ pagination:
     }, false);
 </script>
 
-<script>
-  function recalcPosition(){
-    document.getElementById('buttontrigger').style.display = "none"
-    const scrollLength = document.getElementById('projectPreview_outer').scrollWidth;
-    console.log(scrollLength)
 
-    if(scrollLength<=1366){
-      document.getElementById('buttontrigger').style.left = (1365 - 200-50) + "px"; //!!!!PELIGRO!!!! recalculate it
-      document.getElementById('buttontrigger').style.display = "block"
-      
-      console.log(document.getElementById('buttontrigger').style.left)
-    }
-    else{
-      document.getElementById('buttontrigger').style.left = (scrollLength) + 50 + "px"; //!!!!PELIGRO!!!! recalculate it
-      document.getElementById('buttontrigger').style.display = "block"
-    }
-  }
-    
-
-  window.addEventListener('resize', function() {
-    recalcPosition();
-  });
-  window.addEventListener('load', function() {
-    recalcPosition();
-  });
-</script>
-
-
+<!-- Swiper -->
 <script>
   var swiper = new Swiper(".mySwiper", {
     slidesPerView: 2,
     speed: 1000,
+    
     autoplay: {
       delay: 2000,
       pauseOnMouseEnter: true,
@@ -149,4 +108,154 @@ pagination:
       prevEl: ".swiper-button-prev",
     },
   });
+</script>
+
+
+<script src="/_data/test.js"></script>
+<script src="/_data/windowController.js"></script>
+
+<script>
+  window.addEventListener('resize', function() {
+    
+    windowController_recalcWindow();
+    recalcTriggerPosition();
+    checkUnfold();
+  });
+
+  window.addEventListener('load', function() {
+    
+    windowController_recalcWindow();
+    recalcTriggerPosition();
+    checkUnfold();
+  });
+
+  /*on phantom trigger enter/exit (for button animation start) */ 
+  let buttonIsDown = true;
+  const observer = new IntersectionObserver(entries => {
+    let buttonFullProject = document.getElementById("preview_buttonFullProject");
+    let buttonFullProject_arrow = document.getElementById("iddqd101");
+
+    const isIntersectingValue = entries[0].isIntersecting;
+    if(isIntersectingValue){
+      buttonIsDown = false;
+      
+      buttonFullProject.style.height = "288px";
+      buttonFullProject.style.bottom = "90px"; 
+      /*buttonFullProject.style.right = "200px"; */
+
+      buttonFullProject_arrow.style["border-top"] = "143px solid transparent";
+      buttonFullProject_arrow.style["border-bottom"] = "143px solid transparent";
+      buttonFullProject_arrow.style.animation = "arrow_slideTop 1s ease";
+      buttonFullProject.style.animation = "slideTop 1s ease"; 
+    }
+    else{
+      if(buttonIsDown){
+        return;
+      }
+      buttonIsDown = true;
+
+      buttonFullProject.style.height = "61px";
+      buttonFullProject.style.bottom = "8px"; 
+      /*buttonFullProject.style.right = "50px"; */
+      
+      buttonFullProject_arrow.style["border-top"] = "30px solid transparent";
+      buttonFullProject_arrow.style["border-bottom"] = "30px solid transparent";
+      buttonFullProject_arrow.style.animation = "arrow_slideBottom 0.5s ease";
+      buttonFullProject.style.animation = "slideBottom 0.5s ease";
+    }
+  })
+
+  observer.observe(document.getElementById("phantomTrigger"));
+
+  const projectPreview_buttonFullProject_width = 228;
+  const projectPreview_buttonFullProject_padding = 22;
+
+  fullProject_button_unfold_enabled = false;
+
+  function recalcTriggerPosition(){
+    disableTrigger(); // to get the correct scroll length
+
+    scrollLength = document.getElementById('projectPreview_outer').scrollWidth;
+    boxWidth = document.getElementById('projectPreview_outer').offsetWidth;
+
+    columnWidth = document.getElementById('preview_scrollableContent').offsetWidth;
+    numberOfColumns = Math.floor( (scrollLength) / (columnWidth+22));
+
+    if(boxWidth > 1100){
+      swiper.params.slidesPerView = 2;
+    }
+    else{
+      swiper.params.slidesPerView = 1;
+    }
+
+    document.getElementById('phantomColumn').style.width = boxWidth - columnWidth - 80 + "px";
+    document.getElementById('phantomColumn').style.display = "block"
+
+    if(numberOfColumns == 1){  
+      if(boxWidth > (13 + columnWidth + 228 + 22 + 50)){
+        document.getElementById('phantomColumn').style.left = columnWidth + 50 + "px"; //!!!!PELIGRO!!!! recalculate it
+        document.getElementById('phantomTrigger').style.display = "block"
+        return;
+      }else{
+        document.getElementById('phantomTrigger').style.display = "none"
+        return;
+      }
+    }
+
+    if(boxWidth < windowMaxSize-1){
+      document.getElementById('phantomColumn').style.left = (scrollLength) + 50 + "px"; //!!!!PELIGRO!!!! recalculate it
+      document.getElementById('phantomTrigger').style.display = "none"
+      return;
+    }
+
+    document.getElementById('phantomColumn').style.left = (scrollLength) + 50 + "px"; //!!!!PELIGRO!!!! recalculate it
+    document.getElementById('phantomTrigger').style.display = "block"
+    return;
+
+    /*hasSingleColumnOnly = false;
+
+    console.log("boxWidth: "+ boxWidth + " scrollLength: " + scrollLength + " hasSingleColumnOnly: " + hasSingleColumnOnly)
+    console.log("columnWidth: " + columnWidth);
+    console.log("numberOfColumns: " + numberOfColumns);
+    console.log("-----------------");
+
+    if(isFullScreen){
+      document.getElementById('phantomColumn').style.left = (contentScrollLength) + 50 + "px"; //!!!!PELIGRO!!!! recalculate it
+      document.getElementById('phantomColumn').style.display = "block"
+    }
+
+    if(!isFullScreen){
+      document.getElementById('phantomColumn').style.left = (s1365 - 200-50) + "px"; //!!!!PELIGRO!!!! recalculate it
+      document.getElementById('phantomColumn').style.display = "block"
+      
+      console.log(document.getElementById('phantomColumn').style.left)
+    }*/
+  }
+
+  function disableTrigger(){
+    document.getElementById('phantomColumn').style.display = "none"
+  }
+
+  function checkUnfold(){
+    if(isFullScreen){
+      fullProject_button_unfold_enabled = true;
+      return;
+    }
+
+    const projectPreview_textContainer = document.querySelector('.projectPreview_textContainer');
+    const textContainerWidth = projectPreview_textContainer.offsetWidth;
+
+    console.log("textContainerWidth:" + textContainerWidth);
+  }
+
+  function renameMe(){
+    //document.getElementById(preview_buttonFullProject);
+    
+  }
+
+</script>
+
+
+<script>
+
 </script>
