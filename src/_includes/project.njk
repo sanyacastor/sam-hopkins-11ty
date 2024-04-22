@@ -7,110 +7,67 @@ layout: base.njk
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
 
 <body>
-    {% set project = {
-        data: {
-            title: title,
-            dates: dates,
-            collaborators: collaborators,
-            cardDescription: cardDescription
-        }
-    } %}
+  {% set project = {
+      data: {
+          title: title,
+          dates: dates,
+          collaborators: collaborators,
+          cardDescription: cardDescription
+      }
+  } %}
     <!--link rel="stylesheet" href="bundle.css"-->
-    <article>
-      <div class='container'>
-        <div class="projectView_container">
-          <div class="projectView_sideBar">
-              <div class="projectView_cardSlot">
-                        {% include 'summary-card.njk'  %}
-              </div>
-              <div class="projectView_photoSlot">
-                        <div class="swiper mySwiper">
-                          <div class="swiper-wrapper" id="projectView_swiperWrapper">
-                          </div>
-                          <div class="swiper-button-next"></div>
-                          <div class="swiper-button-prev"></div>
-                          <div class="swiper-pagination"></div>
-                        </div>
-              </div>
+  <article>
+    <div class='container'>
+      <div class="projectView_container">
+        <div class="projectView_sideBar">
+          <div class="projectView_cardSlot">
+            {% include 'summary-card.njk'  %}
           </div>
-          <div class="projectView_blockText">
-            <div id="projectView_outer">
-              <div class="projectView_ScrollArticle" id="scrollArticle">
-                  {{content | safe}}
-                  <div class="projectView_phantomColumn"> <!--!!!PELIGRO!!! column width--></div>
+          <div class="projectView_photoSlot">
+            <div class="swiper mySwiper">
+              <div class="swiper-wrapper" id="projectView_swiperWrapper">
               </div>
+              <div class="swiper-button-next"></div>
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-pagination"></div>
+            </div>
           </div>
-          </div>
-
-          <div class="projectView_navigation" id="projectView_scrollNavBar">
-              0 1 2 3 4
-          <div>
         </div>
+        <div class="projectView_blockText">
+          <div id="projectView_outer">
+            <div class="projectView_ScrollArticle" id="scrollArticle">
+              <!--scrollable main text content-->
+              <div class="hackColumn" id="firstHackColumn"></div>
+              {{content | safe}}
+              <div class="projectView_phantomColumn" id="previewPhantomColumn"> <!--!!!PELIGRO!!! column width--></div>
+              <div class="hackColumn" id="lastHackColumn"></div>
+              <!--/scrollable main text content-->
+          </div>
+        </div>
+        </div>
+
+        <div class="projectView_navigation" id="projectView_scrollNavBar">
+            0 1 2 3 4
+        <div>
       </div>
-    </article>
+    </div>
+  </article>
 
     <script>
-      // use a script tag or an external JS file
-      document.addEventListener("DOMContentLoaded", (event) => {
-       // gsap code here!
-      });
-     
+      document.addEventListener("DOMContentLoaded", (event) => { /* gsap code */});
     </script>
 
     <script>
       let checkpoints;
       let current_checkpoint_index = 0;
+      let windowColumnsPerPage = 1;
+      let windowColumnWidth = 416;
 
-      function getClosestCheckpointIndex(fraction){
-        let closest = checkpoints.reduce((prev, curr) => Math.abs(curr - fraction) < Math.abs(prev - fraction) ? curr : prev);
-        return checkpoints.indexOf(closest);
-      }
+      const hscrollContent = document.querySelector('.projectView_ScrollArticle');
+      const hscrollOuter = document.querySelector('projectView_outer');
 
-      function selectCurrentCheckpoint(){
-        for (let i = 0; i < checkpoints.length; i++) {
-          document.getElementById('navButton'+i).classList.remove('active');
-        }
-        document.getElementById('navButton'+current_checkpoint_index).classList.add('active');
-      }
-
-      const setScrollFraction = (newFrac) => {
-        console.log("setScrollFraction( " + newFrac + ")");
-        console.log("targetCheckpoint: " + getClosestCheckpointIndex(newFrac) + "checkpointValue: " + checkpoints[getClosestCheckpointIndex(newFrac)]);
-        console.log("NotImplementedException");
-        current_checkpoint_index = getClosestCheckpointIndex(newFrac);
-        newFrac = checkpoints[current_checkpoint_index];
-        selectCurrentCheckpoint();
-
-        newFrac = Math.max(0, Math.min(newFrac, 1));
-        
-        swipeToFraction(newFrac);
-
-        window.targetScrollFraction = newFrac;
-        //window.currentScrollFraction = newFrac;
-
-        history.pushState(null, null, "?persent=" + newFrac * 100);
-
-        let columnGap = parseInt(getComputedStyle(document.getElementById('scrollArticle')).columnGap);
-        console.log("[[[]]]>}>}>}>columnGap: " + columnGap);
-        gsap.to(  document.getElementById('projectView_outer'),{
-                    scrollLeft: newFrac * (document.getElementById('projectView_outer').scrollWidth+columnGap),
-                    duration: 0.5, ease: "power2.inOut"
-                  });
-        //document.getElementById('projectView_outer').scrollLeft = newFrac * document.getElementById('projectView_outer').scrollWidth;
-      }
-
-      const scrollStep = (pages) =>{
-        console.log("scrollStep( " + parseInt( pages ) + ")");
-
-        frac = window.targetScrollFraction;
-        frac = Math.min(1, frac + pages*window.scrollStepPercent / 100);
-        frac = Math.max(0, frac);
-
-        setScrollFraction(frac);
-      }
-
-      /*deprecated*/ const scrollStepRight = () => {scrollStep(window.columnsPerPage);}
-      /*deprecated*/ const scrollStepLeft = () => {scrollStep(-1*window.columnsPerPage);}
+      /*deprecated*/ const scrollStepRight = () => {scrollStep(windowColumnsPerPage);}
+      /*deprecated*/ const scrollStepLeft = () => {scrollStep(-1*windowColumnsPerPage);}
 
       const scrollNextCheckpoint = () => {
         current_checkpoint_index++;
@@ -125,19 +82,56 @@ layout: base.njk
           current_checkpoint_index = 0;
         setScrollFraction(checkpoints[current_checkpoint_index]);
       }
+      const scrollStep = (pages) =>{
+        console.log("scrollStep( " + parseInt( pages ) + ")");
 
-      document.getElementById('projectView_outer').addEventListener('wheel', function (e) {
-          var delta = e.wheelDelta ? e.wheelDelta : -e.deltaY;
+        frac = window.targetScrollFraction;
+        frac = Math.min(1, frac + pages*window.scrollStepPercent / 100);
+        frac = Math.max(0, frac);
 
-          if(delta > 0){
-            scrollPrevCheckpoint(); //scrollStepLeft();
-          } else {
-            scrollNextCheckpoint(); //scrollStepRight();
-          }
-      }, false);
+        setScrollFraction(frac);
+      }
+      function getClosestCheckpointIndex(fraction){
+        let closest = checkpoints.reduce((prev, curr) => Math.abs(curr - fraction) < Math.abs(prev - fraction) ? curr : prev);
+        return checkpoints.indexOf(closest);
+      }
+      function selectCurrentCheckpoint(){
+        for (let i = 0; i < checkpoints.length; i++) {
+          document.getElementById('navButton'+i).classList.remove('active');
+        }
+        document.getElementById('navButton'+current_checkpoint_index).classList.add('active');
+      }
+
+      const setScrollFraction = (newFrac) => {
+        current_checkpoint_index = getClosestCheckpointIndex(newFrac);
+        newFrac = checkpoints[current_checkpoint_index];
+        selectCurrentCheckpoint();
+
+        newFrac = Math.max(0, Math.min(newFrac, 1));
+        
+        swipeImageToFraction(newFrac);
+
+        window.targetScrollFraction = newFrac;
+        updateSlug(newFrac);
+
+        scrollTwineStart(newFrac);
+        //document.getElementById('projectView_outer').scrollLeft = newFrac * document.getElementById('projectView_outer').scrollWidth;
+      }
+
+      function updateSlug(newFrac){
+        history.replaceState(null, null, "?persent=" + newFrac * 100);
+      }
+
+      function scrollTwineStart(newFrac){
+        let columnGap = parseInt(getComputedStyle(hscrollContent).columnGap);
+        gsap.to(  document.getElementById('projectView_outer'),{
+                    scrollLeft: newFrac * (document.getElementById('projectView_outer').scrollWidth+columnGap),
+                    duration: 0.5, ease: "power2.inOut"
+                });
+      }
 
       function getListOfImages() {
-        str = document.getElementById('scrollArticle').innerHTML;   
+        str = hscrollContent.innerHTML;
 
         console.log(str)
 
@@ -161,6 +155,7 @@ layout: base.njk
         swiper.update();
       }
 
+      //==============Callbacks================
       window.addEventListener('load', function() {
         console.log("get list of images")
         getListOfImages();
@@ -170,17 +165,37 @@ layout: base.njk
         processSlug();
         //window.history.pushState({"html":html,"pageTitle":"fdsfsdf"},"", "somePath");
       });
-
       window.addEventListener('resize', function() {
         onResize();
       });
+      document.getElementById('projectView_outer').addEventListener('wheel', function (e) {
+          var delta = e.wheelDelta ? e.wheelDelta : -e.deltaY;
+
+          if(delta > 0){
+            scrollPrevCheckpoint(); //scrollStepLeft();
+          } else {
+            scrollNextCheckpoint(); //scrollStepRight();
+          }
+      }, false);
+      document.getElementById('projectView_outer').addEventListener('keydown', function(e) {
+        if (e.keyCode === 37) {
+          scrollPrevCheckpoint();
+        } else
+        if (e.keyCode === 39) {
+          scrollNextCheckpoint();
+        }
+      });
+      //=============/Callbacks================
+
 
       function hidePhantomColumn(){
-        document.querySelector('.projectView_phantomColumn').style.display = 'none';
+        document.getElementById('previewPhantomColumn').style.display = 'none';
       }
-
+      function showPhantomColumn(){
+        document.getElementById('previewPhantomColumn').style.display = 'block';
+      }
       function updatePhantomColumn(){
-        if(window.columnsPerPage == 1){
+        if(windowColumnsPerPage == 1){
           hidePhantomColumn();
           return;
         }
@@ -188,58 +203,94 @@ layout: base.njk
         if (window.numberOfColumns % 2 === 0) {
           hidePhantomColumn();
         } else {
-          document.querySelector('.projectView_phantomColumn').style.display = 'block';
-          window.numberOfColumns = numberOfColumns+1;
+          showPhantomColumn();
+          window.numberOfColumns = window.numberOfColumns+1;
+        }
+
+        if(window.numberOfColumns < 1 || windowColumnsPerPage > 2){
+          console.log("Error: window.numberOfColumns < 1 || windowColumnsPerPage > 2 " + window.numberOfColumns + " " + windowColumnsPerPage);
         }
       }
 
       function recalcColumnsPerPage(){
         var projectViewOuter = document.getElementById('projectView_outer');
         var elementWidth = projectViewOuter.offsetWidth;
-        window.columnsPerPage = parseInt( elementWidth/(416+15) ); //!!!PELIGRO!!! wrong magic numbers, parseint
-        console.log("columnsPerPage: " + window.columnsPerPage);
-      }
+        windowColumnsPerPage = parseInt( elementWidth/(416+15) ); //!!!PELIGRO!!! wrong magic numbers, parseint
 
+        if(windowColumnsPerPage > 1){
+          windowColumnsPerPage = 2;
+        }
+        else{
+          windowColumnsPerPage = 1;
+        }
+      }
       function recalcColumnWidth(){
-        if(window.columnsPerPage == 2){
-          window.columnWidth = 416; //!!!PELIGRO!!! magic numbers
-          
-          document.getElementById('scrollArticle').style.columnWidth = window.columnWidth + 'px';
-          console.log(">>>>>columnWidth: " + window.columnWidth);
+        if(windowColumnsPerPage == 2){
+          windowColumnWidth = 416; //!!!PELIGRO!!! magic numbers
+          hscrollContent.style.columnWidth = windowColumnWidth + 'px';
           return;  
         }
         
-        /*if(window.columnsPerPage > 2){
-          console.log("window.columnsPerPage > 2: " + window.columnsPerPage);
-          window.columnWidth = 416; //!!!PELIGRO!!! magic numbers
-          
-          document.getElementById('scrollArticle').style.columnWidth = window.columnWidth + 'px';
-          console.log(">>>>>columnWidth: " + window.columnWidth);
-          return; 
-        }*/
-
         var projectViewOuter = document.getElementById('projectView_outer');
         var elementWidth = projectViewOuter.offsetWidth;
-        window.columnWidth = elementWidth-30;//!!!PELIGRO!!! magic numbers
+        windowColumnWidth = elementWidth-60;//!!!PELIGRO!!! magic numbers
 
-        
-        document.getElementById('scrollArticle').style.columnWidth = window.columnWidth + 'px';
-
-        console.log(">>>>>columnWidth: " + window.columnWidth);
+        hscrollContent.style.columnWidth = windowColumnWidth + 'px';
       }
-      
       function recalcNumberOfColumns(){
         hidePhantomColumn();
-
-        let columnGap = parseInt(getComputedStyle(document.getElementById('scrollArticle')).columnGap);
-        console.log("---->}>}>}>columnGap: " + columnGap);
-        numberOfColumns = (document.getElementById('projectView_outer').scrollWidth+columnGap) / (window.columnWidth+columnGap); //!!!PELIGRO!!! magic number for padding
-        console.log("numberOfColumns before floor: " + numberOfColumns);
-        numberOfColumns = Math.floor(numberOfColumns);//Math.round(numberOfColumns);
-        console.log("numberOfColumns after floor: " + numberOfColumns);
-        window.numberOfColumns = numberOfColumns;
-        
+        window.numberOfColumns = getNumberOfColumns_dirtiest_way_ever();
         updatePhantomColumn();
+        window.numberOfColumns = getNumberOfColumns_dirtiest_way_ever();
+      }
+      function getNumberOfColumns_dirtiest_way_ever(){
+        //cycle through all elements and increment counter
+        //What the fuck wrong with me?!
+        let ncols = 1;
+        let rightmost = document.getElementById('firstHackColumn').getBoundingClientRect().left;
+        //get all elements
+        let elements = hscrollContent.children;
+
+        for (let i = 0; i < elements.length; i++) {
+          let element = elements[i];
+          let rect = element.getBoundingClientRect();
+          console.log("element pos: " + rect.left);
+          if (rect.left > rightmost + 100) {
+            rightmost = rect.left;
+            ncols++;
+          }
+        }
+
+        ncols = Math.floor(ncols);
+        return ncols;
+      }
+
+      function getNumberOfColumnsDepr(){
+        let columnGap = parseInt(getComputedStyle(hscrollContent).columnGap);
+        console.log("---->}>}>}>columnGap: " + columnGap);
+
+        firstHackColumn = document.getElementById('firstHackColumn');
+        lastHackColumn = document.getElementById('lastHackColumn');
+        firstPositionLeft = firstHackColumn.getBoundingClientRect().left;
+        firstTotalWidth = firstHackColumn.getBoundingClientRect().width;
+        lastPositionLeft = lastHackColumn.getBoundingClientRect().left;
+
+        marginLeft = 30;
+        if(windowColumnsPerPage == 2)
+          marginLeft = 0;//firstHackColumn.style.marginLeft;
+
+        marginRight = firstHackColumn.style.marginRight;
+
+        console.log("firstPositionLeft: " + firstPositionLeft
+                     + " lastPositionLeft: " + lastPositionLeft
+                     + " firstTotalWidth: " + firstTotalWidth
+                     + " marginLeft: " + marginLeft
+                     + " marginRight: " + marginRight
+                     + " width/(colWidth + gap)" + (lastPositionLeft - firstPositionLeft) / (windowColumnWidth+columnGap+ marginLeft + marginRight ));
+
+        ret = 1+(lastPositionLeft - firstPositionLeft) / (windowColumnWidth+columnGap+ marginLeft+ marginRight); 
+        console.log("getNumberOfColumns: " + ret);
+        return ret;
       }
 
       function recalcScrollStep(){
@@ -247,48 +298,54 @@ layout: base.njk
         window.scrollStepPercent = 100 / numberOfColumns;
       }
 
-      function redrawNavButtons(){
-        document.getElementById('projectView_scrollNavBar').innerHTML = '';
-        newNav = '';
-        
-        if(window.columnsPerPage == 0){
-          console.log("window.columnsPerPage == 0");
+      function recalcScrollCheckpoints(){
+        if(windowColumnsPerPage == 0){
+          console.log("windowColumnsPerPage == 0");
           return;
         }
 
-
-        numberOfButtons = window.numberOfColumns/window.columnsPerPage;
-        numberOfButtons = Math.ceil(numberOfButtons);
-
-        console.log("numberOfColumns: " + window.numberOfColumns);
-        console.log("window.columnsPerPage: " + window.columnsPerPage);
-        console.log("numberOfButtons: " + numberOfButtons);
+        numberOfCheckpoints = window.numberOfColumns/windowColumnsPerPage;
+        numberOfCheckpoints = Math.ceil(numberOfCheckpoints);
 
         checkpoints = [];
 
-        newNav += `<button class="projectView_navigationButtonNextCheckpoint"
-                           id="navButton${numberOfButtons}"
+        for (let i = numberOfCheckpoints-1; i >= 0; i--) {
+          targetPersent = parseFloat((  (i*windowColumnsPerPage) * 100 / window.numberOfColumns).toFixed(2));
+          checkpoints.unshift(targetPersent/100);
+        }
+      }
+
+      function redrawNavButtons(){
+        document.getElementById('projectView_scrollNavBar').innerHTML = '';
+        newNav = '';
+
+        numberOfButtons = window.numberOfColumns/windowColumnsPerPage;
+        numberOfButtons = Math.ceil(numberOfButtons);
+
+        newNav += createNavNextButton();
+
+        for(let i=checkpoints.length-1; i >= 0 ; i--)
+          newNav += createNavButton(i, checkpoints[i]);
+
+        document.getElementById('projectView_scrollNavBar').innerHTML = newNav;
+        document.getElementById('navButton0').classList.add('active');
+      }
+
+      function createNavNextButton(){
+        return `<button class="projectView_navigationButtonNextCheckpoint"
+                           id="navButtonScrollToNextCheckpoint"
                            onclick="scrollNextCheckpoint()">
                            >>
                   </button>`;
-
-        for (let i = numberOfButtons-1; i >= 0; i--) {
-          targetPersent = parseFloat((  (i*window.columnsPerPage) * 100 / window.numberOfColumns).toFixed(2));
-          
-          newNav += `<button class="projectView_navigationDigit"
-                             id="navButton${i}"
-                             targetPersent="${targetPersent}"
-                             targetCheckpoint="${numberOfButtons-i}"
-                             onclick="setScrollFraction(${targetPersent/100})">
-                             ${i}
+      }
+      function createNavButton(n, checkp){
+        return `<button class="projectView_navigationDigit"
+                             id="navButton${n}"
+                             targetPersent="${checkp}"
+                             targetCheckpoint="${n}"
+                             onclick="setScrollFraction(${checkp})">
+                             ${n}
                     </button>`;
-
-            checkpoints.unshift(targetPersent/100);
-        }
-
-        console.log("checkpoints: " + checkpoints);
-        document.getElementById('projectView_scrollNavBar').innerHTML = newNav;
-        document.getElementById('navButton0').classList.add('active');
       }
 
       function attractScrollToNearestColumn(){
@@ -301,6 +358,7 @@ layout: base.njk
         recalcNumberOfColumns();
         recalcScrollStep();
 
+        recalcScrollCheckpoints();
         redrawNavButtons();
         attractScrollToNearestColumn();
       }
@@ -320,7 +378,6 @@ layout: base.njk
         columnNumber = parseInt(frac/window.scrollStep);
         newPosition = columnNumber*window.scrollStep;
 
-        //console.log("frac: "+ frac + " scrollStep:" + window.scrollStep + " number: " + columnNumber + " newPosition: " + newPosition);
         setScrollFraction(newPosition);
       }
     </script>
@@ -342,7 +399,7 @@ layout: base.njk
       }
     });
 
-    function swipeToFraction(persent){
+    function swipeImageToFraction(persent){
       nSlides = swiper.slides.length;
 
       if(nSlides == 0)
@@ -351,17 +408,5 @@ layout: base.njk
       targetSlideNumber = parseInt(nSlides * persent);
 
       swiper.slideTo(targetSlideNumber);
-    }
-
-    function printSwiper(){
-      console.log("current index:" + swiper.realIndex);
-      console.log("number of slides:" + swiper.slides.length);
-      
-      if(swiper.slides.length == 0)
-        return;
-
-      console.log("current persent:" + swiper.realIndex/swiper.slides.length);
-      
-      swipeToFraction(0.99);
     }
   </script>
