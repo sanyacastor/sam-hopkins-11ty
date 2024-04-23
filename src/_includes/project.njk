@@ -45,7 +45,6 @@ layout: base.njk
           </div>
         </div>
         </div>
-
         <div class="projectView_navigation" id="projectView_scrollNavBar">
             0 1 2 3 4
         <div>
@@ -62,14 +61,17 @@ layout: base.njk
       let current_checkpoint_index = 0;
       let windowColumnsPerPage = 1;
       let windowColumnWidth = 416;
+      let windowScrollStep = 0.01;
+      let windowScrollStepPercent = 1;
+      let windowtargetScrollFraction = 0;
+      let windownumberOfColumns = 1;
 
       const hscrollContent = document.querySelector('.projectView_ScrollArticle');
       const hscrollOuter = document.querySelector('projectView_outer');
 
-      /*deprecated*/ const scrollStepRight = () => {scrollStep(windowColumnsPerPage);}
-      /*deprecated*/ const scrollStepLeft = () => {scrollStep(-1*windowColumnsPerPage);}
-
       const scrollNextCheckpoint = () => {
+        current_checkpoint_index = Math.floor(current_checkpoint_index);
+
         current_checkpoint_index++;
         if(current_checkpoint_index >= checkpoints.length)
           current_checkpoint_index = checkpoints.length-1;
@@ -77,6 +79,8 @@ layout: base.njk
         setScrollFraction(checkpoints[current_checkpoint_index]);
       }
       const scrollPrevCheckpoint = () => {
+        current_checkpoint_index = Math.ceil(current_checkpoint_index);
+
         current_checkpoint_index--;
         if(current_checkpoint_index < 0)
           current_checkpoint_index = 0;
@@ -85,8 +89,8 @@ layout: base.njk
       const scrollStep = (pages) =>{
         console.log("scrollStep( " + parseInt( pages ) + ")");
 
-        frac = window.targetScrollFraction;
-        frac = Math.min(1, frac + pages*window.scrollStepPercent / 100);
+        frac = windowtargetScrollFraction;
+        frac = Math.min(1, frac + pages*windowScrollStepPercent / 100);
         frac = Math.max(0, frac);
 
         setScrollFraction(frac);
@@ -111,11 +115,10 @@ layout: base.njk
         
         swipeImageToFraction(newFrac);
 
-        window.targetScrollFraction = newFrac;
+        windowtargetScrollFraction = newFrac;
         updateSlug(newFrac);
 
         scrollTwineStart(newFrac);
-        //document.getElementById('projectView_outer').scrollLeft = newFrac * document.getElementById('projectView_outer').scrollWidth;
       }
 
       function updateSlug(newFrac){
@@ -124,8 +127,10 @@ layout: base.njk
 
       function scrollTwineStart(newFrac){
         let columnGap = parseInt(getComputedStyle(hscrollContent).columnGap);
+        console.log("columnGap: "+columnGap);
+        console.log("");
         gsap.to(  document.getElementById('projectView_outer'),{
-                    scrollLeft: newFrac * (document.getElementById('projectView_outer').scrollWidth+columnGap),
+                    scrollLeft: newFrac * (document.getElementById('projectView_outer').scrollWidth + columnGap/2),
                     duration: 0.5, ease: "power2.inOut"
                 });
       }
@@ -172,21 +177,28 @@ layout: base.njk
           var delta = e.wheelDelta ? e.wheelDelta : -e.deltaY;
 
           if(delta > 0){
-            scrollPrevCheckpoint(); //scrollStepLeft();
+            scrollPrevCheckpoint();
           } else {
-            scrollNextCheckpoint(); //scrollStepRight();
+            scrollNextCheckpoint();
           }
       }, false);
-      document.getElementById('projectView_outer').addEventListener('keydown', function(e) {
+      document.getElementById('projectView_swiperWrapper').addEventListener('wheel', function(e) {
+        var delta = e.wheelDelta ? e.wheelDelta : -e.deltaY;
+
+        if(delta > 0){
+          swiper.slidePrev();
+        } else {
+          swiper.slideNext();
+        }
+      });
+      document.addEventListener('keydown', function(e) { 
         if (e.keyCode === 37) {
           scrollPrevCheckpoint();
-        } else
-        if (e.keyCode === 39) {
+        } else if (e.keyCode === 39) {
           scrollNextCheckpoint();
         }
       });
       //=============/Callbacks================
-
 
       function hidePhantomColumn(){
         document.getElementById('previewPhantomColumn').style.display = 'none';
@@ -200,15 +212,15 @@ layout: base.njk
           return;
         }
 
-        if (window.numberOfColumns % 2 === 0) {
+        if (windownumberOfColumns % 2 === 0) {
           hidePhantomColumn();
         } else {
           showPhantomColumn();
-          window.numberOfColumns = window.numberOfColumns+1;
+          windownumberOfColumns = windownumberOfColumns+1;
         }
 
-        if(window.numberOfColumns < 1 || windowColumnsPerPage > 2){
-          console.log("Error: window.numberOfColumns < 1 || windowColumnsPerPage > 2 " + window.numberOfColumns + " " + windowColumnsPerPage);
+        if(windownumberOfColumns < 1 || windowColumnsPerPage > 2){
+          console.log("Error: windownumberOfColumns < 1 || windowColumnsPerPage > 2 " + windownumberOfColumns + " " + windowColumnsPerPage);
         }
       }
 
@@ -239,9 +251,9 @@ layout: base.njk
       }
       function recalcNumberOfColumns(){
         hidePhantomColumn();
-        window.numberOfColumns = getNumberOfColumns_dirtiest_way_ever();
+        windownumberOfColumns = getNumberOfColumns_dirtiest_way_ever();
         updatePhantomColumn();
-        window.numberOfColumns = getNumberOfColumns_dirtiest_way_ever();
+        windownumberOfColumns = getNumberOfColumns_dirtiest_way_ever();
       }
       function getNumberOfColumns_dirtiest_way_ever(){
         //cycle through all elements and increment counter
@@ -265,37 +277,9 @@ layout: base.njk
         return ncols;
       }
 
-      function getNumberOfColumnsDepr(){
-        let columnGap = parseInt(getComputedStyle(hscrollContent).columnGap);
-        console.log("---->}>}>}>columnGap: " + columnGap);
-
-        firstHackColumn = document.getElementById('firstHackColumn');
-        lastHackColumn = document.getElementById('lastHackColumn');
-        firstPositionLeft = firstHackColumn.getBoundingClientRect().left;
-        firstTotalWidth = firstHackColumn.getBoundingClientRect().width;
-        lastPositionLeft = lastHackColumn.getBoundingClientRect().left;
-
-        marginLeft = 30;
-        if(windowColumnsPerPage == 2)
-          marginLeft = 0;//firstHackColumn.style.marginLeft;
-
-        marginRight = firstHackColumn.style.marginRight;
-
-        console.log("firstPositionLeft: " + firstPositionLeft
-                     + " lastPositionLeft: " + lastPositionLeft
-                     + " firstTotalWidth: " + firstTotalWidth
-                     + " marginLeft: " + marginLeft
-                     + " marginRight: " + marginRight
-                     + " width/(colWidth + gap)" + (lastPositionLeft - firstPositionLeft) / (windowColumnWidth+columnGap+ marginLeft + marginRight ));
-
-        ret = 1+(lastPositionLeft - firstPositionLeft) / (windowColumnWidth+columnGap+ marginLeft+ marginRight); 
-        console.log("getNumberOfColumns: " + ret);
-        return ret;
-      }
-
       function recalcScrollStep(){
-        window.scrollStep = 1/numberOfColumns;
-        window.scrollStepPercent = 100 / numberOfColumns;
+        windowScrollStep = 1/windownumberOfColumns;
+        windowScrollStepPercent = 100 / windownumberOfColumns;
       }
 
       function recalcScrollCheckpoints(){
@@ -304,13 +288,13 @@ layout: base.njk
           return;
         }
 
-        numberOfCheckpoints = window.numberOfColumns/windowColumnsPerPage;
+        numberOfCheckpoints = windownumberOfColumns/windowColumnsPerPage;
         numberOfCheckpoints = Math.ceil(numberOfCheckpoints);
 
         checkpoints = [];
 
         for (let i = numberOfCheckpoints-1; i >= 0; i--) {
-          targetPersent = parseFloat((  (i*windowColumnsPerPage) * 100 / window.numberOfColumns).toFixed(2));
+          targetPersent = parseFloat((  (i*windowColumnsPerPage) * 100 / windownumberOfColumns).toFixed(2));
           checkpoints.unshift(targetPersent/100);
         }
       }
@@ -319,7 +303,7 @@ layout: base.njk
         document.getElementById('projectView_scrollNavBar').innerHTML = '';
         newNav = '';
 
-        numberOfButtons = window.numberOfColumns/windowColumnsPerPage;
+        numberOfButtons = windownumberOfColumns/windowColumnsPerPage;
         numberOfButtons = Math.ceil(numberOfButtons);
 
         newNav += createNavNextButton();
@@ -375,8 +359,8 @@ layout: base.njk
 
         frac = parseFloat(parameter) / 100;
         
-        columnNumber = parseInt(frac/window.scrollStep);
-        newPosition = columnNumber*window.scrollStep;
+        columnNumber = parseInt(frac/windowScrollStep);
+        newPosition = columnNumber*windowScrollStep;
 
         setScrollFraction(newPosition);
       }
