@@ -163,6 +163,7 @@ pagination:
 
   let checkpoints;
   let currentChecpointIndex = 0;
+  let buttonCanBeUnfolded = false;
 
   function recalcStep(){
     let scrollLength = document.getElementById('projectPreview_outer').scrollWidth;
@@ -173,7 +174,10 @@ pagination:
     for(let i = 0; i < numberOfSteps; i++){
       checkpoints.push(i * boxWidth);
     }
-    checkpoints[checkpoints.length-1] = scrollLength;
+    //checkpoints[checkpoints.length-1] = scrollLength;
+
+    if(checkpoints.length == 1)
+      checkpoints[0] = 0;
   }
 
   function scrollTextLeft(){
@@ -194,8 +198,37 @@ pagination:
 
     moveToCheckpoint(nextCheckpoint);
   }
+
+  function updateButtonFoldState(){
+    console.log("updateButtonFoldState");
+
+    if( !buttonCanBeUnfolded || !checkpointIsTheLast())
+    {
+      console.log("not last");
+      foldFullProjectButton();
+    } else
+    {
+      console.log("last");
+      unfoldFullProjectButton();
+    }
+    
+  }
+/*
+  function updateButtonFoldState(){
+    if(isFullScreen){
+      fullProject_button_unfold_enabled = true;
+      return;
+    }else
+      fullProject_button_unfold_enabled = false;
+
+    const projectPreview_textContainer = document.querySelector('.projectPreview_textContainer');
+    
+    const textContainerWidth = projectPreview_textContainer.offsetWidth;
+    console.log("textContainerWidth:" + textContainerWidth);
+  }*/
+
   function moveToCheckpoint(index){
-    console.log("moveToCheckpoint" + currentChecpointIndex + ">" + index);
+    //console.log("moveToCheckpoint" + currentChecpointIndex + ">" + index);
 
     currentChecpointIndex = index;
 
@@ -207,21 +240,11 @@ pagination:
                 });
   }
 
-  function updateButtonFoldState(){
-    console.log("updateButtonFoldState");
-
-    if(checkpointIsTheLast()){
-      console.log("last");
-      //unfoldFullProjectButton();
-    }
-    else{
-      console.log("not last");
-      //foldFullProjectButton();
-    }
-  }
-
   function checkpointIsTheLast(){
-    return currentChecpointIndex == checkpoints.length - 1;
+    if(checkpoints == null || checkpoints.length == 0)
+      return false;
+
+    return currentChecpointIndex == (checkpoints.length - 1);
   }
 
   function unfoldFullProjectButton(){
@@ -302,15 +325,18 @@ pagination:
     document.getElementById('phantomColumn').style.width = boxWidth - columnWidth - 80 + "px";
     document.getElementById('phantomColumn').style.display = "block"
     console.log("a")
+    buttonCanBeUnfolded = true;
 
     if(numberOfColumns == 1){  
       if(boxWidth > (13 + columnWidth + 228 + 22 + 50)){
         document.getElementById('phantomColumn').style.left = columnWidth + 50 + "px"; //!!!!PELIGRO!!!! recalculate it
         document.getElementById('phantomTrigger').style.display = "block"
+        buttonCanBeUnfolded = true;
         console.log("b");
         return;
       }else{
         document.getElementById('phantomTrigger').style.display = "none"
+        buttonCanBeUnfolded = false;
         console.log("c");
         return;
       }
@@ -319,12 +345,14 @@ pagination:
     if(boxWidth < windowMaxSize-1){
       document.getElementById('phantomColumn').style.left = (scrollLength) + 50 + "px"; //!!!!PELIGRO!!!! recalculate it
       document.getElementById('phantomTrigger').style.display = "none"
+      buttonCanBeUnfolded = false;
       console.log("d")
       return;
     }
 
     document.getElementById('phantomColumn').style.left = (scrollLength) + 50 + "px"; //!!!!PELIGRO!!!! recalculate it
     document.getElementById('phantomTrigger').style.display = "block"
+    buttonCanBeUnfolded = true;
     console.log("e")
 
     return;
@@ -332,19 +360,6 @@ pagination:
 
   function disableTrigger(){
     document.getElementById('phantomColumn').style.display = "none"
-  }
-
-  function updateButtonFoldState(){
-    if(isFullScreen){
-      fullProject_button_unfold_enabled = true;
-      return;
-    }else
-      fullProject_button_unfold_enabled = false;
-
-    const projectPreview_textContainer = document.querySelector('.projectPreview_textContainer');
-    
-    const textContainerWidth = projectPreview_textContainer.offsetWidth;
-    console.log("textContainerWidth:" + textContainerWidth);
   }
 
   function renameMe(){
