@@ -34,7 +34,7 @@ pagination:
       </card>
       <pictures>
         <div class="swiper mySwiper">
-          <div class="swiper-wrapper">
+          <div class="swiper-wrapper" id="projectPreview_swiperWrapper">
             {% for image in preview.images %}
               <div class="swiper-slide">
                 <img src='{{ image.url }}' alt='{{ image.alt }}' style='width: 100%; display: block; object-fit: cover; margin: auto;'></img> <!--style='object-fit: cover;'-->
@@ -47,6 +47,13 @@ pagination:
         </div>
       </pictures>
       <!--imgcaption>asd</imgcaption-->
+      <navigationpanel>
+        <div class="navigation_buttons_group">
+          <button class="navigation-button left-button" onclick="scrollTextLeft()">Left</button>
+          <button class="navigation-button right-button" onclick="scrollTextRight()">Right</button>
+          <button class="navigation-button close-button" onclick="window.location.href = '/'">Close</button>
+        </div>
+      </navigationpanel>
       <main>
         <div class = "projectPreview_mainTextContainer">
           <div class="projectPreview_textContainer">
@@ -79,13 +86,31 @@ pagination:
   document
     .getElementById('projectPreview_outer')
     .addEventListener('wheel', function (e) {
+      
       // Cross-browser wheel delta
       var delta = e.wheelDelta
         ? e.wheelDelta
         : -e.deltaY;
-      this.scrollLeft -= (delta);
+      
+        if(delta>0)
+          scrollTextLeft();
+        else
+          scrollTextRight();
+      //  this.scrollLeft -= (delta);
       e.preventDefault();
     }, false);
+
+  document
+    .getElementById('projectPreview_swiperWrapper')
+    .addEventListener('wheel', function(e) {
+      var delta = e.wheelDelta ? e.wheelDelta : -e.deltaY;
+
+      if(delta > 0){
+        swiper.slidePrev();
+      } else {
+        swiper.slideNext();
+      }
+    });
 </script>
 
 
@@ -114,45 +139,117 @@ pagination:
 <script src="/_data/test.js"></script>
 <script src="/_data/windowController.js"></script>
 
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", (event) => { /* gsap code */});
+</script>
+
 <script>
   window.addEventListener('resize', function() {
     
-    windowController_recalcWindow();
-    recalcTriggerPosition();
-    checkUnfold();
+    //windowController_recalcWindow();
+    recalcUnfoldTriggerPosition();
+    updateButtonFoldState();
+    recalcStep();
   });
 
   window.addEventListener('load', function() {
-    
-    windowController_recalcWindow();
-    recalcTriggerPosition();
-    checkUnfold();
+    //windowController_recalcWindow();
+    recalcUnfoldTriggerPosition();
+    updateButtonFoldState();
+    recalcStep();
+    moveToCheckpoint(0);
   });
 
-  /*on phantom trigger enter/exit (for button animation start) */ 
-  let buttonIsDown = true;
-  const observer = new IntersectionObserver(entries => {
-    let buttonFullProject = document.getElementById("preview_buttonFullProject");
-    let buttonFullProject_arrow = document.getElementById("iddqd101");
+  let checkpoints;
+  let currentChecpointIndex = 0;
 
-    const isIntersectingValue = entries[0].isIntersecting;
-    if(isIntersectingValue){
-      buttonIsDown = false;
-      
-      buttonFullProject.style.height = "288px";
-      buttonFullProject.style.bottom = "90px"; 
-      /*buttonFullProject.style.right = "200px"; */
+  function recalcStep(){
+    let scrollLength = document.getElementById('projectPreview_outer').scrollWidth;
+    let boxWidth = document.getElementById('preview_scrollableContent').offsetWidth;
+    let numberOfSteps = Math.floor(scrollLength / boxWidth);
+    
+    checkpoints = [];
+    for(let i = 0; i < numberOfSteps; i++){
+      checkpoints.push(i * boxWidth);
+    }
+    checkpoints[checkpoints.length-1] = scrollLength;
+  }
 
-      buttonFullProject_arrow.style["border-top"] = "143px solid transparent";
-      buttonFullProject_arrow.style["border-bottom"] = "143px solid transparent";
-      buttonFullProject_arrow.style.animation = "arrow_slideTop 1s ease";
-      buttonFullProject.style.animation = "slideTop 1s ease"; 
+  function scrollTextLeft(){
+    let nextCheckpoint = currentChecpointIndex - 1;
+    if(nextCheckpoint < 0){
+      nextCheckpoint = 0;
+    }
+    
+    moveToCheckpoint(nextCheckpoint);
+  }
+
+  function scrollTextRight(){
+    let nextCheckpoint = currentChecpointIndex + 1;
+
+    if(nextCheckpoint >= checkpoints.length){
+      nextCheckpoint = checkpoints.length - 1;
+    }
+
+    moveToCheckpoint(nextCheckpoint);
+  }
+  function moveToCheckpoint(index){
+    console.log("moveToCheckpoint" + currentChecpointIndex + ">" + index);
+
+    currentChecpointIndex = index;
+
+    updateButtonFoldState();
+
+    gsap.to(  document.getElementById('projectPreview_outer'),{
+                    scrollLeft: checkpoints[index],
+                    duration: 0.5, ease: "power2.inOut"
+                });
+  }
+
+  function updateButtonFoldState(){
+    console.log("updateButtonFoldState");
+
+    if(checkpointIsTheLast()){
+      console.log("last");
+      //unfoldFullProjectButton();
     }
     else{
-      if(buttonIsDown){
+      console.log("not last");
+      //foldFullProjectButton();
+    }
+  }
+
+  function checkpointIsTheLast(){
+    return currentChecpointIndex == checkpoints.length - 1;
+  }
+
+  function unfoldFullProjectButton(){
+    if(!buttonIsDown){
+        return;
+      }
+
+    buttonIsDown = false;
+    let buttonFullProject = document.getElementById("preview_buttonFullProject");
+    let buttonFullProject_arrow = document.getElementById("iddqd101");
+    
+    buttonFullProject.style.height = "288px";
+    buttonFullProject.style.bottom = "90px"; 
+    /*buttonFullProject.style.right = "200px"; */
+
+    buttonFullProject_arrow.style["border-top"] = "143px solid transparent";
+    buttonFullProject_arrow.style["border-bottom"] = "143px solid transparent";
+    buttonFullProject_arrow.style.animation = "arrow_slideTop 1s ease";
+    buttonFullProject.style.animation = "slideTop 1s ease"; 
+  }
+  function foldFullProjectButton(){
+    if(buttonIsDown){
         return;
       }
       buttonIsDown = true;
+      
+      let buttonFullProject = document.getElementById("preview_buttonFullProject");
+      let buttonFullProject_arrow = document.getElementById("iddqd101");
 
       buttonFullProject.style.height = "61px";
       buttonFullProject.style.bottom = "8px"; 
@@ -162,24 +259,38 @@ pagination:
       buttonFullProject_arrow.style["border-bottom"] = "30px solid transparent";
       buttonFullProject_arrow.style.animation = "arrow_slideBottom 0.5s ease";
       buttonFullProject.style.animation = "slideBottom 0.5s ease";
-    }
-  })
+  }
 
-  observer.observe(document.getElementById("phantomTrigger"));
+  let buttonIsDown = true;
+  /*const observer = new IntersectionObserver(entries => {
+    let buttonFullProject = document.getElementById("preview_buttonFullProject");
+    let buttonFullProject_arrow = document.getElementById("iddqd101");
+
+    const isIntersectingValue = entries[0].isIntersecting;
+    if(isIntersectingValue){
+      unfoldFullProjectButton();
+    }
+    else{
+      foldFullProjectButton();
+    }
+  })*/
+
+  //observer.observe(document.getElementById("phantomTrigger"));
 
   const projectPreview_buttonFullProject_width = 228;
   const projectPreview_buttonFullProject_padding = 22;
 
   fullProject_button_unfold_enabled = false;
 
-  function recalcTriggerPosition(){
+  function recalcUnfoldTriggerPosition(){
     disableTrigger(); // to get the correct scroll length
 
     scrollLength = document.getElementById('projectPreview_outer').scrollWidth;
     boxWidth = document.getElementById('projectPreview_outer').offsetWidth;
 
     columnWidth = document.getElementById('preview_scrollableContent').offsetWidth;
-    numberOfColumns = Math.floor( (scrollLength) / (columnWidth+22));
+    console.log("numcols: " + (scrollLength) / (columnWidth));
+    numberOfColumns = Math.floor( (scrollLength) / (columnWidth)); //!!!PELIGRO!!!! magic number
 
     if(boxWidth > 1100){
       swiper.params.slidesPerView = 2;
@@ -190,14 +301,17 @@ pagination:
 
     document.getElementById('phantomColumn').style.width = boxWidth - columnWidth - 80 + "px";
     document.getElementById('phantomColumn').style.display = "block"
+    console.log("a")
 
     if(numberOfColumns == 1){  
       if(boxWidth > (13 + columnWidth + 228 + 22 + 50)){
         document.getElementById('phantomColumn').style.left = columnWidth + 50 + "px"; //!!!!PELIGRO!!!! recalculate it
         document.getElementById('phantomTrigger').style.display = "block"
+        console.log("b");
         return;
       }else{
         document.getElementById('phantomTrigger').style.display = "none"
+        console.log("c");
         return;
       }
     }
@@ -205,46 +319,31 @@ pagination:
     if(boxWidth < windowMaxSize-1){
       document.getElementById('phantomColumn').style.left = (scrollLength) + 50 + "px"; //!!!!PELIGRO!!!! recalculate it
       document.getElementById('phantomTrigger').style.display = "none"
+      console.log("d")
       return;
     }
 
     document.getElementById('phantomColumn').style.left = (scrollLength) + 50 + "px"; //!!!!PELIGRO!!!! recalculate it
     document.getElementById('phantomTrigger').style.display = "block"
+    console.log("e")
+
     return;
-
-    /*hasSingleColumnOnly = false;
-
-    console.log("boxWidth: "+ boxWidth + " scrollLength: " + scrollLength + " hasSingleColumnOnly: " + hasSingleColumnOnly)
-    console.log("columnWidth: " + columnWidth);
-    console.log("numberOfColumns: " + numberOfColumns);
-    console.log("-----------------");
-
-    if(isFullScreen){
-      document.getElementById('phantomColumn').style.left = (contentScrollLength) + 50 + "px"; //!!!!PELIGRO!!!! recalculate it
-      document.getElementById('phantomColumn').style.display = "block"
-    }
-
-    if(!isFullScreen){
-      document.getElementById('phantomColumn').style.left = (s1365 - 200-50) + "px"; //!!!!PELIGRO!!!! recalculate it
-      document.getElementById('phantomColumn').style.display = "block"
-      
-      console.log(document.getElementById('phantomColumn').style.left)
-    }*/
   }
 
   function disableTrigger(){
     document.getElementById('phantomColumn').style.display = "none"
   }
 
-  function checkUnfold(){
+  function updateButtonFoldState(){
     if(isFullScreen){
       fullProject_button_unfold_enabled = true;
       return;
-    }
+    }else
+      fullProject_button_unfold_enabled = false;
 
     const projectPreview_textContainer = document.querySelector('.projectPreview_textContainer');
+    
     const textContainerWidth = projectPreview_textContainer.offsetWidth;
-
     console.log("textContainerWidth:" + textContainerWidth);
   }
 

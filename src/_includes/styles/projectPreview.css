@@ -23,8 +23,10 @@
 
 .projectPreview_ScrollArticle {
   column-fill: auto;
-  column-width: 878px;
+  column-width: 878px; 
   column-gap: 44px;
+
+  max-width: 878px;
 
   height: 100%;
   padding-left: 13px;
@@ -34,21 +36,21 @@
 
   position:relative;
 
-  /*
-  @media screen and (max-width: 800px) {
-    column-gap: 100px;
-    column-width: 50%;
-    background: #0000ff;
-  }*/
+  
+  @media screen and (max-width: 878px) {
+    max-width: 80%;
+  }
 }
 
 .projectPreview_phantomColumn{
-  height: 2%;
-  width: 200px;
+  height: 100%;
+  width: 100px;
   
   position: absolute;
-  left:2500px;
-  background-color: rgba(70, 70, 70, 0.021);
+  left: 0px;
+  /*right: 0px;
+  /*left:2500px;*/
+  background-color: rgba(140, 0, 145, 0);
 }
 
 .projectPreview_phantomTrigger{
@@ -176,8 +178,9 @@
   height: 600px;
   grid-template-areas:
       "card pictures"
+      "navigationpanel navigationpanel"
       "main main";
-  grid-template-rows: 203px 416px;
+  grid-template-rows: 203px 30px 416px;
   grid-template-columns: 443px minmax(0, 1fr);/*I don't know why auto set its size to over 9000*/
 }
 .projectPreview_Grid > card {
@@ -190,10 +193,30 @@
   background-color: transparent;
 }
 
-.projectPreview_Grid > navigation {
-  grid-area: navigation;
+.projectPreview_Grid > navigationpanel {
   background-color: #ff0000;
+  position: relative;
+  grid-area: navigationpanel;
+  width: 100%; 
+  position: relative;
 }
+
+.projectPreview_Grid > navigationpanel {
+  background-color: aqua;
+  width: 150px;
+  right: 0px;
+  bottom: 0px;
+  justify-self: end;
+}
+.navigation_buttons_group{
+  justify-self: end;
+  display: flex;
+  height: 100%;
+  background-color: black;
+}
+/*.navigation_buttons_group > navigation-button{
+
+}*/
 
 .projectPreview_Grid > imgcaption {
   grid-area: caption;
