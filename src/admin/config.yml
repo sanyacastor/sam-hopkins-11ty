@@ -3,56 +3,99 @@ backend:
   branch: master
 #publish_mode: editorial_workflow
 
-media_folder: "public/assets/data"
-public_folder: "/assets/data"
+media_folder: 'src/assets'
+public_folder: '/assets'
 
 collections:
-  - name: "project"
-    label: "Project"
-    folder: "src/projects"
+  - name: 'project'
+    label: 'Project'
+    folder: 'src/projects'
     create: true
-    slug: "project-{{slug}}"
+    slug: 'project-{{slug}}'
     fields:
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Year", name: "year", widget: "string"}
-      - {label: "Link to original material", name: "link", widget: "string", required: false}
-      - {label: "Collaborators", name: "collaborators", widget: "string", required: false}
-      - {label: "Thumbnail description", name: "thumbnailDescription", widget: "string"}
-      - {label: "Preview summary", name: "summary", widget: "string"}
-      - {label: "Content", name: "content", widget: "markdown"}
-      - {label: "PDF", name: "PDF File", widget: "file", required: false}
-      - label: "Related projects"
-        name: "relatedProjects"
-        widget: "list"
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Year', name: 'year', widget: 'string' }
+      - {
+          label: 'Link to original material',
+          name: 'link',
+          widget: 'string',
+          required: false,
+        }
+      - {
+          label: 'Collaborators',
+          name: 'collaborators',
+          widget: 'string',
+          required: false,
+        }
+      - {
+          label: 'Thumbnail description',
+          name: 'thumbnailDescription',
+          widget: 'string',
+        }
+      - { label: 'Preview summary', name: 'summary', widget: 'string' }
+      - { label: 'Body', name: 'body', widget: 'markdown' }
+      - { label: 'PDF', name: 'PDF File', widget: 'file', required: false }
+      - label: 'Related projects'
+        name: 'relatedProjects'
+        required: false
+        widget: 'list'
         min: 1
         max: 3
-        field: { label: "Project", name: "project" ,widget: "relation" ,collection: "project" ,value_field: "title" ,search_fields: ["title"]}
-  - name: "publication"
-    label: "Publication"
-    folder: "src/publications"
+        field:
+          {
+            label: 'Project',
+            name: 'project',
+            widget: 'relation',
+            collection: 'project',
+            value_field: 'title',
+            search_fields: ['title'],
+          }
+  - name: 'publication'
+    label: 'Publication'
+    folder: 'src/publications'
     create: true
-    slug: "publication-{{slug}}"
+    slug: 'publication-{{slug}}'
     fields:
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Year", name: "year", widget: "string"}
-      - {label: "ISBN", name: "isbn", widget: "string"}
-      - {label: "Thumbnail description", name: "description", widget: "string"}
-      - {label: "Link to publication", name: "link", widget: "string", required: false}
-  - name: "news"
-    label: "News"
-    folder: "src/news"
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Year', name: 'year', widget: 'string' }
+      - { label: 'ISBN', name: 'isbn', widget: 'string' }
+      - {
+          label: 'Thumbnail description',
+          name: 'description',
+          widget: 'string',
+        }
+      - {
+          label: 'Link to publication',
+          name: 'link',
+          widget: 'string',
+          required: false,
+        }
+  - name: 'news'
+    label: 'News'
+    folder: 'src/news'
     create: true
-    slug: "news-{{slug}}"
+    slug: 'news-{{slug}}'
     fields:
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Thumbnail description", name: "description", widget: "string"}
-  - name: "video"
-    label: "Video"
-    folder: "src/video"
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - {
+          label: 'Thumbnail description',
+          name: 'description',
+          widget: 'string',
+        }
+  - name: 'video'
+    label: 'Video'
+    folder: 'src/video'
     create: true
-    slug: "video-{{slug}}"
+    slug: 'video-{{slug}}'
     fields:
-      - {label: "Thumbnail description", name: "description", widget: "string"}
-      - {label: "Link to video", name: "link", widget: "string", required: true}
-
-
+      - {
+          label: 'Thumbnail description',
+          name: 'description',
+          widget: 'string',
+        }
+      - {
+          label: 'Link to video',
+          name: 'link',
+          widget: 'string',
+          required: true,
+        }

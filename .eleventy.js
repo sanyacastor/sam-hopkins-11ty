@@ -3,10 +3,6 @@ const bundlerPlugin = require("@11ty/eleventy-plugin-bundle");
 
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy('./src/assets')
-  eleventyConfig.addPassthroughCopy('./src/assets/data')
-  eleventyConfig.addPassthroughCopy('./assets')
-  eleventyConfig.addPassthroughCopy('./assets/data')
-  eleventyConfig.addPassthroughCopy('./src/_data')
 
   // Netlify CMS
   eleventyConfig.addPassthroughCopy('./src/admin')
