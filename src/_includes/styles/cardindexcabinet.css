@@ -41,20 +41,20 @@
 .cardcabinet_dates {
   font-size: 14px;
   word-break: break-all;
-  white-space: normal;
+  word-break: word-break;
   border-bottom: 1px solid #6d0b0a;
 }
 
 .cardcabinet_collaborators {
   font-size: 14px;
   word-break: break-all;
-  white-space: normal;
+  word-break: word-break;
   border-bottom: 1px solid #6d0b0a;
 }
 
 .cardcabinet_cardDescription {
   font-size: 14px;
-  word-break: break-all;
+  word-break: word-break;
   white-space: normal;
 }
 
