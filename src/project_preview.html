@@ -69,7 +69,6 @@ pagination:
 
           <div class="projectPreview_buttonFullProject_container" id="preview_buttonFullProject" >
             <a href={{ "/projects/project_" ~ preview.title | slug }}>
-            full project →
             </a>
             <div class="projectPreview_buttonFullProject_arrowRight" id="iddqd101"></div>  
           </div>
@@ -86,7 +85,8 @@ pagination:
   document
     .getElementById('projectPreview_outer')
     .addEventListener('wheel', function (e) {
-      
+      console.log("checkpoints: " + checkpoints);
+
       // Cross-browser wheel delta
       var delta = e.wheelDelta
         ? e.wheelDelta
@@ -145,39 +145,74 @@ pagination:
 </script>
 
 <script>
+  let checkpoints;
+  let currentChecpointIndex = 0;
+  let buttonCanBeUnfolded = false;
+
+  var buttonIsFolded = true;
+  const projectPreview_buttonFullProject_width = 228;
+  const projectPreview_buttonFullProject_padding = 22;
+
+  var fullProject_button_unfold_enabled = false;
+
   window.addEventListener('resize', function() {
     
     //windowController_recalcWindow();
     recalcUnfoldTriggerPosition();
     updateButtonFoldState();
-    recalcStep();
+    recalcCheckpoints();
+    recalcSwiperImages();
   });
 
   window.addEventListener('load', function() {
     //windowController_recalcWindow();
     recalcUnfoldTriggerPosition();
     updateButtonFoldState();
-    recalcStep();
+    recalcCheckpoints();
+    recalcSwiperImages();
     moveToCheckpoint(0);
   });
 
-  let checkpoints;
-  let currentChecpointIndex = 0;
-  let buttonCanBeUnfolded = false;
+  function recalcSwiperImages(){
+    boxWidth = document.getElementsByClassName('mySwiper')[0].offsetWidth;	
+    if(boxWidth > 826){
+      swiper.params.slidesPerView = 2;
+      document.getElementById('projectPreview_swiperWrapper').style.width = '826px';
+    }
+    else{
+      swiper.params.slidesPerView = 1;
+      document.getElementById('projectPreview_swiperWrapper').style.width = '416px';
+    }
+  }
 
-  function recalcStep(){
+  function recalcCheckpoints(){
+    document.getElementById('phantomColumn').style.display = "none";
+
     let scrollLength = document.getElementById('projectPreview_outer').scrollWidth;
     let boxWidth = document.getElementById('preview_scrollableContent').offsetWidth;
-    let numberOfSteps = Math.floor(scrollLength / boxWidth);
+    
+    let paddingLeft = parseInt(window.getComputedStyle(document.getElementById('preview_scrollableContent')).paddingLeft);
+    let paddingRight = parseInt(window.getComputedStyle(document.getElementById('preview_scrollableContent')).paddingRight);
+
+    let numberOfSteps = scrollLength / (boxWidth+paddingLeft);
+
+    let fractionalSteps = numberOfSteps % 1;
+    if(fractionalSteps > 0.8)  //!!!!Nasty...!!!!
+      numberOfSteps = Math.ceil(numberOfSteps);
+    else
+      numberOfSteps = Math.floor(numberOfSteps);
     
     checkpoints = [];
     for(let i = 0; i < numberOfSteps; i++){
-      checkpoints.push(i * boxWidth);
+      checkpoints.push(i * (boxWidth+paddingLeft));
     }
-    //checkpoints[checkpoints.length-1] = scrollLength;
 
     if(checkpoints.length == 1)
       checkpoints[0] = 0;
+
+    document.getElementById('phantomColumn').style.position = "absolute";
+    document.getElementById('phantomColumn').style.left = checkpoints[checkpoints.length-1] + boxWidth + paddingLeft + "px";
+    document.getElementById('phantomColumn').style.display = "block";
   }
 
   function scrollTextLeft(){
@@ -211,25 +246,9 @@ pagination:
       console.log("last");
       unfoldFullProjectButton();
     }
-    
   }
-/*
-  function updateButtonFoldState(){
-    if(isFullScreen){
-      fullProject_button_unfold_enabled = true;
-      return;
-    }else
-      fullProject_button_unfold_enabled = false;
-
-    const projectPreview_textContainer = document.querySelector('.projectPreview_textContainer');
-    
-    const textContainerWidth = projectPreview_textContainer.offsetWidth;
-    console.log("textContainerWidth:" + textContainerWidth);
-  }*/
 
   function moveToCheckpoint(index){
-    //console.log("moveToCheckpoint" + currentChecpointIndex + ">" + index);
-
     currentChecpointIndex = index;
 
     updateButtonFoldState();
@@ -248,16 +267,16 @@ pagination:
   }
 
   function unfoldFullProjectButton(){
-    if(!buttonIsDown){
+    if(!buttonIsFolded){
         return;
       }
 
-    buttonIsDown = false;
+    buttonIsFolded = false;
     let buttonFullProject = document.getElementById("preview_buttonFullProject");
     let buttonFullProject_arrow = document.getElementById("iddqd101");
     
-    buttonFullProject.style.height = "288px";
-    buttonFullProject.style.bottom = "90px"; 
+    buttonFullProject.style.height = "288px"; //!!!! Magic number
+    buttonFullProject.style.bottom = "90px";  //!!!! Magic number
     /*buttonFullProject.style.right = "200px"; */
 
     buttonFullProject_arrow.style["border-top"] = "143px solid transparent";
@@ -266,16 +285,16 @@ pagination:
     buttonFullProject.style.animation = "slideTop 1s ease"; 
   }
   function foldFullProjectButton(){
-    if(buttonIsDown){
+    if(buttonIsFolded){
         return;
       }
-      buttonIsDown = true;
+      buttonIsFolded = true;
       
       let buttonFullProject = document.getElementById("preview_buttonFullProject");
       let buttonFullProject_arrow = document.getElementById("iddqd101");
 
-      buttonFullProject.style.height = "61px";
-      buttonFullProject.style.bottom = "8px"; 
+      buttonFullProject.style.height = "61px"; //!!!! Magic number
+      buttonFullProject.style.bottom = "8px";  //!!!! Magic number
       /*buttonFullProject.style.right = "50px"; */
       
       buttonFullProject_arrow.style["border-top"] = "30px solid transparent";
@@ -284,7 +303,6 @@ pagination:
       buttonFullProject.style.animation = "slideBottom 0.5s ease";
   }
 
-  let buttonIsDown = true;
   /*const observer = new IntersectionObserver(entries => {
     let buttonFullProject = document.getElementById("preview_buttonFullProject");
     let buttonFullProject_arrow = document.getElementById("iddqd101");
@@ -300,10 +318,6 @@ pagination:
 
   //observer.observe(document.getElementById("phantomTrigger"));
 
-  const projectPreview_buttonFullProject_width = 228;
-  const projectPreview_buttonFullProject_padding = 22;
-
-  fullProject_button_unfold_enabled = false;
 
   function recalcUnfoldTriggerPosition(){
     disableTrigger(); // to get the correct scroll length
@@ -315,21 +329,27 @@ pagination:
     console.log("numcols: " + (scrollLength) / (columnWidth));
     numberOfColumns = Math.floor( (scrollLength) / (columnWidth)); //!!!PELIGRO!!!! magic number
 
-    if(boxWidth > 1100){
-      swiper.params.slidesPerView = 2;
-    }
-    else{
-      swiper.params.slidesPerView = 1;
-    }
+    let additionalSectionWidth = boxWidth - columnWidth;
+    if(additionalSectionWidth < 0)
+      additionalSectionWidth = 0;
 
-    document.getElementById('phantomColumn').style.width = boxWidth - columnWidth - 80 + "px";
-    document.getElementById('phantomColumn').style.display = "block"
-    console.log("a")
+    document.getElementById('phantomColumn').style.width = additionalSectionWidth + "px";
+    document.getElementById('phantomColumn').style.display = "block";
+    
+    console.log("a");
+
     buttonCanBeUnfolded = true;
 
-    if(numberOfColumns == 1){  
+    if(additionalSectionWidth > projectPreview_buttonFullProject_width + 50){ //!!!! Magic number
+      buttonCanBeUnfolded = true;
+    }
+    else
+      buttonCanBeUnfolded = false;
+
+    //////CRIME SCENE-DO NOT CROSS//////CRIME SCENE-DO NOT CROSS//////CRIME SCENE-DO NOT CROSS//////CRIME SCENE-DO NOT CROSS
+    /*if(numberOfColumns == 1){  
       if(boxWidth > (13 + columnWidth + 228 + 22 + 50)){
-        document.getElementById('phantomColumn').style.left = columnWidth + 50 + "px"; //!!!!PELIGRO!!!! recalculate it
+        document.getElementById('phantomColumn').style.left = columnWidth + 50 + "px";
         document.getElementById('phantomTrigger').style.display = "block"
         buttonCanBeUnfolded = true;
         console.log("b");
@@ -343,28 +363,24 @@ pagination:
     }
 
     if(boxWidth < windowMaxSize-1){
-      document.getElementById('phantomColumn').style.left = (scrollLength) + 50 + "px"; //!!!!PELIGRO!!!! recalculate it
+      document.getElementById('phantomColumn').style.left = (scrollLength) + 50 + "px";
       document.getElementById('phantomTrigger').style.display = "none"
       buttonCanBeUnfolded = false;
       console.log("d")
       return;
     }
 
-    document.getElementById('phantomColumn').style.left = (scrollLength) + 50 + "px"; //!!!!PELIGRO!!!! recalculate it
+    document.getElementById('phantomColumn').style.left = (scrollLength) + 50 + "px";
     document.getElementById('phantomTrigger').style.display = "block"
     buttonCanBeUnfolded = true;
-    console.log("e")
+    console.log("e")*/
+    //////CRIME SCENE-DO NOT CROSS//////CRIME SCENE-DO NOT CROSS//////CRIME SCENE-DO NOT CROSS//////CRIME SCENE-DO NOT CROSS
 
     return;
   }
 
   function disableTrigger(){
     document.getElementById('phantomColumn').style.display = "none"
-  }
-
-  function renameMe(){
-    //document.getElementById(preview_buttonFullProject);
-    
   }
 
 </script>
