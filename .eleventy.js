@@ -6,6 +6,7 @@ module.exports = function (eleventyConfig) {
 
   // Netlify CMS
   eleventyConfig.addPassthroughCopy('./src/admin')
+  eleventyConfig.addPassthroughCopy('./src/_scripts')
 
   // Custom Fonts
   eleventyConfig.addPassthroughCopy('KareliaWeb-Bold.woff2')
