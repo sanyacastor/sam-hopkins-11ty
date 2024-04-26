@@ -10,7 +10,6 @@ slug: projects
     {% for project in collections.project %}
       {% assign previewURL = project.data.title | slug %}
       {% assign previewURL = '/preview/' | append: previewURL %}
-
       {% include "summary-card.njk" with project %}
     {% endfor %}
   </div>
