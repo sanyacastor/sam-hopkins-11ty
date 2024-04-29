@@ -13,23 +13,32 @@ pagination:
   addAllPagesToCollection: true
 ---
 
-{% set project = {
+{# {% set project = {
   data: {
       title: preview.title,
       dates: preview.dates,
       collaborators: preview.collaborators,
       cardDescription: preview.cardDescription
   }
-} %} <!--!!!Peligro!!! Deleteme-->
+} %} <!--!!!Peligro!!! Deleteme--> #}
+
+{% set card_data = {
+  data: {
+      title: preview.title,
+      dates: preview.dates,
+      collaborators: preview.collaborators,
+      cardDescription: preview.cardDescription
+  }
+} %}
 
 <link rel="stylesheet" href="bundle.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
 <article>
-  <div class='container'>
+  {# <div class='container'> #}
     <div class="projectPreview_Grid">
       <card>
-        {% include 'summary-card.njk' %}
+        {%- include 'summary-card.njk' -%}
       </card>
       <pictures>
         <div class="swiper mySwiper">
@@ -46,37 +55,45 @@ pagination:
         </div>
       </pictures>
       <!--imgcaption>asd</imgcaption-->
-      <navigationpanel>
-        <div class="navigation_buttons_group">
-          <button class="navigation-button left-button"  id="preview_descriptionNavButton_left" >Left</button>
-          <button class="navigation-button right-button" id="preview_descriptionNavButton_right">Right</button>
-          <button class="navigation-button close-button" id="preview_descriptionNavButton_close" >Close</button>
-        </div>
-      </navigationpanel>
       <main>
         <div class = "projectPreview_mainTextContainer">
           <div class="projectPreview_textContainer">
             <div id="projectPreview_outer">
               <div class="projectPreview_ScrollArticle" id= "preview_scrollableContent">
-                {{preview.previewDescription}}
+                <font>
+                  {{preview.previewDescription}}
+                </font>
               </div>
               <div class="projectPreview_phantomColumn" id = "phantomColumn">
                 <div class="projectPreview_phantomTrigger"  id = "phantomTrigger"></div>
               </div>
             </div>
           </div>
-
-          <div class="projectPreview_buttonFullProject_container" id="preview_buttonFullProject" >
-            <a href={{ "/projects/project_" ~ preview.title | slug }}>
-              Full project
-            </a>
-            <div class="projectPreview_buttonFullProject_arrowRight" id="preview_buttonFullProject_arrow"></div>  
+          <div class="navigation_panel">
+            <div class="navigation_buttons_group">
+              <button class="navigation-button left-button"  id="preview_descriptionNavButton_left" > l </button>
+              <button class="navigation-button right-button" id="preview_descriptionNavButton_right"> r </button>
+              <button class="navigation-button close-button" id="preview_descriptionNavButton_close" > x </button>
+            </div>
           </div>
+
+          <div class="related_and_full_buttons_container">
+            <div class="projectPreview_buttonFullProject_container" id="preview_buttonFullProject" >
+              <a href={{ "/projects/project_" ~ preview.title | slug }}>
+                full project
+              </a>
+              <div class="projectPreview_buttonFullProject_arrowRight" id="preview_buttonFullProject_arrow"></div>
+            </div>
+          </div>
+
         </div>
       </main>  
     </div>
-  </div>
+    {# {% include 'relatedAndMoreCards.njk' %} #}
+
+  {# </div><!--container--> #}
 </article>
+
 
 
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
@@ -102,7 +119,7 @@ pagination:
 
     previewImageSwiperInstance
                  = new previewImageSwiper('mySwiper',
-                                               'preview_swiperWrapper');
+                                          'preview_swiperWrapper');
     assignButtonsEvents();
 
     previewDescriptionScrollInstance.onload();

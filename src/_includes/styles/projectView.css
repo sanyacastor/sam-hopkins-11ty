@@ -13,7 +13,10 @@
   column-width: 416px;
   column-gap: 30px;
   height: 90%;
-  padding-top: 10px;
+
+  margin-top: 0px;
+
+  padding-top: 0px;
   padding-left: 10px;
 
   word-break: break-word;
@@ -39,12 +42,17 @@
     background-color: transparent;
     height: calc(100vh - 120px);
     position: relative;
+    background-color: var(--color-white);
+
+    margin-top: 0px;
+    border: none;
 }
 
 .projectView_sideBar {
     display: flex;
     width: 443px; /* Adjust the width as needed */
-    border: 1px solid #ccc;
+    border: none;
+    /* border: 1px solid #ccc; */
     box-sizing: border-box;
     height: 100%;
     background-color: transparent;
@@ -56,7 +64,8 @@
 .projectView_cardSlot{
     width: 443px;
     height: 203px;
-    background-color: red;
+    background-color: transparent;
+    margin-top: 85px;
 }
 
 .projectView_photoSlot{
@@ -71,10 +80,12 @@
 
 .projectView_blockText {
     flex-grow: 1;
-    border: 1px solid #ccc;
     padding: 20px;
     box-sizing: border-box;
     height: 100%;
+
+    border: none;
+    /* border: 1px solid #ccc; */
 }
 
 .projectView_navigation{

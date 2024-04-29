@@ -1,0 +1,64 @@
+{% if project.data.relatedProjects.length > 0 -%}
+    {# <div class="preview_related_and_more_projects_container"> #}
+        
+    {# </div> #}
+
+    <div class="cardcabinet_grid" id="relatedProjectsGrid"> 
+        {%- for relatedProject in project.data.relatedProjects -%}
+            {%- for qproject in collections.project -%}
+                {%- if qproject.data.title == relatedProject.project -%}
+                    {%- include "summary-card.njk" -%}
+                {%- endif -%}
+            {%- endfor -%}
+        {%- endfor -%}
+       
+        <button class="related_projects_button"
+                onclick="scrollToElement('related_projects_button')">
+                Related projects
+        </button>
+       
+    </div>
+{%- endif -%}
+<!--            /related cards section                -->
+
+
+
+{# <div style="background-color: white; position: relative;">
+    <div class="cardcabinet_grid" id="moreProjectsGrid">
+        {%- for projectDamnIt in collections.project -%}
+
+            {%- set drawThisProject = "true" -%}
+
+            {%- for relatedProject in project.data.relatedProjects -%}
+                {%- if project.data.title == relatedProject.project -%}
+                    {%- set drawThisProject = "false" -%}
+                {%- endif -%}
+                <div>
+                    {{- drawThisProject -}}
+                    {{- project.data.title}}
+                    {{- relatedProject.project -}}
+                </div>
+            {%- endfor -%}    
+
+            {{- drawThisProject -}}
+            {%- if drawThisProject == "true" -%}
+                {%- include "summary-card.njk" -%}
+            {%- endif -%}
+
+        {%- endfor -%}
+    </div>
+    <button class="more_projects_button" 
+        onclick="scrollToElement('more_projects_button')">
+        More projects</button>
+</div> #}
+ 
+<!--               /more cards section                -->
+
+<script>
+    function scrollToElement(className) {
+        var element = document.querySelector('.' + className);
+        if (element) {
+            element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+    }
+</script>

@@ -7,14 +7,17 @@ layout: base.njk
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
 
 <body>
-  {% set project = {
-      data: {
-          title: title,
-          dates: dates,
-          collaborators: collaborators,
-          cardDescription: cardDescription
-      }
+
+  <!--to pass to summary-card.njk-->
+  {% set card_data = { 
+    data: {
+        title: title,
+        dates: dates,
+        collaborators: collaborators,
+        cardDescription: cardDescription
+    }
   } %}
+  
     <!--link rel="stylesheet" href="bundle.css"-->
   <article>
     <div class='container'>
@@ -44,12 +47,16 @@ layout: base.njk
               <!--/scrollable main text content-->
           </div>
         </div>
-        </div>
+      </div>
         <div class="projectView_navigation" id="projectView_scrollNavBar">
             0 1 2 3 4
-        <div>
-      </div>
+        </div>
+      <hr>
+    </div> <!--container-->
+    <div>
+      {% include 'relatedAndMoreCards.njk' %}
     </div>
+    
   </article>
 
     <script>
@@ -127,8 +134,7 @@ layout: base.njk
 
       function scrollTwineStart(newFrac){
         let columnGap = parseInt(getComputedStyle(hscrollContent).columnGap);
-        console.log("columnGap: "+columnGap);
-        console.log("");
+        //console.log("columnGap: "+columnGap);
         gsap.to(  document.getElementById('projectView_outer'),{
                     scrollLeft: newFrac * (document.getElementById('projectView_outer').scrollWidth + columnGap/2),
                     duration: 0.5, ease: "power2.inOut"
@@ -138,14 +144,14 @@ layout: base.njk
       function getListOfImages() {
         str = hscrollContent.innerHTML;
 
-        console.log(str)
+        //console.log(str)
 
         let images = [];
         let regex = /<img\s+src="([^"]+)"\s+alt="([^"]+)"/g;
         const imgCollection = document.getElementsByTagName('img');
         for (let item of imgCollection) {
-          console.log('src :', item.src)
-          console.log('alt :', item.alt)
+          // console.log('src :', item.src)
+          // console.log('alt :', item.alt)
           images.push({src: item.src, alt: item.alt});
         }
 
@@ -162,9 +168,7 @@ layout: base.njk
 
       //==============Callbacks================
       window.addEventListener('load', function() {
-        console.log("get list of images")
         getListOfImages();
-        console.log("/get list of images")
 
         onResize();
         processSlug();
@@ -173,6 +177,23 @@ layout: base.njk
       window.addEventListener('resize', function() {
         onResize();
       });
+
+      // Prevent default window scroll only when mouse is over swiper or projectView_outer
+      window.addEventListener("wheel", function(e) {
+          if (isDescendantOfSwiperOrOuter(e.target)) {
+              e.preventDefault();
+          }
+      }, { passive: false });
+
+      function isDescendantOfSwiperOrOuter(element) {
+          // Check if the element or any of its ancestors is swiper or projectView_outer
+          while (element !== null && element.id !== 'projectView_swiperWrapper' && element.id !== 'projectView_outer') {
+              element = element.parentElement;
+          }
+          // If the loop ended without finding swiper or projectView_outer, it means the element is not a descendant
+          return element !== null;
+      }
+      
       document.getElementById('projectView_outer').addEventListener('wheel', function (e) {
           var delta = e.wheelDelta ? e.wheelDelta : -e.deltaY;
 
@@ -182,6 +203,7 @@ layout: base.njk
             scrollNextCheckpoint();
           }
       }, false);
+
       document.getElementById('projectView_swiperWrapper').addEventListener('wheel', function(e) {
         var delta = e.wheelDelta ? e.wheelDelta : -e.deltaY;
 
@@ -266,7 +288,7 @@ layout: base.njk
         for (let i = 0; i < elements.length; i++) {
           let element = elements[i];
           let rect = element.getBoundingClientRect();
-          console.log("element pos: " + rect.left);
+
           if (rect.left > rightmost + 100) {
             rightmost = rect.left;
             ncols++;

@@ -1,6 +1,4 @@
 .projectPreview_textContainer{
-
-
   width: 100%;
   height: 100%;
 }
@@ -10,7 +8,6 @@
   padding-bottom: 70px;
   width: 100%;
   height: 100%;
-  overflow-x: auto;
   
   display: flex;
   align-items: center;
@@ -18,6 +15,17 @@
   position:absolute;
   
   box-sizing: border-box;
+
+  
+  overflow-x: auto;
+
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-primary) var(--color-secondary);
+}
+
+#projectPreview_outer::-webkit-scrollbar {
+  /*width: 4px;*/
+  background-color: rgb(255, 0, 0);
 }
 
 
@@ -42,6 +50,10 @@
   }
 }
 
+.projectPreview_ScrollArticle > font{
+  margin-left: 20px;
+}
+
 .projectPreview_phantomColumn{
   height: 100px;
   width: 100px;
@@ -50,7 +62,7 @@
   /*left: 0px;*/
   left: 0px;
   /*left:2500px;*/
-  background-color: rgb(140, 0, 145);
+  background-color: rgba(140, 0, 145, 0);
 }
 
 .projectPreview_phantomTrigger{
@@ -77,32 +89,6 @@
   background-color: var(--color-white);
 }
 
-.related_projects_button{
-  /*position: absolute;
-  left: 0px;
-  bottom: -70px;
-  */
-  position: absolute;
-  bottom: 0px;
-
-  height: 31px;
-  width: 229px;
-
-  background-color: var(--color-primary);
-  border-style: none;
-  color: var(--color-secondary);
-}
-
-.preview_related_projects_container{
-  position: relative;
-
-  top: 35px;
-
-  width: 100%;
-  height: 60px;
-  border-bottom: 1px solid var(--color-primary);
-}
-
 .projectPreview_buttonFullProject_container{
   position: absolute;
   
@@ -111,7 +97,6 @@
 
   right: 50px;
   bottom: 8px;
-  
 
   background-color: var(--color-secondary);
   color: blue;
@@ -181,6 +166,14 @@
 
 .projectPreview_buttonFullProject_container > a{
   color: var(--color-primary);
+  
+  font-family: KareliaTrial;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 14px;
+
+  margin-left: 20px;
+  margin-right: auto;  
 }
 
 .projectPreview_buttonFullProject_arrowRight {
@@ -202,47 +195,69 @@
   display: grid;
   width: 100%;
   height: 600px;
+  margin-top: 98px;
+
   grid-template-areas:
       "card pictures"
-      "navigationpanel navigationpanel"
       "main main";
-  grid-template-rows: 203px 30px 416px;
+  grid-template-rows: 203px 416px;
   grid-template-columns: 443px minmax(0, 1fr);/*I don't know why auto set its size to over 9000*/
 }
 .projectPreview_Grid > card {
+  pad: 0px;
+  margin: 0px;
+
   grid-area: card;
-  background-color: #f0f0f0;
+  background-color: var(--color-secondary);
 }
 
 .projectPreview_Grid > pictures {
   grid-area: pictures;
   background-color: transparent;
 }
-
+/*
 .projectPreview_Grid > navigationpanel {
   background-color: #ff0000;
   position: relative;
   grid-area: navigationpanel;
   width: 100%; 
   position: relative;
-}
-
-.projectPreview_Grid > navigationpanel {
-  background-color: aqua;
-  width: 150px;
-  right: 0px;
-  bottom: 0px;
-  justify-self: end;
-}
-.navigation_buttons_group{
-  justify-self: end;
-  display: flex;
-  height: 100%;
-  background-color: black;
-}
-/*.navigation_buttons_group > navigation-button{
-
 }*/
+
+.navigation_panel{
+  position: absolute;
+  top: 0px;
+  right: 0px;
+
+  width: 100%;
+  background-color: #f0f0f000;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.navigation_buttons_group{
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.navigation-button{
+
+  width: 21.88px;
+  height: 22.4px;
+  left: 1280px;
+  top: 367px;
+
+  /*padding: 10px 20px;*/
+  background-color: transparent;
+  color: var(--color-primary);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
 
 .projectPreview_Grid > imgcaption {
   grid-area: caption;
@@ -251,5 +266,5 @@
 
 .projectPreview_Grid > main {
   grid-area: main;
-  background-color: #0000ff;
+  background-color: #0000ff00;
 }

@@ -1,15 +1,13 @@
-<div class="cardcabinet_summaryCard">
+<a href="{{previewURL}}" class="tmp"><div class="cardcabinet_summaryCard"><!-- otherwise it renders <p></p>-->
     <div class = "cardcabinet_oulineBox">
-        <h2 class="cardcabinet_cardTitle"><a href="{{previewURL}}"> <font> {{project.data.title}} </font> </a></h2>
-
-        {% if project.data.dates %}
-        <p class="cardcabinet_dates"> <font color=#6D0B0A> {{project.data.dates}} </font> </p>
-        {% endif %}
-
-        {% if project.data.collaborators %}
-        <p class="cardcabinet_collaborators"> <font color=#6D0B0A> with: {{project.data.collaborators}} </font> </p>
-        {% endif %}
-
-        <p class="cardcabinet_cardDescription"> <font color=#6D0B0A> {{project.data.cardDescription}} </font> </p>
+        <h2 class="cardcabinet_cardTitle"> {{card_data.data.title}} </h2>
+        {%- if card_data.data.dates -%}
+            <p class="cardcabinet_dates"> {{card_data.data.dates}} </p>
+        {%- endif -%}
+        {%- if card_data.data.collaborators -%}
+            <p class="cardcabinet_collaborators">  with: {{card_data.data.collaborators}} </p>
+        {%- endif -%}
+        <p class="cardcabinet_cardDescription"> {{card_data.data.cardDescription}} </p>
     </div>
-</div>
+  </div>
+</a>

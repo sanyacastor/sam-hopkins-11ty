@@ -16,23 +16,29 @@
 
     <title>{{ title }}</title>
   </head>
+
   <body>
-    {% include 'header.njk' %}
-    {{ content | safe }}
-    <script>
-      if (window.netlifyIdentity) {
-        window
-          .netlifyIdentity
-          .on("init", (user) => {
-            if (!user) {
-              window
-                .netlifyIdentity
-                .on("login", () => {
-                  document.location.href = "/admin/";
-                });
-            }
-          });
-      }
-    </script>
+    <div class="global-container">
+      <div class='container'>
+        {% include 'header.njk' %}
+        {{ content | safe }}
+        <hr>
+      </div>
+      <script>
+        if (window.netlifyIdentity) {
+          window
+            .netlifyIdentity
+            .on("init", (user) => {
+              if (!user) {
+                window
+                  .netlifyIdentity
+                  .on("login", () => {
+                    document.location.href = "/admin/";
+                  });
+              }
+            });
+        }
+      </script>
+    </div>
   </body>
 </html>
