@@ -38,40 +38,57 @@
 
 
 .projectView_container {
-    display: flex;
-    background-color: transparent;
-    height: calc(100vh - 120px);
-    position: relative;
-    background-color: var(--color-white);
+  display: flex;
+  background-color: transparent;
+  height: calc(100vh - 120px);
+  position: relative;
+  background-color: var(--color-white);
 
-    margin-top: 0px;
-    border: none;
+  margin-top: 0px;
+  border: none;
+
+  @media screen and (max-width: 800px) {
+    flex-direction: column;
+    height: auto;
+  }
 }
 
 .projectView_sideBar {
-    display: flex;
-    width: 443px; /* Adjust the width as needed */
-    border: none;
-    /* border: 1px solid #ccc; */
-    box-sizing: border-box;
-    height: 100%;
-    background-color: transparent;
+  display: flex;
+  width: 443px; /* Adjust the width as needed */
+  border: none;
+  /* border: 1px solid #ccc; */
+  box-sizing: border-box;
+  height: 100%;
+  background-color: transparent;
 
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+
+  @media screen and (max-width: 800px) {
+    width: 100%;
+  }
 }
 .projectView_cardSlot{
-    width: 443px;
-    height: 203px;
-    background-color: transparent;
-    margin-top: 85px;
+  width: 443px;
+  height: 203px;
+  background-color: transparent;
+  margin-top: 85px;
+
+  @media screen and (max-width: 800px) {
+    width: 100%;
+  }
 }
 
 .projectView_photoSlot{
-    width: 443px;
-    height: 305px;
-    background-color: green;
+  width: 443px;
+  height: 305px;
+  background-color: green;
+
+  @media screen and (max-width: 800px) {
+    width: 100%;
+  }
 }
 
 .swiper{
@@ -79,22 +96,30 @@
 }
 
 .projectView_blockText {
-    flex-grow: 1;
-    padding: 20px;
-    box-sizing: border-box;
-    height: 100%;
+  flex-grow: 1;
+  padding: 20px;
+  box-sizing: border-box;
+  height: 100%;
 
-    border: none;
-    /* border: 1px solid #ccc; */
+  border: none;
+  /* border: 1px solid #ccc; */
+
+  @media screen and (max-width: 800px) {
+    padding: 0px;
+  }
 }
 
 .projectView_navigation{
-    width: 800px;
-    height: 15px;
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    background-color: transparent;
+  width: 800px;
+  height: 15px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  background-color: transparent;
+
+  @media screen and (max-width: 800px) {
+    display: none;
+  }
 }
 
 .projectView_navigationDigit{
@@ -134,6 +159,10 @@
     'caption main';
   grid-template-rows: 203px 305px 27px;
   grid-template-columns: 443px 1000px;
+
+  @media screen and (max-width: 800px) {
+    background-color: #0000ff;
+  }
 }
 
 .projectView_Grid > card {

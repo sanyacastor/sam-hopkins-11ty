@@ -62,6 +62,8 @@ layout: base.njk
       document.addEventListener("DOMContentLoaded", (event) => { /* gsap code */});
     </script>
 
+    <script src="/_scripts/windowController.js"></script>
+
     <script>
       let checkpoints;
       let current_checkpoint_index = 0;
@@ -71,6 +73,8 @@ layout: base.njk
       let windowScrollStepPercent = 1;
       let windowtargetScrollFraction = 0;
       let windownumberOfColumns = 1;
+
+      var windowControllerInstance;
 
       const hscrollContent = document.querySelector('.projectView_ScrollArticle');
       const hscrollOuter = document.querySelector('projectView_outer');
@@ -166,7 +170,11 @@ layout: base.njk
       }
 
       //==============Callbacks================
-      window.addEventListener('load', function() {
+      window.addEventListener('load', function() {    
+        windowControllerInstance = new windowController();
+        let isMobileVersion = windowControllerInstance.itisMobile();
+        console.log("isMobile: " + isMobileVersion);
+
         getListOfImages();
 
         onResize();
@@ -179,9 +187,13 @@ layout: base.njk
 
       // Prevent default window scroll only when mouse is over swiper or projectView_outer
       window.addEventListener("wheel", function(e) {
-          if (isDescendantOfSwiperOrOuter(e.target)) {
-              e.preventDefault();
-          }
+        if(windowControllerInstance.itisMobile()){
+          return;
+        }
+
+        if (isDescendantOfSwiperOrOuter(e.target)) {
+            e.preventDefault();
+        }
       }, { passive: false });
 
       function isDescendantOfSwiperOrOuter(element) {
@@ -194,7 +206,11 @@ layout: base.njk
       }
       
       document.getElementById('projectView_outer').addEventListener('wheel', function (e) {
-          var delta = e.wheelDelta ? e.wheelDelta : -e.deltaY;
+        if(windowControllerInstance.itisMobile()){
+          return;
+        }
+
+        var delta = e.wheelDelta ? e.wheelDelta : -e.deltaY;
 
           if(delta > 0){
             scrollPrevCheckpoint();
@@ -204,6 +220,10 @@ layout: base.njk
       }, false);
 
       document.getElementById('projectView_swiperWrapper').addEventListener('wheel', function(e) {
+        if(windowControllerInstance.itisMobile()){
+          return;
+        }
+        
         var delta = e.wheelDelta ? e.wheelDelta : -e.deltaY;
 
         if(delta > 0){
