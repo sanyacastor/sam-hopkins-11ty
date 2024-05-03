@@ -242,6 +242,34 @@ body::-webkit-scrollbar {
   }
 }
 
+.projectPreview_Grid {
+  display: grid;
+  width: 100%;
+  height: 600px;
+  padding-top: 98px;
+  margin-top: 0px;
+
+  grid-template-areas:
+      "card pictures"
+      "main main";
+  grid-template-rows: 203px 416px;
+  grid-template-columns: 443px minmax(0, 1fr);/*I don't know why auto set its size to over 9000*/
+
+  @media screen and (max-width: 800px) {
+    height: auto;
+    justify-content: center;
+    /* margin-left: 100px;
+    margin-right: 100px; */
+
+    grid-template-areas:
+      "card"
+      "pictures"
+      "main";
+    grid-template-rows: 203px auto auto; 
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
 .container{
   @media screen and (max-width: 800px){
     justify-content: center;
