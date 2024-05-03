@@ -35,8 +35,8 @@ pagination:
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
 <article>
-  {# <div class='container'> #}
-    <div class="projectPreview_Grid">
+  <div class='container'>
+    <div class="projectPreview_Grid" id="preview_Grid">
       <card>
         {%- include 'summary-card.njk' -%}
       </card>
@@ -77,22 +77,22 @@ pagination:
             </div>
           </div>
 
-          <div class="related_and_full_buttons_container">
-            <div class="projectPreview_buttonFullProject_container" id="preview_buttonFullProject" >
-              <a href={{ "/projects/project_" ~ preview.title | slug }}>
-                full project
-              </a>
-              <div class="projectPreview_buttonFullProject_arrowRight" id="preview_buttonFullProject_arrow"></div>
-            </div>
+        {# <div class="related_and_full_buttons_container"> #}
+          <div class="projectPreview_buttonFullProject_container" id="preview_buttonFullProject" >
+            <a href={{ "/projects/project_" ~ preview.title | slug }}>
+              full project
+            </a>
+            <div class="projectPreview_buttonFullProject_arrowRight" id="preview_buttonFullProject_arrow"></div>
           </div>
+        {# </div> #}
 
         </div>
       </main>  
     </div>
+  </div><!--container-->
     {# {% include 'relatedAndMoreCards.njk' %} #}
-
-  {# </div><!--container--> #}
 </article>
+
 
 
 
@@ -100,15 +100,23 @@ pagination:
 
 <script src="/_scripts/previewDescriptionScroll.js"></script>
 <script src="/_scripts/previewImageSwiper.js"></script>
+<script src="/_scripts/windowController.js"></script>
 
 <script>
   var previewDescriptionScrollInstance;
   var previewImageSwiperInstance;
   var gsapTwiner = gsap;
+
+  var windowControllerInstance;
   
   document.addEventListener("DOMContentLoaded", (event) => { /* gsap code */});
 
   window.addEventListener('load', function() {
+    windowControllerInstance = new windowController();
+    let isMobileVersion = windowControllerInstance.itisMobile();
+    console.log("isMobile: " + isMobileVersion);
+
+
     previewDescriptionScrollInstance
                  = new previewDescriptionScroll('projectPreview_outer',
                                             'preview_scrollableContent',
@@ -123,17 +131,35 @@ pagination:
     assignButtonsEvents();
 
     previewDescriptionScrollInstance.onload();
-    previewImageSwiperInstance.onLoad();
+    previewImageSwiperInstance.onLoad(isMobileVersion);
   });
 
   window.addEventListener('resize', function() {
+    let isMobileVersion = windowControllerInstance.itisMobile();
+
     previewDescriptionScrollInstance.onResize();
-    previewImageSwiperInstance.recalc();
+    previewImageSwiperInstance.recalc(isMobileVersion);
+  });
+
+  document.addEventListener('scroll', function() {
+    if(windowControllerInstance.itisMobile()){
+      if (window.scrollY === 0) {
+        console.log("mobile scrolling top");
+      }
+      else{
+        console.log("mobile scrolling");
+      }
+    }
+    else
+      console.log("desktop scrolling");
   });
 
   document
     .getElementById('projectPreview_outer')
     .addEventListener('wheel', function (e) {
+      if(windowControllerInstance.itisMobile())
+        return;
+
       // Cross-browser wheel delta
       var delta = e.wheelDelta
         ? e.wheelDelta
@@ -150,6 +176,9 @@ pagination:
   document
     .getElementById('preview_swiperWrapper')
     .addEventListener('wheel', function(e) {
+      if(windowControllerInstance.itisMobile())
+        return;
+
       var delta = e.wheelDelta ? e.wheelDelta : -e.deltaY;
 
       if(delta > 0){

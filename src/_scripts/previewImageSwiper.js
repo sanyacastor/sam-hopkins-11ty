@@ -23,11 +23,11 @@ class previewImageSwiper{
     }
     destructor(){
     }
-    onLoad(){
-      this.recalc();
+    onLoad(isMobileVerison){
+      this.recalc(isMobileVerison);
     }
-    recalc(){
-      this.recalcSwiperImages();
+    recalc(isMobileVerison){
+      this.recalcSwiperImages(isMobileVerison);
     }
 
     slideNext(){
@@ -37,8 +37,16 @@ class previewImageSwiper{
       this.swiper.slidePrev();
     }
 
-    recalcSwiperImages(){
-      let boxWidth = this.swiperElement.offsetWidth;	
+    recalcSwiperImages(isMobileVerison){
+      let boxWidth = this.swiperElement.offsetWidth;
+      console.log("swiper box widht: " + boxWidth + "px");
+      console.log("isMobile        : " + isMobileVerison);
+
+      if(isMobileVerison){
+        this.swiper.params.slidesPerView = 1;
+        this.swiperWrapper.style.width = window.innerWidth + 'px';
+        return;
+      }
 
       if(boxWidth > 826){
         this.swiper.params.slidesPerView = 2;

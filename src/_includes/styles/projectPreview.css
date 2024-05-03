@@ -1,6 +1,11 @@
 .projectPreview_textContainer{
   width: 100%;
   height: 100%;
+
+  @media screen and (max-width: 800px) {
+   background-color: aqua;
+   height: auto;
+  }
 }
 
 #projectPreview_outer {
@@ -21,6 +26,10 @@
 
   scrollbar-width: thin;
   scrollbar-color: var(--color-primary) var(--color-secondary);
+
+  @media screen and (max-width: 800px) {
+    height: auto;
+  }
 }
 
 #projectPreview_outer::-webkit-scrollbar {
@@ -46,7 +55,24 @@
 
   
   @media screen and (max-width: 878px) {
-    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+  }
+
+  @media screen and (max-width: 800px) {
+    column-fill: unset;
+    column-width: unset;
+    column-gap: unset;
+    background-color: var(--color-white);
+  }
+}
+
+.cardcabinet_summaryCard{
+  
+  @media screen and (max-width: 800px) {
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
@@ -66,13 +92,22 @@
 }
 
 .projectPreview_phantomTrigger{
-  background-color: blueviolet;
   height: 100%;
   width: 1px;
   right: 0px;
   position: absolute;
 }
 
+body {
+  overflow-y: scroll;
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-primary) var(--color-secondary);
+}
+
+body::-webkit-scrollbar {
+  width: 4px;
+  background-color: rgb(255, 0, 0);
+}
 
 .projectPreview_ScrollArticle > p > img {
   display: none;
@@ -87,6 +122,12 @@
   width: flex;
   position: relative;
   background-color: var(--color-white);
+
+  @media screen and (max-width: 800px) {
+    height: auto;
+    align-items: stretch;
+    background-color: deeppink;
+  }
 }
 
 .projectPreview_buttonFullProject_container{
@@ -105,11 +146,48 @@
   flex-direction: column;
   justify-content: center;
 
-  /* transition: bottom 0.7s ease;
-  transition: height 0.7s ease;
-  transition: right 0.7s ease; */
-  /*animation: slideRight 0.3s ease;*/
+  @media screen and (max-width: 800px) {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 999;
+    background-color: var(--color-primary);
+    
+  }  
 }
+
+.projectPreview_buttonFullProject_container > a{
+  color: var(--color-primary);
+  
+  font-family: KareliaTrial;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 14px;
+
+  margin-left: 20px;
+  margin-right: auto;  
+}
+
+.projectPreview_buttonFullProject_arrowRight {
+  position: absolute;
+  right: -20px;
+  top: 0;
+  width: 0;
+  height: 100%;
+  border-top: 30px solid transparent;
+  border-bottom: 30px solid transparent;
+  border-left: 20px solid var(--color-secondary);
+  background-color: transparent;
+  
+  transition: border-top 0.3s ease;
+  transition: border-bottom 0.3s ease;
+
+  @media screen and (max-width: 800px) {
+    border-left: var(--color-primary);
+    background-color: transparent;
+  }
+}
+
 
 @keyframes slideTop {
   0% {
@@ -164,45 +242,40 @@
   }
 }
 
-.projectPreview_buttonFullProject_container > a{
-  color: var(--color-primary);
-  
-  font-family: KareliaTrial;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 14px;
-
-  margin-left: 20px;
-  margin-right: auto;  
-}
-
-.projectPreview_buttonFullProject_arrowRight {
-  position: absolute;
-  right: -20px;
-  top: 0;
-  width: 0;
-  height: 100%;
-  border-top: 30px solid transparent;
-  border-bottom: 30px solid transparent;
-  border-left: 20px solid var(--color-secondary);
-  background-color: transparent;
-  
-  transition: border-top 0.3s ease;
-  transition: border-bottom 0.3s ease;
-}
-
 .projectPreview_Grid {
   display: grid;
   width: 100%;
   height: 600px;
-  margin-top: 98px;
+  padding-top: 98px;
+  margin-top: 0px;
 
   grid-template-areas:
       "card pictures"
       "main main";
   grid-template-rows: 203px 416px;
   grid-template-columns: 443px minmax(0, 1fr);/*I don't know why auto set its size to over 9000*/
+
+  @media screen and (max-width: 800px) {
+    height: auto;
+    justify-content: center;
+    /* margin-left: 100px;
+    margin-right: 100px; */
+
+    grid-template-areas:
+      "card"
+      "pictures"
+      "main";
+    grid-template-rows: 203px auto auto; 
+    grid-template-columns: minmax(0, 1fr);
+  }
 }
+
+.container{
+  @media screen and (max-width: 800px){
+    justify-content: center;
+  }
+}
+
 .projectPreview_Grid > card {
   pad: 0px;
   margin: 0px;
@@ -214,6 +287,11 @@
 .projectPreview_Grid > pictures {
   grid-area: pictures;
   background-color: transparent;
+
+  @media screen and (max-width: 800px) {
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 /*
 .projectPreview_Grid > navigationpanel {
@@ -233,6 +311,10 @@
   background-color: #f0f0f000;
   padding: 20px;
   box-sizing: border-box;
+
+  @media screen and (max-width: 800px) {
+    display: none;
+  }
 }
 
 .navigation_buttons_group{
@@ -267,4 +349,9 @@
 .projectPreview_Grid > main {
   grid-area: main;
   background-color: #0000ff00;
+
+  @media screen and (max-width: 800px) {
+    height: auto; 
+    background-color: #ff6a00;
+  }
 }
