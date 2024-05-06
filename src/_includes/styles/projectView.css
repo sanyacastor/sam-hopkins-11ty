@@ -30,7 +30,25 @@
 
 .projectView_ScrollArticle > p > img {
   display: none;
+
+  @media screen and (max-width: 800px) {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
 }
+
+.projectView_imgCaptionMobile{
+  background-color: green;
+  display: none;
+
+  @media screen and (max-width: 800px) {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+}
+
 
 .projectView_ScrollArticle > img {
   display: none;
@@ -105,10 +123,9 @@
   height: 100%;
 }
 
-.swiper-slide{
-  
+.swiper-slide{ 
  color:green;
- font:40px Impact;   
+ font:40px Impact;
 }
 
 .projectView_blockText {

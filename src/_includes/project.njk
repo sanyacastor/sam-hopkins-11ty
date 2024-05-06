@@ -147,18 +147,28 @@ layout: base.njk
                 });
       }
 
-      function getListOfImages() {
+      function processImages() {
         str = hscrollContent.innerHTML;
 
         let images = [];
         let regex = /<img\s+src="([^"]+)"\s+alt="([^"]+)"/g;
+
         const imgCollection = document.getElementsByTagName('img');
         for (let item of imgCollection) {
-          // console.log('src :', item.src)
-          // console.log('alt :', item.alt)
           images.push({src: item.src, alt: item.alt, title: item.title});
         }
 
+        addCaptionsToImages(imgCollection);
+        addImagesToSwiper(images);
+      }
+
+      function addCaptionsToImages(imgCollection){
+        for (let item of imgCollection) {
+          item.insertAdjacentHTML('afterend', `<p class="projectView_imgCaptionMobile">${item.title}</p>`);
+        }
+      }
+
+      function addImagesToSwiper(images){
         //put images into swiper-wrapper
         let swiperWrapper = document.getElementById('projectView_swiperWrapper');
         swiperWrapper.innerHTML = '';
@@ -176,7 +186,8 @@ layout: base.njk
         let isMobileVersion = windowControllerInstance.itisMobile();
         console.log("isMobile: " + isMobileVersion);
 
-        getListOfImages();
+        processImages();
+
 
         onResize();
         processSlug();
