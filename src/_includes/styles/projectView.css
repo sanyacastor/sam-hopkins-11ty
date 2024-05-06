@@ -91,6 +91,16 @@
   }
 }
 
+.projectView_photo_caption{
+  text-align: left;
+  position: inherit;
+  left: 0px;
+  top: 0px;
+  background-color: green;
+  width: 100%;
+  padding-left: 10px;
+}
+
 .swiper{
   height: 100%;
 }
