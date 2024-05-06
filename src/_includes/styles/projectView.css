@@ -21,6 +21,11 @@
 
   word-break: break-word;
   white-space: normal;
+
+  @media screen and (max-width: 800px) {
+    width: 100%;
+    padding-right: 10px;
+  }
 }
 
 .projectView_phantomColumn{
@@ -35,9 +40,9 @@
     display: block;
     width: 100%;
     height: auto;
+    object-fit: contain; /* Updated */
   }
 }
-
 .projectView_imgCaptionMobile{
   background-color: green;
   display: none;
@@ -105,7 +110,7 @@
   background-color: green;
 
   @media screen and (max-width: 800px) {
-    width: 100%;
+    display: none;
   }
 }
 
@@ -117,6 +122,10 @@
   background-color: green;
   width: 100%;
   padding-left: 10px;
+
+  @media screen and (max-width: 800px) {
+    display: none;
+  }
 }
 
 .swiper{

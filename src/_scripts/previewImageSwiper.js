@@ -39,7 +39,8 @@ class previewImageSwiper{
 
     recalcSwiperImages(isMobileVerison){
       let boxWidth = this.swiperElement.offsetWidth;
-      console.log("swiper box widht: " + boxWidth + "px");
+
+      console.log("swiper box width: " + boxWidth + "px");
       console.log("isMobile        : " + isMobileVerison);
 
       if(isMobileVerison){

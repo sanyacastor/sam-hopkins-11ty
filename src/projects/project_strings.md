@@ -73,8 +73,5 @@ Walking in the forest I had a similar experience of these shafts of light pourin
 
 These structures were build having developed a few prototypes first. They are made from one piece of string, which goes from the base to the top, and back again. They are temporary and at some stage will decay and fade away. 
 
-
-
 ![](/assets/data/strings_documentation_2006_-c-hopkins-4-1-.jpg)
 
-![](/assets/data/strings_documentation_2006_-c-hopkins-5-1-.jpg)
