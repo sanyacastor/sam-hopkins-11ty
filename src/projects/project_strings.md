@@ -65,11 +65,11 @@ previewDescription: The initial idea for this came from an old photo I saw of
 
 The initial idea for this came from an old photo I saw of Grand Central Station in New York. The photo is black and white and shows the huge atrium in the interior of the station. Shafts of light stream through large windows on the side of the building illuminating the dwarfed figures standing there. The light seems so tactile, almost as if it actually was a three dimensional form.
 
-![](/assets/data/strings_documentation_2006_-c-hopkins-2-1-.jpg)
+![](/assets/data/strings_documentation_2006_-c-hopkins-2-1-.jpg "This is the 2nd photo caption")
 
 Walking in the forest I had a similar experience of these shafts of light pouring through gaps in the foliage in the afternoon sun. I tried to recreate this phenomenon, to give the illusion of light, but using sisal string.
 
-![](/assets/data/strings_documentation_2006_-c-hopkins-3-1-.jpg)
+![](/assets/data/strings_documentation_2006_-c-hopkins-3-1-.jpg "This caption is unrealisticly long. This caption is unrealisticly long. This caption is unrealisticly long.")
 
 These structures were build having developed a few prototypes first. They are made from one piece of string, which goes from the base to the top, and back again. They are temporary and at some stage will decay and fade away. 
 

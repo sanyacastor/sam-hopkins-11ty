@@ -105,6 +105,12 @@
   height: 100%;
 }
 
+.swiper-slide{
+  
+ color:green;
+ font:40px Impact;   
+}
+
 .projectView_blockText {
   flex-grow: 1;
   padding: 20px;

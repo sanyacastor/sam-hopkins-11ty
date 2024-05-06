@@ -150,15 +150,13 @@ layout: base.njk
       function getListOfImages() {
         str = hscrollContent.innerHTML;
 
-        //console.log(str)
-
         let images = [];
         let regex = /<img\s+src="([^"]+)"\s+alt="([^"]+)"/g;
         const imgCollection = document.getElementsByTagName('img');
         for (let item of imgCollection) {
           // console.log('src :', item.src)
           // console.log('alt :', item.alt)
-          images.push({src: item.src, alt: item.alt});
+          images.push({src: item.src, alt: item.alt, title: item.title});
         }
 
         //put images into swiper-wrapper
@@ -166,7 +164,7 @@ layout: base.njk
         swiperWrapper.innerHTML = '';
         images.forEach(image => {
           swiperWrapper.innerHTML += `<div class="swiper-slide">
-                                        <img src="${image.src}" alt="${image.alt}" class="swiper-slide">
+                                        <img src="${image.src}" alt="${image.alt}" class="swiper-slide" title="${image.title}">
                                       </div>`;
         }); 
         swiper.update();
@@ -182,6 +180,7 @@ layout: base.njk
 
         onResize();
         processSlug();
+        updateImageCaption();
         //window.history.pushState({"html":html,"pageTitle":"fdsfsdf"},"", "somePath");
       });
       window.addEventListener('resize', function() {
@@ -424,8 +423,33 @@ layout: base.njk
       navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev"
-      }
+      },
+      onSlideChangeEnd: function(swiper){
+        console.log("slide changed");
+      }                
     });
+    /*
+    swiper.on('reachEnd', function() {
+      console.log("swiper reached end");
+    });
+
+
+    swiper.on('beforeSlideChangeStart', function() {
+      console.log("swiper change start");
+    });*/
+
+    swiper.on('slideChange', function() {
+      updateImageCaption();
+    });
+
+    function updateImageCaption(){
+      let currentSlide = swiper.slides[swiper.activeIndex];
+      let currentImage = currentSlide.querySelector('img');
+      let currentImageTitle = currentImage.getAttribute('title');
+
+      var caprtion = document.getElementById('projectView_photo_caption');
+      caprtion.innerHTML = currentImageTitle;
+    }
 
     function swipeImageToFraction(persent){
       nSlides = swiper.slides.length;
@@ -437,4 +461,6 @@ layout: base.njk
 
       swiper.slideTo(targetSlideNumber);
     }
-  </script>
+
+</script>
+
