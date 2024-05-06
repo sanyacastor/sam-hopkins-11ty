@@ -274,7 +274,7 @@ body::-webkit-scrollbar {
   }
 }
 
-.container{
+.container {
   @media screen and (max-width: 800px){
     justify-content: center;
   }

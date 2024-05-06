@@ -6,17 +6,23 @@
         </button>
         <div class="cardcabinet_grid greenish" id="relatedProjectsGrid"> 
             {%- for relatedProject in related_projects_data.relatedProjects -%}
-                {%- for qproject in collections.project -%}
-                    {%- if qproject.data.title == relatedProject.project -%}
+                {%- for collection_project in collections.project -%}
+                    {%- if collection_project.data.title == relatedProject -%}
+
+                        {% set qpreviewURL = collection_project.data.title | slug %}
+                        {%- set qpreviewURLfull = '/preview/' + qpreviewURL -%}
+
                         {%- set card_data = { 
                             data: {
-                                title: qproject.data.title,
-                                dates: qproject.data.dates,
-                                collaborators: qproject.data.collaborators,
-                                cardDescription: qproject.data.cardDescription,
-                                relatedProjects: qproject.data.relatedProjects
+                                targetUrl: qpreviewURLfull,
+                                title: collection_project.data.title,
+                                dates: collection_project.data.dates,
+                                collaborators: collection_project.data.collaborators,
+                                cardDescription: collection_project.data.cardDescription,
+                                relatedProjects: collection_project.data.relatedProjects
                             }
                         } -%}
+
                         {%- include "summary-card.njk" -%}
                     {%- endif -%}
                 {%- endfor -%}

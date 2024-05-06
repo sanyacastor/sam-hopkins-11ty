@@ -6,9 +6,9 @@ thumbnailDescription: THUMBNAIL DESCRIPTION IS REQUIRED.
 summary: From 06.09.06 until 11.09.06 for 6 hours a day I sat on a bench in
   Kuznicza Street in Wroclaw
 relatedProjects:
-  - project: Cyclist problems in sociourban subarea
-  - project: Strings
-  - project: The naked snail
+  - Cyclist problems in sociourban subarea
+  - Strings
+  - The naked snail
 cardDescription: My idea for this project was to explore the state of being
   stationary within a city that is in constant flux.
 tags: project

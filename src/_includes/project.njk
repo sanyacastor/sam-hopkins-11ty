@@ -11,11 +11,12 @@ layout: base.njk
   <!--to pass to summary-card.njk-->
   {% set card_data = { 
     data: {
-        title: title,
-        dates: dates,
-        collaborators: collaborators,
-        cardDescription: cardDescription,
-        relatedProjects: relatedProjects
+      targetUrl: project.url,
+      title: title,
+      dates: dates,
+      collaborators: collaborators,
+      cardDescription: cardDescription,
+      relatedProjects: relatedProjects
     }
   } %}
 
@@ -304,7 +305,7 @@ layout: base.njk
         
         var projectViewOuter = document.getElementById('projectView_outer');
         var elementWidth = projectViewOuter.offsetWidth;
-        windowColumnWidth = elementWidth-60;//!!!PELIGRO!!! magic numbers
+        windowColumnWidth = elementWidth-40;//!!!PELIGRO!!! magic numbers
 
         hscrollContent.style.columnWidth = windowColumnWidth + 'px';
       }
