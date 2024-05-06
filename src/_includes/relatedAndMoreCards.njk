@@ -1,22 +1,27 @@
-{% if project.data.relatedProjects.length > 0 -%}
-    {# <div class="preview_related_and_more_projects_container"> #}
-        
-    {# </div> #}
-
-    <div class="cardcabinet_grid" id="relatedProjectsGrid"> 
-        {%- for relatedProject in project.data.relatedProjects -%}
-            {%- for qproject in collections.project -%}
-                {%- if qproject.data.title == relatedProject.project -%}
-                    {%- include "summary-card.njk" -%}
-                {%- endif -%}
-            {%- endfor -%}
-        {%- endfor -%}
-       
+{% if related_projects_data.relatedProjects.length > 0 -%}
+    <div class="relatedAndMore_container">
         <button class="related_projects_button"
-                onclick="scrollToElement('related_projects_button')">
-                Related projects
+            onclick="scrollToElement('related_projects_button')">
+            Related projects
         </button>
-       
+        <div class="cardcabinet_grid greenish" id="relatedProjectsGrid"> 
+            {%- for relatedProject in related_projects_data.relatedProjects -%}
+                {%- for qproject in collections.project -%}
+                    {%- if qproject.data.title == relatedProject.project -%}
+                        {%- set card_data = { 
+                            data: {
+                                title: qproject.data.title,
+                                dates: qproject.data.dates,
+                                collaborators: qproject.data.collaborators,
+                                cardDescription: qproject.data.cardDescription,
+                                relatedProjects: qproject.data.relatedProjects
+                            }
+                        } -%}
+                        {%- include "summary-card.njk" -%}
+                    {%- endif -%}
+                {%- endfor -%}
+            {%- endfor -%}
+        </div>
     </div>
 {%- endif -%}
 <!--            /related cards section                -->

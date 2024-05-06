@@ -29,6 +29,8 @@
 
   @media screen and (max-width: 800px) {
     height: auto;
+    overflow-x: hidden;
+    padding-top: 0px;
   }
 }
 
@@ -61,6 +63,8 @@
   }
 
   @media screen and (max-width: 800px) {
+    width: 100%;
+    height: 100%;
     column-fill: unset;
     column-width: unset;
     column-gap: unset;
@@ -351,6 +355,12 @@ body::-webkit-scrollbar {
   background-color: #0000ff00;
 
   @media screen and (max-width: 800px) {
+    margin-top: 0px;
+    margin-bottom: 0px;
+
+    padding-top: 0px;
+    padding-bottom: 0px;
+
     height: auto; 
     background-color: #ff6a00;
   }

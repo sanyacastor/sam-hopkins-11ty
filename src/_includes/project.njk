@@ -14,11 +14,16 @@ layout: base.njk
         title: title,
         dates: dates,
         collaborators: collaborators,
-        cardDescription: cardDescription
+        cardDescription: cardDescription,
+        relatedProjects: relatedProjects
     }
   } %}
-  
-    <!--link rel="stylesheet" href="bundle.css"-->
+
+  {%-set related_projects_data = {
+    relatedProjects: relatedProjects
+  } %}
+    
+  <!--link rel="stylesheet" href="bundle.css"-->
   <article>
     <div class='container'>
       <div class="projectView_container">
@@ -26,7 +31,7 @@ layout: base.njk
           <div class="projectView_cardSlot">
             {% include 'summary-card.njk'  %}
           </div>
-          <div class="projectView_photoSlot">
+          <div class="projectView_photoSlot" id = 'projectView_photoSlot'>
             <div class="swiper mySwiper">
               <div class="swiper-wrapper" id="projectView_swiperWrapper">
               </div>
@@ -454,7 +459,17 @@ layout: base.njk
     });
 
     function updateImageCaption(){
+      if(swiper.slides.length == 0){
+        document.getElementById('projectView_photoSlot').style["display"] = "none";
+        document.getElementById('projectView_photo_caption').style["display"] = "none";
+        return;
+      }else{
+        document.getElementById('projectView_photoSlot').style["display"] = "block";
+        document.getElementById('projectView_photo_caption').style["display"] = "block";
+      }
+
       let currentSlide = swiper.slides[swiper.activeIndex];
+
       let currentImage = currentSlide.querySelector('img');
       let currentImageTitle = currentImage.getAttribute('title');
 

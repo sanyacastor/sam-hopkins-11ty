@@ -76,16 +76,12 @@ pagination:
               <button class="navigation-button close-button" id="preview_descriptionNavButton_close" > x </button>
             </div>
           </div>
-
-        {# <div class="related_and_full_buttons_container"> #}
           <div class="projectPreview_buttonFullProject_container" id="preview_buttonFullProject" >
             <a href={{ "/projects/project_" ~ preview.title | slug }}>
               full project
             </a>
             <div class="projectPreview_buttonFullProject_arrowRight" id="preview_buttonFullProject_arrow"></div>
           </div>
-        {# </div> #}
-
         </div>
       </main>  
     </div>
@@ -115,7 +111,6 @@ pagination:
     windowControllerInstance = new windowController();
     let isMobileVersion = windowControllerInstance.itisMobile();
     console.log("isMobile: " + isMobileVersion);
-
 
     previewDescriptionScrollInstance
                  = new previewDescriptionScroll('projectPreview_outer',
