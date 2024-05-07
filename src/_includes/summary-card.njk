@@ -6,12 +6,40 @@
   <div class = "cardcabinet_oulineBox">
       <h2 class="cardcabinet_cardTitle"> {{card_data.data.title}} </h2>
       {%- if card_data.data.dates -%}
-          <p class="cardcabinet_dates"> {{card_data.data.dates}} </p>
+        <p class="cardcabinet_dates"> {{card_data.data.dates}} </p>
       {%- endif -%}
       {%- if card_data.data.collaborators -%}
-          <p class="cardcabinet_collaborators">  with: {{card_data.data.collaborators}} </p>
+        <div class="cardcabinet_collaborators">  with: {{card_data.data.collaborators}} </div>
       {%- endif -%}
-      <p class="cardcabinet_cardDescription"> {{card_data.data.cardDescription}} </p>
+      <div class="cardcabinet_cardDescriptionWrapper">
+        <div class="cardcabinet_cardDescription"> {{card_data.data.cardDescription}} </div>
+      </div>
   </div>
 </div>
 </a>
+
+<script>
+  var cardDescriptionWrappers = document.querySelectorAll('.cardcabinet_cardDescriptionWrapper');
+  
+  cardDescriptionWrappers.forEach(function(wrapper) {
+      var height = wrapper.offsetHeight; 
+      console.log(height);
+
+      var cardDescription = wrapper.querySelector('.cardcabinet_cardDescription');
+      console.log(cardDescription.innerHTML);
+
+      var lineHeight = parseFloat(getComputedStyle(cardDescription).lineHeight);
+      var numLineHeights = (height / lineHeight);
+      console.log("number of line heights" + numLineHeights);
+
+      cardDescription.style['-webkit-line-clamp'] = Math.floor(numLineHeights);
+  });
+  /*
+  .cardcabinet_cardDescriptionWrapper {
+  width: 100%;
+  height: 100%;
+
+  background-color: aqua;
+}
+  */
+</script>
