@@ -27,6 +27,23 @@ header {
   padding-bottom: 7px;
 
   background: var(--color-primary);
+
+
+}
+
+.header-nav__links-list-item.header-nav__links-list-item--desktopButtons{
+  display: block;
+  @media screen and (max-width: 800px){
+    display: none; 
+  }
+}
+
+.header-nav__links-list-item.header-nav__links-list-item--mobileMenuButton{
+  display: none; 
+  width: 100px;
+  @media screen and (max-width: 800px){
+    display: block;
+  }
 }
 
 .header-nav__links-list-item a {

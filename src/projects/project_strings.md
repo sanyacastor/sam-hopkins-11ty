@@ -1,7 +1,7 @@
 ---
 title: Strings
 year: "2024"
-collaborators: Mutheu Mbondo
+collaborators: Mutheu Mbondo Mutheu Mbondo Mutheu Mbondo Mutheu Mbondo Mutheu Mbondo Mutheu Mbondo Mutheu Mbondo Mutheu Mbondo Mutheu Mbondo Mutheu Mbondo Mutheu Mbondo Mutheu Mbondo Mutheu Mbondo Mutheu Mbondo Mutheu Mbondo 
 thumbnailDescription: fw3f 3F f 3F  AFSDFAW34F ASDfFSD FAW4F
   ASDFAW4GAERT5HASRTBNS45UHJWAfw3f 3F f 3F  AFSDFAW34F ASDfFSD FAW4F
   ASDFAW4GAERT5HASRTBNS45UHJWAfw3f 3F f 3F  AFSDFAW34F ASDfFSD FAW4F
@@ -46,8 +46,7 @@ PDF File: /assets/data/test.pdf
 relatedProjects:
   - Feeding Your Toy Snail with Clouds Extract
   - The naked snail
-cardDescription: Sisal string structures built in the forest which try to evoke
-  shafts of light coming through the trees.
+cardDescription: Sisal string structures built in the forest which try to evoke shafts of light coming through the trees. Sisal string structures built in the forest which try to evoke shafts of light coming through the trees. Sisal string structures built in the forest which try to evoke shafts of light coming through the trees. Sisal string structures built in the forest which try to evoke shafts of light coming through the trees.
 previewDescription: The initial idea for this came from an old photo I saw of
   Grand Central Station in New York. The photo is black and white and shows the
   huge atrium in the interior of the station. Shafts of light stream through

@@ -1,6 +1,6 @@
 ---
-title: p42
-dates: p42
+title: The industry of plastic
+dates: 840-420 b.c.
 collaborators: p42
 cardDescription: p42
 previewDescription: p42

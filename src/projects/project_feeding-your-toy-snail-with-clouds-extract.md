@@ -1,7 +1,7 @@
 ---
 title: Feeding Your Toy Snail with Clouds Extract
 dates: 1928-04-03T16:13
-collaborators: Mr. Garry The Mighty and Samantha Shellburg
+collaborators: Mr. Garry The Mighty and Samantha Shellburg Mr. Garry The Mighty and Samantha Shellburg
 cardDescription: Toy snails, while not requiring traditional sustenance like
   real animals, can still benefit from creative and imaginative feeding methods.
   In this article, we'll explore the whimsical idea of feeding your toy snail

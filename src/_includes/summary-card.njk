@@ -7,10 +7,16 @@
       <h2 class="cardcabinet_cardTitle"> {{card_data.data.title}} </h2>
       {%- if card_data.data.dates -%}
         <p class="cardcabinet_dates"> {{card_data.data.dates}} </p>
+      {%- else -%}
+        <p class="cardcabinet_dates"> error: year is missing </p>
       {%- endif -%}
-      {%- if card_data.data.collaborators -%}
-        <div class="cardcabinet_collaborators">  with: {{card_data.data.collaborators}} </div>
-      {%- endif -%}
+      <div class="cardcabinet_collaborators"> 
+        {%- if card_data.data.collaborators.length > 0  -%} 
+          with: {{card_data.data.collaborators}}
+        {%- else -%}
+          personal
+        {%- endif -%}
+      </div>
       <div class="cardcabinet_cardDescriptionWrapper">
         <div class="cardcabinet_cardDescription"> {{card_data.data.cardDescription}} </div>
       </div>

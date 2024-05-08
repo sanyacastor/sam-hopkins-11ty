@@ -6,12 +6,15 @@ slug: projects
 <link rel="stylesheet" href="bundle.css">
 
 <div class='container' >
-  <div class="cardcabinet_grid">
-    {% for project in collections.project %}
-      {% assign previewURL = project.data.title | slug %}
-      {% assign previewURL = '/preview/' | append: previewURL %}
-      {% assign card_data = project %}
-      {% include "summary-card.njk" with card_data %}
-    {% endfor %}
+  <div class="mainPage_scrollBox">
+    <div class="cardcabinet_grid">
+      {% for project in collections.project %}
+        {% assign previewURL = project.data.title | slug %}
+        {% assign previewURL = '/preview/' | append: previewURL %}
+        {% assign card_data = project %}
+        {% include "summary-card.njk" with card_data %}
+      {% endfor %}
+    </div>
+    <div class="corner"></div>
   </div>
 </div>
