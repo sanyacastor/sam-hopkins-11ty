@@ -80,10 +80,6 @@
 }
 .tmp:hover .cardcabinet_cardTitle{
   font-weight: 700;
-  
-  font-family: 'Karelia Web Bold';
-  src: url('/fonts/KareliaWeb-Bold.woff2') format('woff2');
-  font-style: normal;
 }
 
 .cardcabinet_cardTitle{
