@@ -13,8 +13,12 @@ collections:
     create: true
     slug: 'project-{{slug}}'
     fields:
+      - { label: "ID",
+          name: "id",
+          widget: "uuid"
+        }
       - { label: 'Title', name: 'title', widget: 'string' }
-      - { label: 'Year', name: 'year', widget: 'string' }
+      - { label: 'Dates', name: 'dates', widget: 'string' }
       - {
           label: 'Link to original material',
           name: 'link',
@@ -28,11 +32,11 @@ collections:
           required: false,
         }
       - {
-          label: 'Thumbnail description',
-          name: 'thumbnailDescription',
+          label: 'Card description',
+          name: 'cardDescription',
           widget: 'string',
         }
-      - { label: 'Preview summary', name: 'summary', widget: 'string' }
+      - { label: 'Preview description', name: 'previewDescription', widget: 'string' }
       - { label: 'Body', name: 'body', widget: 'markdown' }
       - { label: 'PDF', name: 'PDF File', widget: 'file', required: false }
       - label: 'Related projects'
