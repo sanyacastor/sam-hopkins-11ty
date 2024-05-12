@@ -31,20 +31,3 @@
     </div>
   </div>
 </header>
-
-<script>
-  const mobileMenu = document.querySelector('.header-mobile-menu');
-  const mobilleMenuToggle = document.querySelector('.mobile-menu-toggle');
-
-  const toggleMobileMenu = () => {
-    mobileMenu
-      .classList
-      .toggle('header-mobile-menu--hidden');
-
-    mobilleMenuToggle
-      .classList
-      .toggle('mobile-menu-toggle--close');
-  }
-
-  mobilleMenuToggle.addEventListener('click', toggleMobileMenu, true);
-</script>
