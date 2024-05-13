@@ -145,11 +145,6 @@ pagination:
     previewDescriptionScrollInstance.onload();
     previewImageSwiperInstance.onLoad(isMobileVersion);
 
-    if(previewDescriptionScrollInstance.getNumberOfColumns() > 1)
-      previewNavigationPanelInstance.setButtonsLeftRightState(true);
-    else
-      previewNavigationPanelInstance.setButtonsLeftRightState(false);
-
     previewNavigationPanelInstance.update(previewDescriptionScrollInstance);
   });
 
@@ -158,6 +153,8 @@ pagination:
 
     previewDescriptionScrollInstance.onResize();
     previewImageSwiperInstance.recalc(isMobileVersion);
+
+    previewNavigationPanelInstance.update(previewDescriptionScrollInstance);
   });
 
   document.addEventListener('scroll', function() {
@@ -210,6 +207,8 @@ pagination:
       }
 
       previewNavigationPanelInstance.update(previewDescriptionScrollInstance);
+      
+      e.preventDefault();
     });
 
   function assignButtonsEvents(){
