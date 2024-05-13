@@ -5,19 +5,46 @@
         <li class="header-nav__links-list-item header-nav__links-list-item--logo">
           <a class="header-nav__link" href="/">Sam Hopkins</a>
         </li>
-
-        <li class="header-nav__links-list-item header-nav__links-list-item--mobileMenuButton" >
-          <button>--</button>
+        {% for link in constants.menuItems %}
+          <li class="header-nav__links-list-item header-nav__links-list-item--desktop {%if linkSlug in page.url %}header-nav__links-list-item--active{% endif %}" >
+            <a class="header-nav__link" href={{ "/" ~ link.slug }}>{{ link.title }}</a>
+          </li>
+        {% endfor %}
+        <li class='header-nav__links-list-item header-nav__links-list-item--active links-list-item__menu mobile-menu-toggle mobile-menu-toggle--close'>
+          <button class='mobile-menu-toggle__button burger-menu-icon'>
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+          </button>
+          <button class='mobile-menu-toggle__button burger-close-icon'>
+                X
+          </button>
         </li>
-
-          {% for link in constants.menuItems %}
-            {% set linkSlug = "/" ~ link.slug %}
-            <li class="header-nav__links-list-item header-nav__links-list-item--desktopButtons {%if linkSlug in page.url %}header-nav__links-list-item--active{% endif %}" >
-              <a class="header-nav__link" href={{ linkSlug }}>{{ link.title }}</a>
-            </li>
-          {% endfor %}
-
       </ul>
     </nav>
+    <div class="header-mobile-menu header-mobile-menu--hidden">
+      {% for link in constants.menuItems %}
+        <li class="header-nav__links-list-item header-nav__links-list-item--mobile {%if linkSlug in page.url %}header-nav__links-list-item--active{% endif %}" >
+          <a class="header-nav__link" href={{ "/" ~ link.slug }}>{{ link.title }}</a>
+        </li>
+      {% endfor %}
+    </div>
   </div>
 </header>
+
+<script>
+  const mobileMenu = document.querySelector('.header-mobile-menu');
+  const mobilleMenuToggle = document.querySelector('.mobile-menu-toggle');
+
+  const toggleMobileMenu = () => {
+    mobileMenu
+      .classList
+      .toggle('header-mobile-menu--hidden');
+
+    mobilleMenuToggle
+      .classList
+      .toggle('mobile-menu-toggle--close');
+  }
+
+  mobilleMenuToggle.addEventListener('click', toggleMobileMenu, true);
+</script>
