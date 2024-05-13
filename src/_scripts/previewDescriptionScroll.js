@@ -22,6 +22,10 @@ class previewDescriptionScroll{
     destructor(){     
     }
 
+    getNumberOfColumns(){
+      return this.checkpoints.length;
+    }
+
     onload() {
       this.onResize();
       
@@ -160,5 +164,13 @@ class previewDescriptionScroll{
                       scrollLeft: this.checkpoints[index],
                       duration: 0.5, ease: "power2.inOut"
                   });
+    }
+
+    isLastCheckpoint(){
+      return this.currentChecpointIndex == this.checkpoints.length - 1;
+    }
+
+    isFirstCheckpoint(){
+      return this.currentChecpointIndex == 0;
     }
   }

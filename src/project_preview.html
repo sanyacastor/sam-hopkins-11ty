@@ -68,9 +68,21 @@ pagination:
           </div>
           <div class="navigation_panel">
             <div class="navigation_buttons_group">
-              <button class="navigation-button left-button"  id="preview_descriptionNavButton_left" > l </button>
-              <button class="navigation-button right-button" id="preview_descriptionNavButton_right"> r </button>
-              <button class="navigation-button close-button" id="preview_descriptionNavButton_close" > x </button>
+              <button class="navigation-button left-button"  id="preview_descriptionNavButton_left">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="23" fill="none">
+                  <path fill="currentColor" fill-rule="evenodd" d="M3.27 10 9.344 0h-2.56L1.376 9.216 0 11.2l1.216 1.984L6.784 22.4h2.56L3.063 12H21.88v-2H3.27Z" clip-rule="evenodd"/>
+                </svg>
+              </button>
+              <button class="navigation-button right-button" id="preview_descriptionNavButton_right">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="23" fill="none">
+                  <path fill="currentColor" fill-rule="evenodd" d="m18.61 12.4-6.074 10h2.56l5.408-9.216L21.88 11.2l-1.216-1.984L15.096 0h-2.56l6.281 10.4H0v2h18.61Z" clip-rule="evenodd"/>
+                </svg>
+              </button>
+              <button class="navigation-button close-button" id="preview_descriptionNavButton_close">
+                <svg width="17" height="23" viewBox="0 0 17 23" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M0.536 23L7.32 11.832L0.536 0.599998H3.096L8.664 9.816L14.104 0.599998H16.664L9.88 11.8L16.632 23H14.104L8.504 13.784L3.096 23H0.536Z" fill="#6E0B0B"/>
+                </svg>
+              </button>
             </div>
           </div>
           <div class="projectPreview_buttonFullProject_container" id="preview_buttonFullProject" >
@@ -94,6 +106,7 @@ pagination:
 <script src="/_scripts/previewDescriptionScroll.js"></script>
 <script src="/_scripts/previewImageSwiper.js"></script>
 <script src="/_scripts/windowController.js"></script>
+<script src="/_scripts/previewNavigationPanel.js"></script>
 
 <script>
   var previewDescriptionScrollInstance;
@@ -101,6 +114,7 @@ pagination:
   var gsapTwiner = gsap;
 
   var windowControllerInstance;
+  var previewNavigationPanelInstance;
   
   document.addEventListener("DOMContentLoaded", (event) => { /* gsap code */});
 
@@ -120,10 +134,23 @@ pagination:
     previewImageSwiperInstance
                  = new previewImageSwiper('mySwiper',
                                           'preview_swiperWrapper');
+    previewNavigationPanelInstance
+                 = new previewNavigationPanel('preview_descriptionNavButton_left',
+                                              'preview_descriptionNavButton_right',
+                                              'preview_descriptionNavButton_close');
+
+
     assignButtonsEvents();
 
     previewDescriptionScrollInstance.onload();
     previewImageSwiperInstance.onLoad(isMobileVersion);
+
+    if(previewDescriptionScrollInstance.getNumberOfColumns() > 1)
+      previewNavigationPanelInstance.setButtonsLeftRightState(true);
+    else
+      previewNavigationPanelInstance.setButtonsLeftRightState(false);
+
+    previewNavigationPanelInstance.update(previewDescriptionScrollInstance);
   });
 
   window.addEventListener('resize', function() {
@@ -157,10 +184,13 @@ pagination:
         ? e.wheelDelta
         : -e.deltaY;
       
-        if(delta>0)
-          previewDescriptionScrollInstance.scrollLeft();
-        else
-          previewDescriptionScrollInstance.scrollRight();
+      if(delta>0)
+        previewDescriptionScrollInstance.scrollLeft();
+      else
+        previewDescriptionScrollInstance.scrollRight();
+
+      previewNavigationPanelInstance.update(previewDescriptionScrollInstance);
+
       //  this.scrollLeft -= (delta);
       e.preventDefault();
     }, false);
@@ -178,15 +208,21 @@ pagination:
       } else {
         previewImageSwiperInstance.slideNext();
       }
+
+      previewNavigationPanelInstance.update(previewDescriptionScrollInstance);
     });
 
   function assignButtonsEvents(){
     document.getElementById('preview_descriptionNavButton_left').addEventListener('click', function() {
       previewDescriptionScrollInstance.scrollLeft();
+      
+      previewNavigationPanelInstance.update(previewDescriptionScrollInstance);
     });
 
     document.getElementById('preview_descriptionNavButton_right').addEventListener('click', function() {
       previewDescriptionScrollInstance.scrollRight();
+      
+      previewNavigationPanelInstance.update(previewDescriptionScrollInstance);
     });
 
     document.getElementById('preview_descriptionNavButton_close').addEventListener('click', function() {
