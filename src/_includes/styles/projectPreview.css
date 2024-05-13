@@ -24,7 +24,7 @@
   overflow-x: auto;
 
   scrollbar-width: thin;
-  scrollbar-color: var(--color-primary) var(--color-secondary);
+  scrollbar-color: var(--color-primary) var(--color-white);
 
   @media screen and (max-width: 800px) {
     height: auto;
