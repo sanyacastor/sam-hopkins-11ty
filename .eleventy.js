@@ -9,10 +9,8 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy('./src/_scripts')
 
   // Custom Fonts
-  eleventyConfig.addPassthroughCopy('KareliaWeb-Bold.woff2')
-  eleventyConfig.addPassthroughCopy('KareliaWeb-Regular.woff2')
-  
-	eleventyConfig.addPlugin(bundlerPlugin);
+  eleventyConfig.addPassthroughCopy('./src/fonts/KareliaWeb-Bold.woff2')
+  eleventyConfig.addPassthroughCopy('./src/fonts/KareliaWeb-Regular.woff2')
 
   return {
     dir: {
