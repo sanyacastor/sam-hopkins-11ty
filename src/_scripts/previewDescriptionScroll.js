@@ -37,6 +37,8 @@ class previewDescriptionScroll{
       this.recalcUnfoldTriggerPosition();
       this.recalcCheckpoints();
       this.updateButtonFoldState();
+
+      this.foldFullProjectButton();
     }
 
     recalcUnfoldTriggerPosition(){
