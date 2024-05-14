@@ -137,6 +137,26 @@ body::-webkit-scrollbar {
   }
 }
 
+.projectPreview_buttonFullProject_container.unfolded {
+  width: 130px;
+  right: 328px;
+  
+  height: 288px;
+  bottom: 90px;
+}
+
+.projectPreview_buttonFullProject_arrowRight.unfolded {
+  border-left: 98px;
+  right: -98px;
+
+  border-top: 143px solid transparent;
+  border-bottom: 143px solid transparent;
+  border-left: 98px solid var(--color-secondary);
+
+  height: 288px;
+  bottom: 90px;
+}
+
 .projectPreview_buttonFullProject_container{
   position: absolute;
   
