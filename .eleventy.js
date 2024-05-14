@@ -12,7 +12,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy('KareliaWeb-Bold.woff2')
   eleventyConfig.addPassthroughCopy('KareliaWeb-Regular.woff2')
   
-	eleventyConfig.addPlugin(bundlerPlugin);
+	eleventyConfig.addPlugin(bundlerPlugin); 
 
   return {
     dir: {
