@@ -22,9 +22,9 @@ pagination:
       <pictures>
         <div class="swiper mySwiper">
           <div class="swiper-wrapper">
-            {% for image in preview.images %}
+            {% for sliderImage in preview.images %}
               <div class="swiper-slide">
-                <img src='{{ image.url }}' alt='{{ image.alt }}' class="swiper-slide" >
+                {% image sliderImage.url, sliderImage.alt %}
               </div>
             {% endfor %}
           </div>
@@ -35,7 +35,6 @@ pagination:
       </pictures>
 
       <navigation>df</navigation>
-      <!--imgcaption>asd</imgcaption-->
       <main>
         <div id="projectPreview_outer">
           <div class="projectPreview_ScrollArticle">
