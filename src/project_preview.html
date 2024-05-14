@@ -39,10 +39,15 @@ pagination:
   <div class='container'>
     <div class="projectPreview_Grid" id="preview_Grid">
       <card>
-        {%- include 'summary-card.njk' -%}
-      </card><pictures><div class="swiper mySwiper"><div class="swiper-wrapper" id="preview_swiperWrapper">
-            {%- for image in preview.images -%}
-              <div class="swiper-slide"><img src='{{ image.url }}' alt='{{ image.alt }}' style='width: 100%; display: block; object-fit: cover; margin: auto;'></img> <!--style='object-fit: cover;'-->
+        {% include 'summary-card.njk' %}
+      </card>
+      <pictures>
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper"  id="preview_swiperWrapper">
+            {% for image in preview.images %}
+              <div class="swiper-slide">
+                {% image sliderImage.url, sliderImage.alt %}
+                <!--img src='{{ image.url }}' alt='{{ image.alt }}' class="swiper-slide" -->
               </div>
             {%- endfor -%}
           </div>
