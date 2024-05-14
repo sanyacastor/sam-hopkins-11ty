@@ -88,7 +88,10 @@ header {
 }
 
 .header-mobile-menu {
+<<<<<<< HEAD
   z-index: 9999;
+=======
+>>>>>>> master
   display: block;
   width: 100%;
   max-width: 375px;
