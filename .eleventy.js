@@ -1,5 +1,11 @@
+const Image = require('@11ty/eleventy-img')
+const path = require('path')
+
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy('./src/assets')
+  eleventyConfig.addPassthroughCopy('img')
+
+  eleventyConfig.addPassthroughCopy('./src/js')
 
   // Netlify CMS
   eleventyConfig.addPassthroughCopy('./src/admin')
