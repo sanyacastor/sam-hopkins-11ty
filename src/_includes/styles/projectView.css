@@ -128,13 +128,40 @@
   }
 }
 
-.swiper{
+.swiper {
   height: 100%;
+  width: 100%;
 }
 
-.swiper-slide{ 
+.swiper-wrapper {
+  height: 100%;
+  width: 100%;
+   
+  justify-content: flex-start;
+  align-items: center;
+  display: flex !important; 
+}
+
+.swiper-slide { 
  color:green;
  font:40px Impact;
+
+ height: max-content !important;
+}
+
+.swiper-slide > p {
+  width: 100%;
+  margin: 0;
+  /* set it vertically centered */
+}
+
+.swiper-slide > p > picture {
+  width: 100%;
+}
+
+.swiper-slide > p > picture > img {
+  width: 100%;
+  height: auto;
 }
 
 .projectView_blockText {

@@ -38,7 +38,7 @@
 }
 
 .cardcabinet_oulineBox {
-  height: 99%;
+  height: 100%;
   border-bottom: 1px solid var(--color-borders); 
   
   flex-direction: column;

@@ -38,7 +38,6 @@
   background-color: rgb(255, 0, 0);
 }
 
-
 .projectPreview_ScrollArticle {
   column-fill: auto;
   column-width: 878px; 
@@ -76,7 +75,7 @@
   }
 }
 
-.cardcabinet_summaryCard{
+.cardcabinet_summaryCard {
   @media screen and (max-width: 800px) {
     margin-left: auto;
     margin-right: auto;
@@ -124,11 +123,14 @@ body::-webkit-scrollbar {
   display: none;
 }
 
-.projectPreview_mainTextContainer{
+.projectPreview_mainTextContainer {
   height: 100%;
   width: flex;
   position: relative;
   background-color: var(--color-white);
+  /* padding-left: 13px; */
+  /* padding-right: 13px; */
+  /* overflow: hidden; */
 
   @media screen and (max-width: 800px) {
     height: auto;
@@ -269,33 +271,57 @@ body::-webkit-scrollbar {
   }
 }
 
+
+/*-----------------------------------*/
 .projectPreview_Grid {
-  display: grid;
-  width: 100%;
-  height: 800px;
-  padding-top: 98px;
-  margin-top: 0px;
-
-  grid-template-areas:
-      "card pictures"
-      "main main";
+  grid-template-columns: 443px 1fr;
   grid-template-rows: 203px 416px;
-  grid-template-columns: 443px minmax(0, 1fr);/*I don't know why auto set its size to over 9000*/
 
-  @media screen and (max-width: 800px) {
-    height: auto;
-    justify-content: center;
-    /* margin-left: 100px;
-    margin-right: 100px; */
-
-    grid-template-areas:
-      "card"
-      "pictures"
-      "main";
-    grid-template-rows: 203px auto auto; 
-    grid-template-columns: minmax(0, 1fr);
+  display: grid;
+  gap: 1px;
+  background-color: transparent;
+  padding-top: 100px;
+  padding-bottom: 10px;
+  
+  @media screen and (max-width: 800px){
+    width: 100%;
+    display: block;
+    grid-template-columns: 1fr;
+    grid-template-rows: 203px auto auto;
   }
 }
+
+.preview-grid-card {
+  grid-column: 1;
+  grid-row: 1;
+  background-color: transparent;
+}
+
+.preview-grid-images {
+  grid-column: 2;
+  grid-row: 1;
+  background-color: transparent;
+  
+  @media screen and (max-width: 800px){
+    height: 300px;
+    grid-column: 1;
+    grid-row: 2;
+  }
+}
+
+.preview-grid-text {
+  grid-column: 1 / span 2;
+  grid-row: 2;
+  
+  background-color: transparent;
+  
+  @media screen and (max-width: 800px){
+    height: max-content;
+    grid-column: 1;
+    grid-row: 3;
+  }
+}
+/*-----------------------------------*/
 
 .container {
   @media screen and (max-width: 800px){
