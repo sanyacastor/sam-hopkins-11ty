@@ -19,6 +19,7 @@ class previewDescriptionScroll{
       this.fullButton = document.getElementById(id_fullButton);
       this.fullButtonArrow = document.getElementById(id_fullButtonArrow);
     }
+    
     destructor(){     
     }
 
@@ -72,6 +73,7 @@ class previewDescriptionScroll{
         this.unfoldFullProjectButton();
       }
     }
+    
     unfoldFullProjectButton(){
       if(!this.buttonIsFolded){
           return;

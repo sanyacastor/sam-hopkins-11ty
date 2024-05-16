@@ -41,21 +41,21 @@ pagination:
       <div class="preview-grid-card" id="preview-grid-card">
         {% include 'summary-card.njk' %}
       </div>
-      <div class="preview-grid-images">
-        <div class="swiper mySwiper">
-          <div class="swiper-wrapper" id="preview_swiperWrapper">
-            {% for sliderImage in preview.images %}
-              <div class="swiper-slide">
-                {% if sliderImage.url %}
-                  {% image sliderImage.url, sliderImage.alt %}
-                {% endif %}
-              </div>
-            {% endfor %}
+      <div class="preview-grid-images" id="preview-grid-images">
+          <div class="swiper mySwiper">
+            <div class="swiper-wrapper" id="preview_swiperWrapper">
+              {% for sliderImage in preview.images %}
+                <div class="swiper-slide">
+                  {% if sliderImage.url %}
+                    {% image sliderImage.url, sliderImage.alt %}
+                  {% endif %}
+                </div>
+              {% endfor %}
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
           </div>
-          <div class="swiper-button-next"></div>
-          <div class="swiper-button-prev"></div>
-          <div class="swiper-pagination"></div>
-        </div>
       </div>
       <!--imgcaption>asd</imgcaption-->
       <div class="preview-grid-text">
@@ -124,6 +124,8 @@ pagination:
   var previewNavigationPanelInstance;
   
   document.addEventListener("DOMContentLoaded", (event) => { 
+    hideShowSwiperBlock();
+
     document.documentElement.dataset.scroll = 0;
 
     windowControllerInstance = new windowController();
@@ -157,6 +159,17 @@ pagination:
     removeEmptyParagraphs('preview-grid-card');
 
   });
+
+  function hideShowSwiperBlock(){
+    var numSlides = document.querySelectorAll('.swiper-slide').length;
+    var previewGridImages = document.getElementById('preview-grid-images');
+    
+    if (numSlides < 1) {
+      previewGridImages.style.display = 'none';
+    } else {
+      previewGridImages.style.display = 'block';
+    }
+  }
 
   window.addEventListener('load', function() {});
 
