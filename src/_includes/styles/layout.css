@@ -7,7 +7,7 @@
 
 .global-container {
   font-family: 'IBM Plex Mono', monospace;
-  background-color: var(--color-white);
+  background-color: var(--global-background-color);
   height: auto;
   min-height: 100vh;
 

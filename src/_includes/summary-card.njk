@@ -8,7 +8,7 @@
       {%- if card_data.data.dates -%}
         <p class="cardcabinet_dates"> {{card_data.data.dates}} </p>
       {%- else -%}
-        <p class="cardcabinet_dates"> error: year is missing </p>
+        <p class="cardcabinet_dates"> unknown year </p>
       {%- endif -%}
       <div class="cardcabinet_collaborators"> 
         {%- if card_data.data.collaborators.length > 0  -%} 

@@ -38,26 +38,27 @@ pagination:
 <article>
   <div class='container'>
     <div class="projectPreview_Grid" id="preview_Grid">
-      <card>
+      <div class="preview-grid-card" id="preview-grid-card">
         {% include 'summary-card.njk' %}
-      </card>
-      <pictures>
+      </div>
+      <div class="preview-grid-images">
         <div class="swiper mySwiper">
-          <div class="swiper-wrapper"  id="preview_swiperWrapper">
-            {% for image in preview.images %}
+          <div class="swiper-wrapper" id="preview_swiperWrapper">
+            {% for sliderImage in preview.images %}
               <div class="swiper-slide">
-                {% image sliderImage.url, sliderImage.alt %}
-                <!--img src='{{ image.url }}' alt='{{ image.alt }}' class="swiper-slide" -->
+                {% if sliderImage.url %}
+                  {% image sliderImage.url, sliderImage.alt %}
+                {% endif %}
               </div>
-            {%- endfor -%}
+            {% endfor %}
           </div>
           <div class="swiper-button-next"></div>
           <div class="swiper-button-prev"></div>
           <div class="swiper-pagination"></div>
         </div>
-      </pictures>
+      </div>
       <!--imgcaption>asd</imgcaption-->
-      <main>
+      <div class="preview-grid-text">
         <div class = "projectPreview_mainTextContainer">
           <div class="projectPreview_textContainer">
             <div id="projectPreview_outer">
@@ -97,7 +98,7 @@ pagination:
             <div class="projectPreview_buttonFullProject_arrowRight" id="preview_buttonFullProject_arrow"></div>
           </div>
         </div>
-      </main>  
+      </div>  
     </div>
   </div><!--container-->
     {# {% include 'relatedAndMoreCards.njk' %} #}
@@ -112,6 +113,7 @@ pagination:
 <script src="/_scripts/previewImageSwiper.js"></script>
 <script src="/_scripts/windowController.js"></script>
 <script src="/_scripts/previewNavigationPanel.js"></script>
+<script src="/_scripts/tool_emptyParagraphEraser.js"></script>
 
 <script>
   var previewDescriptionScrollInstance;
@@ -121,20 +123,13 @@ pagination:
   var windowControllerInstance;
   var previewNavigationPanelInstance;
   
-  document.addEventListener("DOMContentLoaded", (event) => { /* gsap code */});
+  document.addEventListener("DOMContentLoaded", (event) => { 
+    document.documentElement.dataset.scroll = 0;
 
-  window.addEventListener('load', function() {
     windowControllerInstance = new windowController();
     let isMobileVersion = windowControllerInstance.itisMobile();
     console.log("isMobile: " + isMobileVersion);
 
-    previewDescriptionScrollInstance
-                 = new previewDescriptionScroll('projectPreview_outer',
-                                            'preview_scrollableContent',
-                                            'phantomColumn',
-                                            'preview_buttonFullProject',
-                                            'preview_buttonFullProject_arrow',
-                                            gsapTwiner);
 
     previewImageSwiperInstance
                  = new previewImageSwiper('mySwiper',
@@ -144,14 +139,26 @@ pagination:
                                               'preview_descriptionNavButton_right',
                                               'preview_descriptionNavButton_close');
 
+    previewDescriptionScrollInstance
+                 = new previewDescriptionScroll('projectPreview_outer',
+                                            'preview_scrollableContent',
+                                            'phantomColumn',
+                                            'preview_buttonFullProject',
+                                            'preview_buttonFullProject_arrow',
+                                            gsapTwiner);
 
     assignButtonsEvents();
 
-    previewDescriptionScrollInstance.onload();
     previewImageSwiperInstance.onLoad(isMobileVersion);
-
     previewNavigationPanelInstance.update(previewDescriptionScrollInstance);
+    previewDescriptionScrollInstance.onload();
+
+    removeEmptyParagraphs('preview_swiperWrapper');
+    removeEmptyParagraphs('preview-grid-card');
+
   });
+
+  window.addEventListener('load', function() {});
 
   window.addEventListener('resize', function() {
     let isMobileVersion = windowControllerInstance.itisMobile();
@@ -163,6 +170,11 @@ pagination:
   });
 
   document.addEventListener('scroll', function() {
+    if(window.scrollY > 650)
+      document.documentElement.dataset.scroll = window.scrollY;
+    else
+      document.documentElement.dataset.scroll = 0;
+
     if(windowControllerInstance.itisMobile()){
       if (window.scrollY === 0) {
         console.log("mobile scrolling top");
