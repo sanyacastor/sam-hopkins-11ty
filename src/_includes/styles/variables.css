@@ -19,4 +19,7 @@
   --container-max-width: 1366px;
 
   --global-background-color: #f0f0f0;
+
+  --color-fullproject-button-hover: #e5eff0;
+  --swiper-theme-color: var(--color-secondary) !important; /* swiperjs left and right arrows color */
 }

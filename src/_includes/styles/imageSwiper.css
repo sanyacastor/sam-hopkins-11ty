@@ -2,11 +2,3 @@
     color: var(--color-primary);
      border: 3px solid var(--color-swiper-progressbar);
 }
- 
-.swiper{
-}
-  /*
-  .swiper-pagination-progressbar {
-     background-color: rgb(255, 255, 255);
-    border-radius: 5px; 
-  }*/

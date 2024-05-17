@@ -74,12 +74,6 @@
   }
 }
 
-.cardcabinet_summaryCard {
-  @media screen and (max-width: 800px) {
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
 
 .projectPreview_ScrollArticle > font{
   margin-left: 20px;
@@ -158,6 +152,21 @@ body::-webkit-scrollbar {
   bottom: 90px;
 }
 
+.projectPreview_buttonFullProject_container:hover .a{
+  font-weight: 900;
+  background-color: var(--color-fullproject-button-hover);
+}
+
+.projectPreview_buttonFullProject_container:hover{
+  font-weight: 900;
+  cursor: pointer;
+  background-color: var(--color-fullproject-button-hover);
+}
+
+.projectPreview_buttonFullProject_container:hover .projectPreview_buttonFullProject_arrowRight {
+  border-left: 20px solid var(--color-fullproject-button-hover);
+}
+
 .projectPreview_buttonFullProject_container{
   position: absolute;
   
@@ -173,6 +182,8 @@ body::-webkit-scrollbar {
   display: flex;
   flex-direction: column;
   justify-content: center;
+
+  border: none;
 
   /* transition: bottom 0.5s ease, right 0.5s ease, position 0.5s ease; Add transitions */
 
@@ -273,6 +284,19 @@ html:not([data-scroll='0']) .projectPreview_buttonFullProject_container {
   }
 }
 
+.swiper-wrapper.previewPage{
+  width: 200px;
+  /*@media screen and (min-width: 1200px){
+    width: 800px;
+    background-color: #ff6a00;
+  }
+
+  @media screen and (max-width: 1199px){
+    width: 416px !important;
+    max-width: 416px;
+    display: none;
+  }*/
+}
 
 /*-----------------------------------*/
 .projectPreview_Grid {
