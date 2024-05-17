@@ -450,3 +450,12 @@ html:not([data-scroll='0']) .projectPreview_buttonFullProject_container {
     background-color: #ff6a00;
   }
 }
+
+.fullscreen{
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  background-color: #161418f3 !important;
+}

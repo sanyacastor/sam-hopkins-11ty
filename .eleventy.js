@@ -27,7 +27,7 @@ module.exports = function (eleventyConfig) {
         let metadata = await Image(`src${src}`, {
           widths: [300, 600, 1000],
           formats: ['avif', 'jpeg'],
-          outputDir: './img/',
+          outputDir: './public/img/',
           filenameFormat: function (_, src, width, format) {
             const extension = path.extname(src)
             const name = path.basename(src, extension)

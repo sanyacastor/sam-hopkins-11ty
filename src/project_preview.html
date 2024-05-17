@@ -116,6 +116,7 @@ pagination:
 <script src="/_scripts/tool_emptyParagraphEraser.js"></script>
 
 <script>
+
   var previewDescriptionScrollInstance;
   var previewImageSwiperInstance;
   var gsapTwiner = gsap;
@@ -123,7 +124,41 @@ pagination:
   var windowControllerInstance;
   var previewNavigationPanelInstance;
   
-  document.addEventListener("DOMContentLoaded", (event) => { 
+  function subscribeToFullscreen(){
+
+    const mySwiperElement = document.querySelector('.mySwiper');
+
+    if (mySwiperElement) {
+      mySwiperElement.addEventListener('click', function(event) {
+        if (event.target.classList.contains('swiper-button-next')) {
+          return;
+        }
+        if (event.target.classList.contains('swiper-button-prev')) {
+          return;
+        }
+
+        // Your code here
+        if (mySwiperElement.classList.contains("fullscreen")) {
+          mySwiperElement.classList.remove("fullscreen");
+        } else {
+          mySwiperElement.classList.add("fullscreen");
+        }
+      });
+
+
+      document.addEventListener("keydown", function(event) {
+        if (event.key === "Escape") {
+          mySwiperElement.classList.remove("fullscreen");
+        }
+      });
+
+
+    }
+  }
+
+  document.addEventListener("DOMContentLoaded", (event) => {
+    subscribeToFullscreen();
+
     hideShowSwiperBlock();
 
     document.documentElement.dataset.scroll = 0;
