@@ -49,13 +49,14 @@ class previewImageSwiper{
         return;
       }
 
-      if(boxWidth > 826){
+      if(boxWidth > 526){
         this.swiper.params.slidesPerView = 2;
-        this.swiperWrapper.style.width = '826px';
+        //this.swiperWrapper.style.width = '826px';
       }
       else{
         this.swiper.params.slidesPerView = 1;
-        this.swiperWrapper.style.width = '416px';
+        //this.swiperWrapper.style.width = (window.innerWidth - 443 - 37) + 'px'; // !!!magic number
+        //console.log("swiper wrapper width: " + this.swiperWrapper.style.width);
       }
     }
   }
