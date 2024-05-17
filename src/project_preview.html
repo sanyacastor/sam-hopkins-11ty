@@ -43,7 +43,7 @@ pagination:
       </div>
       <div class="preview-grid-images" id="preview-grid-images">
           <div class="swiper mySwiper">
-            <div class="swiper-wrapper" id="preview_swiperWrapper">
+            <div class="swiper-wrapper previewPage" id="preview_swiperWrapper">
               {% for sliderImage in preview.images %}
                 <div class="swiper-slide">
                   {% if sliderImage.url %}
@@ -91,12 +91,12 @@ pagination:
               </button>
             </div>
           </div>
-          <div class="projectPreview_buttonFullProject_container" id="preview_buttonFullProject" >
+          <button onclick="window.location.href='/projects/project_{{ preview.title | slug }}'" class="projectPreview_buttonFullProject_container" id="preview_buttonFullProject" >
             <a href={{ "/projects/project_" ~ preview.title | slug }}>
               full project
             </a>
             <div class="projectPreview_buttonFullProject_arrowRight" id="preview_buttonFullProject_arrow"></div>
-          </div>
+          </button>
         </div>
       </div>  
     </div>
