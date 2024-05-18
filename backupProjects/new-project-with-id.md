@@ -3,7 +3,7 @@ id: kc-AryVjcVNzeP_ZyHohO
 title: new project with ID
 dates: "2099"
 link: none
-collaborators: none
+collaborators: null
 cardDescription: lorem 300
 previewDescription: lorem 300
 relatedProjects:

@@ -2,7 +2,7 @@
 title: Project with image
 year: "2024"
 link: none
-collaborators: none
+collaborators: null
 thumbnailDescription: Project with image short text
 summary: Project with image summary
 ---
