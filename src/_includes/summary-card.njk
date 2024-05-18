@@ -1,15 +1,51 @@
-<div class="cardcabinet_summaryCard">
-    <div class = "cardcabinet_oulineBox">
-        <h2 class="cardcabinet_cardTitle"><a href="{{previewURL}}"> <font> {{project.data.title}} </font> </a></h2>
-
-        {% if project.data.dates %}
-        <p class="cardcabinet_dates"> <font color=#6D0B0A> {{project.data.dates}} </font> </p>
-        {% endif %}
-
-        {% if project.data.collaborators %}
-        <p class="cardcabinet_collaborators"> <font color=#6D0B0A> with: {{project.data.collaborators}} </font> </p>
-        {% endif %}
-
-        <p class="cardcabinet_cardDescription"> <font color=#6D0B0A> {{project.data.cardDescription}} </font> </p>
-    </div>
+{% if card_data.data.targetUrl %}
+  <a href="{{card_data.data.targetUrl}}" class="tmp">
+{% else %}
+  <a href="{{previewURL}}" class="tmp">
+{% endif %}<div class="cardcabinet_summaryCard"><!-- otherwise it renders <p></p>-->
+  <div class = "cardcabinet_oulineBox">
+      <h2 class="cardcabinet_cardTitle"> {{card_data.data.title}} </h2>
+      {%- if card_data.data.dates -%}
+        <p class="cardcabinet_dates"> {{card_data.data.dates}} </p>
+      {%- else -%}
+        <p class="cardcabinet_dates"> unknown year </p>
+      {%- endif -%}
+      <div class="cardcabinet_collaborators"> 
+        {%- if card_data.data.collaborators.length > 0  -%} 
+          with: {{card_data.data.collaborators}}
+        {%- else -%}
+          personal
+        {%- endif -%}
+      </div>
+      <div class="cardcabinet_cardDescriptionWrapper">
+        <div class="cardcabinet_cardDescription"> {{card_data.data.cardDescription}} </div>
+      </div>
+  </div>
 </div>
+</a>
+
+<script>
+  var cardDescriptionWrappers = document.querySelectorAll('.cardcabinet_cardDescriptionWrapper');
+  
+  cardDescriptionWrappers.forEach(function(wrapper) {
+      var height = wrapper.offsetHeight; 
+      console.log(height);
+
+      var cardDescription = wrapper.querySelector('.cardcabinet_cardDescription');
+      console.log(cardDescription.innerHTML);
+
+      var lineHeight = parseFloat(getComputedStyle(cardDescription).lineHeight);
+      var numLineHeights = (height / lineHeight);
+      console.log("number of line heights" + numLineHeights);
+
+      cardDescription.style['-webkit-line-clamp'] = Math.floor(numLineHeights);
+  });
+  /*
+  .cardcabinet_cardDescriptionWrapper {
+  width: 100%;
+  height: 100%;
+
+  background-color: aqua;
+}
+  */
+</script>
