@@ -2,7 +2,6 @@ const fs = require('fs').promises
 const path = require('path')
 const fm = require('front-matter')
 const markdownit = require('markdown-it')
-const { randomUUID } = require('crypto')
 
 const projectsPath = process.cwd() + '/src/projects/'
 
@@ -19,7 +18,6 @@ const readFiles = async filePaths => {
 
         const currentProject = { ...attributes, body }
 
-        currentProject.id = randomUUID()
         currentProject.images = []
 
         const tokens = md.parse(body)
@@ -38,7 +36,11 @@ const readFiles = async filePaths => {
             }
           })
         })
-        projects.push(currentProject)
+        projects.push({
+          id: currentProject.id,
+          title: currentProject.title,
+          images: currentProject.images,
+        })
       } catch (err) {
         console.error(`Error reading file ${filePath}:`, err)
       }
@@ -54,5 +56,10 @@ module.exports = async () => {
     process.exit(1)
   })
   const projects = await readFiles(files)
+
+  await fs.writeFile(
+    './public/js/projects.json',
+    JSON.stringify(projects, null, 2),
+  )
   return projects
 }
