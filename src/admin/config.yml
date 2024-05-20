@@ -11,7 +11,7 @@ collections:
     label: 'Project'
     folder: 'src/projects'
     create: true
-    slug: 'project-{{slug}}'
+    slug: '{{slug}}'
     fields:
       - { label: "ID",
           name: "id",
@@ -58,7 +58,7 @@ collections:
     label: 'Publication'
     folder: 'src/publications'
     create: true
-    slug: 'publication-{{slug}}'
+    slug: '{{slug}}'
     fields:
       - { label: 'Title', name: 'title', widget: 'string' }
       - { label: 'Year', name: 'year', widget: 'string' }
@@ -78,7 +78,7 @@ collections:
     label: 'News'
     folder: 'src/news'
     create: true
-    slug: 'news-{{slug}}'
+    slug: '{{slug}}'
     fields:
       - { label: 'Title', name: 'title', widget: 'string' }
       - {
@@ -90,7 +90,7 @@ collections:
     label: 'Video'
     folder: 'src/video'
     create: true
-    slug: 'video-{{slug}}'
+    slug: '{{slug}}'
     fields:
       - {
           label: 'Thumbnail description',

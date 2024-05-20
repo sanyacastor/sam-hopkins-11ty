@@ -3,6 +3,13 @@ header {
   width: 100%;
   height: 62px;
 }
+/* 
+.header-nav {
+  overflow: hidden;
+  width: 100%;
+}
+.header-nav__link {
+} */
 
 .header-nav__links-list {
   width: 100%;
@@ -88,6 +95,7 @@ header {
 }
 
 .header-mobile-menu {
+  z-index: 9999;
   display: block;
   width: 100%;
   max-width: 375px;

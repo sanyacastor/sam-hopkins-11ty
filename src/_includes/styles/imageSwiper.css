@@ -1,0 +1,4 @@
+.swiper-pagination-progressbar-fill {
+    color: var(--color-primary);
+     border: 3px solid var(--color-swiper-progressbar);
+}
