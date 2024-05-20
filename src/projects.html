@@ -3,12 +3,15 @@ title: Sam Hopkins | Projects
 layout: base.njk
 slug: projects
 ---
-
-<div class='container'>
-  {% for project in collections.project %}
-    {% assign previewURL = project.data.title | slug %}
-    <a href={{ "/preview/" | append: previewURL }}><br/>
-      {{ project.data.title }}
-    </a>
-  {% endfor %}
+<div class='container' >
+  <div class="mainPage_scrollBox">
+    <div class="cardcabinet_grid">
+      {% for project in collections.project %}
+        {% assign previewURL = project.data.title | slug %}
+        {% assign previewURL = '/preview/' | append: previewURL %}
+        {% assign card_data = project %}
+        {% include "summary-card.njk" with card_data %}
+      {% endfor %}
+    </div>
+  </div>
 </div>

@@ -2,27 +2,27 @@
   "menuItems": [
     {
       "title": "Projects",
-      "slug": "projects"
+      "slug": "/projects"
     },
     {
       "title": "Images",
-      "slug": "images"
+      "slug": "/images"
     },
     {
       "title": "Video",
-      "slug": "video"
+      "slug": "/video"
     },
     {
       "title": "Publications",
-      "slug": "publications"
+      "slug": "/publications"
     },
     {
       "title": "News",
-      "slug": "news"
+      "slug": "/news"
     },
     {
       "title": "About & Contact",
-      "slug": "about"
+      "slug": "/about"
     }
   ]
 }

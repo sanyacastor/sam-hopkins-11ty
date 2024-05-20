@@ -3,11 +3,11 @@
     <nav class="header-nav">
       <ul class="header-nav__links-list">
         <li class="header-nav__links-list-item header-nav__links-list-item--logo">
-          <a class="header-nav__link" href="/">Sam Hopkins</a>
+          <a class="header-nav__link" href="/projects">Sam Hopkins</a>
         </li>
         {% for link in constants.menuItems %}
-          <li class="header-nav__links-list-item header-nav__links-list-item--desktop {%if linkSlug in page.url %}header-nav__links-list-item--active{% endif %}" >
-            <a class="header-nav__link" href={{ "/" ~ link.slug }}>{{ link.title }}</a>
+          <li class="header-nav__links-list-item header-nav__links-list-item--desktop {%if link.slug in page.url %}header-nav__links-list-item--active{% endif %}" >
+            <a class="header-nav__link" href={{ link.slug }}>{{ link.title }}</a>
           </li>
         {% endfor %}
         <li class='header-nav__links-list-item header-nav__links-list-item--active links-list-item__menu mobile-menu-toggle mobile-menu-toggle--close'>
@@ -24,8 +24,8 @@
     </nav>
     <div class="header-mobile-menu header-mobile-menu--hidden">
       {% for link in constants.menuItems %}
-        <li class="header-nav__links-list-item header-nav__links-list-item--mobile {%if linkSlug in page.url %}header-nav__links-list-item--active{% endif %}" >
-          <a class="header-nav__link" href={{ "/" ~ link.slug }}>{{ link.title }}</a>
+        <li class="header-nav__links-list-item header-nav__links-list-item--mobile {%if link.slug in page.url %}header-nav__links-list-item--active{% endif %}" >
+          <a class="header-nav__link" href={{ link.slug }}>{{ link.title }}</a>
         </li>
       {% endfor %}
     </div>
