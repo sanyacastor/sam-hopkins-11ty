@@ -4,10 +4,117 @@ layout: base.njk
 tags: images
 ---
 
-<div class='container'>
-    {% for project in projectWithImages %}
-        {% for image in project.images %}
-            <img src='{{ image.url }}' alt='{{ image.alt }}' width='200' height='128'/>
-        {% endfor %}
-    {% endfor %}
+<div class="container">
+  <form class="search-form">
+    <label class="search-form__label" for="search">
+      <input class="search-form__input" type="text" id="search" name="search" />
+    </label>
+    <div
+      class="search-form__autocomplete search-form__autocomplete--hidden"
+    ></div>
+  </form>
+
+  <section class="images-list">
+    {% for project in projectWithImages %} {% for image in project.images %}
+    <div
+      class="images-list__item images-list__item--container"
+      data-project="{{ project.title }}"
+    >
+      {% image image.url image.alt 'preview_image' %}
+    </div>
+    {% endfor %} {% endfor %}
+  </section>
 </div>
+
+<div class="slider-modal slider-modal--hidden">
+  <div class="slider-modal__swiper swiper">
+    <div class="slider-modal__swiper-wrapper swiper-wrapper">
+      {% for project in projectWithImages %} {% for image in project.images %}
+      <div class="slider-modal__slide swiper-slide">
+        {% image image.url image.alt %}
+      </div>
+      {% endfor %} {% endfor %}
+    </div>
+    <div class="slider-modal__button-next swiper-button-next"></div>
+    <div class="slider-modal__button-prev swiper-button-prev"></div>
+    <div class="slider-modal__pagination swiper-pagination"></div>
+  </div>
+  <button class="slider-modal__close-button close-button">X</button>
+</div>
+
+<script type="module">
+  import projects from '/js/projects.json' assert { type: 'json' }
+
+  import { Autocomplete } from '/js/imagesPage/autocomplete.js'
+  import { DraggableModal } from '/js/imagesPage/draggableModal.js'
+  import { SwiperModal } from '/js/imagesPage/swiperModal.js'
+
+  const swiper = new Swiper('.swiper', {
+    slidesPerView: 1,
+    pagination: {
+      el: '.swiper-pagination',
+      type: 'progressbar',
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  })
+
+  const swiperModal = new SwiperModal({ className: 'slider-modal', swiper })
+
+  const imagesListElement = document.querySelector('.images-list')
+  const allImages = document.querySelectorAll('.images-list__item')
+
+  const createDraggbleModal = event =>
+    new DraggableModal({
+      event,
+      className: '.images-list__item--container',
+      onClick: imageIndex => {
+        swiperModal.open()
+        swiper.slideTo(imageIndex)
+      },
+    })
+
+  allImages.forEach((el, i) => {
+    el.dataset.imageIndex = i
+    el.addEventListener('click', createDraggbleModal)
+  })
+
+  const resetFilter = () => {
+    let imageIndex = 0
+    allImages.forEach(imageElement => {
+      imageElement.classList.remove('images-list__item--hidden')
+      imageElement.dataset.imageIndex = imageIndex
+      imageIndex += 1
+    })
+
+    swiperModal.update()
+  }
+
+  const filterProjects = value => {
+    const selectedProject = projects.find(project => project.title === value)
+    const filtredImages = []
+    let imageIndex = 0
+
+    allImages.forEach(imageElement => {
+      imageElement.removeAttribute('data-image-index')
+      if (imageElement.dataset.project === value) {
+        imageElement.classList.remove('images-list__item--hidden')
+        imageElement.dataset.imageIndex = imageIndex
+        imageIndex += 1
+      } else {
+        imageElement.classList.add('images-list__item--hidden')
+      }
+    })
+
+    swiperModal.update()
+  }
+
+  const projectsAutocomplete = new Autocomplete({
+    className: '.search-form',
+    projects,
+    callback: filterProjects,
+    resetFilter,
+  })
+</script>
