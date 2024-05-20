@@ -27,13 +27,11 @@ city that is in constant flux. From 06.09.06 until 11.09.06 for 6 hours a day I
 sat on a bench in Kuznicza Street in Wroclaw. I wanted to see whether, for that
 small section of the city, there were patterns/routines that I could identify,
 and try to learn them, as one would learn a song.
-![altText](/assets/data/6-hours-for-6-day_01_video-documentation_still_2006_-c-hopkins-0.jpg "ImageTitle")
 However I soon realized that by merely being in the space for extended periods
 of time I began to attract people’s curiosity. Although I had set out to watch
 and learn the space I began to feel that it was in fact me that was being
 observed. As the days passed I felt this mutual curiosity mount. But was it
 actually mutual?
-![humanalt](/assets/data/6-hours-for-6-day_01_video-documentation_still_2006_-c-hopkins-9.jpg "humantitle")
 To explore this further, when I had finished the action, I asked Zosia Jarosz
 and Marius Jodko to interview people in that particular space about ‘the guy on
 the bench’. The video presents this material; a spectrum of memories,
@@ -41,7 +39,6 @@ encompassing the wildly inaccurate, the highly perceptive and those that simply
 do not look.
 Thanks to: Karolina Freino, Usually4, Zosia Jarosz, Marius Jodko Supported by:
 Gallery Entropia
-![manalt](/assets/data/6-hours-for-6-day_01_video-documentation_still_2006_-c-hopkins-5.jpg "mantitle")
 However, as I delved deeper into this exploration, I realized that my mere presence on the bench began to alter the dynamics of the space itself. Passersby, initially indifferent to my presence, gradually became intrigued by the sight of someone sitting for prolonged periods in what seemed like an inconsequential spot. Their glances turned into stares, and before long, I felt like a spectacle, a feature of the street that they couldn't quite decipher.
 As days turned into weeks, the line between observer and observed blurred. While my initial intention was to study the routines and patterns of the street, I found myself becoming the subject of scrutiny. It was as if my stationary presence invited speculation and conjecture from those who passed by. The curiosity I had hoped to satisfy about the city's rhythms now turned inward, as I questioned the nature of this mutual observation. Was it truly mutual, or was I merely projecting my own fascination onto the situation?
 To delve deeper into this phenomenon, I enlisted the help of Zosia Jarosz and Marius Jodko to conduct interviews with individuals frequenting Kuznicza Street during my hours on the bench. Their task was to gather perspectives on "the guy on the bench," shedding light on how my presence was perceived and interpreted by the diverse array of people inhabiting that space.

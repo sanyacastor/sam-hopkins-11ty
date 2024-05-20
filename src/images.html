@@ -15,7 +15,7 @@ tags: images
   </form>
 
   <section class="images-list">
-    {% for project in projectWithImages %} {% for image in project.images %}
+    {% for project in projects %} {% for image in project.images %}
     <div
       class="images-list__item images-list__item--container"
       data-project="{{ project.title }}"
@@ -29,7 +29,7 @@ tags: images
 <div class="slider-modal slider-modal--hidden">
   <div class="slider-modal__swiper swiper">
     <div class="slider-modal__swiper-wrapper swiper-wrapper">
-      {% for project in projectWithImages %} {% for image in project.images %}
+      {% for project in projects %} {% for image in project.images %}
       <div class="slider-modal__slide swiper-slide">
         {% image image.url image.alt %}
       </div>

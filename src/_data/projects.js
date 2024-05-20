@@ -37,8 +37,7 @@ const readFiles = async filePaths => {
           })
         })
         projects.push({
-          id: currentProject.id,
-          title: currentProject.title,
+          ...currentProject,
           images: currentProject.images,
         })
       } catch (err) {
@@ -57,9 +56,15 @@ module.exports = async () => {
   })
   const projects = await readFiles(files)
 
+  const imagesPageJson = projects.map(project => ({
+    id: project.id,
+    title: project.title,
+    images: project.images,
+  }))
+
   await fs.writeFile(
     './public/js/projects.json',
-    JSON.stringify(projects, null, 2),
+    JSON.stringify(imagesPageJson, null, 2),
   )
   return projects
 }
