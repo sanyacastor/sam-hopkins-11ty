@@ -44,7 +44,6 @@
   }
 }
 .projectView_imgCaptionMobile{
-  background-color: green;
   display: none;
 
   @media screen and (max-width: 800px) {
@@ -107,7 +106,6 @@
 .projectView_photoSlot{
   width: 443px;
   height: 305px;
-  background-color: green;
 
   @media screen and (max-width: 800px) {
     display: none;
@@ -119,7 +117,6 @@
   position: inherit;
   left: 0px;
   top: 0px;
-  background-color: green;
   width: 100%;
   padding-left: 10px;
 
@@ -142,8 +139,7 @@
   display: flex !important; 
 }
 
-.swiper-slide { 
- color:green;
+.swiper-slide {
  font:40px Impact;
 
  height: max-content !important;

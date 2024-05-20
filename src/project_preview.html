@@ -96,11 +96,11 @@ pagination:
   var previewNavigationPanelInstance;
   
   function subscribeToFullscreen(){
-
     const mySwiperElement = document.querySelector('.mySwiper');
 
     if (mySwiperElement) {
       mySwiperElement.addEventListener('click', function(event) {
+        /* ignore clicks ontop of the navigation buttons */
         if (event.target.classList.contains('swiper-button-next')) {
           return;
         }
@@ -108,12 +108,7 @@ pagination:
           return;
         }
 
-        // Your code here
-        if (mySwiperElement.classList.contains("fullscreen")) {
-          mySwiperElement.classList.remove("fullscreen");
-        } else {
-          mySwiperElement.classList.add("fullscreen");
-        }
+        previewImageSwiperInstance.switch_fullscreen();
       });
 
 

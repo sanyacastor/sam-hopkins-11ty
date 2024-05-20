@@ -37,10 +37,11 @@ class previewImageSwiper {
   }
 
   recalcSwiperImages(isMobileVerison) {
+    if (typeof isMobileVerison === 'undefined')
+      isMobileVerison = this.isMobileVerison;
+    this.isMobileVerison = isMobileVerison;
+    
     let boxWidth = this.swiperElement.offsetWidth
-
-    console.log('swiper box width: ' + boxWidth + 'px')
-    console.log('isMobile        : ' + isMobileVerison)
 
     if (isMobileVerison) {
       this.swiper.params.slidesPerView = 1
@@ -48,13 +49,33 @@ class previewImageSwiper {
       return
     }
 
+    if(this.fullscreen === true){
+      this.swiper.params.slidesPerView = 1
+      return;  
+    }
+
     if (boxWidth > 526) {
       this.swiper.params.slidesPerView = 2
-      //this.swiperWrapper.style.width = '826px';
     } else {
       this.swiper.params.slidesPerView = 1
-      //this.swiperWrapper.style.width = (window.innerWidth - 443 - 37) + 'px'; // !!!magic number
-      //console.log("swiper wrapper width: " + this.swiperWrapper.style.width);
+    }
+  }
+
+  switch_fullscreen(){
+    if(this.swiperElement.classList.contains("fullscreen")){
+      this.fullscreen = false;
+
+      this.swiperElement.classList.remove("fullscreen");
+
+      this.swiper.autoplay.start();
+      this.recalcSwiperImages();
+    } else {
+      this.fullscreen = true;
+
+      this.swiper.params.slidesPerView = 1;
+      this.swiperElement.classList.add("fullscreen");
+
+      this.swiper.autoplay.stop();
     }
   }
 }
