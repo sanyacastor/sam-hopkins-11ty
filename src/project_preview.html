@@ -13,15 +13,6 @@ pagination:
   addAllPagesToCollection: true
 ---
 
-{# {% set project = {
-  data: {
-      title: preview.title,
-      dates: preview.dates,
-      collaborators: preview.collaborators,
-      cardDescription: preview.cardDescription
-  }
-} %} <!--!!!Peligro!!! Deleteme--> #}
-
 {% set card_data = {
   data: {
       targetUrl: project.url,
@@ -31,10 +22,6 @@ pagination:
       cardDescription: preview.cardDescription
   }
 } %}
-
-<link rel="stylesheet" href="bundle.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-
 <article>
   <div class='container'>
     <div class="projectPreview_Grid" id="preview_Grid">
@@ -57,7 +44,6 @@ pagination:
             <div class="swiper-pagination"></div>
           </div>
       </div>
-      <!--imgcaption>asd</imgcaption-->
       <div class="preview-grid-text">
         <div class = "projectPreview_mainTextContainer">
           <div class="projectPreview_textContainer">
@@ -91,17 +77,14 @@ pagination:
               </button>
             </div>
           </div>
-          <button onclick="window.location.href='/projects/project_{{ preview.title | slug }}'" class="projectPreview_buttonFullProject_container" id="preview_buttonFullProject" >
-            <a href={{ "/projects/project_" ~ preview.title | slug }}>
-              full project
-            </a>
+          <a href="{{ "/projects/" ~ preview.title | slug }}" class="projectPreview_buttonFullProject_container" id="preview_buttonFullProject" >
+            full project
             <div class="projectPreview_buttonFullProject_arrowRight" id="preview_buttonFullProject_arrow"></div>
-          </button>
+          </a>
         </div>
       </div>  
     </div>
-  </div><!--container-->
-    {# {% include 'relatedAndMoreCards.njk' %} #}
+  </div>
 </article>
 
 

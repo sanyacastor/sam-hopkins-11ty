@@ -1,6 +1,3 @@
-
-const bundlerPlugin = require("@11ty/eleventy-plugin-bundle");
-
 const Image = require('@11ty/eleventy-img')
 const path = require('path')
 
@@ -21,8 +18,6 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addShortcode(
     'image',
     async function (src, alt, className, sizes) {
-
-      // return "<img src='#placeholder.jpg' alt='image is missing'>";
       try {
         let metadata = await Image(`src${src}`, {
           widths: [300, 600, 1000],
@@ -45,8 +40,7 @@ module.exports = function (eleventyConfig) {
         }
 
         return Image.generateHTML(metadata, imageAttributes)
-      }
-      catch (err){
+      } catch (err) {
         console.log(err)
         // return "<img src='#placeholder.jpg' alt='image is missing'>";
       }
