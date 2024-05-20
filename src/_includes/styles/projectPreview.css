@@ -3,7 +3,7 @@
   height: 100%;
 
   @media screen and (max-width: 800px) {
-   background-color: aqua;
+   background-color: aqua; 
    height: auto;
   }
 }
