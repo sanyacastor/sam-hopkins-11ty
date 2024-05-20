@@ -426,8 +426,41 @@ html:not([data-scroll='0']) .projectPreview_buttonFullProject_container {
   cursor: pointer;
 }
 
+.navigation-button.left-button{
+  color: var(--color-primary);
+  background-color: transparent;
+  background-repeat: no-repeat;
+
+  
+  background-color: var(--color-primary);
+  -webkit-mask-image: url('/_includes/site_assets/navigation_arrow_left.svg');
+  mask-image: url('/_includes/site_assets/navigation_arrow_left.svg');
+  mask-repeat: no-repeat;
+  
+}
+.navigation-button.right-button{
+  color: var(--color-primary);
+  background-color: transparent;
+  background-repeat: no-repeat;
+  
+  background-color: var(--color-primary);
+  -webkit-mask-image: url('/_includes/site_assets/navigation_arrow_right.svg');
+  mask-image: url('/_includes/site_assets/navigation_arrow_right.svg');
+  mask-repeat: no-repeat;
+}
+.navigation-button.close-button{
+  color: var(--color-primary);
+  background-color: transparent;
+  background-repeat: no-repeat;
+
+  background-color: var(--color-primary);
+  -webkit-mask-image: url('/_includes/site_assets/navigation_close_cross.svg');
+  mask-image: url('/_includes/site_assets/navigation_close_cross.svg');
+  mask-repeat: no-repeat;
+}
+
 .navigation-button.inactive {
-  color: #828282;
+  background-color: #828282;
 }
 
 .projectPreview_Grid > imgcaption {

@@ -33,7 +33,7 @@ class previewNavigationPanel{
           else
             this.setButtonsLeftRightState(false);
 
-        console.log("update navigation panel: " + descriptionScrollobject.isFirstCheckpoint() + " " + descriptionScrollobject.isLastCheckpoint());
+        console.log("update navigation panel: isFirstCheckpoint=" + descriptionScrollobject.isFirstCheckpoint() + " isLastCheckpoint=" + descriptionScrollobject.isLastCheckpoint());
 
         if (descriptionScrollobject.isFirstCheckpoint() ) {
             this.buttonLeft.classList.add("inactive");
