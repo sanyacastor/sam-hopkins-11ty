@@ -11,8 +11,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addTemplateFormats('css')
 
   // Assets
-  eleventyConfig.addPassthroughCopy('./src/_includes/site_assets')
-  eleventyConfig.addPassthroughCopy('./src/assets')
+  eleventyConfig.addPassthroughCopy('./src/assets/icons')
   eleventyConfig.addPassthroughCopy('img')
 
   // Fonts
@@ -63,7 +62,7 @@ module.exports = function (eleventyConfig) {
 
         let imageAttributes = {
           alt: alt || '',
-          sizes: sizes || '(min-width: 30em) 50vw, 100vw',
+          sizes: sizes || '(min-width: 320px) 50vw, 100vw',
           loading: 'lazy',
           decoding: 'async',
           class: className,

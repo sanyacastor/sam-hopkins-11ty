@@ -187,7 +187,9 @@ body::-webkit-scrollbar {
   bottom: 8px;
 
   background-color: var(--color-secondary);
-  color: blue;
+  color: var(--color-primary);
+  text-decoration: none;
+
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -453,10 +455,8 @@ body::-webkit-scrollbar {
 
   background-color: var(--color-primary);
 
-
-  /* TODO: Move to assets folder */
-  -webkit-mask-image: url('/_includes/site_assets/navigation_arrow_left.svg');
-  mask-image: url('/_includes/site_assets/navigation_arrow_left.svg');
+  -webkit-mask-image: url('/assets/icons/navigation_arrow_left.svg');
+  mask-image: url('/assets/icons/navigation_arrow_left.svg');
   mask-repeat: no-repeat;
 }
 .navigation-button.right-button {
@@ -465,8 +465,8 @@ body::-webkit-scrollbar {
   background-repeat: no-repeat;
 
   background-color: var(--color-primary);
-  -webkit-mask-image: url('/_includes/site_assets/navigation_arrow_right.svg');
-  mask-image: url('/_includes/site_assets/navigation_arrow_right.svg');
+  -webkit-mask-image: url('/assets/icons/navigation_arrow_right.svg');
+  mask-image: url('/assets/icons/navigation_arrow_right.svg');
   mask-repeat: no-repeat;
 }
 .navigation-button.close-button {
@@ -475,8 +475,8 @@ body::-webkit-scrollbar {
   background-repeat: no-repeat;
 
   background-color: var(--color-primary);
-  -webkit-mask-image: url('/_includes/site_assets/navigation_close_cross.svg');
-  mask-image: url('/_includes/site_assets/navigation_close_cross.svg');
+  -webkit-mask-image: url('/assets/icons/navigation_close_cross.svg');
+  mask-image: url('/assets/icons/navigation_close_cross.svg');
   mask-repeat: no-repeat;
 }
 
