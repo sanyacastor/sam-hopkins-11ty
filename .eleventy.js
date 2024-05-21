@@ -15,6 +15,8 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy('./src/fonts/KareliaWeb-Bold.woff2')
   eleventyConfig.addPassthroughCopy('./src/fonts/KareliaWeb-Regular.woff2')
 
+  eleventyConfig.addPassthroughCopy('./src/_includes/site_assets')
+
   eleventyConfig.addShortcode(
     'image',
     async function (src, alt, className, sizes) {

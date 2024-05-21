@@ -26,14 +26,10 @@ class previewNavigationPanel{
     }
 
     update(descriptionScrollobject){
-        console.log(">>>> update navigation panel number of columns: " + descriptionScrollobject.getNumberOfColumns());
-
         if(descriptionScrollobject.getNumberOfColumns() > 1)
             this.setButtonsLeftRightState(true);
           else
             this.setButtonsLeftRightState(false);
-
-        console.log("update navigation panel: " + descriptionScrollobject.isFirstCheckpoint() + " " + descriptionScrollobject.isLastCheckpoint());
 
         if (descriptionScrollobject.isFirstCheckpoint() ) {
             this.buttonLeft.classList.add("inactive");
