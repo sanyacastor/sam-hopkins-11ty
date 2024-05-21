@@ -1,0 +1,17 @@
+@import './variables.css';
+@import './fonts.css';
+@import './reset.css';
+
+@import './layout.css';
+@import './header.css';
+@import './cardindexcabinet.css';
+@import './projectPreview.css';
+@import './projectView.css';
+@import './contacts.css';
+@import './projectView.css';
+@import './imagesPage.css';
+@import './videoPage.css';
+
+@import './imageSwiper.css';
+@import './relatedAndMoreCards.css';
+@import './mainPage.css';

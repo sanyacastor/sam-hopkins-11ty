@@ -1,21 +1,48 @@
-const Image = require('@11ty/eleventy-img')
 const path = require('path')
 
+const Image = require('@11ty/eleventy-img')
+
+const postcss = require('postcss')
+const autoprefixer = require('autoprefixer')
+const csso = require('postcss-csso')
+const pimport = require('postcss-import')
+
 module.exports = function (eleventyConfig) {
-  eleventyConfig.addPassthroughCopy('./src/assets')
+  eleventyConfig.addTemplateFormats('css')
+
+  // Assets
+  eleventyConfig.addPassthroughCopy('./src/assets/icons')
   eleventyConfig.addPassthroughCopy('img')
 
+  // Fonts
+  eleventyConfig.addPassthroughCopy('./src/fonts/KareliaWeb-Bold.woff2')
+  eleventyConfig.addPassthroughCopy('./src/fonts/KareliaWeb-Regular.woff2')
+
+  // Scripts
   eleventyConfig.addPassthroughCopy('./src/js')
 
   // Netlify CMS
   eleventyConfig.addPassthroughCopy('./src/admin')
   eleventyConfig.addPassthroughCopy('./src/_scripts')
 
-  // Custom Fonts
-  eleventyConfig.addPassthroughCopy('./src/fonts/KareliaWeb-Bold.woff2')
-  eleventyConfig.addPassthroughCopy('./src/fonts/KareliaWeb-Regular.woff2')
-
-  eleventyConfig.addPassthroughCopy('./src/_includes/site_assets')
+  eleventyConfig.addExtension('css', {
+    outputFileExtension: 'css',
+    compile: async (inputContent, inputPath) => {
+      if (inputPath !== './src/styles/index.css') {
+        return;
+      }
+  
+      return async () => {
+        let output = await postcss([
+          pimport,
+          autoprefixer,
+          csso
+        ]).process(inputContent, { from: inputPath });
+  
+        return output.css;
+      }
+    }
+  });
 
   eleventyConfig.addShortcode(
     'image',
@@ -35,7 +62,7 @@ module.exports = function (eleventyConfig) {
 
         let imageAttributes = {
           alt: alt || '',
-          sizes: sizes || '(min-width: 30em) 50vw, 100vw',
+          sizes: sizes || '(min-width: 320px) 50vw, 100vw',
           loading: 'lazy',
           decoding: 'async',
           class: className,
