@@ -1,32 +1,36 @@
-.projectPreview_textContainer{
+.projectPreview_textContainer {
   width: 100%;
   height: 100%;
+}
 
-  @media screen and (max-width: 800px) {
-   background-color: aqua; 
-   height: auto;
+@media screen and (max-width: 800px) {
+  .projectPreview_textContainer {
+    background-color: aqua;
+    height: auto;
   }
 }
 
 #projectPreview_outer {
   padding-top: 41px;
-  padding-bottom: 70px; 
+  padding-bottom: 70px;
   width: 100%;
   height: 100%;
-  
+
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  position:absolute;
-  
+  position: absolute;
+
   box-sizing: border-box;
 
   overflow-x: auto;
 
   scrollbar-width: thin;
   scrollbar-color: var(--color-primary) var(--color-white);
+}
 
-  @media screen and (max-width: 800px) {
+@media screen and (max-width: 800px) {
+  #projectPreview_outer {
     height: auto;
     overflow-x: hidden;
     padding-top: 0px;
@@ -40,7 +44,7 @@
 
 .projectPreview_ScrollArticle {
   column-fill: auto;
-  column-width: 878px; 
+  column-width: 878px;
   column-gap: 44px;
 
   max-width: 878px;
@@ -48,19 +52,23 @@
   height: 100%;
   padding-left: 13px;
   padding-right: 13px;
-  
+
   word-break: break-word;
   white-space: normal;
 
-  position:relative;
+  position: relative;
+}
 
-  @media screen and (max-width: 878px) {
+@media screen and (max-width: 878px) {
+  .projectPreview_ScrollArticle {
     margin-left: auto;
     margin-right: auto;
     max-width: 100%;
   }
+}
 
-  @media screen and (max-width: 800px) {
+@media screen and (max-width: 800px) {
+  .projectPreview_ScrollArticle {
     width: 100%;
     height: 100%;
 
@@ -74,15 +82,14 @@
   }
 }
 
-
-.projectPreview_ScrollArticle > font{
+.projectPreview_ScrollArticle > font {
   margin-left: 20px;
 }
 
-.projectPreview_phantomColumn{
+.projectPreview_phantomColumn {
   height: 100px;
   width: 100px;
-  
+
   position: relative;
   /*left: 0px;*/
   left: 0px;
@@ -90,13 +97,13 @@
   background-color: rgba(140, 0, 145, 0);
 }
 
-.projectPreview_phantomTrigger{
+.projectPreview_phantomTrigger {
   height: 100%;
   width: 1px;
   right: 0px;
   position: absolute;
 }
-
+/* TODO: Move to global styles */
 body {
   overflow-y: scroll;
   scrollbar-width: thin;
@@ -124,8 +131,10 @@ body::-webkit-scrollbar {
   /* padding-left: 13px; */
   /* padding-right: 13px; */
   /* overflow: hidden; */
+}
 
-  @media screen and (max-width: 800px) {
+@media screen and (max-width: 800px) {
+  .projectPreview_mainTextContainer {
     height: auto;
     align-items: stretch;
     background-color: deeppink;
@@ -135,7 +144,7 @@ body::-webkit-scrollbar {
 .projectPreview_buttonFullProject_container.unfolded {
   width: 130px;
   right: 328px;
-  
+
   height: 288px;
   bottom: 90px;
 }
@@ -152,24 +161,25 @@ body::-webkit-scrollbar {
   bottom: 90px;
 }
 
-.projectPreview_buttonFullProject_container:hover .a{
+.projectPreview_buttonFullProject_container:hover .a {
   font-weight: 900;
   background-color: var(--color-fullproject-button-hover);
 }
 
-.projectPreview_buttonFullProject_container:hover{
+.projectPreview_buttonFullProject_container:hover {
   font-weight: 900;
   cursor: pointer;
   background-color: var(--color-fullproject-button-hover);
 }
 
-.projectPreview_buttonFullProject_container:hover .projectPreview_buttonFullProject_arrowRight {
+.projectPreview_buttonFullProject_container:hover
+  .projectPreview_buttonFullProject_arrowRight {
   border-left: 20px solid var(--color-fullproject-button-hover);
 }
 
-.projectPreview_buttonFullProject_container{
+.projectPreview_buttonFullProject_container {
   position: absolute;
-  
+
   height: 61px;
   width: 229px;
 
@@ -186,15 +196,17 @@ body::-webkit-scrollbar {
   border: none;
 
   /* transition: bottom 0.5s ease, right 0.5s ease, position 0.5s ease; Add transitions */
+}
 
-  @media screen and (max-width: 800px) {
+@media screen and (max-width: 800px) {
+  .projectPreview_buttonFullProject_container {
     bottom: -69px;
     right: 20px;
   }
 }
 
-html:not([data-scroll='0']) .projectPreview_buttonFullProject_container {
-  @media screen and (max-width: 800px) {
+@media screen and (max-width: 800px) {
+  html:not([data-scroll='0']) .projectPreview_buttonFullProject_container {
     position: fixed;
     /*bottom: 20px;*/
     top: 10px;
@@ -203,9 +215,9 @@ html:not([data-scroll='0']) .projectPreview_buttonFullProject_container {
   }
 }
 
-.projectPreview_buttonFullProject_container > a{
+.projectPreview_buttonFullProject_container > a {
   color: var(--color-primary);
-  
+
   font-family: KareliaTrial;
   text-decoration: none;
   font-weight: bold;
@@ -225,11 +237,10 @@ html:not([data-scroll='0']) .projectPreview_buttonFullProject_container {
   border-bottom: 30px solid transparent;
   border-left: 20px solid var(--color-secondary);
   background-color: transparent;
-  
+
   transition: border-top 0.3s ease;
   transition: border-bottom 0.3s ease;
 }
-
 
 @keyframes slideTop {
   0% {
@@ -237,11 +248,11 @@ html:not([data-scroll='0']) .projectPreview_buttonFullProject_container {
     height: 64px;
     bottom: 8px;
   }
-   50%{
+  50% {
     /*right: 50px;*/
     height: 288px;
     bottom: 90px;
-  } 
+  }
   100% {
     /*right: 200px;*/
     height: 288px;
@@ -262,29 +273,29 @@ html:not([data-scroll='0']) .projectPreview_buttonFullProject_container {
   }
 }
 
-@keyframes arrow_slideTop{
-  0%{
+@keyframes arrow_slideTop {
+  0% {
     border-top: 30px solid transparent;
     border-bottom: 30px solid transparent;
   }
-  100%{
+  100% {
     border-top: 143px solid transparent;
     border-bottom: 143px solid transparent;
   }
 }
 
-@keyframes arrow_slideBottom{
-  0%{
+@keyframes arrow_slideBottom {
+  0% {
     border-top: 143px solid transparent;
     border-bottom: 143px solid transparent;
   }
-  100%{
+  100% {
     border-top: 30px solid transparent;
     border-bottom: 30px solid transparent;
   }
 }
 
-.swiper-wrapper.previewPage{
+.swiper-wrapper.previewPage {
   width: 200px;
   /*@media screen and (min-width: 1200px){
     width: 800px;
@@ -308,8 +319,10 @@ html:not([data-scroll='0']) .projectPreview_buttonFullProject_container {
   background-color: transparent;
   padding-top: 100px;
   padding-bottom: 10px;
-  
-  @media screen and (max-width: 800px){
+}
+
+@media screen and (max-width: 800px) {
+  .projectPreview_Grid {
     width: 100%;
     display: block;
     grid-template-columns: 1fr;
@@ -327,8 +340,10 @@ html:not([data-scroll='0']) .projectPreview_buttonFullProject_container {
   grid-column: 2;
   grid-row: 1;
   background-color: transparent;
-  
-  @media screen and (max-width: 800px){
+}
+
+@media screen and (max-width: 800px) {
+  .preview-grid-images {
     height: 300px;
     grid-column: 1;
     grid-row: 2;
@@ -338,19 +353,20 @@ html:not([data-scroll='0']) .projectPreview_buttonFullProject_container {
 .preview-grid-text {
   grid-column: 1 / span 2;
   grid-row: 2;
-  
+
   background-color: transparent;
-  
-  @media screen and (max-width: 800px){
+}
+
+@media screen and (max-width: 800px) {
+  .preview-grid-text {
     height: max-content;
     grid-column: 1;
     grid-row: 3;
   }
 }
-/*-----------------------------------*/
-
-.container {
-  @media screen and (max-width: 800px){
+/* TODO: Move to global styles if needed */
+@media screen and (max-width: 800px) {
+  .container {
     justify-content: center;
   }
 }
@@ -366,8 +382,10 @@ html:not([data-scroll='0']) .projectPreview_buttonFullProject_container {
 .projectPreview_Grid > pictures {
   grid-area: pictures;
   background-color: transparent;
+}
 
-  @media screen and (max-width: 800px) {
+@media screen and (max-width: 800px) {
+  .projectPreview_Grid > pictures {
     margin-left: auto;
     margin-right: auto;
   }
@@ -381,7 +399,7 @@ html:not([data-scroll='0']) .projectPreview_buttonFullProject_container {
   position: relative;
 }*/
 
-.navigation_panel{
+.navigation_panel {
   position: absolute;
   top: 0px;
   right: 0px;
@@ -392,15 +410,17 @@ html:not([data-scroll='0']) .projectPreview_buttonFullProject_container {
   background-color: #f0f0f000;
   padding: 0px;
   box-sizing: border-box;
+}
 
-  @media screen and (max-width: 800px) {
+@media screen and (max-width: 800px) {
+  .navigation_panel {
     display: none;
   }
 }
 
 .navigation_buttons_group {
   height: 29px;
-  
+
   position: absolute;
   top: 0;
   right: 0;
@@ -413,7 +433,7 @@ html:not([data-scroll='0']) .projectPreview_buttonFullProject_container {
   gap: 10px;
 }
 
-.navigation-button{
+.navigation-button {
   width: 30.88px;
   height: 22.4px;
   left: 1280px;
@@ -426,29 +446,30 @@ html:not([data-scroll='0']) .projectPreview_buttonFullProject_container {
   cursor: pointer;
 }
 
-.navigation-button.left-button{
+.navigation-button.left-button {
   color: var(--color-primary);
   background-color: transparent;
   background-repeat: no-repeat;
 
-  
   background-color: var(--color-primary);
+
+
+  /* TODO: Move to assets folder */
   -webkit-mask-image: url('/_includes/site_assets/navigation_arrow_left.svg');
   mask-image: url('/_includes/site_assets/navigation_arrow_left.svg');
   mask-repeat: no-repeat;
-  
 }
-.navigation-button.right-button{
+.navigation-button.right-button {
   color: var(--color-primary);
   background-color: transparent;
   background-repeat: no-repeat;
-  
+
   background-color: var(--color-primary);
   -webkit-mask-image: url('/_includes/site_assets/navigation_arrow_right.svg');
   mask-image: url('/_includes/site_assets/navigation_arrow_right.svg');
   mask-repeat: no-repeat;
 }
-.navigation-button.close-button{
+.navigation-button.close-button {
   color: var(--color-primary);
   background-color: transparent;
   background-repeat: no-repeat;
@@ -471,20 +492,22 @@ html:not([data-scroll='0']) .projectPreview_buttonFullProject_container {
 .projectPreview_Grid > main {
   grid-area: main;
   background-color: #0000ff00;
+}
 
-  @media screen and (max-width: 800px) {
+@media screen and (max-width: 800px) {
+  .projectPreview_Grid {
     margin-top: 0px;
     margin-bottom: 0px;
 
     padding-top: 0px;
     padding-bottom: 0px;
 
-    height: auto; 
+    height: auto;
     background-color: #ff6a00;
   }
 }
 
-.fullscreen{
+.fullscreen {
   position: fixed !important;
   top: 0 !important;
   left: 0 !important;
