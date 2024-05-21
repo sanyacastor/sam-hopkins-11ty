@@ -1,8 +1,8 @@
 //import "gsap";
 
 class previewDescriptionScroll{
+
     constructor(id_outerBox, id_contentBox, id_phantomColumn, id_fullButton, id_fullButtonArrow, gsapTwiner){
-      this.gsap = gsapTwiner;
 
       this.checkpoints = [];
       this.currentChecpointIndex = 0;
@@ -18,6 +18,8 @@ class previewDescriptionScroll{
       this.phantomColumn = document.getElementById(id_phantomColumn);
       this.fullButton = document.getElementById(id_fullButton);
       this.fullButtonArrow = document.getElementById(id_fullButtonArrow);
+
+      this.gsap = gsapTwiner;
     }
     
     destructor(){     
@@ -143,6 +145,9 @@ class previewDescriptionScroll{
     }
 
     scrollRight(){
+      if (this.isAnimating)
+        return;
+
       let targetCheckpointIndex = this.currentChecpointIndex + 1;
       if(targetCheckpointIndex >= this.checkpoints.length){
         targetCheckpointIndex = this.checkpoints.length - 1;
@@ -150,7 +155,11 @@ class previewDescriptionScroll{
 
       this.moveToCheckpoint(targetCheckpointIndex);
     }
+
     scrollLeft(){
+      if (this.isAnimating)
+        return;
+      
       let targetCheckpointIndex = this.currentChecpointIndex - 1;
       if(targetCheckpointIndex < 0){
         targetCheckpointIndex = 0;
@@ -166,8 +175,12 @@ class previewDescriptionScroll{
 
       this.gsap.to(  this.outerBox,{
                       scrollLeft: this.checkpoints[index],
-                      duration: 0.5, ease: "power2.inOut"
+                      duration: 0.5, ease: "power2.inOut",
+                      onComplete: () => {
+                        this.isAnimating = false;
+                      }
                   });
+      this.isAnimating = true;
     }
 
     isLastCheckpoint(){

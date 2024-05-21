@@ -82,6 +82,7 @@ layout: base.njk
       let windowScrollStepPercent = 1;
       let windowtargetScrollFraction = 0;
       let windownumberOfColumns = 1;
+      let isAnimating = false;
 
       var windowControllerInstance;
 
@@ -143,12 +144,20 @@ layout: base.njk
       }
 
       function scrollTwineStart(newFrac){
+        if(isAnimating){
+          return;
+        }
+
         let columnGap = parseInt(getComputedStyle(hscrollContent).columnGap);
 
         gsap.to(  document.getElementById('projectView_outer'),{
                     scrollLeft: newFrac * (document.getElementById('projectView_outer').scrollWidth + columnGap/2),
-                    duration: 0.5, ease: "power2.inOut"
+                    duration: 0.5, ease: "power2.inOut",
+                    onComplete: () => {
+                      isAnimating = false;
+                    }
                 });
+        isAnimating = true;
       }
 
       function processImages() {
@@ -186,6 +195,8 @@ layout: base.njk
 
       //==============Callbacks================
       window.addEventListener('load', function() {    
+        isAnimating = false;
+        
         windowControllerInstance = new windowController();
         let isMobileVersion = windowControllerInstance.itisMobile();
         console.log("isMobile: " + isMobileVersion);
@@ -227,6 +238,9 @@ layout: base.njk
           return;
         }
 
+        if(isAnimating)
+          return;
+
         var delta = e.wheelDelta ? e.wheelDelta : -e.deltaY;
 
           if(delta > 0){
@@ -252,8 +266,14 @@ layout: base.njk
 
       document.addEventListener('keydown', function(e) { 
         if (e.keyCode === 37) {
+          if(isAnimating)
+            return;
+
           scrollPrevCheckpoint();
         } else if (e.keyCode === 39) {
+          if(isAnimating)
+            return;
+
           scrollNextCheckpoint();
         }
       });
