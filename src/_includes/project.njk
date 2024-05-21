@@ -106,8 +106,6 @@ layout: base.njk
         setScrollFraction(checkpoints[current_checkpoint_index]);
       }
       const scrollStep = (pages) =>{
-        console.log("scrollStep( " + parseInt( pages ) + ")");
-
         frac = windowtargetScrollFraction;
         frac = Math.min(1, frac + pages*windowScrollStepPercent / 100);
         frac = Math.max(0, frac);
@@ -146,7 +144,7 @@ layout: base.njk
 
       function scrollTwineStart(newFrac){
         let columnGap = parseInt(getComputedStyle(hscrollContent).columnGap);
-        //console.log("columnGap: "+columnGap);
+
         gsap.to(  document.getElementById('projectView_outer'),{
                     scrollLeft: newFrac * (document.getElementById('projectView_outer').scrollWidth + columnGap/2),
                     duration: 0.5, ease: "power2.inOut"
@@ -251,6 +249,7 @@ layout: base.njk
           swiper.slideNext();
         }
       });
+
       document.addEventListener('keydown', function(e) { 
         if (e.keyCode === 37) {
           scrollPrevCheckpoint();
@@ -260,13 +259,15 @@ layout: base.njk
       });
       //=============/Callbacks================
 
-      function hidePhantomColumn(){
+      function hidePhantomColumn() {
         document.getElementById('previewPhantomColumn').style.display = 'none';
       }
-      function showPhantomColumn(){
+
+      function showPhantomColumn() {
         document.getElementById('previewPhantomColumn').style.display = 'block';
       }
-      function updatePhantomColumn(){
+
+      function updatePhantomColumn() {
         if(windowColumnsPerPage == 1){
           hidePhantomColumn();
           return;
@@ -284,7 +285,7 @@ layout: base.njk
         }
       }
 
-      function recalcColumnsPerPage(){
+      function recalcColumnsPerPage() {
         var projectViewOuter = document.getElementById('projectView_outer');
         var elementWidth = projectViewOuter.offsetWidth;
         windowColumnsPerPage = parseInt( elementWidth/(416+15) ); //!!!PELIGRO!!! wrong magic numbers, parseint
@@ -296,7 +297,7 @@ layout: base.njk
           windowColumnsPerPage = 1;
         }
       }
-      function recalcColumnWidth(){
+      function recalcColumnWidth() {
         if(windowColumnsPerPage == 2){
           windowColumnWidth = 416; //!!!PELIGRO!!! magic numbers
           hscrollContent.style.columnWidth = windowColumnWidth + 'px';
@@ -309,17 +310,20 @@ layout: base.njk
 
         hscrollContent.style.columnWidth = windowColumnWidth + 'px';
       }
-      function recalcNumberOfColumns(){
+      function recalcNumberOfColumns() {
         hidePhantomColumn();
         windownumberOfColumns = getNumberOfColumns_dirtiest_way_ever();
         updatePhantomColumn();
         windownumberOfColumns = getNumberOfColumns_dirtiest_way_ever();
       }
-      function getNumberOfColumns_dirtiest_way_ever(){
+
+      function getNumberOfColumns_dirtiest_way_ever() {
         //cycle through all elements and increment counter
         //What the fuck wrong with me?!
         let ncols = 1;
         let rightmost = document.getElementById('firstHackColumn').getBoundingClientRect().left;
+        let hackColumnWidth = document.getElementById('firstHackColumn').offsetWidth;
+        
         //get all elements
         let elements = hscrollContent.children;
 
@@ -327,9 +331,11 @@ layout: base.njk
           let element = elements[i];
           let rect = element.getBoundingClientRect();
 
-          if (rect.left > rightmost + 100) {
+          let columns_inside = Math.floor((rect.left - rightmost)/hackColumnWidth);
+
+          if(columns_inside > 0){
             rightmost = rect.left;
-            ncols++;
+            ncols += columns_inside;
           }
         }
 
@@ -337,12 +343,12 @@ layout: base.njk
         return ncols;
       }
 
-      function recalcScrollStep(){
+      function recalcScrollStep() {
         windowScrollStep = 1/windownumberOfColumns;
         windowScrollStepPercent = 100 / windownumberOfColumns;
       }
 
-      function recalcScrollCheckpoints(){
+      function recalcScrollCheckpoints() {
         if(windowColumnsPerPage == 0){
           console.log("windowColumnsPerPage == 0");
           return;
@@ -359,7 +365,7 @@ layout: base.njk
         }
       }
 
-      function redrawNavButtons(){
+      function redrawNavButtons() {
         document.getElementById('projectView_scrollNavBar').innerHTML = '';
         newNav = '';
 
@@ -375,14 +381,14 @@ layout: base.njk
         document.getElementById('navButton0').classList.add('active');
       }
 
-      function createNavNextButton(){
+      function createNavNextButton() {
         return `<button class="projectView_navigationButtonNextCheckpoint"
                            id="navButtonScrollToNextCheckpoint"
                            onclick="scrollNextCheckpoint()">
                            >>
                   </button>`;
       }
-      function createNavButton(n, checkp){
+      function createNavButton(n, checkp) {
         return `<button class="projectView_navigationDigit"
                              id="navButton${n}"
                              targetPersent="${checkp}"
@@ -392,7 +398,7 @@ layout: base.njk
                     </button>`;
       }
 
-      function attractScrollToNearestColumn(){
+      function attractScrollToNearestColumn() {
         //processSlug();
       }
  
@@ -407,7 +413,7 @@ layout: base.njk
         attractScrollToNearestColumn();
       }
 
-      function processSlug(){
+      function processSlug() {
         // Get the current URL
         var currentUrl = window.location.href;
         var slug = currentUrl.substring(currentUrl.lastIndexOf('/') + 1);
@@ -449,7 +455,7 @@ layout: base.njk
       updateImageCaption();
     });
 
-    function updateImageCaption(){
+    function updateImageCaption() {
       if(swiper.slides.length == 0){
         document.getElementById('projectView_photoSlot').style["display"] = "none";
         document.getElementById('projectView_photo_caption').style["display"] = "none";
@@ -468,7 +474,7 @@ layout: base.njk
       caprtion.innerHTML = currentImageTitle;
     }
 
-    function swipeImageToFraction(persent){
+    function swipeImageToFraction(persent) {
       nSlides = swiper.slides.length;
 
       if(nSlides == 0)
