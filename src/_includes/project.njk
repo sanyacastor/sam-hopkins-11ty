@@ -23,7 +23,7 @@ layout: base.njk
   {%-set related_projects_data = {
     relatedProjects: relatedProjects
   } %}
-    
+
   <!--link rel="stylesheet" href="bundle.css"-->
   <article>
     <div class='container'>
@@ -35,6 +35,15 @@ layout: base.njk
           <div class="projectView_photoSlot" id = 'projectView_photoSlot'>
             <div class="swiper mySwiper">
               <div class="swiper-wrapper" id="projectView_swiperWrapper">
+                {% for project in projects %}
+                  {% if project.title === title %}
+                    {% for image in project.images %}
+                      <div class="swiper-slide" caption="{{image.caption}}">
+                        {% image image.url, image.alt %}
+                      </div>
+                    {%endfor%}
+                  {%endif%}
+                {%endfor%}
               </div>
               <!--div class="swiper-button-next"></div>
               <div class="swiper-button-prev"></div-->
@@ -172,25 +181,13 @@ layout: base.njk
         }
 
         addCaptionsToImages(imgCollection);
-        addImagesToSwiper(images);
+        swiper.update();
       }
 
       function addCaptionsToImages(imgCollection){
         for (let item of imgCollection) {
           item.insertAdjacentHTML('afterend', `<p class="projectView_imgCaptionMobile">${item.title}</p>`);
         }
-      }
-
-      function addImagesToSwiper(images){
-        //put images into swiper-wrapper
-        let swiperWrapper = document.getElementById('projectView_swiperWrapper');
-        swiperWrapper.innerHTML = '';
-        images.forEach(image => {
-          swiperWrapper.innerHTML += `<div class="swiper-slide">
-                                        <img src="${image.src}" alt="${image.alt}" class="swiper-slide" title="${image.title}">
-                                      </div>`;
-        }); 
-        swiper.update();
       }
 
       //==============Callbacks================
@@ -209,6 +206,7 @@ layout: base.njk
         updateImageCaption();
         //window.history.pushState({"html":html,"pageTitle":"fdsfsdf"},"", "somePath");
       });
+      
       window.addEventListener('resize', function() {
         onResize();
       });
@@ -485,13 +483,16 @@ layout: base.njk
         document.getElementById('projectView_photo_caption').style["display"] = "block";
       }
 
-      let currentSlide = swiper.slides[swiper.activeIndex];
+      var captionElement = document.getElementById('projectView_photo_caption');
 
-      let currentImage = currentSlide.querySelector('img');
-      let currentImageTitle = currentImage.getAttribute('title');
-
-      var caprtion = document.getElementById('projectView_photo_caption');
-      caprtion.innerHTML = currentImageTitle;
+      let activeSlide = swiper.slides[swiper.activeIndex];
+      if (activeSlide) {
+        let captionText = activeSlide.getAttribute("caption");
+        console.log(captionText);  // This will log "Some caption2"
+        captionElement.innerHTML = captionText;
+      }
+      else
+      captionElement.innerHTML = "";
     }
 
     function swipeImageToFraction(persent) {

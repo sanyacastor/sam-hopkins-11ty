@@ -52,7 +52,7 @@ previewDescription: The initial idea for this came from an old photo I saw
   and back again. They are temporary and at some stage will   decay and fade
   away.
 ---
-![](/assets/good_place.png "It's just a location")
+![alt](/assets/good_place.png "It's just a location")
 
 # Concept
 
@@ -79,7 +79,7 @@ To delve deeper into this phenomenon, I enlisted the help of Zosia Jarosz and Ma
 The resulting video material captured a spectrum of responses, ranging from wildly inaccurate assumptions to remarkably perceptive insights, and even some individuals who seemed oblivious to my presence altogether. It became apparent that my experiment had not only revealed the fluidity of urban life but also highlighted the intricate dance between visibility and invisibility in public spaces.
 As I reflect on this experience, I realize that my initial quest to understand the city's rhythms evolved into an exploration of human connection and perception. Through the lens of a simple bench on Kuznicza Street, I witnessed the power of presence to shape our understanding of space and the profound impact of shared experiences, even in the midst of constant flux.
 
-![](/assets/img_20240413_121627.png "Overcomplicated caption for an overcomplicated device. Behold, the intricate marvel that is the cellular power plant, the mitochondrion. This organelle, encapsulated within a double membrane, is a labyrinthine network of pathways and structures, each with a meticulously defined role in the grand orchestra of cellular respiration and energy production. The outer membrane, smooth and unassuming, serves as the gateway, regulating the passage of ions and molecules in a highly controlled manner. It houses numerous transport proteins, each a specialized courier, ensuring only the appropriate substances gain entry into the inner sanctum.")
+![alt2](/assets/img_20240413_121627.png "Overcomplicated caption for an overcomplicated device. Behold, the intricate marvel that is the cellular power plant, the mitochondrion. This organelle, encapsulated within a double membrane, is a labyrinthine network of pathways and structures, each with a meticulously defined role in the grand orchestra of cellular respiration and energy production. The outer membrane, smooth and unassuming, serves as the gateway, regulating the passage of ions and molecules in a highly controlled manner. It houses numerous transport proteins, each a specialized courier, ensuring only the appropriate substances gain entry into the inner sanctum.")
 
 # Exploring the Dynamics of Stationarity in a City of Flux
 
