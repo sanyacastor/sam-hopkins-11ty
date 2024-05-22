@@ -45,6 +45,9 @@
 }
 .projectView_imgCaptionMobile{
   display: none;
+  font-size: 14px; 
+  font-weight: 400;
+  line-height: 18.48px;
 
   @media screen and (max-width: 800px) {
     display: block;
