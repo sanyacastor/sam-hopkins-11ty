@@ -3,12 +3,12 @@
   height: 128px;
 
   cursor: pointer;
+}
 
-  img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
+.images-list__item--container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .images-list__item--hidden {
@@ -19,14 +19,14 @@
   position: fixed;
   z-index: 1;
   max-height: 300px;
+}
 
-  button {
-    background: transparent;
-    border: none;
-    position: absolute;
-    right: 0;
-    color: white;
-  }
+.draggable-modal button {
+  background: transparent;
+  border: none;
+  position: absolute;
+  right: 0;
+  color: white;
 }
 
 .modal-image-preview {
