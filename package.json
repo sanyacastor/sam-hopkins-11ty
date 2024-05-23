@@ -12,6 +12,10 @@
   "license": "MIT",
   "devDependencies": {
     "@11ty/eleventy": "^2.0.1",
+    "autoprefixer": "^10.4.19",
+    "postcss": "^8.4.38",
+    "postcss-csso": "^6.0.1",
+    "postcss-import": "^16.1.0",
     "prettier": "3.2.5"
   },
   "dependencies": {
