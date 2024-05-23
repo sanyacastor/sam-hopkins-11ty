@@ -1,0 +1,30 @@
+.swiper-pagination-progressbar-fill {
+  color: var(--color-primary);
+  border: 3px solid var(--color-swiper-progressbar);
+}
+
+.swiper-button-next {
+  color: transparent;
+
+  width: 30px;
+  height: 30px;
+  mask-size: 30px;
+
+  background-color: var(--color-secondary);
+  -webkit-mask-image: url('/assets/icons/navigation_arrow_right.svg');
+  mask-image: url('/assets/icons/navigation_arrow_right.svg');
+  mask-repeat: no-repeat;
+}
+
+.swiper-button-prev {
+  color: transparent;
+
+  width: 30px;
+  height: 30px;
+  mask-size: 30px;
+
+  background-color: var(--color-secondary);
+  -webkit-mask-image: url('/assets/icons/navigation_arrow_left.svg');
+  mask-image: url('/assets/icons/navigation_arrow_left.svg');
+  mask-repeat: no-repeat;
+}

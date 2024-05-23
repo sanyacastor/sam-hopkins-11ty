@@ -21,47 +21,54 @@
 
   word-break: break-word;
   white-space: normal;
+}
 
-  @media screen and (max-width: 800px) {
+@media screen and (max-width: 800px) {
+  .projectView_ScrollArticle {
     width: 100%;
     padding-right: 10px;
   }
 }
 
-.projectView_phantomColumn{
+.projectView_phantomColumn {
   height: 100%;
   width: 416px;
 }
 
 .projectView_ScrollArticle > p > img {
   display: none;
+}
 
-  @media screen and (max-width: 800px) {
+@media screen and (max-width: 800px) {
+  .projectView_ScrollArticle > p > img {
     display: block;
     width: 100%;
     height: auto;
     object-fit: contain; /* Updated */
   }
 }
-.projectView_imgCaptionMobile{
+.projectView_imgCaptionMobile {
   display: none;
+<<<<<<< HEAD:src/_includes/styles/projectView.css
   font-size: 14px; 
   font-weight: 400;
   line-height: 18.48px;
   padding-bottom: 25px;
+=======
+}
+>>>>>>> master:src/styles/projectView.css
 
-  @media screen and (max-width: 800px) {
+@media screen and (max-width: 800px) {
+  .projectView_imgCaptionMobile {
     display: block;
     width: 100%;
     height: auto;
   }
 }
 
-
 .projectView_ScrollArticle > img {
   display: none;
 }
-
 
 .projectView_container {
   display: flex;
@@ -72,8 +79,10 @@
 
   margin-top: 0px;
   border: none;
+}
 
-  @media screen and (max-width: 800px) {
+@media screen and (max-width: 800px) {
+  .projectView_container {
     flex-direction: column;
     height: auto;
   }
@@ -91,40 +100,49 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+}
 
-  @media screen and (max-width: 800px) {
+@media screen and (max-width: 800px) {
+  .projectView_sideBar {
     width: 100%;
   }
 }
-.projectView_cardSlot{
+
+.projectView_cardSlot {
   width: 443px;
   height: 203px;
   background-color: transparent;
   margin-top: 85px;
+}
 
-  @media screen and (max-width: 800px) {
+@media screen and (max-width: 800px) {
+  .projectView_cardSlot {
     width: 100%;
   }
 }
 
-.projectView_photoSlot{
+.projectView_photoSlot {
   width: 443px;
   height: 305px;
+}
 
-  @media screen and (max-width: 800px) {
+@media screen and (max-width: 800px) {
+  .projectView_photoSlot {
     display: none;
   }
 }
 
-.projectView_photo_caption{
+.projectView_photo_caption {
   text-align: left;
   position: inherit;
   left: 0px;
   top: 0px;
   width: 100%;
   padding-left: 10px;
+}
 
-  @media screen and (max-width: 800px) {
+@media screen and (max-width: 800px) {
+  .projectView_photo_caption {
     display: none;
   }
 }
@@ -137,16 +155,16 @@
 .swiper-wrapper {
   height: 100%;
   width: 100%;
-   
+
   justify-content: flex-start;
   align-items: center;
-  display: flex !important; 
+  display: flex !important;
 }
 
 .swiper-slide {
- font:40px Impact;
+  font: 40px Impact;
 
- height: max-content !important;
+  height: max-content !important;
 }
 
 .swiper-slide > p {
@@ -172,8 +190,10 @@
 
   border: none;
   /* border: 1px solid #ccc; */
+}
 
-  @media screen and (max-width: 800px) {
+@media screen and (max-width: 800px) {
+  .projectView_blockText {
     padding: 0px;
   }
 }
@@ -185,12 +205,15 @@
   right: 15.2px;
   bottom: 25px;
   background-color: transparent;
+}
 
-  @media screen and (max-width: 800px) {
+@media screen and (max-width: 800px) {
+  .projectView_navigation {
     display: none;
   }
 }
 
+<<<<<<< HEAD:src/_includes/styles/projectView.css
 .navigation-button.right-button.nav-arrow-project-view{
   float: right;
   margin-left: 8px;
@@ -204,13 +227,21 @@
 }
 
 .projectView_navigationDigit{
+=======
+.projectView_navigationDigit {
+>>>>>>> master:src/styles/projectView.css
   display: inline;
   background-color: transparent;
   border: none;
   float: right;
+<<<<<<< HEAD:src/_includes/styles/projectView.css
   color:#818181;
   font-weight: 400;
   font-family: 'Karelia Web Regular';
+=======
+  color: #818181;
+  font-weight: lighter;
+>>>>>>> master:src/styles/projectView.css
 }
 
 .projectView_navigationDigit:hover {
@@ -222,13 +253,13 @@
   color: var(--color-primary);
 }
 
-.projectView_navigationButtonNextCheckpoint{
+.projectView_navigationButtonNextCheckpoint {
   display: inline;
   background-color: transparent;
   border: none;
   float: right;
   color: var(--color-primary);
-  font-weight:bold;
+  font-weight: bold;
 }
 
 .projectView_Grid {
@@ -241,8 +272,10 @@
     'caption main';
   grid-template-rows: 203px 305px 27px;
   grid-template-columns: 443px 1000px;
+}
 
-  @media screen and (max-width: 800px) {
+@media screen and (max-width: 800px) {
+  .projectView_Grid {
     background-color: #0000ff;
   }
 }
@@ -253,8 +286,8 @@
 }
 
 .projectView_Grid > pictures {
-    grid-area: pictures;
-    background-color: #4cff00;
+  grid-area: pictures;
+  background-color: #4cff00;
 }
 
 .projectView_Grid > navigation {

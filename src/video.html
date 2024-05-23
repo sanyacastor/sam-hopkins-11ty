@@ -1,0 +1,43 @@
+---
+title: Sam Hopkins | Video
+layout: base.njk
+slug: video
+---
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" async></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/Draggable.min.js" async></script>
+
+<div class="container">
+  <ul class="video-list">
+    {% for v in video %}
+      <li class="video-list__item" data-video-url="{{v.hash}}">
+        <div class="video-list__image">
+          <img src="{{ v.imageUrl }}"/>
+        </div>
+        <div class="video-list__description">{{ v.description }}</div>
+      </li>
+    {% endfor %}
+  </ul>
+</div>
+
+<script type="module">
+  import {DraggableModal} from '/js/videoPage/draggableModal.js'
+  gsap.registerPlugin(Draggable)
+
+  const allImages = document.querySelectorAll('.video-list__item')
+
+  const createDraggbleModal = event => {
+    const hash = event
+      .target
+      .closest('.video-list__item')
+      .dataset
+      .videoUrl
+
+    new DraggableModal({event, hash})
+
+    Draggable.create(`#${hash}`, {trigger: `#${hash} .draggable-modal__toolbar`})
+  }
+
+  allImages.forEach(image => {
+    image.addEventListener('click', e => createDraggbleModal(e))
+  })
+</script>

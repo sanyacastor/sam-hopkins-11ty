@@ -86,6 +86,13 @@ collections:
           name: 'description',
           widget: 'string',
         }
+      - { 
+          label: "Date",
+          name: "createdAt",
+          widget: "datetime",
+          date_format: "DD.MM.YYYY", 
+          picker_utc: false,
+        }
   - name: 'video'
     label: 'Video'
     folder: 'src/video'
