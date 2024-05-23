@@ -178,17 +178,29 @@
   }
 }
 
-.projectView_navigation{
+.projectView_navigation {
   width: 800px;
   height: 15px;
   position: absolute;
-  right: 0;
-  bottom: 0;
+  right: 15.2px;
+  bottom: 25px;
   background-color: transparent;
 
   @media screen and (max-width: 800px) {
     display: none;
   }
+}
+
+.navigation-button.right-button.nav-arrow-project-view{
+  float: right;
+  margin-left: 8px;
+  transform: translateY(-5%);
+}
+
+.navigation-button.left-button.nav-arrow-project-view{
+  float: right;
+  margin-left: 8px;
+  transform: translateY(-5%);
 }
 
 .projectView_navigationDigit{
@@ -197,7 +209,8 @@
   border: none;
   float: right;
   color:#818181;
-  font-weight:lighter;
+  font-weight: 400;
+  font-family: 'Karelia Web Regular';
 }
 
 .projectView_navigationDigit:hover {

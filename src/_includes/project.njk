@@ -99,6 +99,9 @@ layout: base.njk
       const hscrollOuter = document.querySelector('projectView_outer');
 
       const scrollNextCheckpoint = () => {
+        if(isAnimating == true)
+          return;
+
         current_checkpoint_index = Math.floor(current_checkpoint_index);
 
         current_checkpoint_index++;
@@ -107,7 +110,11 @@ layout: base.njk
 
         setScrollFraction(checkpoints[current_checkpoint_index]);
       }
+
       const scrollPrevCheckpoint = () => {
+        if(isAnimating == true)
+          return;
+
         current_checkpoint_index = Math.ceil(current_checkpoint_index);
 
         current_checkpoint_index--;
@@ -199,7 +206,6 @@ layout: base.njk
         console.log("isMobile: " + isMobileVersion);
 
         processImages();
-
 
         onResize();
         processSlug();
@@ -395,29 +401,35 @@ layout: base.njk
         for(let i=checkpoints.length-1; i >= 0 ; i--)
           newNav += createNavButton(i, checkpoints[i]);
 
+        //newNav += createNavPrevButton();//is absent in the design
+
         document.getElementById('projectView_scrollNavBar').innerHTML = newNav;
         document.getElementById('navButton0').classList.add('active');
       }
 
+      function createNavPrevButton() {
+        return '<button class="navigation-button left-button nav-arrow-project-view", id="navButtonScrollToPrevCheckpoint", onclick="scrollPrevCheckpoint()"></button>';
+      }
       function createNavNextButton() {
-        return `<button class="projectView_navigationButtonNextCheckpoint"
-                           id="navButtonScrollToNextCheckpoint"
-                           onclick="scrollNextCheckpoint()">
-                           >>
-                  </button>`;
+        return '<button class="navigation-button right-button nav-arrow-project-view" id="navButtonScrollToNextCheckpoint", onclick="scrollNextCheckpoint()"></button>';
       }
       function createNavButton(n, checkp) {
         return `<button class="projectView_navigationDigit"
                              id="navButton${n}"
                              targetPersent="${checkp}"
                              targetCheckpoint="${n}"
-                             onclick="setScrollFraction(${checkp})">
+                             onclick="navDigitClicked(${checkp})">
                              ${n}
                     </button>`;
       }
 
       function attractScrollToNearestColumn() {
         //processSlug();
+      }
+
+      function navDigitClicked(persent) {
+        isAnimating = false;
+        setScrollFraction(persent);
       }
  
       function onResize() {
@@ -492,7 +504,7 @@ layout: base.njk
         captionElement.innerHTML = captionText;
       }
       else
-      captionElement.innerHTML = "";
+        captionElement.innerHTML = "";
     }
 
     function swipeImageToFraction(persent) {
