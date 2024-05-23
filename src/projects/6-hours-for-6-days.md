@@ -51,6 +51,8 @@ previewDescription: The initial idea for this came from an old photo I saw
   They are made from one piece of string, which goes from the   base to the top,
   and back again. They are temporary and at some stage will   decay and fade
   away.
+relatedProjects:
+  - Unseen exhibition
 ---
 ![alt](/assets/good_place.png "It's just a location")
 

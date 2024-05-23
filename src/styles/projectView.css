@@ -131,11 +131,15 @@
 
 .projectView_photo_caption {
   text-align: left;
-  position: inherit;
+  position: relative; /* Change from inherit to relative */
   left: 0px;
   top: 0px;
   width: 100%;
   padding-left: 10px;
+  margin-bottom: 30px;
+  max-height: 100px;
+
+  overflow: scroll;
 }
 
 @media screen and (max-width: 800px) {
