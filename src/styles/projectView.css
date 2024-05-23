@@ -49,14 +49,11 @@
 }
 .projectView_imgCaptionMobile {
   display: none;
-<<<<<<< HEAD:src/_includes/styles/projectView.css
   font-size: 14px; 
   font-weight: 400;
   line-height: 18.48px;
   padding-bottom: 25px;
-=======
 }
->>>>>>> master:src/styles/projectView.css
 
 @media screen and (max-width: 800px) {
   .projectView_imgCaptionMobile {
@@ -213,7 +210,6 @@
   }
 }
 
-<<<<<<< HEAD:src/_includes/styles/projectView.css
 .navigation-button.right-button.nav-arrow-project-view{
   float: right;
   margin-left: 8px;
@@ -226,22 +222,15 @@
   transform: translateY(-5%);
 }
 
-.projectView_navigationDigit{
-=======
 .projectView_navigationDigit {
->>>>>>> master:src/styles/projectView.css
   display: inline;
   background-color: transparent;
   border: none;
   float: right;
-<<<<<<< HEAD:src/_includes/styles/projectView.css
   color:#818181;
   font-weight: 400;
   font-family: 'Karelia Web Regular';
-=======
-  color: #818181;
-  font-weight: lighter;
->>>>>>> master:src/styles/projectView.css
+
 }
 
 .projectView_navigationDigit:hover {
