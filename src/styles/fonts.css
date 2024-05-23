@@ -1,0 +1,42 @@
+@font-face {
+  font-family: 'Karelia Web Regular';
+  src: url('/fonts/KareliaWeb-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Karelia Web Bold';
+  src: url('/fonts/KareliaWeb-Bold.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+.karelia-web mono-regular {
+  font-family: 'Karelia Web Regular', monospace;
+  font-weight: 400;
+}
+
+.karelia-web mono-bold {
+  font-family: 'Karelia Web Bold', monospace;
+  font-weight: 600;
+}
+
+.ibm-plex mono-regular {
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: 400;
+}
+
+.ibm-plex mono-semibold {
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: 600;
+}
+
+.ibm-plex mono-bold {
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: 700;
+}
+
+

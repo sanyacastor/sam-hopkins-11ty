@@ -1,0 +1,13 @@
+.mainPage_scrollBox {
+  margin-left: 4px;
+  margin-right: 4px;
+
+  padding-bottom: 100px;
+
+  display: flex;
+
+  box-sizing: border-box;
+  height: max-content;
+
+  position: relative;
+}

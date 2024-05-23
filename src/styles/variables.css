@@ -1,0 +1,27 @@
+:root {
+  --color-primary: #6e0b0b;
+  --color-secondary: #e5f0ea;
+  --color-borders: #828282;
+  --color-black: #000000;
+  --color-white: #ffffff;
+  --color-swiper-progressbar: #828282;
+
+  --font-family-base: 'IBM Plex Mono', monospace;
+  --font-family-karelia-regular: 'Karelia Web Regular', monospace;
+  --font-family-karelia-bold: 'Karelia Web Bold', monospace;
+  --font-weight-regular: 400;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+
+  --font-size-base: 17px;
+  --font-size-alternative: 20px;
+  --font-size-heading: 33px;
+
+  --container-max-width: 1366px;
+
+  --global-background-color: #f0f0f0;
+
+  --color-fullproject-button-hover: #e5eff0;
+  --swiper-theme-color: var(--color-secondary) !important; /* swiperjs left and right arrows color */
+}
