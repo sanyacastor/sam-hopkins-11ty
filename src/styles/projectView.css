@@ -149,6 +149,10 @@
   width: 100%;
 }
 
+.swiper-slide > picture > img { /*!!!! Boss forbids to use such shit !!!!!*/
+  width: 100%;
+}
+
 .swiper-wrapper {
   height: 100%;
   width: 100%;

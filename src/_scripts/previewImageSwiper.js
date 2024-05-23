@@ -61,7 +61,7 @@ class previewImageSwiper {
     }
   }
 
-  switch_fullscreen(){
+  switch_fullscreen() {
     if(this.swiperElement.classList.contains("fullscreen")){
       this.fullscreen = false;
 
