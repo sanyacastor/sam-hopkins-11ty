@@ -1,15 +1,14 @@
 const fs = require('fs').promises
 const path = require('path')
-const url = require('url')
 const fm = require('front-matter')
 
 const videosPath = process.cwd() + '/src/video/'
 
+// hqdefault.jpg
+// hq720.jpg
+
 const readFiles = async filePaths => {
   const arr = []
-
-  // hqdefault.jpg
-  // hq720.jpg
 
   await Promise.all(
     filePaths.map(async filePath => {
@@ -17,7 +16,9 @@ const readFiles = async filePaths => {
       try {
         const markdown = await fs.readFile(videosPath + filePath, 'utf8')
         const content = fm(markdown)
-        const hash = url.parse(content.attributes.link).query.split('=')[1]
+
+        const regex = /\/embed\/([^?]+)/
+        const hash = content.attributes.link.match(regex)[1]
 
         arr.push({
           ...content.attributes,
