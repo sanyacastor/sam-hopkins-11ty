@@ -43,7 +43,7 @@
   left: 50%;
   transform: translateX(-50%);
 
-  background: url('assets/play-button-icon.svg');
+  background: url('/assets/icons/play-button-icon.svg');
   background-repeat: no-repeat;
 }
 

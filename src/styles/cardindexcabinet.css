@@ -95,7 +95,9 @@
   top: 0px;
   position: relative;
 
-  font-size: 33px;
+  font-size: var(--font-size-heading);
+  line-height: 44.65px;
+
   font-weight: bold;
   margin: 0;
   text-decoration: none;
