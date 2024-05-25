@@ -242,7 +242,6 @@
 }
 
 .projectView_navigationDigit:hover {
-  background-color: aqua;
 }
 
 .active {
@@ -271,11 +270,6 @@
   grid-template-columns: 443px 1000px;
 }
 
-@media screen and (max-width: 800px) {
-  .projectView_Grid {
-    background-color: #0000ff;
-  }
-}
 
 .projectView_Grid > card {
   grid-area: card;
@@ -284,20 +278,16 @@
 
 .projectView_Grid > pictures {
   grid-area: pictures;
-  background-color: #4cff00;
 }
 
 .projectView_Grid > navigation {
   grid-area: navigation;
-  background-color: #ff0000;
 }
 
 .projectView_Grid > imgcaption {
   grid-area: caption;
-  background-color: #ff6a00;
 }
 
 .projectView_Grid > main {
   grid-area: main;
-  background-color: #0000ff;
 }

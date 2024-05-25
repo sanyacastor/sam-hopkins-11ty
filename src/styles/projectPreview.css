@@ -5,7 +5,6 @@
 
 @media screen and (max-width: 800px) {
   .projectPreview_textContainer {
-    background-color: aqua;
     height: auto;
   }
 }
@@ -39,7 +38,6 @@
 
 #projectPreview_outer::-webkit-scrollbar {
   /*width: 4px;*/
-  background-color: rgb(255, 0, 0);
 }
 
 .projectPreview_ScrollArticle {
@@ -113,7 +111,6 @@ body {
 
 body::-webkit-scrollbar {
   width: 4px;
-  background-color: rgb(255, 0, 0);
 }
 
 .projectPreview_ScrollArticle > p > img {
@@ -138,7 +135,6 @@ body::-webkit-scrollbar {
   .projectPreview_mainTextContainer {
     height: auto;
     align-items: stretch;
-    background-color: deeppink;
   }
 }
 
@@ -487,7 +483,6 @@ body::-webkit-scrollbar {
 
 .projectPreview_Grid > imgcaption {
   grid-area: caption;
-  background-color: #ff6a00;
 }
 
 .projectPreview_Grid > main {
@@ -504,7 +499,6 @@ body::-webkit-scrollbar {
     padding-bottom: 0px;
 
     height: auto;
-    background-color: #ff6a00;
   }
 }
 
