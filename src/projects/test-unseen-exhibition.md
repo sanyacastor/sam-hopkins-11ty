@@ -1,9 +1,27 @@
 ---
-id: DSFASDFWETEWR324234A
-title: Project without images
-dates: "625 B.C."
-cardDescription: " No images at all"
-previewDescription: 'No imgs'
+id: 9Kh6WL9wqpZ9ADRZK80jZ
+title: Test unseen exhibition
+dates: "2025"
+collaborators: Bob & Belarus
+cardDescription: " You can's see it, but it's near"
+previewDescription: 'Unseen Realities: A Journey Beyond
+  Perception  "Unseen   Realities: A Journey Beyond Perception" is an innovative
+  exhibition that   transcends the visible world, inviting visitors to engage
+  with the hidden   dimensions of existence. By integrating art, technology, and
+  interactive   elements, the exhibition creates a multi-sensory environment
+  that challenges   traditional notions of perception. Visitors are encouraged
+  to explore   installations that visualize invisible connections, experience
+  auditory   landscapes that evoke the presence of the unseen, and interact with
+  exhibits   that reveal the limitations and expansiveness of human
+  perception.  The   exhibition is designed to be an immersive journey, where
+  each section flows   into the next, creating a cohesive narrative that guides
+  visitors through a   series of perceptual shifts. Highlights include
+  projection mapping, augmented   reality, UV and infrared artworks, and tactile
+  sculptures. Educational   programs, including guided tours, workshops, and
+  panel discussions, offer   further opportunities for engagement and
+  learning.  "Unseen Realities" is a   thought-provoking exploration of what
+  lies beyond the visible, inviting   visitors to reconsider the boundaries of
+  reality and embrace the mysteries of   the unseen.'
 relatedProjects:
   - 6 hours for 6 days
 ---
@@ -35,6 +53,8 @@ Visitor Experience:
 Upon entering "Unseen Realities," visitors are enveloped in an environment where the boundaries between reality and illusion blur. Each exhibit encourages active participation, with hands-on activities and immersive experiences that engage the senses in unexpected ways. The exhibition space is designed to be navigated intuitively, with each section flowing seamlessly into the next, creating a continuous journey of discovery.
 
 Educational Programs:
+
+![](/assets/img_20240413_121635.jpg)
 
 \    Guided Tours: Expert-led tours that provide deeper insights into the themes and technologies used in the exhibition.
 
