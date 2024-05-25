@@ -516,3 +516,18 @@ body::-webkit-scrollbar {
   height: 100% !important;
   background-color: #161418f3 !important;
 }
+
+.markdown-image--mobile {
+  display: none;
+  max-width: 100%;
+  height: auto;
+}
+
+@media screen and (max-width: 800px) {
+  .markdown-image--mobile {
+    display: block;
+  }
+  .projectView_photoSlot {
+    display: none;
+  }
+}
