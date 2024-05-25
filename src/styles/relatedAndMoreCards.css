@@ -45,7 +45,7 @@
   width: 208px;
 
   pointer-events: all;
-  z-index: 9999; /*!!!!PELIGRO!!!!*/
+  z-index: 0; /*!!!!PELIGRO!!!!*/
   background-color: var(--color-secondary);
   border-style: none;
   color: var(--color-primary);

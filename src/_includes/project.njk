@@ -23,7 +23,7 @@ layout: base.njk
   {%-set related_projects_data = {
     relatedProjects: relatedProjects
   } %}
-    
+
   <!--link rel="stylesheet" href="bundle.css"-->
   <article>
     <div class='container'>
@@ -35,6 +35,15 @@ layout: base.njk
           <div class="projectView_photoSlot" id = 'projectView_photoSlot'>
             <div class="swiper mySwiper">
               <div class="swiper-wrapper" id="projectView_swiperWrapper">
+                {% for project in projects %}
+                  {% if project.title === title %}
+                    {% for image in project.images %}
+                      <div class="swiper-slide" caption="{{image.caption}}">
+                        {% image image.url, image.alt %}
+                      </div>
+                    {%endfor%}
+                  {%endif%}
+                {%endfor%}
               </div>
               <!--div class="swiper-button-next"></div>
               <div class="swiper-button-prev"></div-->
@@ -90,6 +99,9 @@ layout: base.njk
       const hscrollOuter = document.querySelector('projectView_outer');
 
       const scrollNextCheckpoint = () => {
+        if(isAnimating == true)
+          return;
+
         current_checkpoint_index = Math.floor(current_checkpoint_index);
 
         current_checkpoint_index++;
@@ -98,7 +110,11 @@ layout: base.njk
 
         setScrollFraction(checkpoints[current_checkpoint_index]);
       }
+
       const scrollPrevCheckpoint = () => {
+        if(isAnimating == true)
+          return;
+
         current_checkpoint_index = Math.ceil(current_checkpoint_index);
 
         current_checkpoint_index--;
@@ -172,7 +188,7 @@ layout: base.njk
         }
 
         addCaptionsToImages(imgCollection);
-        addImagesToSwiper(images);
+        swiper.update();
       }
 
       function addCaptionsToImages(imgCollection){
@@ -181,20 +197,52 @@ layout: base.njk
         }
       }
 
-      function addImagesToSwiper(images){
-        //put images into swiper-wrapper
-        let swiperWrapper = document.getElementById('projectView_swiperWrapper');
-        swiperWrapper.innerHTML = '';
-        images.forEach(image => {
-          swiperWrapper.innerHTML += `<div class="swiper-slide">
-                                        <img src="${image.src}" alt="${image.alt}" class="swiper-slide" title="${image.title}">
-                                      </div>`;
-        }); 
-        swiper.update();
+      function subscribeToFullscreen(){
+        const mySwiperElement = document.querySelector('.mySwiper');
+
+        if (mySwiperElement) {
+          mySwiperElement.addEventListener('click', function(event) {
+            /* ignore clicks ontop of the navigation buttons */
+            if (event.target.classList.contains('swiper-button-next')) {
+              return;
+            }
+            if (event.target.classList.contains('swiper-button-prev')) {
+              return;
+            }
+
+            console.log("Switching_fullscreen!!!");
+            switch_fullscreen();
+            //previewImageSwiperInstance.switch_fullscreen();
+          });
+
+
+          document.addEventListener("keydown", function(event) {
+            if (event.key === "Escape") {
+              mySwiperElement.classList.remove("fullscreen");
+            }
+          });
+
+        }
+      }
+
+          
+      let fullscreen = false;
+      function switch_fullscreen() {
+        let swiperElement = document.querySelector('.mySwiper');
+
+        if(swiperElement.classList.contains("fullscreen")){
+          fullscreen = false;
+          swiperElement.classList.remove("fullscreen");
+        } else {
+          fullscreen = true;
+          swiperElement.classList.add("fullscreen");
+        }
       }
 
       //==============Callbacks================
-      window.addEventListener('load', function() {    
+      window.addEventListener('load', function() {   
+        subscribeToFullscreen();
+
         isAnimating = false;
         
         windowControllerInstance = new windowController();
@@ -203,12 +251,12 @@ layout: base.njk
 
         processImages();
 
-
         onResize();
         processSlug();
         updateImageCaption();
         //window.history.pushState({"html":html,"pageTitle":"fdsfsdf"},"", "somePath");
       });
+      
       window.addEventListener('resize', function() {
         onResize();
       });
@@ -397,29 +445,35 @@ layout: base.njk
         for(let i=checkpoints.length-1; i >= 0 ; i--)
           newNav += createNavButton(i, checkpoints[i]);
 
+        //newNav += createNavPrevButton();//is absent in the design
+
         document.getElementById('projectView_scrollNavBar').innerHTML = newNav;
         document.getElementById('navButton0').classList.add('active');
       }
 
+      function createNavPrevButton() {
+        return '<button class="navigation-button left-button nav-arrow-project-view", id="navButtonScrollToPrevCheckpoint", onclick="scrollPrevCheckpoint()"></button>';
+      }
       function createNavNextButton() {
-        return `<button class="projectView_navigationButtonNextCheckpoint"
-                           id="navButtonScrollToNextCheckpoint"
-                           onclick="scrollNextCheckpoint()">
-                           >>
-                  </button>`;
+        return '<button class="navigation-button right-button nav-arrow-project-view" id="navButtonScrollToNextCheckpoint", onclick="scrollNextCheckpoint()"></button>';
       }
       function createNavButton(n, checkp) {
         return `<button class="projectView_navigationDigit"
                              id="navButton${n}"
                              targetPersent="${checkp}"
                              targetCheckpoint="${n}"
-                             onclick="setScrollFraction(${checkp})">
+                             onclick="navDigitClicked(${checkp})">
                              ${n}
                     </button>`;
       }
 
       function attractScrollToNearestColumn() {
         //processSlug();
+      }
+
+      function navDigitClicked(persent) {
+        isAnimating = false;
+        setScrollFraction(persent);
       }
  
       function onResize() {
@@ -485,13 +539,16 @@ layout: base.njk
         document.getElementById('projectView_photo_caption').style["display"] = "block";
       }
 
-      let currentSlide = swiper.slides[swiper.activeIndex];
+      var captionElement = document.getElementById('projectView_photo_caption');
 
-      let currentImage = currentSlide.querySelector('img');
-      let currentImageTitle = currentImage.getAttribute('title');
-
-      var caprtion = document.getElementById('projectView_photo_caption');
-      caprtion.innerHTML = currentImageTitle;
+      let activeSlide = swiper.slides[swiper.activeIndex];
+      if (activeSlide) {
+        let captionText = activeSlide.getAttribute("caption");
+        console.log(captionText);  // This will log "Some caption2"
+        captionElement.innerHTML = captionText;
+      }
+      else
+        captionElement.innerHTML = "";
     }
 
     function swipeImageToFraction(persent) {

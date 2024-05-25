@@ -49,6 +49,10 @@
 }
 .projectView_imgCaptionMobile {
   display: none;
+  font-size: 14px; 
+  font-weight: 400;
+  line-height: 18.48px;
+  padding-bottom: 25px;
 }
 
 @media screen and (max-width: 800px) {
@@ -127,11 +131,15 @@
 
 .projectView_photo_caption {
   text-align: left;
-  position: inherit;
+  position: relative; /* Change from inherit to relative */
   left: 0px;
   top: 0px;
   width: 100%;
   padding-left: 10px;
+  margin-bottom: 30px;
+  max-height: 100px;
+
+  overflow: scroll;
 }
 
 @media screen and (max-width: 800px) {
@@ -142,6 +150,10 @@
 
 .swiper {
   height: 100%;
+  width: 100%;
+}
+
+.swiper-slide > picture > img { /*!!!! Boss forbids to use such shit !!!!!*/
   width: 100%;
 }
 
@@ -195,8 +207,8 @@
   width: 800px;
   height: 15px;
   position: absolute;
-  right: 0;
-  bottom: 0;
+  right: 15.2px;
+  bottom: 25px;
   background-color: transparent;
 }
 
@@ -206,13 +218,27 @@
   }
 }
 
+.navigation-button.right-button.nav-arrow-project-view{
+  float: right;
+  margin-left: 8px;
+  transform: translateY(-5%);
+}
+
+.navigation-button.left-button.nav-arrow-project-view{
+  float: right;
+  margin-left: 8px;
+  transform: translateY(-5%);
+}
+
 .projectView_navigationDigit {
   display: inline;
   background-color: transparent;
   border: none;
   float: right;
-  color: #818181;
-  font-weight: lighter;
+  color:#818181;
+  font-weight: 400;
+  font-family: 'Karelia Web Regular';
+
 }
 
 .projectView_navigationDigit:hover {
