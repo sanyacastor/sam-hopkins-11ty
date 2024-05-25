@@ -25,7 +25,6 @@ const IMAGE_SIZES = '(min-width: 320px) 50vw, 100vw'
 
 const markdownIt = require('markdown-it')({
   html: true,
-  breaks: true,
 }).use(eleventyImage, {
   imgOptions: IMAGE_CONFIG,
   resolvePath: (filepath, env) => path.join('./src/', filepath),
