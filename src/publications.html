@@ -3,15 +3,16 @@ title: Sam Hopkins | Publications
 layout: base.njk
 slug: publications
 ---
-
-<ul class="publications">
-  {% for publication in collections.publications %}
-    <li class="publication">
-      <h3 class="publication__title">{{ publication.data.title }}</h3>
-      <div class="publication__year">Year: {{ publication.data.year }}</div>
-      <div class="publication__isbn">ISBN: {{ publication.data.isbn }}</div>
-      <div class="publication__description">{{ publication.data.description }}</div>
-      <a class="publication__link" href="{{ publication.data.link }}">link to publication</a>
-    </li>
-  {% endfor %}
-</ul>
+<div class="container">
+  <ul class="publications">
+    {% for publication in collections.publications %}
+      <li class="publication">
+        <h3 class="publication__title">{{ publication.data.title }}</h3>
+        <div class="publication__year">Year: {{ publication.data.year }}</div>
+        <div class="publication__isbn">ISBN: {{ publication.data.isbn }}</div>
+        <div class="publication__description">{{ publication.data.description }}</div>
+        <a class="publication__link" href="{{ publication.data.link }}">link to publication</a>
+      </li>
+    {% endfor %}
+  </ul>
+</div>

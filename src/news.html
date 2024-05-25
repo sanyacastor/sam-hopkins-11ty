@@ -3,13 +3,14 @@ title: Sam Hopkins | News
 layout: base.njk
 slug: news
 ---
-
-<ul class="news-list">
-  {% for news in collections.news %}
-    <li class="news">
-      <h3 class="news__title">{{ news.data.title }}</h3>
-      <div class="news__date">{{ news.data.createdAt }}</div>
-      <div class="news__description">{{ news.data.description }}</div>
-    </li>
-  {% endfor %}
-</ul>
+<div class="container">
+  <ul class="news-list">
+    {% for news in collections.news %}
+      <li class="news">
+        <h3 class="news__title">{{ news.data.title }}</h3>
+        <div class="news__date">{{ news.data.createdAt }}</div>
+        <div class="news__description">{{ news.data.description }}</div>
+      </li>
+    {% endfor %}
+  </ul>
+</div>
