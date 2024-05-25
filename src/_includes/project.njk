@@ -365,6 +365,7 @@ layout: base.njk
           windowColumnsPerPage = 1;
         }
       }
+      
       function recalcColumnWidth() {
         if(windowColumnsPerPage == 2){
           windowColumnWidth = 416; //!!!PELIGRO!!! magic numbers
@@ -485,6 +486,20 @@ layout: base.njk
         recalcScrollCheckpoints();
         redrawNavButtons();
         attractScrollToNearestColumn();
+
+        showHideNavPanel();
+      }
+
+      function showHideNavPanel() {
+        let numberOfPages = windownumberOfColumns/windowColumnsPerPage;
+
+        console.log("number of pages: " + numberOfPages);
+
+        if(numberOfPages <= 1){
+          document.getElementById('projectView_scrollNavBar').style.display = 'none';
+        }else{
+          document.getElementById('projectView_scrollNavBar').style.display = 'block';
+        }
       }
 
       function processSlug() {
