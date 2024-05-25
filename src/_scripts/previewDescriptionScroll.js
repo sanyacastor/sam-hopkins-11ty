@@ -44,7 +44,7 @@ class previewDescriptionScroll{
       this.foldFullProjectButton();
     }
 
-    recalcUnfoldTriggerPosition(){
+    recalcUnfoldTriggerPosition() {
       let scrollLength = this.outerBox.scrollWidth;
       let boxWidth = this.outerBox.offsetWidth;
 
@@ -66,17 +66,21 @@ class previewDescriptionScroll{
       }
     }
 
-    updateButtonFoldState(){
-      if( !this.buttonCanBeUnfolded || !this.checkpointIsTheLast())
-      {
+    updateButtonFoldState() {
+      if(this.buttonCanBeUnfolded == false){
         this.foldFullProjectButton();
-      } else
-      {
+        return;
+      }
+
+      if (this.outerBox.scrollLeft < this.checkpoints[this.checkpoints.length - 1]) {
+        this.foldFullProjectButton();
+      }
+      else if(this.buttonCanBeUnfolded){
         this.unfoldFullProjectButton();
       }
     }
     
-    unfoldFullProjectButton(){
+    unfoldFullProjectButton() {
       if(!this.buttonIsFolded){
           return;
         }
@@ -181,6 +185,10 @@ class previewDescriptionScroll{
                       }
                   });
       this.isAnimating = true;
+    }
+
+    moveToTheLastCheckpoint(){
+      this.moveToCheckpoint(this.checkpoints.length - 1);
     }
 
     isLastCheckpoint(){

@@ -97,11 +97,12 @@
   background-color: rgba(140, 0, 145, 0);
 }
 
-.projectPreview_phantomTrigger {
+.projectPreview_phantomTrigger { /*!!!deprecated!!! Just in case Sanya demands a rollback. */
   height: 100%;
   width: 1px;
   right: 0px;
   position: absolute;
+  display: none;
 }
 /* TODO: Move to global styles */
 body {

@@ -96,7 +96,14 @@ pagination:
 
   var windowControllerInstance;
   var previewNavigationPanelInstance;
+
   
+  projectPreview_outer.addEventListener("scroll", function() {
+    previewDescriptionScrollInstance.updateButtonFoldState();
+    //console.log("scroll: " + projectPreview_outer.scrollWidth + " " + projectPreview_outer.scrollLeft + " " + projectPreview_outer.clientWidth);
+  });
+
+
   function subscribeToFullscreen(){
     const mySwiperElement = document.querySelector('.mySwiper');
 
