@@ -253,11 +253,12 @@ layout: base.njk
 
         onResize();
         processSlug();
-        updateImageCaption();
         //window.history.pushState({"html":html,"pageTitle":"fdsfsdf"},"", "somePath");
       });
       
       window.addEventListener('resize', function() {
+        console.log("onresize");
+
         onResize();
       });
 
@@ -365,7 +366,7 @@ layout: base.njk
           windowColumnsPerPage = 1;
         }
       }
-      
+
       function recalcColumnWidth() {
         if(windowColumnsPerPage == 2){
           windowColumnWidth = 416; //!!!PELIGRO!!! magic numbers
@@ -487,7 +488,8 @@ layout: base.njk
         redrawNavButtons();
         attractScrollToNearestColumn();
 
-        showHideNavPanel();
+        showHideNavPanel();        
+        updateImageCaption();
       }
 
       function showHideNavPanel() {
@@ -545,7 +547,10 @@ layout: base.njk
     });
 
     function updateImageCaption() {
-      if(swiper.slides.length == 0){
+
+      console.log("isMobileVerison: " + windowControllerInstance.itisMobile());
+
+      if(swiper.slides.length == 0 || windowControllerInstance.itisMobile() == true){
         document.getElementById('projectView_photoSlot').style["display"] = "none";
         document.getElementById('projectView_photo_caption').style["display"] = "none";
         return;
