@@ -38,10 +38,12 @@ export class SwiperModal {
 
   open() {
     this.modalElement.classList.remove(`${this.className}--hidden`)
+    document.body.style.overflow = 'hidden';
   }
 
   close() {
     this.modalElement.classList.add(`${this.className}--hidden`)
+    document.body.style.overflow = '';
   }
 
   destroy() {
