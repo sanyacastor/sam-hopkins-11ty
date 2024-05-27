@@ -53,6 +53,7 @@ collections:
             collection: 'project',
             value_field: 'id',
             search_fields: ['title'],
+            display_fields: ['title'],
           }
   - name: 'publication'
     label: 'Publication'
