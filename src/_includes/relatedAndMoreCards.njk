@@ -7,7 +7,7 @@
         <div class="cardcabinet_grid greenish" id="relatedProjectsGrid"> 
             {%- for relatedProject in related_projects_data.relatedProjects -%}
                 {%- for collection_project in collections.project -%}
-                    {%- if collection_project.data.title == relatedProject -%}
+                    {%- if (collection_project.data.title == relatedProject) or (collection_project.data.id == relatedProject) -%}
 
                         {% set qpreviewURL = collection_project.data.title | slug %}
                         {%- set qpreviewURLfull = '/preview/' + qpreviewURL -%}
@@ -25,6 +25,7 @@
 
                         {%- include "summary-card.njk" -%}
                     {%- endif -%}
+
                 {%- endfor -%}
             {%- endfor -%}
         </div>

@@ -20,7 +20,12 @@ previewDescription: My idea for this project was to explore the state of being
   in that particular space about ‘the guy on the bench’. The video presents this
   material; a spectrum of memories, encompassing the wildly inaccurate, the
   highly perceptive and those that simply do not look.
-relatedProjects: []
+relatedProjects: 
+  - Test project without images2
+  - Broken project title
+  - Test project without ixxxmages
+  - DSFASDFWETEWR324234A
+  - DSFASDFWETEWR324234xxA
 ---
 ![](/assets/6-hours-for-6-day_01_video-documentation_still_2006_-c-hopkins-0.jpg)
 
