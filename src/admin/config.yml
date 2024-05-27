@@ -51,7 +51,7 @@ collections:
             name: 'project',
             widget: 'relation',
             collection: 'project',
-            value_field: 'title',
+            value_field: 'id',
             search_fields: ['title'],
           }
   - name: 'publication'
