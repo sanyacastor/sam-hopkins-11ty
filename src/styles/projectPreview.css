@@ -525,3 +525,11 @@ body::-webkit-scrollbar {
     display: none;
   }
 }
+
+.projectPreview_ending_dashes {
+  margin-left: 20px;
+}
+
+.projectPreview_ending {
+
+}

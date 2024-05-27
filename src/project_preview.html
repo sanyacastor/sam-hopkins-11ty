@@ -52,6 +52,10 @@ pagination:
               <div class="projectPreview_ScrollArticle" id= "preview_scrollableContent">
                 <font>
                   {{preview.previewDescription}}
+                  {#{%- if preview.collaborators -%}
+                    <p class="projectPreview_ending_dashes"> --- </p>
+                    <p class="projectPreview_ending"> Together with: {{preview.collaborators}} </p>
+                  {%- endif -%}#}
                 </font>
               </div>
               <div class="projectPreview_phantomColumn" id = "phantomColumn">
