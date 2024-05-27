@@ -45,14 +45,13 @@ layout: base.njk
                   {%endif%}
                 {%endfor%}
               </div>
+              <div class="swiper-button-close"></div>
               <!--div class="swiper-button-next"></div>
               <div class="swiper-button-prev"></div-->
               <div class="swiper-pagination"></div>
             </div>
           </div>
-          <p class="projectView_photo_caption" id="projectView_photo_caption">
-            This is another one photo.
-          <p>
+          <p class="projectView_photo_caption" id="projectView_photo_caption"><p>
         </div>
         <div class="projectView_blockText">
           <div id="projectView_outer">
@@ -227,13 +226,16 @@ layout: base.njk
       let fullscreen = false;
       function switch_fullscreen() {
         let swiperElement = document.querySelector('.mySwiper');
+        let buttonClose = document.querySelector('.swiper-button-close');
 
         if(swiperElement.classList.contains("fullscreen")){
           fullscreen = false;
           swiperElement.classList.remove("fullscreen");
+          buttonClose.style.display = 'none';
         } else {
           fullscreen = true;
           swiperElement.classList.add("fullscreen");
+          buttonClose.style.display = 'block';
         }
       }
 
@@ -487,7 +489,7 @@ layout: base.njk
         attractScrollToNearestColumn();
 
         showHideNavPanel();        
-        updateImageCaption();
+        updateImageSwiperAndCaption();
       }
 
       function showHideNavPanel() {
@@ -541,13 +543,10 @@ layout: base.njk
       }                
     });
     swiper.on('slideChange', function() {
-      updateImageCaption();
+      updateImageSwiperAndCaption();
     });
 
-    function updateImageCaption() {
-
-      console.log("isMobileVerison: " + windowControllerInstance.itisMobile());
-
+    function updateImageSwiperAndCaption() {
       if(swiper.slides.length == 0 || windowControllerInstance.itisMobile() == true){
         document.getElementById('projectView_photoSlot').style["display"] = "none";
         document.getElementById('projectView_photo_caption').style["display"] = "none";

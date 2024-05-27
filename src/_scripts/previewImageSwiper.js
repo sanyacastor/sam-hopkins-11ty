@@ -62,10 +62,13 @@ class previewImageSwiper {
   }
 
   switch_fullscreen() {
+    let buttonClose = document.querySelector(".swiper-button-close");
+
     if(this.swiperElement.classList.contains("fullscreen")){
       this.fullscreen = false;
 
       this.swiperElement.classList.remove("fullscreen");
+      buttonClose.style.display = "none";
 
       this.swiper.autoplay.start();
       this.recalcSwiperImages();
@@ -74,6 +77,7 @@ class previewImageSwiper {
 
       this.swiper.params.slidesPerView = 1;
       this.swiperElement.classList.add("fullscreen");
+      buttonClose.style.display = "block";
 
       this.swiper.autoplay.stop();
     }
