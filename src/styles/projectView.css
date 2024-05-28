@@ -68,6 +68,8 @@
 }
 
 .projectView_container {
+  min-height: 650px;
+
   display: flex;
   background-color: transparent;
   height: calc(100vh - 120px);
@@ -140,6 +142,8 @@
   max-height: 100px;
 
   overflow: scroll;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 @media screen and (max-width: 800px) {
@@ -242,6 +246,7 @@
 }
 
 .projectView_navigationDigit:hover {
+  cursor: pointer;
 }
 
 .active {
