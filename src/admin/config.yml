@@ -75,6 +75,12 @@ collections:
           widget: 'string',
           required: false,
         }
+      - {
+          label: 'publication image',
+          name: 'image',
+          widget: 'image',
+          required: false,
+        }
   - name: 'news'
     label: 'News'
     folder: 'src/news'

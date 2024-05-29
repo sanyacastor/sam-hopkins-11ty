@@ -1,0 +1,24 @@
+#publication-publication-popup-img-container {
+    z-index: 1000;
+    position: absolute;
+    
+    right: 10px;
+    bottom: 10px;
+  
+    width: 217px;
+    height: 616px;
+    display: none;
+    z-index: 100;
+  }
+  
+  #publication-popup-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  @media screen and (max-width: 800px){
+    #publication-publication-popup-img-container {
+      display: none !important;
+    }
+  }
