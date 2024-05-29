@@ -29,14 +29,11 @@
   
   cardDescriptionWrappers.forEach(function(wrapper) {
       var height = wrapper.offsetHeight; 
-      console.log(height);
 
       var cardDescription = wrapper.querySelector('.cardcabinet_cardDescription');
-      console.log(cardDescription.innerHTML);
 
       var lineHeight = parseFloat(getComputedStyle(cardDescription).lineHeight);
       var numLineHeights = (height / lineHeight);
-      console.log("number of line heights" + numLineHeights);
 
       cardDescription.style['-webkit-line-clamp'] = Math.floor(numLineHeights);
   });

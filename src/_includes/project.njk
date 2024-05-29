@@ -78,430 +78,67 @@ layout: base.njk
     </script>
 
     <script src="/_scripts/windowController.js"></script>
+    <script src="/_scripts/projectView_navpanel.js"></script>
+    <script src="/_scripts/projectView_scrollText.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="/_scripts/projectView_swiperController.js"></script>
+    <script src="/_scripts/projectView_swiperFullscreen.js"></script>
+    <script src="/_scripts/projectView_imageProcessor.js"></script>
 
     <script>
-      let checkpoints;
-      let current_checkpoint_index = 0;
-      let windowColumnsPerPage = 1;
-      let windowColumnWidth = 416;
+      var projectView_navpanel_instance;
+      var projectView_scrollText_instance;
+      var projectView_swiperController_instance;
+      var projectView_swiperFullscreen_instance;
+      var windowController_Instance;
+      var projectView_imageProcessor_instance;
+
       let windowScrollStep = 0.01;
-      let windowScrollStepPercent = 1;
-      let windowtargetScrollFraction = 0;
-      let windownumberOfColumns = 1;
-      let isAnimating = false;
 
-      var windowControllerInstance;
-
-      const hscrollContent = document.querySelector('.projectView_ScrollArticle');
-      const hscrollOuter = document.querySelector('projectView_outer');
-
+      //===============Navigation================
       const scrollNextCheckpoint = () => {
-        if(isAnimating == true)
+        if(projectView_scrollText_instance.isAnimating == true)
           return;
 
-        current_checkpoint_index = Math.floor(current_checkpoint_index);
+        let new_checkpoint_index = projectView_scrollText_instance.current_checkpoint_index;
+        new_checkpoint_index = Math.floor(new_checkpoint_index);
 
-        current_checkpoint_index++;
-        if(current_checkpoint_index >= checkpoints.length)
-          current_checkpoint_index = checkpoints.length-1;
+        let checkpoints = projectView_scrollText_instance.checkpoints;
 
-        setScrollFraction(checkpoints[current_checkpoint_index]);
+        new_checkpoint_index++;
+        if(new_checkpoint_index >= checkpoints.length)
+          new_checkpoint_index = checkpoints.length-1;
+
+        setScrollFraction(checkpoints[new_checkpoint_index]);
       }
 
       const scrollPrevCheckpoint = () => {
-        if(isAnimating == true)
+        if(projectView_scrollText_instance.isAnimating == true)
           return;
+          
+        let checkpoints = projectView_scrollText_instance.checkpoints;
+        let new_checkpoint_index = projectView_scrollText_instance.current_checkpoint_index;
+        new_checkpoint_index = Math.ceil(new_checkpoint_index);
 
-        current_checkpoint_index = Math.ceil(current_checkpoint_index);
-
-        current_checkpoint_index--;
-        if(current_checkpoint_index < 0)
-          current_checkpoint_index = 0;
-        setScrollFraction(checkpoints[current_checkpoint_index]);
-      }
-      const scrollStep = (pages) =>{
-        frac = windowtargetScrollFraction;
-        frac = Math.min(1, frac + pages*windowScrollStepPercent / 100);
-        frac = Math.max(0, frac);
-
-        setScrollFraction(frac);
-      }
-      function getClosestCheckpointIndex(fraction){
-        let closest = checkpoints.reduce((prev, curr) => Math.abs(curr - fraction) < Math.abs(prev - fraction) ? curr : prev);
-        return checkpoints.indexOf(closest);
-      }
-      function selectCurrentCheckpoint(){
-        for (let i = 0; i < checkpoints.length; i++) {
-          document.getElementById('navButton'+i).classList.remove('active');
-        }
-        document.getElementById('navButton'+current_checkpoint_index).classList.add('active');
+        new_checkpoint_index--;
+        if(new_checkpoint_index < 0)
+          new_checkpoint_index = 0;
+        
+        setScrollFraction(checkpoints[new_checkpoint_index]);
       }
 
       const setScrollFraction = (newFrac) => {
-        current_checkpoint_index = getClosestCheckpointIndex(newFrac);
-        newFrac = checkpoints[current_checkpoint_index];
-        selectCurrentCheckpoint();
-
-        newFrac = Math.max(0, Math.min(newFrac, 1));
+        let new_checkpoint_frac = projectView_scrollText_instance.set_scroll_fraction(newFrac);
         
-        swipeImageToFraction(newFrac);
+        projectView_swiperController_instance.swipt_image_to_fraction(new_checkpoint_frac); //!!!TODO: udjast this for 3 images per 3 pages!!!
 
-        windowtargetScrollFraction = newFrac;
-        updateSlug(newFrac);
-
-        scrollTwineStart(newFrac);
+        updateSlug(new_checkpoint_frac);
+        projectView_scrollText_instance.start_twine_scroll(new_checkpoint_frac);
       }
 
       function updateSlug(newFrac){
         history.replaceState(null, null, "?persent=" + newFrac * 100);
-      }
-
-      function scrollTwineStart(newFrac){
-        if(isAnimating){
-          return;
-        }
-
-        let columnGap = parseInt(getComputedStyle(hscrollContent).columnGap);
-
-        gsap.to(  document.getElementById('projectView_outer'),{
-                    scrollLeft: newFrac * (document.getElementById('projectView_outer').scrollWidth + columnGap/2),
-                    duration: 0.5, ease: "power2.inOut",
-                    onComplete: () => {
-                      isAnimating = false;
-                    }
-                });
-        isAnimating = true;
-      }
-
-      function processImages() {
-        str = hscrollContent.innerHTML;
-
-        let images = [];
-        let regex = /<img\s+src="([^"]+)"\s+alt="([^"]+)"/g;
-
-        const imgCollection = document.getElementsByTagName('img');
-        for (let item of imgCollection) {
-          images.push({src: item.src, alt: item.alt, title: item.title});
-        }
-
-        addCaptionsToImages(imgCollection);
-        swiper.update();
-      }
-
-      function addCaptionsToImages(imgCollection){
-        for (let item of imgCollection) {
-          item.insertAdjacentHTML('afterend', `<p class="projectView_imgCaptionMobile">${item.title}</p>`);
-        }
-      }
-
-      function subscribeToFullscreen(){
-        const mySwiperElement = document.querySelector('.mySwiper');
-
-        if (mySwiperElement) {
-          mySwiperElement.addEventListener('click', function(event) {
-            /* ignore clicks ontop of the navigation buttons */
-            if (event.target.classList.contains('swiper-button-next')) {
-              return;
-            }
-            if (event.target.classList.contains('swiper-button-prev')) {
-              return;
-            }
-
-            console.log("Switching_fullscreen!!!");
-            switch_fullscreen();
-            //previewImageSwiperInstance.switch_fullscreen();
-          });
-
-
-          document.addEventListener("keydown", function(event) {
-            if (event.key === "Escape") {
-              mySwiperElement.classList.remove("fullscreen");
-            }
-          });
-
-        }
-      }
-
-          
-      let fullscreen = false;
-      function switch_fullscreen() {
-        let swiperElement = document.querySelector('.mySwiper');
-        let buttonClose = document.querySelector('.swiper-button-close');
-
-        if(swiperElement.classList.contains("fullscreen")){
-          fullscreen = false;
-          swiperElement.classList.remove("fullscreen");
-          buttonClose.style.display = 'none';
-        } else {
-          fullscreen = true;
-          swiperElement.classList.add("fullscreen");
-          buttonClose.style.display = 'block';
-        }
-      }
-
-      //==============Callbacks================
-      window.addEventListener('load', function() {   
-        subscribeToFullscreen();
-
-        isAnimating = false;
-        
-        windowControllerInstance = new windowController();
-        let isMobileVersion = windowControllerInstance.itisMobile();
-        console.log("isMobile: " + isMobileVersion);
-
-        processImages();
-
-        onResize();
-        processSlug();
-        //window.history.pushState({"html":html,"pageTitle":"fdsfsdf"},"", "somePath");
-      });
-      
-      window.addEventListener('resize', function() {
-        console.log("onresize");
-
-        onResize();
-      });
-
-      // Prevent default window scroll only when mouse is over swiper or projectView_outer
-      window.addEventListener("wheel", function(e) {
-        if(windowControllerInstance.itisMobile()){
-          return;
-        }
-
-        if (isDescendantOfSwiperOrOuter(e.target)) {
-            e.preventDefault();
-        }
-      }, { passive: false });
-
-      function isDescendantOfSwiperOrOuter(element) {
-          // Check if the element or any of its ancestors is swiper or projectView_outer
-          while (element !== null && element.id !== 'projectView_swiperWrapper' && element.id !== 'projectView_outer') {
-              element = element.parentElement;
-          }
-          // If the loop ended without finding swiper or projectView_outer, it means the element is not a descendant
-          return element !== null;
-      }
-      
-      document.getElementById('projectView_outer').addEventListener('wheel', function (e) {
-        if(windowControllerInstance.itisMobile()){
-          return;
-        }
-
-        if(isAnimating)
-          return;
-
-        var delta = e.wheelDelta ? e.wheelDelta : -e.deltaY;
-
-          if(delta > 0){
-            scrollPrevCheckpoint();
-          } else {
-            scrollNextCheckpoint();
-          }
-      }, false);
-
-      document.getElementById('projectView_swiperWrapper').addEventListener('wheel', function(e) {
-        if(windowControllerInstance.itisMobile()){
-          return;
-        }
-        
-        var delta = e.wheelDelta ? e.wheelDelta : -e.deltaY;
-
-        if(delta > 0){
-          swiper.slidePrev();
-        } else {
-          swiper.slideNext();
-        }
-      });
-
-      document.addEventListener('keydown', function(e) { 
-        if (e.keyCode === 37) {
-          if(isAnimating)
-            return;
-
-          scrollPrevCheckpoint();
-        } else if (e.keyCode === 39) {
-          if(isAnimating)
-            return;
-
-          scrollNextCheckpoint();
-        }
-      });
-      //=============/Callbacks================
-
-      function hidePhantomColumn() {
-        document.getElementById('previewPhantomColumn').style.display = 'none';
-      }
-
-      function showPhantomColumn() {
-        document.getElementById('previewPhantomColumn').style.display = 'block';
-      }
-
-      function updatePhantomColumn() {
-        if(windowColumnsPerPage == 1){
-          hidePhantomColumn();
-          return;
-        }
-
-        if (windownumberOfColumns % 2 === 0) {
-          hidePhantomColumn();
-        } else {
-          showPhantomColumn();
-          windownumberOfColumns = windownumberOfColumns+1;
-        }
-
-        if(windownumberOfColumns < 1 || windowColumnsPerPage > 2){
-          console.log("Error: windownumberOfColumns < 1 || windowColumnsPerPage > 2 " + windownumberOfColumns + " " + windowColumnsPerPage);
-        }
-      }
-
-      function recalcColumnsPerPage() {
-        var projectViewOuter = document.getElementById('projectView_outer');
-        var elementWidth = projectViewOuter.offsetWidth;
-        windowColumnsPerPage = parseInt( elementWidth/(416+15) ); //!!!PELIGRO!!! wrong magic numbers, parseint
-
-        if(windowColumnsPerPage > 1){
-          windowColumnsPerPage = 2;
-        }
-        else{
-          windowColumnsPerPage = 1;
-        }
-      }
-
-      function recalcColumnWidth() {
-        if(windowColumnsPerPage == 2){
-          windowColumnWidth = 416; //!!!PELIGRO!!! magic numbers
-          hscrollContent.style.columnWidth = windowColumnWidth + 'px';
-          return;  
-        }
-        
-        var projectViewOuter = document.getElementById('projectView_outer');
-        var elementWidth = projectViewOuter.offsetWidth;
-        windowColumnWidth = elementWidth-40;//!!!PELIGRO!!! magic numbers
-
-        hscrollContent.style.columnWidth = windowColumnWidth + 'px';
-      }
-      function recalcNumberOfColumns() {
-        hidePhantomColumn();
-        windownumberOfColumns = getNumberOfColumns_dirtiest_way_ever();
-        updatePhantomColumn();
-        windownumberOfColumns = getNumberOfColumns_dirtiest_way_ever();
-      }
-
-      function getNumberOfColumns_dirtiest_way_ever() {
-        //cycle through all elements and increment counter
-        //What the fuck wrong with me?!
-        let ncols = 1;
-        let rightmost = document.getElementById('firstHackColumn').getBoundingClientRect().left;
-        let hackColumnWidth = document.getElementById('firstHackColumn').offsetWidth;
-        
-        //get all elements
-        let elements = hscrollContent.children;
-
-        for (let i = 0; i < elements.length; i++) {
-          let element = elements[i];
-          let rect = element.getBoundingClientRect();
-
-          let columns_inside = Math.floor((rect.left - rightmost)/hackColumnWidth);
-
-          if(columns_inside > 0){
-            rightmost = rect.left;
-            ncols += columns_inside;
-          }
-        }
-
-        ncols = Math.floor(ncols);
-        return ncols;
-      }
-
-      function recalcScrollStep() {
-        windowScrollStep = 1/windownumberOfColumns;
-        windowScrollStepPercent = 100 / windownumberOfColumns;
-      }
-
-      function recalcScrollCheckpoints() {
-        if(windowColumnsPerPage == 0){
-          console.log("windowColumnsPerPage == 0");
-          return;
-        }
-
-        numberOfCheckpoints = windownumberOfColumns/windowColumnsPerPage;
-        numberOfCheckpoints = Math.ceil(numberOfCheckpoints);
-
-        checkpoints = [];
-
-        for (let i = numberOfCheckpoints-1; i >= 0; i--) {
-          targetPersent = parseFloat((  (i*windowColumnsPerPage) * 100 / windownumberOfColumns).toFixed(2));
-          checkpoints.unshift(targetPersent/100);
-        }
-      }
-
-      function redrawNavButtons() {
-        document.getElementById('projectView_scrollNavBar').innerHTML = '';
-        newNav = '';
-
-        numberOfButtons = windownumberOfColumns/windowColumnsPerPage;
-        numberOfButtons = Math.ceil(numberOfButtons);
-
-        newNav += createNavNextButton();
-
-        for(let i=checkpoints.length-1; i >= 0 ; i--)
-          newNav += createNavButton(i, checkpoints[i]);
-
-        //newNav += createNavPrevButton();//is absent in the design
-
-        document.getElementById('projectView_scrollNavBar').innerHTML = newNav;
-        document.getElementById('navButton0').classList.add('active');
-      }
-
-      function createNavPrevButton() {
-        return '<button class="navigation-button left-button nav-arrow-project-view", id="navButtonScrollToPrevCheckpoint", onclick="scrollPrevCheckpoint()"></button>';
-      }
-      function createNavNextButton() {
-        return '<button class="navigation-button right-button nav-arrow-project-view" id="navButtonScrollToNextCheckpoint", onclick="scrollNextCheckpoint()"></button>';
-      }
-      function createNavButton(n, checkp) {
-        return `<button class="projectView_navigationDigit"
-                             id="navButton${n}"
-                             targetPersent="${checkp}"
-                             targetCheckpoint="${n}"
-                             onclick="navDigitClicked(${checkp})">
-                             ${n}
-                    </button>`;
-      }
-
-      function attractScrollToNearestColumn() {
-        //processSlug();
-      }
-
-      function navDigitClicked(persent) {
-        isAnimating = false;
-        setScrollFraction(persent);
-      }
- 
-      function onResize() {
-        recalcColumnsPerPage();
-        recalcColumnWidth();
-        recalcNumberOfColumns();
-        recalcScrollStep();
-
-        recalcScrollCheckpoints();
-        redrawNavButtons();
-        attractScrollToNearestColumn();
-
-        showHideNavPanel();        
-        updateImageSwiperAndCaption();
-      }
-
-      function showHideNavPanel() {
-        let numberOfPages = windownumberOfColumns/windowColumnsPerPage;
-
-        console.log("number of pages: " + numberOfPages);
-
-        if(numberOfPages <= 1){
-          document.getElementById('projectView_scrollNavBar').style.display = 'none';
-        }else{
-          document.getElementById('projectView_scrollNavBar').style.display = 'block';
-        }
       }
 
       function processSlug() {
@@ -521,63 +158,113 @@ layout: base.njk
 
         setScrollFraction(newPosition);
       }
+
+      //==============Callbacks================
+      window.addEventListener('load', function() {
+        projectView_navpanel_instance
+            = new projectView_navpanel('projectView_scrollNavBar');
+        projectView_scrollText_instance
+            = new projectView_scrollText('projectView_outer',
+                                        'previewPhantomColumn',
+                                        'scrollArticle',
+                                        'firstHackColumn',
+                                        gsap);
+
+        windowController_Instance = new windowController();
+        let isMobileVersion = windowController_Instance.itisMobile();
+        console.log("isMobile: " + isMobileVersion);
+        
+        projectView_swiperController_instance
+            = new projectView_swiperController(windowController_Instance,
+                                              'projectView_photoSlot',
+                                              'projectView_photo_caption');
+
+        projectView_swiperFullscreen_instance
+            = new projectView_swiperFullscreen();
+        projectView_swiperFullscreen_instance.subscribe_to_fullscreen();
+
+        //!!! there must not be any other instance of projectView_imageProcessor !!!!
+        projectView_imageProcessor_instance = new projectView_imageProcessor('scrollArticle');
+
+        onResize();
+        processSlug();
+      });
+      
+      window.addEventListener('resize', function() {
+        onResize();
+      });
+
+      function onResize() {
+        projectView_scrollText_instance.onResize();
+        projectView_navpanel_instance.redrawNavButtons(projectView_scrollText_instance.checkpoints);
+        projectView_swiperController_instance.update_image_swiper_and_caption();
+      }
+
+      // Prevent default window scroll only when mouse is over swiper or projectView_outer
+      window.addEventListener("wheel", function(e) {
+        if(windowController_Instance.itisMobile()){
+          return;
+        }
+
+        if (isDescendantOfSwiperOrOuter(e.target)) {
+            e.preventDefault();
+        }
+      }, { passive: false });
+
+      function isDescendantOfSwiperOrOuter(element) {
+          while (element !== null && element.id !== 'projectView_swiperWrapper' && element.id !== 'projectView_outer') {
+              element = element.parentElement;
+          }
+          return element !== null;
+      }
+      
+      document.getElementById('projectView_outer').addEventListener('wheel', function (e) {
+        if(windowController_Instance.itisMobile()){
+          return;
+        }
+
+        if(projectView_scrollText_instance.isAnimating)
+          return;
+
+        var delta = e.wheelDelta ? e.wheelDelta : -e.deltaY;
+
+          if(delta > 0){
+            scrollPrevCheckpoint();
+          } else {
+            scrollNextCheckpoint();
+          }
+      }, false);
+
+      document.getElementById('projectView_swiperWrapper').addEventListener('wheel', function(e) {
+        if(windowController_Instance.itisMobile()){
+          return;
+        }
+        
+        var delta = e.wheelDelta ? e.wheelDelta : -e.deltaY;
+
+        if(delta > 0){
+          projectView_swiperController_instance.swiper.slidePrev();
+        } else {
+          projectView_swiperController_instance.swiper.slideNext();
+        }
+      });
+
+      document.addEventListener('keydown', function(e) { 
+        if (e.keyCode === 37) {
+          if(projectView_scrollText_instance.isAnimating)
+            return;
+
+          scrollPrevCheckpoint();
+        } else if (e.keyCode === 39) {
+          if(projectView_scrollText_instance.isAnimating)
+            return;
+
+          scrollNextCheckpoint();
+        }
+      });
+
+      function navDigitClicked(persent) {
+        projectView_scrollText_instance.isAnimating = false; // don't wait for animation to finish
+        setScrollFraction(persent);
+      }
     </script>
-
-  <!-- Swiper JS -->
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  
-  <!-- Initialize Image Swiper -->
-  <script>
-    const swiper = new Swiper(".mySwiper", {
-      slidesPerView: 1,
-      pagination: {
-        el: ".swiper-pagination",
-        type: "custom"
-      },
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev"
-      },
-      onSlideChangeEnd: function(swiper){
-        console.log("slide changed");
-      }                
-    });
-    swiper.on('slideChange', function() {
-      updateImageSwiperAndCaption();
-    });
-
-    function updateImageSwiperAndCaption() {
-      if(swiper.slides.length == 0 || windowControllerInstance.itisMobile() == true){
-        document.getElementById('projectView_photoSlot').style["display"] = "none";
-        document.getElementById('projectView_photo_caption').style["display"] = "none";
-        return;
-      }else{
-        document.getElementById('projectView_photoSlot').style["display"] = "block";
-        document.getElementById('projectView_photo_caption').style["display"] = "block";
-      }
-
-      var captionElement = document.getElementById('projectView_photo_caption');
-
-      let activeSlide = swiper.slides[swiper.activeIndex];
-      if (activeSlide) {
-        let captionText = activeSlide.getAttribute("caption");
-        console.log(captionText);  // This will log "Some caption2"
-        captionElement.innerHTML = captionText;
-      }
-      else
-        captionElement.innerHTML = "";
-    }
-
-    function swipeImageToFraction(persent) {
-      nSlides = swiper.slides.length;
-
-      if(nSlides == 0)
-        return;
-
-      targetSlideNumber = parseInt(nSlides * persent);
-
-      swiper.slideTo(targetSlideNumber);
-    }
-
-</script>
-
