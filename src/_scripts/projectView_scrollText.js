@@ -162,8 +162,6 @@ class projectView_scrollText {
 
     new_fraction = Math.max(0, Math.min(1, new_fraction));
 
-    console.log("!!!ERROR!!! swipeImageToFraction(newFrac);");
-
     this.target_scroll_fraction = new_fraction;
     
     return new_fraction;

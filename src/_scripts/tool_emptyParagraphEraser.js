@@ -28,6 +28,5 @@ function recursivelyRemoveEmptyParagraphs(node) {
 
 function isEmptyParagraph(p) {
   let res = (p.textContent.trim() === '' && p.childNodes.length == 0);
-  console.log("length = " + p.childNodes.length + " >> p.innerHTML = " + p.innerHTML + " >> isempty = " + res);
-    return p.textContent.trim() === '' && p.childNodes.length == 0;
+  return p.textContent.trim() === '' && p.childNodes.length == 0;
 }

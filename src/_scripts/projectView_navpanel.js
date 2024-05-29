@@ -2,9 +2,7 @@
 
 class projectView_navpanel {
     constructor(scrollNavBar_id) {
-      console.log("load");
       this.scrollNavBar = document.getElementById(scrollNavBar_id);
-      console.log("scrollNavBar: " + scrollNavBar_id + " " + this.scrollNavBar); 
     }
 
     createNavPrevButton() {
@@ -25,8 +23,6 @@ class projectView_navpanel {
     }
 
     redrawNavButtons(checkpoints) {
-      console.log("redrawNavButtons: " + checkpoints.length + " :: " + checkpoints);
-
       this.scrollNavBar.innerHTML = '';
       let newNav = '';
 
