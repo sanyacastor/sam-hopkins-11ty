@@ -43,7 +43,23 @@ tags: images
 </div>
 
 <script type="module">
-  import projects from '/js/projects.json' assert { type: 'json' }
+  let projects = [];
+
+  async function loadProjects() {
+    try {
+      const response = await fetch('/js/projects.json');
+      if (!response.ok) {
+        throw new Error('fetch failed');
+      }
+      const data = await response.json();
+      projects = data;
+      console.log(projects); 
+    } catch (error) {
+      console.error('Error fetching projects:', error);
+    }
+  }
+
+  await loadProjects();
 
   import { Autocomplete } from '/js/imagesPage/autocomplete.js'
   import { DraggableModal } from '/js/imagesPage/draggableModal.js'
