@@ -1,4 +1,3 @@
-
 document.addEventListener("DOMContentLoaded", function() {
   const publications = document.querySelectorAll('.publication');
   const popupImg = document.getElementById('publication-popup-img');
