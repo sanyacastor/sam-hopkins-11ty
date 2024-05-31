@@ -15,8 +15,9 @@
 
 .news__title {
   margin: 0;
+  height: 28px;
   padding-left: 13px;
-  padding-bottom: 13px;
+  padding-bottom: 10px;
 
   font-family: var(--font-family-karelia-bold);
   font-weight: 700;
@@ -24,9 +25,16 @@
   line-height: 18.94px;
 
   border-bottom: 1px solid var(--color-borders);
+  
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .news__date {
+  display: block;
+  height: 34px;
+
   padding-top: 6px;
   padding-left: 13px;
   padding-bottom: 10px;
@@ -35,9 +43,15 @@
 }
 
 .news__description {
+  display: block;
+  height: 120px;
+
   padding-top: 6px;
   padding-left: 13px;
   padding-bottom: 10px;
+  padding-right: 5px;
 
   border-bottom: 1px solid var(--color-borders);
+
+  overflow-y: auto;
 }
