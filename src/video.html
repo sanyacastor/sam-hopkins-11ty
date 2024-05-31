@@ -30,18 +30,18 @@ slug: video
   const allImages = document.querySelectorAll('.video-list__item')
 
   const createDraggbleModal = event => {
-    if(window_controller.isMobileVersion() == false){
-      const hash = event
+    const hash = event
         .target
         .closest('.video-list__item')
         .dataset
-        .videoUrl
+        .videoUrl;
 
+    if(window_controller.isMobileVersion() == false){
       new DraggableModal({event, hash})
 
       Draggable.create(`#${hash}`, {trigger: `#${hash} .draggable-modal__toolbar`})
     } else {
-      console.log("Error: open popup or visit youtube!!!");
+      window.open(`https://www.youtube.com/watch?v=${hash}`, '_blank');
     }
   }
 
