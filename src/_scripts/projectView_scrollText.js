@@ -76,6 +76,7 @@ class projectView_scrollText {
   show_phantom_column_if_needed() {
     if (this.columns_per_page == 1) {
       this.hide_phantom_column();
+      return;
     }
 
     if (this.number_of_columns % 2 == 0){

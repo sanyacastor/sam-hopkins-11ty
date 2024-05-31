@@ -1,47 +1,56 @@
-//('scrollNavBar',)
-
-class projectView_navpanel {
-    constructor(scrollNavBar_id) {
+export class projectView_navpanel {
+  constructor(scrollNavBar_id) {
       this.scrollNavBar = document.getElementById(scrollNavBar_id);
+  }
+
+  createNavPrevButton() {
+      const button = document.createElement('button');
+      button.className = 'navigation-button left-button nav-arrow-project-view';
+      button.id = 'navButtonScrollToPrevCheckpoint';
+      return button;
+  }
+
+  createNavNextButton() {
+      const button = document.createElement('button');
+      button.className = 'navigation-button right-button nav-arrow-project-view';
+      button.id = 'navButtonScrollToNextCheckpoint';
+      return button;
+  }
+
+  createNavButton(n, checkp) {
+      const button = document.createElement('button');
+      button.className = 'projectView_navigationDigit';
+      button.id = `navButton${n}`;
+      button.setAttribute('targetPersent', checkp);
+      button.setAttribute('targetCheckpoint', n);
+      
+      button.textContent = n+1;
+      return button;
+  }
+
+  redrawNavButtons(checkpoints, navDigitClicked) {
+    document.querySelectorAll('.projectView_navigationDigit').forEach(e => e.remove());
+    document.getElementById('navButtonScrollToPrevCheckpoint')?.remove();
+    document.getElementById('navButtonScrollToNextCheckpoint')?.remove();
+
+    let nextButton = this.createNavNextButton();
+    this.scrollNavBar.appendChild(nextButton);
+
+    for(let i = checkpoints.length - 1; i >= 0; i--) {
+        let navButton = this.createNavButton(i, checkpoints[i]);
+        this.scrollNavBar.appendChild(navButton);
     }
 
-    createNavPrevButton() {
-      return '<button class="navigation-button left-button nav-arrow-project-view", id="navButtonScrollToPrevCheckpoint", onclick="scrollPrevCheckpoint()"></button>';
-    }
+    // document.getElementById('navButton0').classList.add('active');
 
-    createNavNextButton() {
-      return '<button class="navigation-button right-button nav-arrow-project-view" id="navButtonScrollToNextCheckpoint", onclick="scrollNextCheckpoint()"></button>';
-    }
-    createNavButton(n, checkp) {
-      return `<button class="projectView_navigationDigit"
-                              id="navButton${n}"
-                              targetPersent="${checkp}"
-                              targetCheckpoint="${n}"
-                              onclick="navDigitClicked(${checkp})">
-                              ${n}
-              </button>`;
-    }
+    this.show_hide_navpanel(checkpoints);
+  }
 
-    redrawNavButtons(checkpoints) {
-      this.scrollNavBar.innerHTML = '';
-      let newNav = '';
-
-      newNav += this.createNavNextButton();
-
-      for(let i=checkpoints.length-1; i >= 0 ; i--)
-          newNav += this.createNavButton(i, checkpoints[i]);
-
-      this.scrollNavBar.innerHTML = newNav;
-      //document.getElementById('navButton0').classList.add('active');
-
-      this.show_hide_navpanel(checkpoints);
-    }
-
-    show_hide_navpanel(checkpoints) {
-      if(checkpoints.length > 1)
-        this.scrollNavBar.style.display = 'block';
-      else
-        this.scrollNavBar.style.display = 'none';
-    }
-    
+  show_hide_navpanel(checkpoints) {
+      if (checkpoints.length > 1) {
+          this.scrollNavBar.style.display = 'block';
+      } else {
+          this.scrollNavBar.style.display = 'none';
+      }
+  }
 }

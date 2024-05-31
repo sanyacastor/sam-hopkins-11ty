@@ -77,7 +77,6 @@ layout: base.njk
       document.addEventListener("DOMContentLoaded", (event) => { /* gsap code */});
     </script>
 
-    <script src="/_scripts/projectView_navpanel.js"></script>
     <script src="/_scripts/projectView_scrollText.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
@@ -87,6 +86,7 @@ layout: base.njk
 
     <script type="module">
       import { WindowController } from '/_scripts/WindowController.js'
+      import { projectView_navpanel } from '/_scripts/projectView_navpanel.js';
 
       var projectView_navpanel_instance;
       var projectView_scrollText_instance;
@@ -258,6 +258,26 @@ layout: base.njk
           if(projectView_scrollText_instance.isAnimating)
             return;
 
+          scrollNextCheckpoint();
+        }
+      });
+/*
+  createNavButton(n, checkp) {
+      const button = document.createElement('button');
+      button.className = 'projectView_navigationDigit';
+      button.id = `navButton${n}`;
+      button.setAttribute('targetPersent', checkp);
+      button.setAttribute('targetCheckpoint', n);
+      
+      button.textContent = n+1;
+      return button;
+  }
+*/
+      document.addEventListener('click', function(event) {
+        if (event.target.classList.contains('projectView_navigationDigit')) {
+          let fraction = event.target.getAttribute('targetPersent');
+          navDigitClicked(fraction);
+        } else if(event.target.classList.contains('nav-arrow-project-view'))  {
           scrollNextCheckpoint();
         }
       });
