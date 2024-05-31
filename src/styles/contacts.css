@@ -1,22 +1,111 @@
-.grid {
+.contacts_grid {
+  padding-top: 57px;
+
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  gap: 30px;
+  grid-template-rows: auto auto 1fr;
 
+  gap: 30px;
   width: 100%;
 }
 
-.contacts {
-  padding-top: 106px;
+.contacts_card {
+  padding-top: 30px;
+
+  height: fit-content;
+
+  grid-column: 1;
+  grid-row: 1;
 }
 
-.contacts h2 {
+.contacts__cvList {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+.contacts_designedby {
+  grid-column: 1;
+  grid-row: 3;
+  padding-top: 110px;
+}
+
+.contacts__info {
+  grid-row: 1 / 4;
+  grid-column: 2;
+
+}
+.contacts__cv {
+  grid-row: 1 / 4;
+  grid-column: 3;
+}
+
+@media screen and (max-width: 1000px) {
+  .contacts_grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto auto;
+  }
+
+  .contacts_card {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .contacts__cvList {
+    padding-top: 60px;
+
+    grid-row: 4;
+    grid-column: 1;
+  }
+
+  .contacts__info {
+    padding-top: 80px;
+
+    grid-row: 2;
+    grid-column: 1;
+  }
+
+  .contacts__cv {
+    padding-top: 72px;
+
+    grid-row: 3;
+    grid-column: 1;
+  }
+
+  .contacts_designedby {
+    padding-top: 81px;
+
+    grid-row: 5;
+    grid-column: 1;
+  }
+}
+
+.contacts_card h2 {
   font-size: 14px;
   color: var(--color-black);
   padding: 0;
   margin: 0;
   padding-left: 13px;
   padding-bottom: 11px;
+}
+
+.contacts_cv_header {
+  margin-top: 0px;
+}
+
+.contacts__cvListItem {
+  display: block;
+  position: relative;
+  height: 60px;
+
+  background: var(--color-white);
+  max-width: 210px;
+  padding-left: 16px;
+  padding-top: 20px;
+  padding-bottom: 22px;
+  margin-bottom: 10px;
+
+  color: var(--color-primary);
+  text-decoration: none;
 }
 
 .contacts__list {
@@ -43,34 +132,6 @@
 
 .contacts__listItem--underlined a {
   text-decoration: underline;
-}
-
-.contacts__info {
-  margin-top: 50px;
-}
-
-.contacts__cv {
-  margin-top: 50px;
-}
-
-.contacts__cvList {
-  margin-top: 64px;
-}
-
-.contacts__cvListItem {
-  display: block;
-  position: relative;
-  height: 60px;
-
-  background: var(--color-white);
-  max-width: 210px;
-  padding-left: 16px;
-  padding-top: 20px;
-  padding-bottom: 22px;
-  margin-bottom: 10px;
-
-  color: var(--color-primary);
-  text-decoration: none;
 }
 
 .cvListItem__arrow-right {
@@ -119,7 +180,7 @@
 
 /* Visual styles */
 .accordion {
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 .tab__label,
 .tab__close {
@@ -127,6 +188,9 @@
   cursor: pointer;
 }
 .tab__label {
+  color: var(--color-primary);
+  /* border: 1px solid var(--color-primary); */
+
   justify-content: space-between;
   margin-bottom: 14px;
 }
