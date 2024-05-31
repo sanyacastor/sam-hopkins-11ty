@@ -21,20 +21,28 @@ slug: video
 
 <script type="module">
   import {DraggableModal} from '/js/videoPage/draggableModal.js'
+  import { WindowController } from '/_scripts/WindowController.js'
+
+  const window_controller = new WindowController();
+  
   gsap.registerPlugin(Draggable)
 
   const allImages = document.querySelectorAll('.video-list__item')
 
   const createDraggbleModal = event => {
-    const hash = event
-      .target
-      .closest('.video-list__item')
-      .dataset
-      .videoUrl
+    if(window_controller.isMobileVersion() == false){
+      const hash = event
+        .target
+        .closest('.video-list__item')
+        .dataset
+        .videoUrl
 
-    new DraggableModal({event, hash})
+      new DraggableModal({event, hash})
 
-    Draggable.create(`#${hash}`, {trigger: `#${hash} .draggable-modal__toolbar`})
+      Draggable.create(`#${hash}`, {trigger: `#${hash} .draggable-modal__toolbar`})
+    } else {
+      console.log("Error: open popup or visit youtube!!!");
+    }
   }
 
   allImages.forEach(image => {

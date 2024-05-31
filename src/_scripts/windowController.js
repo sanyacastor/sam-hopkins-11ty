@@ -1,4 +1,4 @@
-class windowController{
+export class WindowController{
   constructor(){
     this.desktopMaxSize = 1366;
     this.desktopMinSize = 800;
@@ -11,7 +11,7 @@ class windowController{
     return window.innerWidth >= this.desktopMaxSize;
   }
 
-  itisMobile(){
+  isMobileVersion(){
     return  (window.innerWidth < this.desktopMinSize);
   }
 }

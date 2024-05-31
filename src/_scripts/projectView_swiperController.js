@@ -27,7 +27,7 @@ class projectView_swiperController {
 
   update_image_swiper_and_caption = () => {
     if (this.swiper.slides.kength == 0
-        || this.window_controller.itisMobile() == true) {
+        || this.window_controller.isMobileVersion() == true) {
 
           this.photoslot.style.display = 'none';
           this.photocaption.style.display = 'none';

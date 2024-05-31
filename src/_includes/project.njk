@@ -77,7 +77,6 @@ layout: base.njk
       document.addEventListener("DOMContentLoaded", (event) => { /* gsap code */});
     </script>
 
-    <script src="/_scripts/windowController.js"></script>
     <script src="/_scripts/projectView_navpanel.js"></script>
     <script src="/_scripts/projectView_scrollText.js"></script>
 
@@ -86,7 +85,9 @@ layout: base.njk
     <script src="/_scripts/projectView_swiperFullscreen.js"></script>
     <script src="/_scripts/projectView_imageProcessor.js"></script>
 
-    <script>
+    <script type="module">
+      import { WindowController } from '/_scripts/WindowController.js'
+
       var projectView_navpanel_instance;
       var projectView_scrollText_instance;
       var projectView_swiperController_instance;
@@ -151,10 +152,10 @@ layout: base.njk
           parameter = 0;
         }
 
-        frac = parseFloat(parameter) / 100;
+        let frac = parseFloat(parameter) / 100;
         
-        columnNumber = parseInt(frac/windowScrollStep);
-        newPosition = columnNumber*windowScrollStep;
+        let columnNumber = parseInt(frac/windowScrollStep);
+        let newPosition = columnNumber*windowScrollStep;
 
         setScrollFraction(newPosition);
       }
@@ -170,7 +171,7 @@ layout: base.njk
                                         'firstHackColumn',
                                         gsap);
 
-        windowController_Instance = new windowController();
+        windowController_Instance = new WindowController();
         
         projectView_swiperController_instance
             = new projectView_swiperController(windowController_Instance,
@@ -200,7 +201,7 @@ layout: base.njk
 
       // Prevent default window scroll only when mouse is over swiper or projectView_outer
       window.addEventListener("wheel", function(e) {
-        if(windowController_Instance.itisMobile()){
+        if(windowController_Instance.isMobileVersion()){
           return;
         }
 
@@ -217,7 +218,7 @@ layout: base.njk
       }
       
       document.getElementById('projectView_outer').addEventListener('wheel', function (e) {
-        if(windowController_Instance.itisMobile()){
+        if(windowController_Instance.isMobileVersion()){
           return;
         }
 
@@ -234,7 +235,7 @@ layout: base.njk
       }, false);
 
       document.getElementById('projectView_swiperWrapper').addEventListener('wheel', function(e) {
-        if(windowController_Instance.itisMobile()){
+        if(windowController_Instance.isMobileVersion()){
           return;
         }
         

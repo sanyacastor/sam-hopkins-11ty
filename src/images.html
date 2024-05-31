@@ -64,6 +64,7 @@ tags: images
   import { Autocomplete } from '/js/imagesPage/autocomplete.js'
   import { DraggableModal } from '/js/imagesPage/draggableModal.js'
   import { SwiperModal } from '/js/imagesPage/swiperModal.js'
+  import { WindowController } from '/_scripts/WindowController.js'
 
   const swiper = new Swiper('.swiper', {
     slidesPerView: 1,
@@ -82,15 +83,23 @@ tags: images
   const imagesListElement = document.querySelector('.images-list')
   const allImages = document.querySelectorAll('.images-list__item')
 
-  const createDraggbleModal = event =>
-    new DraggableModal({
-      event,
-      className: '.images-list__item--container',
-      onClick: imageIndex => {
+  const window_controller = new WindowController();
+
+  const createDraggbleModal = event => {
+    if(window_controller.isMobileVersion() == false){
+      new DraggableModal({
+        event,
+        className: '.images-list__item--container',
+        onClick: imageIndex => {
+          swiperModal.open()
+          swiper.slideTo(imageIndex)
+        },
+      })
+    } else {
         swiperModal.open()
         swiper.slideTo(imageIndex)
-      },
-    })
+    }
+  }
 
   allImages.forEach((el, i) => {
     el.dataset.imageIndex = i
