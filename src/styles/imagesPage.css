@@ -74,6 +74,8 @@
   gap: 26px 18px;
 
   padding-top: 61px;
+
+  justify-content: center;
 }
 
 /* Search */

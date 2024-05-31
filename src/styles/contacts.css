@@ -27,6 +27,10 @@
   grid-column: 1;
   grid-row: 3;
   padding-top: 110px;
+
+  font-size: 14px;
+  line-height: 18.23px;
+  font-weight: 300;
 }
 
 .contacts__info {

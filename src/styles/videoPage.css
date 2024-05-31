@@ -8,6 +8,8 @@
   gap: 83px 18px;
 
   margin-top: 97px;
+
+  justify-content: center;
 }
 
 .video-list__item {
