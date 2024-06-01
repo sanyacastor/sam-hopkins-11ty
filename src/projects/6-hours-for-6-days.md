@@ -2,6 +2,7 @@
 id: ZajWPmOTRBb0QgBuWv4Wg
 title: 6 hours for 6 days
 dates: "2006"
+link: https://en.wikipedia.org/wiki/Artemis_2
 collaborators: "Karolina Freino, Usually4, Zosia Jarosz, Marius Jodko Supported
   by: Gallery Entropia"
 cardDescription: " From 06.09.06 until 11.09.06 for 6 hours a day I sat on a
@@ -20,12 +21,8 @@ previewDescription: My idea for this project was to explore the state of being
   in that particular space about ‘the guy on the bench’. The video presents this
   material; a spectrum of memories, encompassing the wildly inaccurate, the
   highly perceptive and those that simply do not look.
-relatedProjects: 
-  - Test project without images2
-  - Broken project title
-  - Test project without ixxxmages
+relatedProjects:
   - DSFASDFWETEWR324234A
-  - DSFASDFWETEWR324234xxA
 ---
 ![](/assets/6-hours-for-6-day_01_video-documentation_still_2006_-c-hopkins-0.jpg)
 
