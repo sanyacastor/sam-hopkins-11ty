@@ -22,9 +22,18 @@ pagination:
       cardDescription: preview.cardDescription
   }
 } %}
+
 <article>
   <div class='container'>
     <div class="projectPreview_Grid" id="preview_Grid">
+      <div class="bookmark_block">
+        <div class="preview_bookmark">
+          <p class="preview_bookmark_text">Project Preview</p>
+          <a href="/" class="navigation-button close-button preview_close_button" id="preview_closeCross"></a>
+        </div>
+        <div class="bookmark_empty">
+        </div>
+      </div>
       <div class="preview-grid-card" id="preview-grid-card">
         {% include 'summary-card.njk' %}
       </div>
@@ -139,7 +148,6 @@ pagination:
 
     windowControllerInstance = new WindowController();
     let isMobileVersion = windowControllerInstance.isMobileVersion();
-    console.log(">>>>>>>>>isMobileVersion: " + isMobileVersion);
 
     previewImageSwiperInstance
                  = new previewImageSwiper('mySwiper',
