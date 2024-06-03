@@ -298,9 +298,11 @@
 }
 
 .projectView_title {
-  font-size: 17px;
+  /*font-size: 17px;*/
+  font-size: 24px;
   font-family: 'Karelia Web Regular';
-  font-weight: 700;
+  /*font-weight: 700;*/
+  font-weight: 900;
   line-height: 23px;
 }
 

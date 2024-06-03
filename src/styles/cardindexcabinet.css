@@ -59,7 +59,7 @@
   color: var(--color-black);
 }
 
-.tmp {
+.summary-card-wrap {
   height: 100%;
   width: 100%;
 
@@ -73,20 +73,24 @@
 }
 
 @media screen and (max-width: 800px) {
-  .tmp {
+  .summary-card-wrap {
     width: 100%;
     margin: 0px;
   }
 }
 
-.tmp .cardcabinet_cardTitle {
+.summary-card-wrap .cardcabinet_cardTitle {
   color: var(--color-primary);
   font-weight: 400;
 
   font-family: var(--font-family-karelia-regular);
   font-style: normal;
 }
-.tmp:hover .cardcabinet_cardTitle {
+.summary-card-wrap.static-wrap {
+  pointer-events: none;
+  cursor: default;
+}
+.summary-card-wrap.dynamic-wrap:hover .cardcabinet_cardTitle {
   font-weight: 700;
 }
 
