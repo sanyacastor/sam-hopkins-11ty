@@ -296,3 +296,18 @@
 .projectView_Grid > main {
   grid-area: main;
 }
+
+.projectView_title {
+  font-size: 17px;
+  font-family: 'Karelia Web Regular';
+  font-weight: 700;
+  line-height: 23px;
+}
+
+.projectView_link {
+  font-family: 'Karelia Web Regular';
+  font-size: 14px;
+  line-height: 18.94px;
+  font-weight: 400;
+  color: var(--color-primary);
+}

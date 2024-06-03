@@ -58,6 +58,11 @@ layout: base.njk
             <div class="projectView_ScrollArticle" id="scrollArticle">
               <!--scrollable main text content-->
               <div class="hackColumn" id="firstHackColumn"></div>
+              <h1 class="projectView_title">{{ title }}</h1>
+              {%- if link %}
+                <a href="{{ link }}" class="projectView_link" id="projectView_link">original publication</a>
+              {%- endif %}
+              {{ project.content | safe}}
               {{content | safe}}
               <div class="projectView_phantomColumn" id="previewPhantomColumn"> <!--!!!PELIGRO!!! column width--></div>
               <div class="hackColumn" id="lastHackColumn"></div>
