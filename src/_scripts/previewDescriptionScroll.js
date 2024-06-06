@@ -64,9 +64,18 @@ class previewDescriptionScroll{
       else{
         this.buttonCanBeUnfolded = false;
       }
+
+      console.log("___recalcUnfoldTriggerPosition___");
+      console.log("additionalSectionWidth: " + additionalSectionWidth + "px" + " > this.projectPreview_buttonFullProject_width: " + this.projectPreview_buttonFullProject_width + "px + 50");
+      console.log("this.buttonCanBeUnfolded: " + this.buttonCanBeUnfolded);
+      console.log("___/recalcUnfoldTriggerPosition___");
     }
 
     updateButtonFoldState() {
+      console.log("___updateButtonFoldState___");
+      console.log("buttonCanBeUnfolded: " + this.buttonCanBeUnfolded, " this.outerBox.scrollLeft: " + this.outerBox.scrollLeft, " this.checkpoints[this.checkpoints.length - 1]: " + this.checkpoints[this.checkpoints.length - 1]);
+      console.log("___/updateButtonFoldState___");
+      
       if(this.buttonCanBeUnfolded == false){
         this.foldFullProjectButton();
         return;
@@ -118,6 +127,7 @@ class previewDescriptionScroll{
 
       return this.currentChecpointIndex == (this.checkpoints.length - 1);
     }
+
     recalcCheckpoints(){
       this.phantomColumn.style.display = "none";
 
