@@ -58,7 +58,7 @@ class previewDescriptionScroll{
       this.phantomColumn.style.width = additionalSectionWidth + "px";
       this.phantomColumn.style.display = "block";
       
-      if(additionalSectionWidth > this.projectPreview_buttonFullProject_width + 50){ //!!!! Magic number
+      if(additionalSectionWidth > this.projectPreview_buttonFullProject_width + 25){ //!!!! Magic number
         this.buttonCanBeUnfolded = true;
       }
       else{
@@ -66,22 +66,22 @@ class previewDescriptionScroll{
       }
 
       console.log("___recalcUnfoldTriggerPosition___");
-      console.log("additionalSectionWidth: " + additionalSectionWidth + "px" + " > this.projectPreview_buttonFullProject_width: " + this.projectPreview_buttonFullProject_width + "px + 50");
+      console.log("additionalSectionWidth: " + additionalSectionWidth + "px" + " > this.projectPreview_buttonFullProject_width: " + this.projectPreview_buttonFullProject_width + "px + 25");
       console.log("this.buttonCanBeUnfolded: " + this.buttonCanBeUnfolded);
       console.log("___/recalcUnfoldTriggerPosition___");
     }
 
     updateButtonFoldState() {
       console.log("___updateButtonFoldState___");
-      console.log("buttonCanBeUnfolded: " + this.buttonCanBeUnfolded, " this.outerBox.scrollLeft: " + this.outerBox.scrollLeft, " this.checkpoints[this.checkpoints.length - 1]: " + this.checkpoints[this.checkpoints.length - 1]);
+      console.log("buttonCanBeUnfolded: " + this.buttonCanBeUnfolded, " this.outerBox.scrollLeft: " + this.outerBox.scrollLeft, " this.checkpoints[this.checkpoints.length - 1]-10: " + (this.checkpoints[this.checkpoints.length - 1]-10));
       console.log("___/updateButtonFoldState___");
-      
+
       if(this.buttonCanBeUnfolded == false){
         this.foldFullProjectButton();
         return;
       }
 
-      if (this.outerBox.scrollLeft < this.checkpoints[this.checkpoints.length - 1]) {
+      if (this.outerBox.scrollLeft < (this.checkpoints[this.checkpoints.length - 1]-10)) {
         this.foldFullProjectButton();
       }
       else if(this.buttonCanBeUnfolded){
