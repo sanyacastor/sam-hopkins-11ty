@@ -4,6 +4,15 @@ layout: base.njk
 tags: images
 ---
 
+<script
+  src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"
+  async
+></script>
+<script
+  src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/Draggable.min.js"
+  async
+></script>
+
 <div class="container">
   <form class="search-form">
     <label class="search-form__label" for="search">
@@ -66,6 +75,8 @@ tags: images
   import { SwiperModal } from '/js/imagesPage/swiperModal.js'
   import { WindowController } from '/_scripts/WindowController.js'
 
+  gsap.registerPlugin(Draggable)
+
   const swiper = new Swiper('.swiper', {
     slidesPerView: 1,
     pagination: {
@@ -83,22 +94,16 @@ tags: images
   const imagesListElement = document.querySelector('.images-list')
   const allImages = document.querySelectorAll('.images-list__item')
 
-  const window_controller = new WindowController();
-
   const createDraggbleModal = event => {
-    if(window_controller.isMobileVersion() == false){
-      new DraggableModal({
-        event,
-        className: '.images-list__item--container',
-        onClick: imageIndex => {
-          swiperModal.open()
-          swiper.slideTo(imageIndex)
-        },
-      })
-    } else {
+    const modal = new DraggableModal({
+      event,
+      className: '.images-list__item--container',
+      onClick: imageIndex => {
         swiperModal.open()
         swiper.slideTo(imageIndex)
-    }
+      },
+    })
+    Draggable.create(modal.modal, { trigger: modal.toolbar })
   }
 
   allImages.forEach((el, i) => {
