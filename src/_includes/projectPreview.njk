@@ -2,6 +2,20 @@
 <html lang="en">
   <head>
     {% include "shared/htmlhead.njk" %}
+
+    <meta name="description" content="{{ preview.cardDescription }}">
+
+    <!-- Open Graph Meta Tags for Social Media Sharing -->
+    <meta property="og:title" content="Preview: {{ preview.title }}">
+    <meta property="og:description" content="{{ preview.cardDescription }}">
+    <meta property="og:url" content="https://{{ env.DOMAIN_NAME }}/preview/{{ preview.title | slug }}">
+    <meta property="og:type" content="website">
+
+    <!-- Author Information -->
+    <meta name="author" content="Sam Hopkins">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://{{ env.DOMAIN_NAME }}/preview/{{ preview.title | slug }}">
   </head>
   <body>
     <div class="global-container">

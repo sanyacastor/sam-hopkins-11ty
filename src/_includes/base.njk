@@ -2,6 +2,22 @@
 <html lang="en">
   <head>
     {% include "shared/htmlhead.njk" %}
+    <meta name="description" content="{{ description }}">
+
+    <!-- Open Graph Meta Tags for Social Media Sharing -->
+    <meta property="og:title" content="{{ title }}">
+    <meta property="og:description" content="{{ description }}">
+    <meta property="og:url" content="https://{{ env.DOMAIN_NAME }}/{{ slug }}">
+    <meta property="og:type" content="website">
+
+    <!-- Author Information -->
+    <meta name="author" content="Sam Hopkins">
+
+    <!-- Keywords for Search Engines -->
+    <meta name="keywords" content="Sam Hoplikns, projects, images">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://{{ env.DOMAIN_NAME }}/{{ slug }}">
   </head>
   <body>
     <div class="global-container">

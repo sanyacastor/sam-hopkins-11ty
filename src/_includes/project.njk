@@ -6,6 +6,20 @@ title: Sam Hopkins | Projects {{ project.title}}
 <html lang="en">
   <head>
     {% include "shared/htmlhead.njk" %}
+    <meta name="description" content="{{ cardDescription }}">
+
+    <!-- Open Graph Meta Tags for Social Media Sharing -->
+    <meta property="og:title" content="Project: {{ title }}">
+    <meta property="og:description" content="{{ cardDescription }}">
+    <meta property="og:url" content="https://{{ env.DOMAIN_NAME }}/project/{{ title | slug }}">
+    <meta property="og:type" content="website">
+
+    <!-- Author Information -->
+    <meta name="author" content="Sam Hopkins">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://{{ env.DOMAIN_NAME }}/project/{{ title | slug }}">
+
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
 
