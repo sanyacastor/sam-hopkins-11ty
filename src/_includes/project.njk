@@ -1,15 +1,19 @@
 ---
 title: Sam Hopkins | Projects {{ project.title}}
-layout: base.njk
 ---
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% include "shared/htmlhead.njk" %}
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
 
-<body>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  </head>
 
   <!--to pass to summary-card.njk-->
-  {% set card_data = { 
+  {% set card_data = {
     data: {
       targetUrl: project.url,
       title: title,
@@ -26,270 +30,272 @@ layout: base.njk
   } %}
 
   <!--link rel="stylesheet" href="bundle.css"-->
-  <article>
-    <div class='container'>
-      <div class="projectView_container">
-        <div class="projectView_sideBar">
-          <div class="projectView_cardSlot">
-            {% include 'summary-card.njk'  %}
-          </div>
-          <div class="projectView_photoSlot" id = 'projectView_photoSlot'>
-            <div class="swiper mySwiper">
-              <div class="swiper-wrapper" id="projectView_swiperWrapper">
-                {% for project in projects %}
-                  {% if project.title === title %}
-                    {% for image in project.images %}
-                      <div class="swiper-slide" caption="{{image.caption}}">
-                        {% image image.url, image.alt %}
-                      </div>
-                    {%endfor%}
-                  {%endif%}
-                {%endfor%}
+  <body>
+    <div class="global-container">
+      {% include 'header.njk' %}
+      <article>
+        <div class='container'>
+          <div class="projectView_container">
+            <div class="projectView_sideBar">
+              <div class="projectView_cardSlot">
+                {% include 'summary-card.njk'  %}
               </div>
-              <div class="swiper-button-close"></div>
-              <!--div class="swiper-button-next"></div>
+              <div class="projectView_photoSlot" id = 'projectView_photoSlot'>
+                <div class="swiper mySwiper">
+                  <div class="swiper-wrapper" id="projectView_swiperWrapper">
+                    {% for project in projects %}
+                      {% if project.title === title %}
+                        {% for image in project.images %}
+                          <div class="swiper-slide" caption="{{image.caption}}">
+                            {% image image.url,
+                            image.alt %}
+                          </div>
+                          {%endfor%}
+                          {%endif%}
+                          {%endfor%}
+                        </div>
+                        <div class="swiper-button-close"></div>
+                        <!--div class="swiper-button-next"></div>
               <div class="swiper-button-prev"></div-->
-              <div class="swiper-pagination"></div>
-            </div>
-          </div>
-          <p class="projectView_photo_caption" id="projectView_photo_caption"><p>
-        </div>
-        <div class="projectView_blockText">
-          <div id="projectView_outer">
-            <div class="projectView_ScrollArticle" id="scrollArticle">
-              <!--scrollable main text content-->
-              <div class="hackColumn" id="firstHackColumn"></div>
-              <h1 class="projectView_title">{{ title }}</h1>
-              {%- if link %}
-                <a href="{{ link }}" class="projectView_link" id="projectView_link">original publication</a>
-              {%- endif %}
-              {{ project.content | safe}}
-              {{content | safe}}
-              <div class="projectView_phantomColumn" id="previewPhantomColumn"> <!--!!!PELIGRO!!! column width--></div>
-              <div class="hackColumn" id="lastHackColumn"></div>
-              <!--/scrollable main text content-->
-          </div>
-        </div>
-      </div>
-        <div class="projectView_navigation" id="projectView_scrollNavBar"></div>
-    </div> <!--container-->
-    <div>
-      {% include 'relatedAndMoreCards.njk' %}
-    </div>
-    
-  </article>
+                        <div class="swiper-pagination"></div>
+                      </div>
+                    </div>
+                    <p class="projectView_photo_caption" id="projectView_photo_caption">
+                      <p></div>
+                      <div class="projectView_blockText">
+                        <div id="projectView_outer">
+                          <div class="projectView_ScrollArticle" id="scrollArticle">
+                            <!--scrollable main text content-->
+                            <div class="hackColumn" id="firstHackColumn"></div>
+                            <h1 class="projectView_title">{{ title }}</h1>
+                            {%- if link %}
+                              <a href="{{ link }}" class="projectView_link" id="projectView_link">original publication</a>
+                            {%- endif %}
+                            {{ project.content | safe}}
+                            {{content | safe}}
+                            <div class="projectView_phantomColumn" id="previewPhantomColumn">
+                              <!--!!!PELIGRO!!! column width-->
+                            </div>
+                            <div class="hackColumn" id="lastHackColumn"></div>
+                            <!--/scrollable main text content-->
+                          </div>
+                        </div>
+                      </div>
+                      <div class="projectView_navigation" id="projectView_scrollNavBar"></div>
+                    </div>
+                    <!--container-->
+                    <div>
+                      {% include 'relatedAndMoreCards.njk' %}
+                    </div>
 
-    <script>
-      document.addEventListener("DOMContentLoaded", (event) => { /* gsap code */});
-    </script>
+                  </article>
+                </body>
+              </div>
 
-    <script src="/_scripts/projectView_scrollText.js"></script>
+              <script>
+                document.addEventListener("DOMContentLoaded", (event) => {/* gsap code */
+                });
+              </script>
 
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="/_scripts/projectView_swiperController.js"></script>
-    <script src="/_scripts/projectView_swiperFullscreen.js"></script>
-    <script src="/_scripts/projectView_imageProcessor.js"></script>
+              <script src="/_scripts/projectView_scrollText.js"></script>
 
-    <script type="module">
-      import { WindowController } from '/_scripts/WindowController.js'
-      import { projectView_navpanel } from '/_scripts/projectView_navpanel.js';
+              <script src="/_scripts/projectView_swiperController.js"></script>
+              <script src="/_scripts/projectView_swiperFullscreen.js"></script>
+              <script src="/_scripts/projectView_imageProcessor.js"></script>
 
-      var projectView_navpanel_instance;
-      var projectView_scrollText_instance;
-      var projectView_swiperController_instance;
-      var projectView_swiperFullscreen_instance;
-      var windowController_Instance;
-      var projectView_imageProcessor_instance;
+              <script type="module">
+                import {WindowController} from '/_scripts/WindowController.js'
+                import {projectView_navpanel} from '/_scripts/projectView_navpanel.js';
 
-      let windowScrollStep = 0.01;
+                var projectView_navpanel_instance;
+                var projectView_scrollText_instance;
+                var projectView_swiperController_instance;
+                var projectView_swiperFullscreen_instance;
+                var windowController_Instance;
+                var projectView_imageProcessor_instance;
 
-      //===============Navigation================
-      const scrollNextCheckpoint = () => {
-        if(projectView_scrollText_instance.isAnimating == true)
-          return;
+                let windowScrollStep = 0.01;
 
-        let new_checkpoint_index = projectView_scrollText_instance.current_checkpoint_index;
-        new_checkpoint_index = Math.floor(new_checkpoint_index);
+                //===============Navigation================
+                const scrollNextCheckpoint = () => {
+                  if (projectView_scrollText_instance.isAnimating == true) 
+                    return;
+                  
+                  let new_checkpoint_index = projectView_scrollText_instance.current_checkpoint_index;
+                  new_checkpoint_index = Math.floor(new_checkpoint_index);
 
-        let checkpoints = projectView_scrollText_instance.checkpoints;
+                  let checkpoints = projectView_scrollText_instance.checkpoints;
 
-        new_checkpoint_index++;
-        if(new_checkpoint_index >= checkpoints.length)
-          new_checkpoint_index = checkpoints.length-1;
+                  new_checkpoint_index++;
+                  if (new_checkpoint_index >= checkpoints.length) 
+                    new_checkpoint_index = checkpoints.length - 1;
+                  
+                  setScrollFraction(checkpoints[new_checkpoint_index]);
+                }
 
-        setScrollFraction(checkpoints[new_checkpoint_index]);
-      }
+                const scrollPrevCheckpoint = () => {
+                  if (projectView_scrollText_instance.isAnimating == true) 
+                    return;
+                  
+                  let checkpoints = projectView_scrollText_instance.checkpoints;
+                  let new_checkpoint_index = projectView_scrollText_instance.current_checkpoint_index;
+                  new_checkpoint_index = Math.ceil(new_checkpoint_index);
 
-      const scrollPrevCheckpoint = () => {
-        if(projectView_scrollText_instance.isAnimating == true)
-          return;
-          
-        let checkpoints = projectView_scrollText_instance.checkpoints;
-        let new_checkpoint_index = projectView_scrollText_instance.current_checkpoint_index;
-        new_checkpoint_index = Math.ceil(new_checkpoint_index);
+                  new_checkpoint_index--;
+                  if (new_checkpoint_index < 0) 
+                    new_checkpoint_index = 0;
+                  
+                  setScrollFraction(checkpoints[new_checkpoint_index]);
+                }
 
-        new_checkpoint_index--;
-        if(new_checkpoint_index < 0)
-          new_checkpoint_index = 0;
-        
-        setScrollFraction(checkpoints[new_checkpoint_index]);
-      }
+                const setScrollFraction = (newFrac) => {
+                  let new_checkpoint_frac = projectView_scrollText_instance.set_scroll_fraction(newFrac);
 
-      const setScrollFraction = (newFrac) => {
-        let new_checkpoint_frac = projectView_scrollText_instance.set_scroll_fraction(newFrac);
-        
-        projectView_swiperController_instance.swipt_image_to_fraction(new_checkpoint_frac); //!!!TODO: udjast this for 3 images per 3 pages!!!
+                  projectView_swiperController_instance.swipt_image_to_fraction(new_checkpoint_frac); //!!!TODO: udjast this for 3 images per 3 pages!!!
 
-        updateSlug(new_checkpoint_frac);
-        projectView_scrollText_instance.start_twine_scroll(new_checkpoint_frac);
-      }
+                  updateSlug(new_checkpoint_frac);
+                  projectView_scrollText_instance.start_twine_scroll(new_checkpoint_frac);
+                }
 
-      function updateSlug(newFrac){
-        history.replaceState(null, null, "?persent=" + newFrac * 100);
-      }
+                function updateSlug(newFrac) {
+                  history.replaceState(null, null, "?persent=" + newFrac * 100);
+                }
 
-      function processSlug() {
-        // Get the current URL
-        var currentUrl = window.location.href;
-        var slug = currentUrl.substring(currentUrl.lastIndexOf('/') + 1);
+                function processSlug() {
+                  // Get the current URL
+                  var currentUrl = window.location.href;
+                  var slug = currentUrl.substring(currentUrl.lastIndexOf('/') + 1);
 
-        var parameter = slug.split('=')[1];
-        if (typeof parameter === 'undefined') {
-          parameter = 0;
-        }
+                  var parameter = slug.split('=')[1];
+                  if (typeof parameter === 'undefined') {
+                    parameter = 0;
+                  }
 
-        let frac = parseFloat(parameter) / 100;
-        
-        let columnNumber = parseInt(frac/windowScrollStep);
-        let newPosition = columnNumber*windowScrollStep;
+                  let frac = parseFloat(parameter) / 100;
 
-        setScrollFraction(newPosition);
-      }
+                  let columnNumber = parseInt(frac / windowScrollStep);
+                  let newPosition = columnNumber * windowScrollStep;
 
-      //==============Callbacks================
-      window.addEventListener('load', function() {
-        projectView_navpanel_instance
-            = new projectView_navpanel('projectView_scrollNavBar');
-        projectView_scrollText_instance
-            = new projectView_scrollText('projectView_outer',
-                                        'previewPhantomColumn',
-                                        'scrollArticle',
-                                        'firstHackColumn',
-                                        gsap);
+                  setScrollFraction(newPosition);
+                }
 
-        windowController_Instance = new WindowController();
-        
-        projectView_swiperController_instance
-            = new projectView_swiperController(windowController_Instance,
-                                              'projectView_photoSlot',
-                                              'projectView_photo_caption');
+                //==============Callbacks================
+                window.addEventListener('load', function () {
+                  projectView_navpanel_instance = new projectView_navpanel('projectView_scrollNavBar');
+                  projectView_scrollText_instance = new projectView_scrollText('projectView_outer', 'previewPhantomColumn', 'scrollArticle', 'firstHackColumn', gsap);
 
-        projectView_swiperFullscreen_instance
-            = new projectView_swiperFullscreen();
-        projectView_swiperFullscreen_instance.subscribe_to_fullscreen();
+                  windowController_Instance = new WindowController();
 
-        //!!! there must not be any other instance of projectView_imageProcessor !!!!
-        projectView_imageProcessor_instance = new projectView_imageProcessor('scrollArticle');
+                  projectView_swiperController_instance = new projectView_swiperController(windowController_Instance, 'projectView_photoSlot', 'projectView_photo_caption');
 
-        onResize();
-        processSlug();
-      });
-      
-      window.addEventListener('resize', function() {
-        onResize();
-      });
+                  projectView_swiperFullscreen_instance = new projectView_swiperFullscreen();
+                  projectView_swiperFullscreen_instance.subscribe_to_fullscreen();
 
-      function onResize() {
-        projectView_scrollText_instance.onResize();
-        projectView_navpanel_instance.redrawNavButtons(projectView_scrollText_instance.checkpoints);
-        projectView_swiperController_instance.update_image_swiper_and_caption();
-      }
+                  //!!! there must not be any other instance of projectView_imageProcessor !!!!
+                  projectView_imageProcessor_instance = new projectView_imageProcessor('scrollArticle');
 
-      // Prevent default window scroll only when mouse is over swiper or projectView_outer
-      window.addEventListener("wheel", function(e) {
-        if(windowController_Instance.isMobileVersion()){
-          return;
-        }
+                  onResize();
+                  processSlug();
+                });
 
-        if (isDescendantOfSwiperOrOuter(e.target)) {
-            e.preventDefault();
-        }
-      }, { passive: false });
+                window.addEventListener('resize', function () {
+                  onResize();
+                });
 
-      function isDescendantOfSwiperOrOuter(element) {
-          while (element !== null && element.id !== 'projectView_swiperWrapper' && element.id !== 'projectView_outer') {
-              element = element.parentElement;
-          }
-          return element !== null;
-      }
-      
-      document.getElementById('projectView_outer').addEventListener('wheel', function (e) {
-        if(windowController_Instance.isMobileVersion()){
-          return;
-        }
+                function onResize() {
+                  projectView_scrollText_instance.onResize();
+                  projectView_navpanel_instance.redrawNavButtons(projectView_scrollText_instance.checkpoints);
+                  projectView_swiperController_instance.update_image_swiper_and_caption();
+                }
 
-        if(projectView_scrollText_instance.isAnimating)
-          return;
+                // Prevent default window scroll only when mouse is over swiper or projectView_outer
+                window.addEventListener("wheel", function (e) {
+                  if (windowController_Instance.isMobileVersion()) {
+                    return;
+                  }
 
-        var delta = e.wheelDelta ? e.wheelDelta : -e.deltaY;
+                  if (isDescendantOfSwiperOrOuter(e.target)) {
+                    e.preventDefault();
+                  }
+                }, {passive: false});
 
-          if(delta > 0){
-            scrollPrevCheckpoint();
-          } else {
-            scrollNextCheckpoint();
-          }
-      }, false);
+                function isDescendantOfSwiperOrOuter(element) {
+                  while (element !== null && element.id !== 'projectView_swiperWrapper' && element.id !== 'projectView_outer') {
+                    element = element.parentElement;
+                  }
+                  return element !== null;
+                }
 
-      document.getElementById('projectView_swiperWrapper').addEventListener('wheel', function(e) {
-        if(windowController_Instance.isMobileVersion()){
-          return;
-        }
-        
-        var delta = e.wheelDelta ? e.wheelDelta : -e.deltaY;
+                document
+                  .getElementById('projectView_outer')
+                  .addEventListener('wheel', function (e) {
+                    if (windowController_Instance.isMobileVersion()) {
+                      return;
+                    }
 
-        if(delta > 0){
-          projectView_swiperController_instance.swiper.slidePrev();
-        } else {
-          projectView_swiperController_instance.swiper.slideNext();
-        }
-      });
+                    if (projectView_scrollText_instance.isAnimating) 
+                      return;
+                    
+                    var delta = e.wheelDelta
+                      ? e.wheelDelta
+                      : -e.deltaY;
 
-      document.addEventListener('keydown', function(e) { 
-        if (e.keyCode === 37) {
-          if(projectView_scrollText_instance.isAnimating)
-            return;
+                    if (delta > 0) {
+                      scrollPrevCheckpoint();
+                    } else {
+                      scrollNextCheckpoint();
+                    }
+                  }, false);
 
-          scrollPrevCheckpoint();
-        } else if (e.keyCode === 39) {
-          if(projectView_scrollText_instance.isAnimating)
-            return;
+                document
+                  .getElementById('projectView_swiperWrapper')
+                  .addEventListener('wheel', function (e) {
+                    if (windowController_Instance.isMobileVersion()) {
+                      return;
+                    }
 
-          scrollNextCheckpoint();
-        }
-      });
-/*
-  createNavButton(n, checkp) {
-      const button = document.createElement('button');
-      button.className = 'projectView_navigationDigit';
-      button.id = `navButton${n}`;
-      button.setAttribute('targetPersent', checkp);
-      button.setAttribute('targetCheckpoint', n);
-      
-      button.textContent = n+1;
-      return button;
-  }
-*/
-      document.addEventListener('click', function(event) {
-        if (event.target.classList.contains('projectView_navigationDigit')) {
-          let fraction = event.target.getAttribute('targetPersent');
-          navDigitClicked(fraction);
-        } else if(event.target.classList.contains('nav-arrow-project-view'))  {
-          scrollNextCheckpoint();
-        }
-      });
+                    var delta = e.wheelDelta
+                      ? e.wheelDelta
+                      : -e.deltaY;
 
-      function navDigitClicked(persent) {
-        projectView_scrollText_instance.isAnimating = false; // don't wait for animation to finish
-        setScrollFraction(persent);
-      }
-    </script>
+                    if (delta > 0) {
+                      projectView_swiperController_instance
+                        .swiper
+                        .slidePrev();
+                    } else {
+                      projectView_swiperController_instance
+                        .swiper
+                        .slideNext();
+                    }
+                  });
+
+                document.addEventListener('keydown', function (e) {
+                  if (e.keyCode === 37) {
+                    if (projectView_scrollText_instance.isAnimating) 
+                      return;
+                    
+                    scrollPrevCheckpoint();
+                  } else if (e.keyCode === 39) {
+                    if (projectView_scrollText_instance.isAnimating) 
+                      return;
+                    
+                    scrollNextCheckpoint();
+                  }
+                });
+
+                document.addEventListener('click', function (event) {
+                  if (event.target.classList.contains('projectView_navigationDigit')) {
+                    let fraction = event
+                      .target
+                      .getAttribute('targetPersent');
+                    navDigitClicked(fraction);
+                  } else if (event.target.classList.contains('nav-arrow-project-view')) {
+                    scrollNextCheckpoint();
+                  }
+                });
+
+                function navDigitClicked(persent) {
+                  projectView_scrollText_instance.isAnimating = false; // don't wait for animation to finish
+                  setScrollFraction(persent);
+                }
+              </script>

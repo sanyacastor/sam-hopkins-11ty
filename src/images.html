@@ -1,22 +1,13 @@
 ---
 title: Sam Hopkins | Images
-layout: base.njk
+layout: images.njk
 tags: images
 ---
-
-<script
-  src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"
-  async
-></script>
-<script
-  src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/Draggable.min.js"
-  async
-></script>
 
 <div class="container">
   <form class="search-form">
     <label class="search-form__label" for="search">
-      <input class="search-form__input" type="text" id="search" name="search" />
+      <input class="search-form__input" type="text" id="search" name="search"/>
     </label>
     <div
       class="search-form__autocomplete search-form__autocomplete--hidden"
@@ -24,25 +15,29 @@ tags: images
   </form>
 
   <section class="images-list">
-    {% for project in projects %} {% for image in project.images %}
-    <div
+    {% for project in projects %}
+      {% for image in project.images %}
+        <div
       class="images-list__item images-list__item--container"
       data-project="{{ project.title }}"
     >
-      {% image image.url image.alt 'preview_image' %}
-    </div>
-    {% endfor %} {% endfor %}
+          {% image image.url image.alt 'preview_image' '(min-width: 0) 100px, 600px' %}
+        </div>
+      {% endfor %}
+    {% endfor %}
   </section>
 </div>
 
 <div class="slider-modal slider-modal--hidden">
   <div class="slider-modal__swiper swiper">
     <div class="slider-modal__swiper-wrapper swiper-wrapper">
-      {% for project in projects %} {% for image in project.images %}
-      <div class="slider-modal__slide swiper-slide">
-        {% image image.url image.alt %}
-      </div>
-      {% endfor %} {% endfor %}
+      {% for project in projects %}
+        {% for image in project.images %}
+          <div class="slider-modal__slide swiper-slide">
+            {% image image.url image.alt %}
+          </div>
+        {% endfor %}
+      {% endfor %}
     </div>
     <div class="slider-modal__button-next swiper-button-next"></div>
     <div class="slider-modal__button-prev swiper-button-prev"></div>
@@ -52,28 +47,24 @@ tags: images
 </div>
 
 <script type="module">
-  let projects = [];
+  let projects = []
 
   async function loadProjects() {
     try {
-      const response = await fetch('/js/projects.json');
-      if (!response.ok) {
-        throw new Error('fetch failed');
-      }
-      const data = await response.json();
-      projects = data;
-      console.log(projects); 
+      const response = await fetch('/js/projects.json')
+      const data = await response.json()
+      projects = data
     } catch (error) {
-      console.error('Error fetching projects:', error);
+      console.error('Error fetching projects:', error)
     }
   }
 
-  await loadProjects();
+  await loadProjects()
 
-  import { Autocomplete } from '/js/imagesPage/autocomplete.js'
-  import { DraggableModal } from '/js/imagesPage/draggableModal.js'
-  import { SwiperModal } from '/js/imagesPage/swiperModal.js'
-  import { WindowController } from '/_scripts/WindowController.js'
+  import {Autocomplete} from '/js/imagesPage/autocomplete.js'
+  import {DraggableModal} from '/js/imagesPage/draggableModal.js'
+  import {SwiperModal} from '/js/imagesPage/swiperModal.js'
+  import {WindowController} from '/_scripts/WindowController.js'
 
   gsap.registerPlugin(Draggable)
 
@@ -81,15 +72,15 @@ tags: images
     slidesPerView: 1,
     pagination: {
       el: '.swiper-pagination',
-      type: 'custom',
+      type: 'custom'
     },
     navigation: {
       nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
+      prevEl: '.swiper-button-prev'
+    }
   })
 
-  const swiperModal = new SwiperModal({ className: 'slider-modal', swiper })
+  const swiperModal = new SwiperModal({className: 'slider-modal', swiper})
 
   const imagesListElement = document.querySelector('.images-list')
   const allImages = document.querySelectorAll('.images-list__item')
@@ -101,9 +92,9 @@ tags: images
       onClick: imageIndex => {
         swiperModal.open()
         swiper.slideTo(imageIndex)
-      },
+      }
     })
-    Draggable.create(modal.modal, { trigger: modal.toolbar })
+    Draggable.create(modal.modal, {trigger: modal.toolbar})
   }
 
   allImages.forEach((el, i) => {
@@ -114,7 +105,9 @@ tags: images
   const resetFilter = () => {
     let imageIndex = 0
     allImages.forEach(imageElement => {
-      imageElement.classList.remove('images-list__item--hidden')
+      imageElement
+        .classList
+        .remove('images-list__item--hidden')
       imageElement.dataset.imageIndex = imageIndex
       imageIndex += 1
     })
@@ -130,21 +123,19 @@ tags: images
     allImages.forEach(imageElement => {
       imageElement.removeAttribute('data-image-index')
       if (imageElement.dataset.project === value) {
-        imageElement.classList.remove('images-list__item--hidden')
+        imageElement
+          .classList
+          .remove('images-list__item--hidden')
         imageElement.dataset.imageIndex = imageIndex
         imageIndex += 1
       } else {
-        imageElement.classList.add('images-list__item--hidden')
+        imageElement
+          .classList
+          .add('images-list__item--hidden')
       }
     })
 
     swiperModal.update()
   }
-
-  const projectsAutocomplete = new Autocomplete({
-    className: '.search-form',
-    projects,
-    callback: filterProjects,
-    resetFilter,
-  })
+  new Autocomplete({className: '.search-form', projects, callback: filterProjects, resetFilter})
 </script>

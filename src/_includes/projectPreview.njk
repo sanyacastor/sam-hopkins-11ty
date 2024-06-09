@@ -5,9 +5,12 @@
   </head>
   <body>
     <div class="global-container">
-      {% include 'header.njk' %}
+      <div class='container'>
+        {% include 'header.njk' %}
+      </div>
       {{ content | safe }}
     </div>
   </body>
   {% include "shared/netlifyIdentity.njk" %}
+  {% include "shared/swiperScripts.njk" %}
 </html>

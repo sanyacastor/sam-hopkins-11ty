@@ -5,3 +5,4 @@ package-lock.json
 .vs/
 package.json
 package-lock.json
+.env

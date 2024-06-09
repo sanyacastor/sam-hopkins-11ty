@@ -5,7 +5,7 @@ slug: news
 ---
 <div class="container">
   <ul class="news-list">
-    {% assign sorted_news = collections.news | sort: 'data.createdAt' | reverse %}
+    {% assign sorted_news = collections.news | sort : 'data.createdAt' | reverse %}
     {% for news in sorted_news %}
       <li class="news">
         <h3 class="news__title">{{ news.data.title }}</h3>
