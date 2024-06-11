@@ -1,6 +1,6 @@
 //import "gsap";
 
-class previewDescriptionScroll{
+class previewDescriptionScroll {
 
     constructor(id_outerBox, id_contentBox, id_phantomColumn, id_fullButton, id_fullButtonArrow, gsapTwiner){
 
