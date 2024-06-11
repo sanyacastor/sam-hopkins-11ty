@@ -1,70 +1,51 @@
-{% if related_projects_data.relatedProjects.length > 0 -%}
-    <div class="relatedAndMore_container">
-        <button class="related_projects_button"
-            onclick="scrollToElement('related_projects_button')">
-            Related projects
-        </button>
-        <div class="cardcabinet_grid greenish" id="relatedProjectsGrid"> 
-            {%- for relatedProject in related_projects_data.relatedProjects -%}
-                {%- for collection_project in collections.project -%}
-                    {%- if (collection_project.data.title == relatedProject) or (collection_project.data.id == relatedProject) -%}
+{%- set showButton = false -%}
+<div class="relatedAndMore_container">
+  <div class="cardcabinet_grid greenish" id="relatedProjectsGrid"> 
+    {%- for collection_project in collections.project -%}
+      {%- set mustBeShown = false -%}
 
-                        {% set qpreviewURL = collection_project.data.title | slug %}
-                        {%- set qpreviewURLfull = '/preview/' + qpreviewURL -%}
+      {%- for relatedProject in related_projects_data.relatedProjects -%}
+        {%- if (collection_project.data.title == relatedProject) or (collection_project.data.id == relatedProject) -%}
+          {%- set mustBeShown = true -%}
+          {%- set showButton = true -%}
+        {%- endif -%}
+      {%- endfor -%}
 
-                        {%- set card_data = { 
-                            data: {
-                                targetUrl: qpreviewURLfull,
-                                title: collection_project.data.title,
-                                dates: collection_project.data.dates,
-                                collaborators: collection_project.data.collaborators,
-                                cardDescription: collection_project.data.cardDescription,
-                                relatedProjects: collection_project.data.relatedProjects
-                            }
-                        } -%}
-
-                        {%- include "summary-card.njk" -%}
-                    {%- endif -%}
-
-                {%- endfor -%}
-            {%- endfor -%}
-        </div>
-    </div>
-{%- endif -%}
-<!--            /related cards section                -->
-
-
-
-{# <div style="background-color: white; position: relative;">
-    <div class="cardcabinet_grid" id="moreProjectsGrid">
-        {%- for projectDamnIt in collections.project -%}
-
-            {%- set drawThisProject = "true" -%}
-
-            {%- for relatedProject in project.data.relatedProjects -%}
-                {%- if project.data.title == relatedProject.project -%}
-                    {%- set drawThisProject = "false" -%}
-                {%- endif -%}
-                <div>
-                    {{- drawThisProject -}}
-                    {{- project.data.title}}
-                    {{- relatedProject.project -}}
-                </div>
-            {%- endfor -%}    
-
-            {{- drawThisProject -}}
-            {%- if drawThisProject == "true" -%}
-                {%- include "summary-card.njk" -%}
-            {%- endif -%}
-
+      {%- if mustBeShown == false -%}
+        {%- for checkId in collection_project.data.relatedProjects -%}
+          {%- if related_projects_data.ownId == checkId -%}
+            {%- set mustBeShown = true -%}
+            {%- set showButton = true -%}
+          {%- endif -%}
         {%- endfor -%}
-    </div>
-    <button class="more_projects_button" 
-        onclick="scrollToElement('more_projects_button')">
-        More projects</button>
-</div> #}
- 
-<!--               /more cards section                -->
+      {%- endif -%}
+
+      {%- if mustBeShown -%}
+        {% set qpreviewURL = collection_project.data.title | slug %}
+        {%- set qpreviewURLfull = '/preview/' + qpreviewURL -%}
+
+        {%- set card_data = { 
+          data: {
+              targetUrl: qpreviewURLfull,
+              title: collection_project.data.title,
+              dates: collection_project.data.dates,
+              collaborators: collection_project.data.collaborators,
+              cardDescription: collection_project.data.cardDescription,
+              relatedProjects: collection_project.data.relatedProjects
+          }
+        } -%}
+        {%- include "summary-card.njk" -%}
+      {%- endif -%}
+    {%- endfor -%}
+  </div>
+
+  {%- if showButton -%}
+    <button class="related_projects_button"
+      onclick="scrollToElement('related_projects_button')">
+      Related projects
+    </button>
+  {%- endif -%}
+</div>
 
 <script>
     function scrollToElement(className) {
