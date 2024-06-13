@@ -505,6 +505,7 @@ body::-webkit-scrollbar {
   width: 100% !important;
   height: 100% !important;
   background-color: #161418f3 !important;
+  z-index: 10 !important;
 }
 
 .markdown-image--mobile {
