@@ -42,6 +42,7 @@ const readFiles = async filePaths => {
         projects.push({
           ...currentProject,
           images: currentProject.images,
+          slug: filePath.replace('.md', ''),
         })
       } catch (err) {
         console.error(`Error reading file ${filePath}:`, err)
@@ -63,6 +64,7 @@ module.exports = async () => {
     id: project.id,
     title: project.title,
     images: project.images,
+    slug: project.slug,
   }))
 
   await fs.writeFile(

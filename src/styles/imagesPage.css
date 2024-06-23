@@ -21,6 +21,13 @@
   max-height: 300px;
 }
 
+.draggable-modal__link {
+  font-size: 17px;
+  padding-left: 8px;
+  color: var(--color-secondary);
+  font-family: var(--font-family-karelia-regular);
+}
+
 .draggable-modal button {
   background: transparent;
   border: none;
