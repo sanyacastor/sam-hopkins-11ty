@@ -1,6 +1,7 @@
 export class DraggableModal {
-  constructor({ className, event, onClick }) {
+  constructor({ className, event, onClick, projectSlug }) {
     this.onClick = onClick
+    this.projectSlug = projectSlug
     this.close = this.close.bind(this)
     this.imageIndex = event.target.closest(className).dataset.imageIndex
 
@@ -14,8 +15,13 @@ export class DraggableModal {
     this.modal.style.top = (Math.random() * window.innerHeight) / 2 + 'px'
     this.modal.style.left = (Math.random() * window.innerWidth) / 2 + 'px'
 
+    const projectTitle =
+      event.target.parentElement.parentElement.dataset.project
+    const slug = projectTitle.replaceAll(' ', '-')
+
     this.modal.innerHTML = `
       <div class='draggable-modal__toolbar'>
+        <a href='/projects/${slug}' target='_blank' class='draggable-modal__link'>${projectTitle}</a>
         <button class='draggable-modal__close-button'>X</button>
       </div>
       <img class='modal-image-preview'

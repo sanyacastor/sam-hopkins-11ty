@@ -23,6 +23,24 @@
   white-space: normal;
 }
 
+.projectView_ScrollArticle h2,
+.projectView_ScrollArticle h3,
+.projectView_ScrollArticle h4,
+.projectView_ScrollArticle h5 {
+  font-family: var(--font-family-base);
+  font-weight: 600;
+  font-size: 17px;
+  margin-top: 32px;
+  margin-bottom: 0;
+}
+
+.projectView_ScrollArticle h2 ~ p,
+.projectView_ScrollArticle h3 ~ p,
+.projectView_ScrollArticle h4 ~ p,
+.projectView_ScrollArticle h5 ~ p {
+  margin-top: 0;
+}
+
 @media screen and (max-width: 800px) {
   .projectView_ScrollArticle {
     width: 100%;
@@ -49,7 +67,7 @@
 }
 .projectView_imgCaptionMobile {
   display: none;
-  font-size: 14px; 
+  font-size: 14px;
   font-weight: 400;
   line-height: 18.48px;
   padding-bottom: 25px;
@@ -157,7 +175,8 @@
   width: 100%;
 }
 
-.swiper-slide > picture > img { /*!!!! Boss forbids to use such shit !!!!!*/
+.swiper-slide > picture > img {
+  /*!!!! Boss forbids to use such shit !!!!!*/
   width: 100%;
 }
 
@@ -222,13 +241,13 @@
   }
 }
 
-.navigation-button.right-button.nav-arrow-project-view{
+.navigation-button.right-button.nav-arrow-project-view {
   float: right;
   margin-left: 8px;
   transform: translateY(-5%);
 }
 
-.navigation-button.left-button.nav-arrow-project-view{
+.navigation-button.left-button.nav-arrow-project-view {
   float: right;
   margin-left: 8px;
   transform: translateY(-5%);
@@ -239,10 +258,9 @@
   background-color: transparent;
   border: none;
   float: right;
-  color:#818181;
+  color: #818181;
   font-weight: 400;
-  font-family: 'Karelia Web Regular';
-
+  font-family: var(--font-family-karelia-regular);
 }
 
 .projectView_navigationDigit:hover {
@@ -275,7 +293,6 @@
   grid-template-columns: 443px 1000px;
 }
 
-
 .projectView_Grid > card {
   grid-area: card;
   background-color: #f0f0f0;
@@ -298,16 +315,14 @@
 }
 
 .projectView_title {
-  /*font-size: 17px;*/
-  font-size: 24px;
-  font-family: 'Karelia Web Regular';
-  /*font-weight: 700;*/
-  font-weight: 900;
+  font-size: 17px;
+  font-family: var(--font-family-karelia-bold);
+  font-weight: 700;
   line-height: 23px;
 }
 
 .projectView_link {
-  font-family: 'Karelia Web Regular';
+  font-family: var(--font-family-karelia-regular);
   font-size: 14px;
   line-height: 18.94px;
   font-weight: 400;
