@@ -144,11 +144,13 @@ body::-webkit-scrollbar {
 
   height: 288px;
   bottom: 90px;
+
+  margin-right: 100px;
 }
 
 .projectPreview_buttonFullProject_arrowRight.unfolded {
   border-left: 98px;
-  right: -98px;
+  right: -97px;
 
   border-top: 143px solid transparent;
   border-bottom: 143px solid transparent;
@@ -160,19 +162,40 @@ body::-webkit-scrollbar {
 
 .projectPreview_buttonFullProject_container:hover .a {
   font-weight: 900;
+  color: var(--color-secondary);
   background-color: var(--color-fullproject-button-hover);
 }
 
 .projectPreview_buttonFullProject_container:hover {
   font-weight: 900;
   cursor: pointer;
+  color: var(--color-secondary);
   background-color: var(--color-fullproject-button-hover);
 }
 
+
+
 .projectPreview_buttonFullProject_container:hover
   .projectPreview_buttonFullProject_arrowRight {
-  border-left: 20px solid var(--color-fullproject-button-hover);
+    border-left-color: var(--color-fullproject-button-hover);
 }
+
+.projectPreview_buttonFullProject_container2 {
+  position: relative;
+  height: 61px;
+  width: 229px;
+  right: 50px;
+  bottom: -195px;
+  background-color: var(--color-secondary);
+  color: var(--color-primary);
+  text-decoration: none;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 0;
+}
+
 
 .projectPreview_buttonFullProject_container {
   position: absolute;
@@ -182,6 +205,8 @@ body::-webkit-scrollbar {
 
   right: 50px;
   bottom: 8px;
+
+  margin-right: 0px;
 
   background-color: var(--color-secondary);
   color: var(--color-primary);
@@ -195,6 +220,12 @@ body::-webkit-scrollbar {
   border: none;
 
   /* transition: bottom 0.5s ease, right 0.5s ease, position 0.5s ease; Add transitions */
+}
+
+.projectPreview_buttonFullProject_text {
+  left: 10px;
+  width: 120px;
+  position: absolute;
 }
 
 @media screen and (max-width: 800px) {
@@ -239,36 +270,44 @@ body::-webkit-scrollbar {
 
   transition: border-top 0.3s ease;
   transition: border-bottom 0.3s ease;
+  transition: border-left 0.3s ease;
 }
 
 @keyframes slideTop {
   0% {
     /*right: 50px;*/
+    width: 229px;
     height: 64px;
     bottom: 8px;
-  }
-  50% {
-    /*right: 50px;*/
-    height: 288px;
-    bottom: 90px;
+    
+    margin-right: 0px;
   }
   100% {
     /*right: 200px;*/
+    width: 130px;
     height: 288px;
     bottom: 90px;
+
+    margin-right: 100px;
   }
 }
 
 @keyframes slideBottom {
   100% {
     /*right: 50px;*/
+    width: 229px;
     height: 64px;
     bottom: 8px;
+    
+    margin-right: 0px;
   }
   0% {
     /*right: 200px;*/
+    width: 130px;
     height: 288px;
     bottom: 90px;
+
+    margin-right: 100px;
   }
 }
 
@@ -276,21 +315,33 @@ body::-webkit-scrollbar {
   0% {
     border-top: 30px solid transparent;
     border-bottom: 30px solid transparent;
+    border-left: 20px solid var(--color-secondary);
+    right: -20px;
+    height: 100%;
   }
   100% {
     border-top: 143px solid transparent;
     border-bottom: 143px solid transparent;
+    border-left: 98px solid var(--color-secondary);
+    right: -97px;
+    height: 100%;
   }
 }
 
 @keyframes arrow_slideBottom {
-  0% {
-    border-top: 143px solid transparent;
-    border-bottom: 143px solid transparent;
-  }
   100% {
     border-top: 30px solid transparent;
     border-bottom: 30px solid transparent;
+    border-left: 20px solid var(--color-secondary);
+    right: -20px;
+    height: 100%;
+  }
+  0% {
+    border-top: 143px solid transparent;
+    border-bottom: 143px solid transparent;
+    border-left: 98px solid var(--color-secondary);
+    right: -97px;
+    height: 100%;
   }
 }
 

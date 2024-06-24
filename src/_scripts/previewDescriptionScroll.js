@@ -10,7 +10,7 @@ class previewDescriptionScroll {
       this.buttonIsFolded = true;
       this.buttonCanBeUnfolded = false;
       
-      this.projectPreview_buttonFullProject_width = 228;
+      this.projectPreview_buttonFullProject_width = 240;
       this.projectPreview_buttonFullProject_padding = 22;
 
       this.outerBox = document.getElementById(id_outerBox);
@@ -81,35 +81,30 @@ class previewDescriptionScroll {
     }
     
     unfoldFullProjectButton() {
+      
       if(!this.buttonIsFolded){
           return;
         }
-
       this.buttonIsFolded = false;
-      let buttonFullProject_arrow = document.getElementById("preview_buttonFullProject_arrow");
-      
-      this.fullButton.style.height = "288px"; //!!!! Magic number
-      this.fullButton.style.bottom = "90px";  //!!!! Magic number
-      /*buttonFullProject.style.right = "200px"; */
 
-      this.fullButtonArrow.style["border-top"] = "143px solid transparent";
-      this.fullButtonArrow.style["border-bottom"] = "143px solid transparent";
-      this.fullButtonArrow.style.animation = "arrow_slideTop 1s ease";
-      this.fullButton.style.animation = "slideTop 1s ease"; 
+      this.fullButtonArrow.style.animation = "arrow_slideTop 0.5s ease";
+      this.fullButton.style.animation = "slideTop 0.5s ease"; 
+
+      this.fullButton.classList.add('unfolded');
+      this.fullButtonArrow.classList.add('unfolded');
     }
+
     foldFullProjectButton(){
       if(this.buttonIsFolded){
           return;
         }
         this.buttonIsFolded = true;
 
-        this.fullButton.style.height = "61px"; //!!!! Magic number
-        this.fullButton.style.bottom = "8px";  //!!!! Magic number
-        
-        this.fullButtonArrow.style["border-top"] = "30px solid transparent";
-        this.fullButtonArrow.style["border-bottom"] = "30px solid transparent";
-        this.fullButtonArrow.style.animation = "arrow_slideBottom 0.5s ease";
-        this.fullButton.style.animation = "slideBottom 0.5s ease";
+        this.fullButtonArrow.style.animation = "arrow_slideBottom 0.3s ease";
+        this.fullButton.style.animation = "slideBottom 0.3s ease";
+
+        this.fullButton.classList.remove('unfolded');
+        this.fullButtonArrow.classList.remove('unfolded');
     }
 
     checkpointIsTheLast(){
@@ -173,7 +168,27 @@ class previewDescriptionScroll {
       this.moveToCheckpoint(targetCheckpointIndex);
     }
 
-    moveToCheckpoint(index){
+    updateFullButtonHorizontalPosition() {
+      //buttonContainer = document.getElementById("preview_buttonFullProject");
+      if (!this.buttonCanBeUnfolded) {
+        this.fullButton.style.right = 50 + "px";
+        return;
+      }
+
+      let windowWidth = this.outerBox.offsetWidth;
+      let phantomWidth = this.phantomColumn.offsetWidth;
+      let totalWidth = this.outerBox.scrollWidth;
+      let scrollLeft = this.outerBox.scrollLeft;
+
+      let result = -1*(totalWidth - scrollLeft - windowWidth - phantomWidth + 210);
+
+      if(result < 50)
+        result = 50;  
+
+      this.fullButton.style.right = result + "px";
+    }
+
+    moveToCheckpoint(index) {
       this.currentChecpointIndex = index;
 
       this.updateButtonFoldState();
@@ -183,6 +198,9 @@ class previewDescriptionScroll {
                       duration: 0.5, ease: "power2.inOut",
                       onComplete: () => {
                         this.isAnimating = false;
+                      },
+                      onUpdate: () => {
+                        this.updateFullButtonHorizontalPosition();
                       }
                   });
       this.isAnimating = true;
