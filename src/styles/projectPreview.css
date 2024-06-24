@@ -180,23 +180,6 @@ body::-webkit-scrollbar {
     border-left-color: var(--color-fullproject-button-hover);
 }
 
-.projectPreview_buttonFullProject_container2 {
-  position: relative;
-  height: 61px;
-  width: 229px;
-  right: 50px;
-  bottom: -195px;
-  background-color: var(--color-secondary);
-  color: var(--color-primary);
-  text-decoration: none;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  border: 0;
-}
-
-
 .projectPreview_buttonFullProject_container {
   position: absolute;
 
@@ -259,7 +242,7 @@ body::-webkit-scrollbar {
 
 .projectPreview_buttonFullProject_arrowRight {
   position: absolute;
-  right: -20px;
+  right: -19px;
   top: 0;
   width: 0;
   height: 100%;
@@ -316,7 +299,7 @@ body::-webkit-scrollbar {
     border-top: 30px solid transparent;
     border-bottom: 30px solid transparent;
     border-left: 20px solid var(--color-secondary);
-    right: -20px;
+    right: -19px;
     height: 100%;
   }
   100% {
@@ -333,7 +316,7 @@ body::-webkit-scrollbar {
     border-top: 30px solid transparent;
     border-bottom: 30px solid transparent;
     border-left: 20px solid var(--color-secondary);
-    right: -20px;
+    right: -19px;
     height: 100%;
   }
   0% {
