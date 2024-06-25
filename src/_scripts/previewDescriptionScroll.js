@@ -20,6 +20,10 @@ class previewDescriptionScroll {
       this.fullButtonArrow = document.getElementById(id_fullButtonArrow);
 
       this.gsap = gsapTwiner;
+
+      this.outerBox.addEventListener("scroll", () => {
+        this.updateFullButtonHorizontalPosition();
+      });
     }
     
     destructor(){     
