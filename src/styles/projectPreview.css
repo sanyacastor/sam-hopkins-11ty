@@ -170,14 +170,14 @@ body::-webkit-scrollbar {
   font-weight: 900;
   cursor: pointer;
   color: var(--color-secondary);
-  background-color: var(--color-fullproject-button-hover);
+  background-color: var(--color-primary);
 }
 
 
 
 .projectPreview_buttonFullProject_container:hover
   .projectPreview_buttonFullProject_arrowRight {
-    border-left-color: var(--color-fullproject-button-hover);
+  border-left-color: var(--color-primary);
 }
 
 .projectPreview_buttonFullProject_container {

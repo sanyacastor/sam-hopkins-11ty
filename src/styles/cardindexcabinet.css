@@ -87,11 +87,35 @@
   font-style: normal;
 }
 .summary-card-wrap.static-wrap {
-  pointer-events: none;
   cursor: default;
 }
 .summary-card-wrap.dynamic-wrap:hover .cardcabinet_cardTitle {
   font-weight: 700;
+}
+
+.cardcabinet_cardTitle_container {
+  border-bottom: 1px solid var(--color-borders);
+  overflow: hidden;
+  position: relative;
+}
+
+.cardcabinet_cardTitle_container--marquee:hover .cardcabinet_cardTitle {
+  transform: translateX(calc(440px - 100%));
+  transition: transform 2s linear;
+}
+
+@media screen and (max-width: 1300px) {
+  .cardcabinet_cardTitle_container--marquee:hover .cardcabinet_cardTitle {
+    transform: translateX(calc(400px - 100%));
+    transition: transform 2s linear;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .cardcabinet_cardTitle_container--marquee:hover .cardcabinet_cardTitle {
+    transform: translateX(calc(600px - 100%));
+    transition: transform 2s linear;
+  }
 }
 
 .cardcabinet_cardTitle {
@@ -105,7 +129,6 @@
   font-weight: bold;
   margin: 0;
   text-decoration: none;
-  border-bottom: 1px solid var(--color-borders);
 
   padding-top: 0px;
   padding-left: 13px;
@@ -114,8 +137,9 @@
   margin: 0px;
 
   overflow: hidden;
-  text-overflow: ellipsis;
   white-space: nowrap;
+
+  display: inline-block;
 }
 
 .cardcabinet_dates {
