@@ -184,10 +184,11 @@ class previewDescriptionScroll {
       let totalWidth = this.outerBox.scrollWidth;
       let scrollLeft = this.outerBox.scrollLeft;
 
-      let result = -1*(totalWidth - scrollLeft - windowWidth - phantomWidth + 210);
+      let result = -1*(totalWidth - scrollLeft - windowWidth  + 300 + 210);
 
-      if(result < 50)
-        result = 50;  
+      if (result < 50) {
+        result = 50
+      } 
 
       this.fullButton.style.right = result + "px";
     }

@@ -95,7 +95,8 @@
   background-color: rgba(140, 0, 145, 0);
 }
 
-.projectPreview_phantomTrigger { /*!!!deprecated!!! Just in case Sanya demands a rollback. */
+.projectPreview_phantomTrigger {
+  /*!!!deprecated!!! Just in case Sanya demands a rollback. */
   height: 100%;
   width: 1px;
   right: 0px;
@@ -160,20 +161,12 @@ body::-webkit-scrollbar {
   bottom: 90px;
 }
 
-.projectPreview_buttonFullProject_container:hover .a {
-  font-weight: 900;
-  color: var(--color-secondary);
-  background-color: var(--color-fullproject-button-hover);
-}
-
 .projectPreview_buttonFullProject_container:hover {
   font-weight: 900;
   cursor: pointer;
   color: var(--color-secondary);
   background-color: var(--color-primary);
 }
-
-
 
 .projectPreview_buttonFullProject_container:hover
   .projectPreview_buttonFullProject_arrowRight {
@@ -262,7 +255,7 @@ body::-webkit-scrollbar {
     width: 229px;
     height: 64px;
     bottom: 8px;
-    
+
     margin-right: 0px;
   }
   100% {
@@ -497,6 +490,7 @@ body::-webkit-scrollbar {
   -webkit-mask-image: url('/assets/icons/navigation_arrow_left.svg');
   mask-image: url('/assets/icons/navigation_arrow_left.svg');
   mask-repeat: no-repeat;
+  mask-position: right center;
 }
 .navigation-button.right-button {
   color: var(--color-primary);
@@ -507,6 +501,7 @@ body::-webkit-scrollbar {
   -webkit-mask-image: url('/assets/icons/navigation_arrow_right.svg');
   mask-image: url('/assets/icons/navigation_arrow_right.svg');
   mask-repeat: no-repeat;
+  mask-position: right center;
 }
 .navigation-button.close-button {
   color: var(--color-primary);
@@ -517,6 +512,7 @@ body::-webkit-scrollbar {
   -webkit-mask-image: url('/assets/icons/navigation_close_cross.svg');
   mask-image: url('/assets/icons/navigation_close_cross.svg');
   mask-repeat: no-repeat;
+  mask-position: right center;
 }
 
 .navigation-button.inactive {
@@ -561,6 +557,119 @@ body::-webkit-scrollbar {
   margin-left: 20px;
 }
 
-.projectPreview_ending {
 
+
+
+/* NEW BUTTON STYLES */
+.full-project-button {
+  cursor: pointer;
+  text-decoration: none;
+
+  position: relative;
+  min-width: 200px;
+  height: 61px;
+
+  position: sticky;
+  right: 30px;
+  top: calc(100% - 66px);
+
+  display: flex;
+  align-items: center;
+  padding-left: 16px;
+  color: var(--color-primary);
+  background: var(--color-secondary);
+  transition: all 0.3s ease;
+
+  font-family: var(--font-family-karelia-regular);
+  font-size: 14px;
+}
+
+@media screen and (max-width: 800px) {
+  .full-project-button {
+    top: 8px;
+  }
+}
+
+.full-project-button:hover {
+  font-family: var(--font-family-karelia-bold);
+  background: var(--color-primary);
+  color: var(--color-secondary);
+}
+
+.full-project-button:hover:after {
+  border-left-color: var(--color-primary);
+}
+
+.full-project-button--unfolded {
+  height: 288px;
+  min-width: 150px;
+  top: 13px;
+}
+
+.full-project-button::after {
+  content: '';
+  position: absolute;
+  right: -20px;
+  top: 0;
+  width: 0;
+  height: 0;
+  border-top: 31px solid transparent;
+  border-bottom: 30px solid transparent;
+  border-left: 20px solid var(--color-secondary);
+  background-color: transparent;
+  transition: all 0.3s ease;
+}
+
+.full-project-button--unfolded::after {
+  content: '';
+  position: absolute;
+  right: -90px;
+  top: 0;
+  width: 0;
+  height: 0;
+  border-top: 144px solid transparent;
+  border-bottom: 144px solid transparent;
+  border-left: 90px solid var(--color-secondary);
+  background-color: transparent;
+}
+
+.project-preview-description__scroll-container {
+  padding-top: 47px;
+  overflow-x: scroll;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  background: var(--color-white);
+}
+
+.project-preview-description {
+  column-count: 3;
+  column-width: 700px;
+
+  min-width: 100vw;
+  max-height: 300px;
+
+  padding-left: 14px;
+}
+
+@media screen and (max-width: 800px) {
+  .project-preview-description {
+    column-count: initial;
+    column-width: initial;
+    min-width: auto;
+    height: auto;
+    max-height: initial;
+  }
+
+  .project-preview-description__scroll-container {
+    flex-direction: column;
+    padding-top: 80px;
+  }
+}
+
+.project-preview-description__phantom-column {
+  min-width: 300px;
+  height: 100px;
 }
