@@ -1,0 +1,72 @@
+/* NEW BUTTON STYLES */
+.full-project-button {
+    cursor: pointer;
+    text-decoration: none;
+  
+    position: absolute;
+    min-width: 200px;
+    height: 61px;
+  
+    right: 30px;
+    bottom: 10px;
+  
+    display: flex;
+    align-items: center;
+    padding-left: 16px;
+    color: var(--color-primary);
+    background: var(--color-secondary);
+    transition: all 0.2s ease;
+  
+    font-family: var(--font-family-karelia-regular);
+    font-size: 14px;
+    max-width: 228px;
+  }
+  
+  @media screen and (max-width: 800px) {
+    .full-project-button {
+      top: 8px;
+    }
+  }
+  
+  .full-project-button:hover {
+    font-family: var(--font-family-karelia-bold);
+    background: var(--color-primary);
+    color: var(--color-secondary);
+  }
+  
+  .full-project-button:hover:after {
+    border-left-color: var(--color-primary);
+  }
+  
+  .full-project-button--unfolded {
+    height: 288px;
+    min-width: 150px;
+    bottom: 83px;
+  }
+  
+  .full-project-button::after {
+    content: '';
+    position: absolute;
+    right: -20px;
+    top: 0;
+    width: 0;
+    height: 0;
+    border-top: 31px solid transparent;
+    border-bottom: 30px solid transparent;
+    border-left: 20px solid var(--color-secondary);
+    background-color: transparent;
+    transition: all 0.2s ease;
+  }
+  
+  .full-project-button--unfolded::after {
+    content: '';
+    position: absolute;
+    right: -90px;
+    top: 0;
+    width: 0;
+    height: 0;
+    border-top: 144px solid transparent;
+    border-bottom: 144px solid transparent;
+    border-left: 90px solid var(--color-secondary);
+    background-color: transparent;
+  }

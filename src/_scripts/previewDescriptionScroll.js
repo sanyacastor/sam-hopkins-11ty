@@ -2,7 +2,7 @@
 
 class previewDescriptionScroll {
 
-    constructor(id_outerBox, id_contentBox, id_phantomColumn, id_fullButton, id_fullButtonArrow, gsapTwiner){
+    constructor(id_outerBox, id_contentBox, id_phantomColumn, id_fullButton, gsapTwiner){
 
       this.checkpoints = [];
       this.currentChecpointIndex = 0;
@@ -17,7 +17,6 @@ class previewDescriptionScroll {
       this.contentBox = document.getElementById(id_contentBox);
       this.phantomColumn = document.getElementById(id_phantomColumn);
       this.fullButton = document.getElementById(id_fullButton);
-      this.fullButtonArrow = document.getElementById(id_fullButtonArrow);
 
       this.gsap = gsapTwiner;
 
@@ -85,30 +84,19 @@ class previewDescriptionScroll {
     }
     
     unfoldFullProjectButton() {
-      
-      if(!this.buttonIsFolded){
-          return;
-        }
+      if(!this.buttonIsFolded)
+        return;
+
       this.buttonIsFolded = false;
-
-      this.fullButtonArrow.style.animation = "arrow_slideTop 0.5s ease";
-      this.fullButton.style.animation = "slideTop 0.5s ease"; 
-
-      this.fullButton.classList.add('unfolded');
-      this.fullButtonArrow.classList.add('unfolded');
+      this.fullButton.classList.add("full-project-button--unfolded")
     }
 
     foldFullProjectButton(){
-      if(this.buttonIsFolded){
-          return;
-        }
-        this.buttonIsFolded = true;
+      if(this.buttonIsFolded)
+        return;
 
-        this.fullButtonArrow.style.animation = "arrow_slideBottom 0.3s ease";
-        this.fullButton.style.animation = "slideBottom 0.3s ease";
-
-        this.fullButton.classList.remove('unfolded');
-        this.fullButtonArrow.classList.remove('unfolded');
+      this.buttonIsFolded = true;
+      this.fullButton.classList.remove("full-project-button--unfolded")
     }
 
     checkpointIsTheLast(){
@@ -173,8 +161,8 @@ class previewDescriptionScroll {
     }
 
     updateFullButtonHorizontalPosition() {
-      //buttonContainer = document.getElementById("preview_buttonFullProject");
-      if (!this.buttonCanBeUnfolded) {
+      if(this.buttonIsFolded
+        || !this.buttonCanBeUnfolded){
         this.fullButton.style.right = 50 + "px";
         return;
       }
@@ -184,10 +172,10 @@ class previewDescriptionScroll {
       let totalWidth = this.outerBox.scrollWidth;
       let scrollLeft = this.outerBox.scrollLeft;
 
-      let result = -1*(totalWidth - scrollLeft - windowWidth - phantomWidth + 210);
+      let result = -1*(totalWidth - scrollLeft - windowWidth - phantomWidth + 170);
 
       if(result < 50)
-        result = 50;  
+        result = 50;
 
       this.fullButton.style.right = result + "px";
     }
