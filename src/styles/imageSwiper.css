@@ -6,27 +6,30 @@
 .swiper-button-next {
   color: transparent;
 
-  width: 30px !important; /* otherwise swiperjs will recalculate it */
+  width: 22px !important; /* otherwise swiperjs will recalculate it */
   height: 30px;
-  mask-size: 30px;
+  mask-size: 22px;
 
   background-color: var(--color-secondary);
   -webkit-mask-image: url('/assets/icons/navigation_arrow_right.svg');
   mask-image: url('/assets/icons/navigation_arrow_right.svg');
   mask-repeat: no-repeat;
+  mask-position: center;
 }
 
 .swiper-button-prev {
   color: transparent;
 
-  width: 30px;
+  width: 22px;
   height: 30px;
-  mask-size: 30px;
+  mask-size: 22px;
 
   background-color: var(--color-secondary);
   -webkit-mask-image: url('/assets/icons/navigation_arrow_left.svg');
   mask-image: url('/assets/icons/navigation_arrow_left.svg');
   mask-repeat: no-repeat;
+  mask-position: center;
+
 }
 
 .swiper-button-close {
@@ -40,6 +43,8 @@
   -webkit-mask-image: url('/assets/icons/navigation_close_cross.svg');
   mask-image: url('/assets/icons/navigation_close_cross.svg');
   mask-repeat: no-repeat;
+  mask-position: center;
+
 
   position: absolute;
   top: 10px;

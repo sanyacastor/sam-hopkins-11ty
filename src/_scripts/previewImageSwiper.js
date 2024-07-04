@@ -2,10 +2,10 @@ class previewImageSwiper {
   constructor(classname_swiper, id_swiperWrapper) {
     this.swiper = new Swiper('.mySwiper', {
       slidesPerView: 2,
-      speed: 1000,
-
+      speed: 350,
+      loop: true,
       autoplay: {
-        delay: 2000,
+        delay: 4000,
         pauseOnMouseEnter: true,
       },
       pagination: {
