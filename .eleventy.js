@@ -74,6 +74,23 @@ module.exports = function (eleventyConfig) {
     },
   })
 
+  // Sort projects by dates filter
+  eleventyConfig.addFilter('sortByDate', function (collection) {
+    return collection.sort((a, b) => {
+      if (a.data.dates === 'ongoing' && b.data.dates === 'ongoing') {
+        return 0
+      } else if (a.data.dates === 'ongoing') {
+        return 1
+      } else if (b.data.dates === 'ongoing') {
+        return -1
+      } else {
+        let [aStart, aEnd] = a.data.dates?.split('-')
+        let [bStart, bEnd] = b.data.dates?.split('-')
+        return parseInt(aEnd) - parseInt(bEnd)
+      }
+    })
+  })
+
   eleventyConfig.addShortcode(
     'image',
     async function (src, alt, className, sizes) {
@@ -81,7 +98,7 @@ module.exports = function (eleventyConfig) {
         const metadata = await Image(`src${src}`, IMAGE_CONFIG)
         const imageAttributes = {
           alt: alt || '',
-          sizes: sizes || IMAGE_SIZES ,
+          sizes: sizes || IMAGE_SIZES,
           loading: 'lazy',
           decoding: 'async',
           class: className,

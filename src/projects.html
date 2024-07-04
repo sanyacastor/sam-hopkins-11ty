@@ -7,7 +7,8 @@ slug: projects
 <div class='container' >
   <div class="mainPage_scrollBox">
     <div class="cardcabinet_grid">
-      {% for project in collections.project %}
+      {% assign sortedProjects = collections.project | sortByDate | reverse %}
+      {% for project in sortedProjects %}
         {% assign previewURL = project.data.title | slug %}
         {% assign previewURL = '/preview/' | append: previewURL %}
         {% assign card_data = project %}
