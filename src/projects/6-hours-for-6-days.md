@@ -24,7 +24,7 @@ previewDescription: My idea for this project was to explore the state of being
 relatedProjects:
   - DSFASDFWETEWR324234A
 ---
-![](/assets/6-hours-for-6-day_01_video-documentation_still_2006_-c-hopkins-0.jpg)
+![](/assets/6-hours-for-6-day_01_video-documentation_still_2006_-c-hopkins-0.jpg "caption of the first image")
 
 # Concept
 
@@ -46,7 +46,7 @@ do not look.
 Thanks to: Karolina Freino, Usually4, Zosia Jarosz, Marius Jodko Supported by:
 Gallery Entropia
 
-![](/assets/6-hours-for-6-day_01_video-documentation_still_2006_-c-hopkins-1.jpg)
+![](/assets/6-hours-for-6-day_01_video-documentation_still_2006_-c-hopkins-1.jpg "another caption")
 
 
 However, as I delved deeper into this exploration, I realized that my mere presence on the bench began to alter the dynamics of the space itself. Passersby, initially indifferent to my presence, gradually became intrigued by the sight of someone sitting for prolonged periods in what seemed like an inconsequential spot. Their glances turned into stares, and before long, I felt like a spectacle, a feature of the street that they couldn't quite decipher.
@@ -55,7 +55,7 @@ To delve deeper into this phenomenon, I enlisted the help of Zosia Jarosz and Ma
 The resulting video material captured a spectrum of responses, ranging from wildly inaccurate assumptions to remarkably perceptive insights, and even some individuals who seemed oblivious to my presence altogether. It became apparent that my experiment had not only revealed the fluidity of urban life but also highlighted the intricate dance between visibility and invisibility in public spaces.
 As I reflect on this experience, I realize that my initial quest to understand the city's rhythms evolved into an exploration of human connection and perception. Through the lens of a simple bench on Kuznicza Street, I witnessed the power of presence to shape our understanding of space and the profound impact of shared experiences, even in the midst of constant flux.# Exploring the Dynamics of Stationarity in a City of Flux
 
-![](/assets/6-hours-for-6-day_01_video-documentation_still_2006_-c-hopkins-2.jpg)
+![](/assets/6-hours-for-6-day_01_video-documentation_still_2006_-c-hopkins-2.jpg "megacaption")
 
 ## Introduction
 
