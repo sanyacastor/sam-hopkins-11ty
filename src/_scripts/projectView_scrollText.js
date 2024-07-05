@@ -22,7 +22,6 @@ class projectView_scrollText {
 
     this.gsap_instance = gsap_instance;
 
-    //
     this.isAnimating = false;
   }
 
@@ -156,10 +155,24 @@ class projectView_scrollText {
     document.getElementById('navButton'+this.current_checkpoint_index).classList.add('active');
   }
 
+  update_navarrow_state() {
+    var navArrow = document.getElementById('navButtonScrollToNextCheckpoint');
+
+    if(navArrow == null)
+      return;
+
+    if (this.current_checkpoint_index == this.checkpoints.length - 1){
+      navArrow.classList.add('inactive');
+    }
+    else
+      navArrow.classList.remove('inactive');
+  }
+
   set_scroll_fraction(fraction) {
     this.current_checkpoint_index = this.get_closest_checkpoint_index(fraction);
     let new_fraction = this.checkpoints[this.current_checkpoint_index];
     this.highlight_current_checkpoint();
+    this.update_navarrow_state();
 
     new_fraction = Math.max(0, Math.min(1, new_fraction));
 

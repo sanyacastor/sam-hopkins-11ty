@@ -247,6 +247,14 @@
   transform: translateY(-5%);
 }
 
+.navigation-button.right-button.nav-arrow-project-view.inactive {
+  background-color: var(--color-arrow-disabled);
+}
+
+.navigation-button.right-button.nav-arrow-project-view.inactive:hover {
+  cursor: auto;
+}
+
 .navigation-button.left-button.nav-arrow-project-view {
   float: right;
   margin-left: 8px;

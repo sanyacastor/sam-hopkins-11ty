@@ -5,6 +5,7 @@
   --color-black: #000000;
   --color-white: #ffffff;
   --color-swiper-progressbar: #828282;
+  --color-arrow-disabled: #828282;
 
   --font-family-base: 'IBM Plex Mono', monospace;
   --font-family-karelia-regular: 'Karelia Web Regular', monospace;
@@ -12,7 +13,6 @@
   --font-weight-regular: 400;
   --font-weight-semibold: 600;
   --font-weight-bold: 700;
-
 
   --font-size-base: 17px;
   --font-size-alternative: 20px;
