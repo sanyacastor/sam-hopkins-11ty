@@ -9,15 +9,9 @@
 
   {% endif %}<div class="cardcabinet_summaryCard"><!-- otherwise it renders <p></p>-->
     <div class = "cardcabinet_oulineBox">
-        {%- if card_data.data.title.length > 25 -%}
-          <div class="cardcabinet_cardTitle_container cardcabinet_cardTitle_container--marquee">
-            <h2 class="cardcabinet_cardTitle">{{card_data.data.title}}</h2>
-          </div>
-        {%- else -%}
-          <div class="cardcabinet_cardTitle_container">
-           <h2 class="cardcabinet_cardTitle">{{card_data.data.title}}</h2>
-          </div>
-        {% endif %}
+        <div class="cardcabinet_cardTitle_container cardcabinet_cardTitle_container--marquee">
+          <h2 class="cardcabinet_cardTitle">{{card_data.data.title}}</h2>
+        </div>
         {%- if card_data.data.dates -%}
           <p class="cardcabinet_dates"> {{card_data.data.dates}} </p>
         {%- else -%}
@@ -50,6 +44,33 @@
 
       cardDescription.style['-webkit-line-clamp'] = Math.floor(numLineHeights);
   });
+
+  var recalcMarquee = () => {
+    document
+    .querySelectorAll('.cardcabinet_cardTitle_container')
+    .forEach((titleContainer) => {
+      const containerWidth = titleContainer.offsetWidth;
+      const title = titleContainer.querySelector('.cardcabinet_cardTitle');
+      const setCSSProperty = (element, property, value) => {
+        element
+          .style
+          .setProperty(property, value);
+      };
+      if (title.offsetWidth - containerWidth > 15) {
+        const diff = title.offsetWidth - containerWidth;
+
+        setCSSProperty(title, '--marquee-offset', `calc(${containerWidth}px - 100%)`)
+        setCSSProperty(title, '--marquee-speed', `${ 250 + diff * 5}ms`)
+      } else {
+        title
+          .style
+          .setProperty('--marquee-offset', '0px');
+      }
+    });
+  }
+
+  recalcMarquee();
+
   /*
   .cardcabinet_cardDescriptionWrapper {
   width: 100%;
