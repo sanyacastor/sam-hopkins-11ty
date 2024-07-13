@@ -35,6 +35,7 @@ collections:
           label: 'Card description',
           name: 'cardDescription',
           widget: 'string',
+          pattern: ['^.{0,140}$', "Must be 140 characters or fewer"]
         }
       - { label: 'Preview description', name: 'previewDescription', widget: 'string' }
       - { label: 'Body', name: 'body', widget: 'markdown' }
