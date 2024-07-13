@@ -143,9 +143,11 @@ class previewDescriptionScroll {
       let targetCheckpointIndex = this.currentChecpointIndex + 1;
       if(targetCheckpointIndex >= this.checkpoints.length){
         targetCheckpointIndex = this.checkpoints.length - 1;
+        return false;
       }
 
       this.moveToCheckpoint(targetCheckpointIndex);
+      return true;
     }
 
     scrollLeft(){
@@ -153,11 +155,14 @@ class previewDescriptionScroll {
         return;
       
       let targetCheckpointIndex = this.currentChecpointIndex - 1;
+
       if(targetCheckpointIndex < 0){
         targetCheckpointIndex = 0;
+        return false;
       }
 
       this.moveToCheckpoint(targetCheckpointIndex);
+      return true;
     }
 
     updateFullButtonHorizontalPosition() {

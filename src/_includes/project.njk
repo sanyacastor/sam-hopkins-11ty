@@ -134,7 +134,7 @@ title: Sam Hopkins | Projects {{ project.title}}
                 //===============Navigation================
                 const scrollNextCheckpoint = () => {
                   if (projectView_scrollText_instance.isAnimating == true) 
-                    return;
+                    return true;
                   
                   let new_checkpoint_index = projectView_scrollText_instance.current_checkpoint_index;
                   new_checkpoint_index = Math.floor(new_checkpoint_index);
@@ -142,25 +142,31 @@ title: Sam Hopkins | Projects {{ project.title}}
                   let checkpoints = projectView_scrollText_instance.checkpoints;
 
                   new_checkpoint_index++;
-                  if (new_checkpoint_index >= checkpoints.length) 
+                  if (new_checkpoint_index >= checkpoints.length) {
                     new_checkpoint_index = checkpoints.length - 1;
+                    return false;
+                  }
                   
                   setScrollFraction(checkpoints[new_checkpoint_index]);
+                  return true;
                 }
 
                 const scrollPrevCheckpoint = () => {
                   if (projectView_scrollText_instance.isAnimating == true) 
-                    return;
+                    return true;
                   
                   let checkpoints = projectView_scrollText_instance.checkpoints;
                   let new_checkpoint_index = projectView_scrollText_instance.current_checkpoint_index;
                   new_checkpoint_index = Math.ceil(new_checkpoint_index);
 
                   new_checkpoint_index--;
-                  if (new_checkpoint_index < 0) 
+                  if (new_checkpoint_index < 0) {
                     new_checkpoint_index = 0;
+                    return false;
+                  }
                   
                   setScrollFraction(checkpoints[new_checkpoint_index]);
+                  return true;
                 }
 
                 const setScrollFraction = (newFrac) => {
@@ -230,7 +236,7 @@ title: Sam Hopkins | Projects {{ project.title}}
                   }
 
                   if (isDescendantOfSwiperOrOuter(e.target)) {
-                    e.preventDefault();
+                    ;
                   }
                 }, {passive: false});
 
@@ -248,17 +254,25 @@ title: Sam Hopkins | Projects {{ project.title}}
                       return;
                     }
 
-                    if (projectView_scrollText_instance.isAnimating) 
+                    if (projectView_scrollText_instance.isAnimating){
+                      e.preventDefault();
                       return;
+                    }
                     
                     var delta = e.wheelDelta
                       ? e.wheelDelta
                       : -e.deltaY;
 
+                    let scrollDone = false;
+
                     if (delta > 0) {
-                      scrollPrevCheckpoint();
+                      scrollDone = scrollPrevCheckpoint();
                     } else {
-                      scrollNextCheckpoint();
+                      scrollDone = scrollNextCheckpoint();
+                    }
+
+                    if (scrollDone) {
+                      e.preventDefault();
                     }
                   }, false);
 
