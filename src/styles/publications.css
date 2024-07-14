@@ -4,7 +4,7 @@
   gap: 60px 18px;
 
   list-style: none;
-  
+
   padding: 0;
   margin: 0;
   margin-top: 87px;
@@ -13,36 +13,41 @@
   line-height: 18.94px;
 }
 
+@media (max-width: 768px) {
+  .publications {
+    grid-template-columns: 100%;
+  }
+}
+
 .publication__title {
   margin: 0px;
 
-padding-top: 10px;
-padding-left: 13px;
-padding-right: 13px;
-padding-bottom: 10px;
+  padding-top: 10px;
+  padding-left: 13px;
+  padding-right: 13px;
+  padding-bottom: 10px;
 
-font-family: var(--font-family-karelia-bold);
-font-weight: 700;
-font-size: 14px;
-line-height: 18.94px;
+  font-family: var(--font-family-karelia-bold);
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 18.94px;
 
-height: calc(2 * 18.94px + 11px);
+  height: calc(2 * 18.94px + 20px);
 
-border-bottom: 1px solid var(--color-borders);
+  border-bottom: 1px solid var(--color-borders);
 
-display: -webkit-box;
--webkit-box-orient: vertical;
--webkit-line-clamp: 2;
-overflow: hidden;
-text-overflow: ellipsis;
-white-space: normal;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal;
 
-word-break: keep-all;
-  
+  word-break: keep-all;
 }
 
 .publication__year {
-
   height: 34px;
 
   padding-top: 6px;
@@ -53,7 +58,6 @@ word-break: keep-all;
 }
 
 .publication__isbn {
-
   height: 34px;
 
   padding-top: 6px;

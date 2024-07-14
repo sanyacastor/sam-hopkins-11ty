@@ -14,21 +14,23 @@ slug: video
 ></script>
 
 <div class="container">
-  <ul class="video-list">
-    {% for v in video %}
+  <div class="video-container">
+    <ul class="video-list">
+      {% for v in video %}
       <li class="video-list__item" data-video-url="{{v.hash}}">
         <div class="video-list__image">
-          <img src="{{ v.imageUrl }}"/>
+          <img src="{{ v.imageUrl }}" />
         </div>
         <div class="video-list__description">{{ v.description }}</div>
       </li>
-    {% endfor %}
-  </ul>
+      {% endfor %}
+    </ul>
+  </div>
 </div>
 
 <script type="module">
-  import {DraggableModal} from '/js/videoPage/draggableModal.js'
-  import {WindowController} from '/_scripts/WindowController.js'
+  import { DraggableModal } from '/js/videoPage/draggableModal.js'
+  import { WindowController } from '/_scripts/WindowController.js'
 
   const window_controller = new WindowController()
 
@@ -37,16 +39,14 @@ slug: video
   const allImages = document.querySelectorAll('.video-list__item')
 
   const createDraggbleModal = event => {
-    const hash = event
-      .target
-      .closest('.video-list__item')
-      .dataset
-      .videoUrl
+    const hash = event.target.closest('.video-list__item').dataset.videoUrl
 
     if (window_controller.isMobileVersion() == false) {
-      new DraggableModal({event, hash})
+      new DraggableModal({ event, hash })
 
-      Draggable.create(`#${hash}`, {trigger: `#${hash} .draggable-modal__toolbar`})
+      Draggable.create(`#${hash}`, {
+        trigger: `#${hash} .draggable-modal__toolbar`,
+      })
     } else {
       window.open(`https://www.youtube.com/watch?v=${hash}`, '_blank')
     }

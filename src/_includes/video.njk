@@ -4,10 +4,8 @@
     {% include "shared/htmlhead.njk" %}
   </head>
   <body>
-    <div class="global-container">
-      {% include 'header.njk' %}
-      {{ content | safe }}
-    </div>
+    {% include 'header.njk' %}
+    {{ content | safe }}
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer ></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/Draggable.min.js" defer ></script>
   </body>

@@ -20,10 +20,8 @@
     <link rel="canonical" href="https://{{ env.DOMAIN_NAME }}/{{ slug }}">
   </head>
   <body>
-    <div class="global-container">
       {% include 'header.njk' %}
       {{ content | safe }}
-    </div>
   </body>
   {% include "shared/netlifyIdentity.njk" %}
 </html>

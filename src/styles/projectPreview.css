@@ -70,7 +70,7 @@
     width: 100%;
     height: 100%;
 
-    padding-bottom: 85px;
+    padding-bottom: 16px;
     padding-top: 79px;
 
     column-fill: unset;
@@ -330,7 +330,7 @@ body::-webkit-scrollbar {
 
 .projectPreview_Grid {
   grid-template-columns: 443px 1fr;
-  grid-template-rows: 203px 416px;
+  grid-template-rows: 216px 416px;
 
   display: grid;
   gap: 1px;

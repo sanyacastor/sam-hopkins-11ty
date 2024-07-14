@@ -13,19 +13,20 @@ tags: images
       class="search-form__autocomplete search-form__autocomplete--hidden"
     ></div>
   </form>
-
-  <section class="images-list">
-    {% for project in projects %}
-      {% for image in project.images %}
-        <div
+  <div class="image-list-container">
+    <section class="images-list">
+      {% for project in projects %}
+        {% for image in project.images %}
+          <div
       class="images-list__item images-list__item--container"
       data-project="{{ project.title }}"
     >
-          {% image image.url image.alt 'preview_image' '(min-width: 0) 100px, 600px' %}
-        </div>
+            {% image image.url image.alt 'preview_image' '(min-width: 0) 100px, 600px' %}
+          </div>
+        {% endfor %}
       {% endfor %}
-    {% endfor %}
-  </section>
+    </section>
+  </div>
 </div>
 
 <div class="slider-modal slider-modal--hidden">

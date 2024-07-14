@@ -46,6 +46,7 @@ class previewImageSwiper {
     if (isMobileVerison) {
       this.swiper.params.slidesPerView = 1
       this.swiperWrapper.style.width = window.innerWidth + 'px'
+      this.swiper.update()
       return
     }
 

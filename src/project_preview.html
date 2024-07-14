@@ -15,12 +15,12 @@ pagination:
 
 {% set card_data = {
   data: {
-      targetUrl: project.url,
-      title: preview.title,
-      dates: preview.dates,
-      collaborators: preview.collaborators,
-      cardDescription: preview.cardDescription,
-      isNonClickable: true
+    targetUrl: project.url,
+    title: preview.title,
+    dates: preview.dates,
+    collaborators: preview.collaborators,
+    cardDescription: preview.cardDescription,
+    isNonClickable: true
   }
 } %}
 
@@ -32,28 +32,28 @@ pagination:
           <p class="preview_bookmark_text">Project Preview</p>
           <a href="/" class="navigation-button close-button preview_close_button" id="preview_closeCross"></a>
         </div>
-        <div class="bookmark_empty">
-        </div>
+        <div class="bookmark_empty"></div>
       </div>
       <div class="preview-grid-card" id="preview-grid-card">
         {% include 'summary-card.njk' %}
       </div>
       <div class="preview-grid-images" id="preview-grid-images">
-          <div class="swiper mySwiper">
-            <div class="swiper-wrapper previewPage" id="preview_swiperWrapper">
-              {% for sliderImage in preview.images %}
-                <div class="swiper-slide">
-                  {% if sliderImage.url %}
-                    {% image sliderImage.url, sliderImage.alt %}
-                  {% endif %}
-                </div>
-              {% endfor %}
-            </div>
-            <div class="swiper-button-close"></div>
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-pagination"></div>
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper previewPage" id="preview_swiperWrapper">
+            {% for sliderImage in preview.images %}
+              <div class="swiper-slide">
+                {% if sliderImage.url %}
+                  {% image sliderImage.url,
+                  sliderImage.alt %}
+                {% endif %}
+              </div>
+            {% endfor %}
           </div>
+          <div class="swiper-button-close"></div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-pagination"></div>
+        </div>
       </div>
       <div class="preview-grid-text">
         <div class = "projectPreview_mainTextContainer">
@@ -63,6 +63,7 @@ pagination:
                 <font>
                   {{preview.previewDescription}}
                 </font>
+                  <a href="{{ "/projects/" ~ preview.title | slug }}" class="full-project-button--mobile">full project</a>
               </div>
               <div class="projectPreview_phantomColumn" id = "phantomColumn">
                 <div class="projectPreview_phantomTrigger"  id = "phantomTrigger"></div>
@@ -78,7 +79,7 @@ pagination:
           </div>
           <a href="{{ "/projects/" ~ preview.title | slug }}" class="full-project-button" id="preview_buttonFullProject">full project</a>
         </div>
-      </div>  
+      </div>
     </div>
   </div>
 </article>
@@ -92,7 +93,7 @@ pagination:
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
 
 <script type="module">
-  import { WindowController } from '/_scripts/WindowController.js'
+  import {WindowController} from '/_scripts/WindowController.js'
 
   var previewDescriptionScrollInstance;
   var previewImageSwiperInstance;
@@ -100,17 +101,16 @@ pagination:
 
   var windowControllerInstance;
   var previewNavigationPanelInstance;
-  
-  projectPreview_outer.addEventListener("scroll", function() {
+
+  projectPreview_outer.addEventListener("scroll", function () {
     previewDescriptionScrollInstance.updateButtonFoldState();
   });
 
-
-  function subscribeToFullscreen(){
+  function subscribeToFullscreen() {
     const mySwiperElement = document.querySelector('.mySwiper');
 
     if (mySwiperElement) {
-      mySwiperElement.addEventListener('click', function(event) {
+      mySwiperElement.addEventListener('click', function (event) {
         /* ignore clicks ontop of the navigation buttons */
         if (event.target.classList.contains('swiper-button-next')) {
           return;
@@ -122,10 +122,11 @@ pagination:
         previewImageSwiperInstance.switch_fullscreen();
       });
 
-
-      document.addEventListener("keydown", function(event) {
+      document.addEventListener("keydown", function (event) {
         if (event.key === "Escape") {
-          mySwiperElement.classList.remove("fullscreen");
+          mySwiperElement
+            .classList
+            .remove("fullscreen");
         }
       });
 
@@ -142,20 +143,10 @@ pagination:
     windowControllerInstance = new WindowController();
     let isMobileVersion = windowControllerInstance.isMobileVersion();
 
-    previewImageSwiperInstance
-                 = new previewImageSwiper('mySwiper',
-                                          'preview_swiperWrapper');
-    previewNavigationPanelInstance
-                 = new previewNavigationPanel('preview_descriptionNavButton_left',
-                                              'preview_descriptionNavButton_right',
-                                              'preview_descriptionNavButton_close');
+    previewImageSwiperInstance = new previewImageSwiper('mySwiper', 'preview_swiperWrapper');
+    previewNavigationPanelInstance = new previewNavigationPanel('preview_descriptionNavButton_left', 'preview_descriptionNavButton_right', 'preview_descriptionNavButton_close');
 
-    previewDescriptionScrollInstance
-                 = new previewDescriptionScroll('projectPreview_outer',
-                                            'preview_scrollableContent',
-                                            'phantomColumn',
-                                            'preview_buttonFullProject',
-                                            gsapTwiner);
+    previewDescriptionScrollInstance = new previewDescriptionScroll('projectPreview_outer', 'preview_scrollableContent', 'phantomColumn', 'preview_buttonFullProject', gsapTwiner);
 
     assignButtonsEvents();
 
@@ -168,10 +159,12 @@ pagination:
 
   });
 
-  function hideShowSwiperBlock(){
-    var numSlides = document.querySelectorAll('.swiper-slide').length;
+  function hideShowSwiperBlock() {
+    var numSlides = document
+      .querySelectorAll('.swiper-slide')
+      .length;
     var previewGridImages = document.getElementById('preview-grid-images');
-    
+
     if (numSlides < 1) {
       previewGridImages.style.display = 'none';
     } else {
@@ -179,9 +172,9 @@ pagination:
     }
   }
 
-  window.addEventListener('load', function() {});
+  window.addEventListener('load', function () {});
 
-  window.addEventListener('resize', function() {
+  window.addEventListener('resize', function () {
     let isMobileVersion = windowControllerInstance.isMobileVersion();
 
     previewDescriptionScrollInstance.onResize();
@@ -190,39 +183,38 @@ pagination:
     previewNavigationPanelInstance.update(previewDescriptionScrollInstance);
   });
 
-  document.addEventListener('scroll', function() {
-    if(window.scrollY > 650)
+  document.addEventListener('scroll', function () {
+    if (window.scrollY > 650) 
       document.documentElement.dataset.scroll = window.scrollY;
-    else
+    else 
       document.documentElement.dataset.scroll = 0;
-
-    if(windowControllerInstance.isMobileVersion()){
+    
+    if (windowControllerInstance.isMobileVersion()) {
       if (window.scrollY === 0) {
         console.log("mobile scrolling top");
-      }
-      else{
+      } else {
         console.log("mobile scrolling");
       }
-    }
-    else
+    } else 
       console.log("desktop scrolling");
-  });
+    }
+  );
 
   document
     .getElementById('projectPreview_outer')
     .addEventListener('wheel', function (e) {
-      if(windowControllerInstance.isMobileVersion())
+      if (windowControllerInstance.isMobileVersion()) 
         return;
-
+      
       var delta = e.wheelDelta
         ? e.wheelDelta
         : -e.deltaY;
-      
-      if(delta>0)
-        previewDescriptionScrollInstance.scrollLeft();
-      else
-        previewDescriptionScrollInstance.scrollRight();
 
+      if (delta > 0) 
+        previewDescriptionScrollInstance.scrollLeft();
+      else 
+        previewDescriptionScrollInstance.scrollRight();
+      
       previewNavigationPanelInstance.update(previewDescriptionScrollInstance);
 
       e.preventDefault();
@@ -230,38 +222,46 @@ pagination:
 
   document
     .getElementById('preview_swiperWrapper')
-    .addEventListener('wheel', function(e) {
-      if(windowControllerInstance.isMobileVersion())
+    .addEventListener('wheel', function (e) {
+      if (windowControllerInstance.isMobileVersion()) 
         return;
+      
+      var delta = e.wheelDelta
+        ? e.wheelDelta
+        : -e.deltaY;
 
-      var delta = e.wheelDelta ? e.wheelDelta : -e.deltaY;
-
-      if(delta > 0){
+      if (delta > 0) {
         previewImageSwiperInstance.slidePrev();
       } else {
         previewImageSwiperInstance.slideNext();
       }
 
       previewNavigationPanelInstance.update(previewDescriptionScrollInstance);
-      
+
       e.preventDefault();
     });
 
-  function assignButtonsEvents(){
-    document.getElementById('preview_descriptionNavButton_left').addEventListener('click', function() {
-      previewDescriptionScrollInstance.scrollLeft();
-      
-      previewNavigationPanelInstance.update(previewDescriptionScrollInstance);
-    });
+  function assignButtonsEvents() {
+    document
+      .getElementById('preview_descriptionNavButton_left')
+      .addEventListener('click', function () {
+        previewDescriptionScrollInstance.scrollLeft();
 
-    document.getElementById('preview_descriptionNavButton_right').addEventListener('click', function() {
-      previewDescriptionScrollInstance.scrollRight();
-      
-      previewNavigationPanelInstance.update(previewDescriptionScrollInstance);
-    });
+        previewNavigationPanelInstance.update(previewDescriptionScrollInstance);
+      });
 
-    document.getElementById('preview_descriptionNavButton_close').addEventListener('click', function() {
-      window.location.href = '/';
-    });
+    document
+      .getElementById('preview_descriptionNavButton_right')
+      .addEventListener('click', function () {
+        previewDescriptionScrollInstance.scrollRight();
+
+        previewNavigationPanelInstance.update(previewDescriptionScrollInstance);
+      });
+
+    document
+      .getElementById('preview_descriptionNavButton_close')
+      .addEventListener('click', function () {
+        window.location.href = '/';
+      });
   }
 </script>
