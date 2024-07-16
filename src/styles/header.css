@@ -102,6 +102,7 @@ header {
 .links-list-item__menu {
   display: none;
   width: 54px;
+  min-width: 54px;
   align-items: center;
   justify-content: center;
   padding-bottom: 0;
