@@ -62,7 +62,7 @@ collections:
     create: true
     slug: '{{slug}}'
     fields:
-      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Title', name: 'title', widget: 'string', pattern: ['^.{0,140}$', "Must be 140 characters or fewer"]}
       - { label: 'Year', name: 'year', widget: 'string' }
       - { label: 'ISBN', name: 'isbn', widget: 'string' }
       - {
