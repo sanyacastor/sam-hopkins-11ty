@@ -57,4 +57,16 @@ class projectView_swiperController {
 
     this.swiper.slideTo(target_index);
   }
+
+  canSwipe(direction) {
+    if(direction < 0) { //forward
+      if(this.swiper.activeIndex < this.swiper.slides.length - 1)
+        return true;
+    } else { //backward
+      if(this.swiper.activeIndex > 0)
+        return true;
+    }
+
+    return false;
+  }
 }

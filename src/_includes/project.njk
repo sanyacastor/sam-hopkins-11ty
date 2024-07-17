@@ -248,6 +248,17 @@ title: Sam Hopkins | Projects {{ project.title}}
                 }
 
                 document
+                  .getElementById('projectView_swiperWrapper')
+                  .addEventListener('mouseenter', function (e) {
+                    document.querySelector('body').classList.add('bodyPreventScroll');
+                  });
+                document
+                  .getElementById('projectView_swiperWrapper')
+                  .addEventListener('mouseleave', function (e) {
+                    document.querySelector('body').classList.remove('bodyPreventScroll');
+                  });
+
+                document
                    .getElementById('projectView_outer')
                    .addEventListener('mouseenter', function (e) {
                         document.querySelector('body').classList.add('bodyPreventScroll');
@@ -297,6 +308,15 @@ title: Sam Hopkins | Projects {{ project.title}}
                     var delta = e.wheelDelta
                       ? e.wheelDelta
                       : -e.deltaY;
+
+
+                    if (projectView_swiperController_instance.canSwipe(delta)) {
+                      e.preventDefault();
+                      document.querySelector('body').classList.add('bodyPreventScroll');
+                    } else {
+                      document.querySelector('body').classList.remove('bodyPreventScroll');
+                      return;
+                    }
 
                     if (delta > 0) {
                       projectView_swiperController_instance
