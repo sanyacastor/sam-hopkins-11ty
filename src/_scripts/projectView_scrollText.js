@@ -185,15 +185,50 @@ class projectView_scrollText {
     if(this.isAnimating) return;
 
     let columnGap = parseInt(getComputedStyle(this.hscroll_content).columnGap);
+    this.isAnimating = true;
     
     this.gsap_instance.to( this.hscroll_outer, {
         scrollLeft: newFraction * (this.hscroll_outer.scrollWidth + columnGap/2),
         duration: 0.5, ease: "power2.inOut",
+
         onComplete: () => {
           this.isAnimating = false; //!!!PELIGRO!!! return it
         }
     });
-    this.isAnimating = true;
+  }
+  
+  canScroll(direction) {
+    if(direction > 0){
+      if(this.current_checkpoint_index < this.checkpoints.length - 1)
+        return true;
+    } else {
+      if(this.current_checkpoint_index > 0)
+        return true;
+    }
+
+    return false;
+  }
+
+  canManualScroll(direction) {
+    let scrollLeft = this.hscroll_outer.scrollLeft;
+    let scrollWidth = this.hscroll_outer.scrollWidth;
+    let clientWidth = this.hscroll_outer.clientWidth;
+
+    if(direction > 0){
+      if(scrollLeft + clientWidth < scrollWidth)
+        return true;
+    } else {
+      if(scrollLeft > 0)
+        return true;
+    }
+
+    return false;
+  }
+
+  manualScrollHappened() {
+    this.current_checkpoint_index = this.get_closest_checkpoint_index(this.hscroll_outer.scrollLeft / (this.hscroll_outer.scrollWidth + 1));
+    this.highlight_current_checkpoint();
+    this.update_navarrow_state();
   }
 }
 

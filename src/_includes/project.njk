@@ -248,33 +248,44 @@ title: Sam Hopkins | Projects {{ project.title}}
                 }
 
                 document
-                  .getElementById('projectView_outer')
-                  .addEventListener('wheel', function (e) {
-                    if (windowController_Instance.isMobileVersion()) {
-                      return;
-                    }
+                   .getElementById('projectView_outer')
+                   .addEventListener('mouseenter', function (e) {
+                        document.querySelector('body').classList.add('bodyPreventScroll');
+                   });
+                document
+                   .getElementById('projectView_outer')
+                   .addEventListener('mouseleave', function (e) {
+                      document.querySelector('body').classList.remove('bodyPreventScroll');
+                    });
 
-                    if (projectView_scrollText_instance.isAnimating){
-                      e.preventDefault();
-                      return;
-                    }
-                    
+                document
+                   .getElementById('projectView_outer')
+                   .addEventListener('wheel', function (e) {
+                      if (windowController_Instance.isMobileVersion()) {
+                        return;
+                      }
+               
                     var delta = e.wheelDelta
                       ? e.wheelDelta
                       : -e.deltaY;
+                    delta *= -1;
+                    
+                    var canScroll = projectView_scrollText_instance.canManualScroll(delta);
 
-                    let scrollDone = false;
-
-                    if (delta > 0) {
-                      scrollDone = scrollPrevCheckpoint();
-                    } else {
-                      scrollDone = scrollNextCheckpoint();
-                    }
-
-                    if (scrollDone) {
+                    if(canScroll){ //update body class
                       e.preventDefault();
+                      document.querySelector('body').classList.add('bodyPreventScroll');
                     }
-                  }, false);
+                    else
+                      document.querySelector('body').classList.remove('bodyPreventScroll');
+
+                    if(canScroll){ //scroll
+                      document.getElementById('projectView_outer').scrollLeft += delta;
+                      projectView_scrollText_instance.manualScrollHappened();
+                    } else {
+                      document.querySelector('body').scroll += delta;
+                    }
+                   });
 
                 document
                   .getElementById('projectView_swiperWrapper')
