@@ -18,12 +18,10 @@
     <link rel="canonical" href="https://{{ env.DOMAIN_NAME }}/preview/{{ preview.title | slug }}">
   </head>
   <body>
-    <div class="global-container">
-      <div class='container'>
-        {% include 'header.njk' %}
-      </div>
-      {{ content | safe }}
+    <div class='container'>
+      {% include 'header.njk' %}
     </div>
+    {{ content | safe }}
   </body>
   {% include "shared/netlifyIdentity.njk" %}
   {% include "shared/swiperScripts.njk" %}

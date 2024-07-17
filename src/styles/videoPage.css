@@ -1,3 +1,20 @@
+.video-container {
+  width: 100%;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 1420px) {
+  .video-container {
+    width: calc(443px + 443px + 18px);
+  }
+}
+
+@media screen and (max-width: 940px) {
+  .video-container {
+    width: calc(443px);
+  }
+}
+
 .video-list {
   list-style: none;
   padding-left: 0;
@@ -9,7 +26,7 @@
 
   margin-top: 97px;
 
-  justify-content: center;
+  justify-content: flex-start;
 }
 
 .video-list__item {

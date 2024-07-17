@@ -4,13 +4,19 @@
   gap: 60px 18px;
 
   list-style: none;
-  
+
   padding: 0;
   margin: 0;
   margin-top: 87px;
 
   font-size: 14px;
   line-height: 18.94px;
+}
+
+@media (max-width: 768px) {
+  .news-list {
+    grid-template-columns: 100%;
+  }
 }
 
 .news__title {
@@ -25,7 +31,7 @@
   line-height: 18.94px;
 
   border-bottom: 1px solid var(--color-borders);
-  
+
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;

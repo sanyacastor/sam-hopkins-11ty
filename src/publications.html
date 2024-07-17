@@ -5,7 +5,8 @@ slug: publications
 ---
 <div class="container">
   <ul class="publications">
-    {% for publication in collections.publications %}
+    {% assign sortedPublications = collections.publications | sort : 'data.year' | reverse %}
+    {% for publication in sortedPublications %}
       <li class="publication" publication_img="{{publication.data.image}}">
         <h3 class="publication__title">{{ publication.data.title }}</h3>
         <div class="publication__year">Year: {{ publication.data.year }}</div>

@@ -1,6 +1,6 @@
 <header>
-  <div class="container">
-    <nav class="header-nav">
+  <nav class="header-nav">
+    <div class="container">
       <ul class="header-nav__links-list">
         <li class="header-nav__links-list-item header-nav__links-list-item--logo">
           <a class="header-nav__link" href="/projects">Sam Hopkins</a>
@@ -21,14 +21,15 @@
           </button>
         </li>
       </ul>
-    </nav>
-    <div class="header-mobile-menu header-mobile-menu--hidden">
-      {% for link in constants.menuItems %}
-        <li class="header-nav__links-list-item header-nav__links-list-item--mobile {%if link.slug in page.url %}header-nav__links-list-item--active{% endif %}" >
-          <a class="header-nav__link" href={{ link.slug }}>{{ link.title }}</a>
-        </li>
-      {% endfor %}
+
     </div>
+  </nav>
+  <div class="header-mobile-menu header-mobile-menu--hidden">
+    {% for link in constants.menuItems %}
+      <li class="header-nav__links-list-item header-nav__links-list-item--mobile {%if link.slug in page.url %}header-nav__links-list-item--active{% endif %}" >
+        <a class="header-nav__link" href={{ link.slug }}>{{ link.title }}</a>
+      </li>
+    {% endfor %}
   </div>
 </header>
 
