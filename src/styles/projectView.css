@@ -180,8 +180,11 @@
 }
 
 .swiper-slide > picture > img {
-  /*!!!! Boss forbids to use such shit !!!!!*/
   width: 100%;
+  min-width: 100%;
+  height: auto;
+  object-fit: cover;
+  /* object-position: center; */
 }
 
 .swiper-wrapper {

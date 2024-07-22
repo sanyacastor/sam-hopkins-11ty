@@ -371,9 +371,13 @@ body::-webkit-scrollbar {
 
 @media screen and (max-width: 800px) {
   .preview-grid-images {
-    height: 300px;
+    height: 200px;
     grid-column: 1;
     grid-row: 2;
+  }
+
+  #projectPreview_outer {
+    padding-bottom: 0;
   }
 }
 

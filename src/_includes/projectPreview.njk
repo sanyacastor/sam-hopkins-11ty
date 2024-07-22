@@ -18,9 +18,7 @@
     <link rel="canonical" href="https://{{ env.DOMAIN_NAME }}/preview/{{ preview.title | slug }}">
   </head>
   <body>
-    <div class='container'>
-      {% include 'header.njk' %}
-    </div>
+    {% include 'header.njk' %}
     {{ content | safe }}
   </body>
   {% include "shared/netlifyIdentity.njk" %}
