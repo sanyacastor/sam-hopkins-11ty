@@ -22,7 +22,9 @@ previewDescription: My idea for this project was to explore the state of being
   material; a spectrum of memories, encompassing the wildly inaccurate, the
   highly perceptive and those that simply do not look.
 relatedProjects:
-  - DSFASDFWETEWR324234A
+  - ZajWPmOTR332QgBuWv4Wg
+  - Qp9NWlK9XXEVQZhJWfSWp
+  - 97qYsNwiTFwI5P4S8EAdD
 ---
 ![](/assets/6-hours-for-6-day_01_video-documentation_still_2006_-c-hopkins-0.jpg "caption of the first image")
 
