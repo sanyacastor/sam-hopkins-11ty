@@ -275,11 +275,16 @@ title: Sam Hopkins | Projects {{ project.title}}
                       if (windowController_Instance.isMobileVersion()) {
                         return;
                       }
-               
+
+                    var deltaX = e.deltaX;
+
                     var delta = e.wheelDelta
                       ? e.wheelDelta
                       : -e.deltaY;
                     delta *= -1;
+
+                    if(deltaX != 0)
+                      delta = deltaX; //For touchpad horizontal scrolling
                     
                     var canScroll = projectView_scrollText_instance.canManualScroll(delta);
 
