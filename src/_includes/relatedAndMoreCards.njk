@@ -34,7 +34,9 @@
               relatedProjects: collection_project.data.relatedProjects
           }
         } -%}
-        {%- include "summary-card.njk" -%}
+        <a href="{{qpreviewURLfull}}" class="summary-card-wrap dynamic-wrap">
+          {%- include "summary-card.njk" -%}
+        </a>
       {%- endif -%}
     {%- endfor -%}
   </div>

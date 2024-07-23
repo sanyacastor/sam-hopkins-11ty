@@ -12,7 +12,9 @@ slug: projects
         {% assign previewURL = project.data.title | slug %}
         {% assign previewURL = '/preview/' | append: previewURL %}
         {% assign card_data = project %}
-        {% include "summary-card.njk" with card_data %}
+        <a href="{{previewURL}}" class="summary-card-wrap dynamic-wrap">
+          {% include "summary-card.njk" with card_data %}
+        </a>
       {% endfor %}
     </div>
   </div>

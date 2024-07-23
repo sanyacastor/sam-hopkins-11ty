@@ -53,7 +53,9 @@ title: Sam Hopkins | Projects {{ project.title}}
           <div class="projectView_container">
             <div class="projectView_sideBar">
               <div class="projectView_cardSlot">
-                {% include 'summary-card.njk'  %}
+                <div class="summary-card-wrap static-wrap">
+                  {% include 'summary-card.njk'  %}
+                </div>
               </div>
               <div class="projectView_photoSlot" id = 'projectView_photoSlot'>
                 <div class="swiper mySwiper">

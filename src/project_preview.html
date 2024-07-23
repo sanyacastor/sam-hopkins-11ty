@@ -35,7 +35,9 @@ pagination:
         <div class="bookmark_empty"></div>
       </div>
       <div class="preview-grid-card" id="preview-grid-card">
-        {% include 'summary-card.njk' %}
+        <div class="summary-card-wrap dynamic-wrap">
+          {% include 'summary-card.njk' %}
+        </div>
       </div>
       <div class="preview-grid-images" id="preview-grid-images">
         <div class="swiper mySwiper">
@@ -63,7 +65,7 @@ pagination:
                 <font>
                   {{preview.previewDescription}}
                 </font>
-                  <a href="{{ "/projects/" ~ preview.title | slug }}" class="full-project-button--mobile">full project</a>
+                <a href="{{ "/projects/" ~ preview.title | slug }}" class="full-project-button--mobile">full project</a>
               </div>
               <div class="projectPreview_phantomColumn" id = "phantomColumn">
                 <div class="projectPreview_phantomTrigger"  id = "phantomTrigger"></div>
@@ -150,7 +152,6 @@ pagination:
 
     assignButtonsEvents();
 
-    previewImageSwiperInstance.onLoad(isMobileVersion);
     previewDescriptionScrollInstance.onload();
     previewNavigationPanelInstance.update(previewDescriptionScrollInstance);
 
@@ -172,33 +173,20 @@ pagination:
     }
   }
 
-  window.addEventListener('load', function () {});
-
   window.addEventListener('resize', function () {
     let isMobileVersion = windowControllerInstance.isMobileVersion();
 
     previewDescriptionScrollInstance.onResize();
-    previewImageSwiperInstance.recalc(isMobileVersion);
-
     previewNavigationPanelInstance.update(previewDescriptionScrollInstance);
   });
 
   document.addEventListener('scroll', function () {
-    if (window.scrollY > 650) 
+    if (window.scrollY > 650) {
       document.documentElement.dataset.scroll = window.scrollY;
-    else 
+    } else {
       document.documentElement.dataset.scroll = 0;
-    
-    if (windowControllerInstance.isMobileVersion()) {
-      if (window.scrollY === 0) {
-        console.log("mobile scrolling top");
-      } else {
-        console.log("mobile scrolling");
-      }
-    } else 
-      console.log("desktop scrolling");
     }
-  );
+  });
 
   document
     .getElementById('projectPreview_outer')

@@ -130,8 +130,7 @@
 }
 
 .projectView_cardSlot {
-  width: 443px;
-  height: 203px;
+  width: 100%;
   background-color: transparent;
   margin-top: 85px;
 }

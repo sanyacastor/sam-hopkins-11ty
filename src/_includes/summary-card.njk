@@ -1,76 +1,56 @@
-{% if card_data.data.targetUrl %}
-  <a href="{{card_data.data.targetUrl}}" class="summary-card-wrap dynamic-wrap">
-  {% else %}
-    {%- if card_data.data.isNonClickable == true -%}
-      <a href="{{previewURL}}" class="summary-card-wrap static-wrap">
-      {%- else -%}
-        <a href="{{previewURL}}" class="summary-card-wrap dynamic-wrap">
-        {% endif %}
-
-      {% endif %}
-      <div class="cardcabinet_summaryCard">
-        <!-- otherwise it renders <p></p>-->
-        <div class = "cardcabinet_oulineBox">
-          <div class="cardcabinet_cardTitle_container cardcabinet_cardTitle_container--marquee">
-            <h2 class="cardcabinet_cardTitle">{{card_data.data.title}}</h2>
-          </div>
-          {%- if card_data.data.dates -%}
-            <p class="cardcabinet_dates">
-              {{card_data.data.dates}}
-            </p>
-          {%- else -%}
-            <p class="cardcabinet_dates"> unknown year </p>
-          {%- endif -%}
-          <div class="cardcabinet_collaborators">
-            {%- if card_data.data.collaborators.length > 0  -%} 
+<div class="cardcabinet_summaryCard">
+  <!-- otherwise it renders <p></p>-->
+  <div class = "cardcabinet_oulineBox">
+    <div class="cardcabinet_cardTitle_container cardcabinet_cardTitle_container--marquee">
+      <h2 class="cardcabinet_cardTitle">{{card_data.data.title}}</h2>
+    </div>
+    {%- if card_data.data.dates -%}
+      <p class="cardcabinet_dates">
+        {{card_data.data.dates}}
+      </p>
+    {%- else -%}
+      <p class="cardcabinet_dates"> unknown year </p>
+    {%- endif -%}
+    <div class="cardcabinet_collaborators">
+      {%- if card_data.data.collaborators.length > 0  -%} 
             with: {{card_data.data.collaborators}}
-            {%- else -%}
+      {%- else -%}
             personal
           {%- endif -%}
-          </div>
-          <div class="cardcabinet_cardDescriptionWrapper">
-            <div class="cardcabinet_cardDescription">{{card_data.data.cardDescription}}</div>
-          </div>
-        </div>
-      </div>
-    </a>
-    <script type='module'>
-      const truncateDescription = () => document
-        .querySelectorAll('.cardcabinet_cardDescription')
-        .forEach((cardDescription) => {
-          if (cardDescription.innerHTML.length > 140) {
-            cardDescription.innerHTML = cardDescription
-              .innerHTML
-              .slice(0, 140) + '...';
-          }
-        });
+    </div>
+    <div class="cardcabinet_cardDescriptionWrapper">
+      <div class="cardcabinet_cardDescription">{{card_data.data.cardDescription}}</div>
+    </div>
+  </div>
+</div>
 
-      const recalcMarquee = () => document
-        .querySelectorAll('.cardcabinet_cardTitle_container')
-        .forEach((titleContainer) => {
-          const containerWidth = titleContainer.offsetWidth;
-          const title = titleContainer.querySelector('.cardcabinet_cardTitle');
-          const setCSSProperty = (element, property, value) => {
-            element
-              .style
-              .setProperty(property, value);
-          };
-          if (title.offsetWidth - containerWidth > 15) {
-            const diff = title.offsetWidth - containerWidth;
+<script type='module'>
+  const recalcMarquee = () => document
+    .querySelectorAll('.cardcabinet_cardTitle_container')
+    .forEach((titleContainer) => {
+      const containerWidth = titleContainer.offsetWidth;
+      const title = titleContainer.querySelector('.cardcabinet_cardTitle');
+      const setCSSProperty = (element, property, value) => {
+        element
+          .style
+          .setProperty(property, value);
+      };
+      if (title.offsetWidth - containerWidth > 15) {
+        const diff = title.offsetWidth - containerWidth;
 
-            setCSSProperty(title, '--marquee-offset', `calc(${containerWidth}px - 100%)`)
-            setCSSProperty(title, '--marquee-speed', `${ 250 + diff * 5}ms`)
-          } else {
-            title
-              .style
-              .setProperty('--marquee-offset', '0px');
-          }
-        });
+        setCSSProperty(title, '--marquee-offset', `calc(${containerWidth}px - 100%)`)
+        setCSSProperty(title, '--marquee-speed', `${ 250 + diff * 5}ms`)
+      } else {
+        title
+          .style
+          .setProperty('--marquee-offset', '0px');
+      }
+    });
 
-      window.addEventListener('resize', recalcMarquee);
+  window.addEventListener('resize', recalcMarquee);
 
-      window.addEventListener("DOMContentLoaded", () => {
-        recalcMarquee();
-        truncateDescription();
-      });
-    </script>
+  window.addEventListener("DOMContentLoaded", () => {
+    recalcMarquee();
+    truncateDescription();
+  });
+</script>
