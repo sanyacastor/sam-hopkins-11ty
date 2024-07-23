@@ -16,18 +16,20 @@ class previewImageSwiper {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
       },
+      breakpoints: {
+        0: {
+          slidesPerView: 1,
+        },
+        1000: {
+          slidesPerView: 2,
+        },
+      }
     })
 
     this.swiperElement = document.getElementsByClassName(classname_swiper)[0]
     this.swiperWrapper = document.getElementById(id_swiperWrapper)
   }
   destructor() {}
-  onLoad(isMobileVerison) {
-    this.recalc(isMobileVerison)
-  }
-  recalc(isMobileVerison) {
-    this.recalcSwiperImages(isMobileVerison)
-  }
 
   slideNext() {
     this.swiper.slideNext()
@@ -36,31 +38,6 @@ class previewImageSwiper {
     this.swiper.slidePrev()
   }
 
-  recalcSwiperImages(isMobileVerison) {
-    if (typeof isMobileVerison === 'undefined')
-      isMobileVerison = this.isMobileVerison;
-    this.isMobileVerison = isMobileVerison;
-    
-    let boxWidth = this.swiperElement.offsetWidth
-
-    if (isMobileVerison) {
-      this.swiper.params.slidesPerView = 1
-      this.swiperWrapper.style.width = window.innerWidth + 'px'
-      this.swiper.update()
-      return
-    }
-
-    if(this.fullscreen === true){
-      this.swiper.params.slidesPerView = 1
-      return;  
-    }
-
-    if (boxWidth > 526) {
-      this.swiper.params.slidesPerView = 2
-    } else {
-      this.swiper.params.slidesPerView = 1
-    }
-  }
 
   switch_fullscreen() {
     let buttonClose = document.querySelector(".swiper-button-close");
@@ -72,7 +49,6 @@ class previewImageSwiper {
       buttonClose.style.display = "none";
 
       this.swiper.autoplay.start();
-      this.recalcSwiperImages();
     } else {
       this.fullscreen = true;
 
