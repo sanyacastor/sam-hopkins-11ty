@@ -25,7 +25,7 @@ export class DraggableModal {
         <button class='draggable-modal__close-button'>X</button>
       </div>
       <img class='modal-image-preview'
-      src='${event.target.src.replace('300w', '600w')}' alt='modal_image'>
+      src='${event.target.src}' alt='modal_image'>
     `
 
     this.closeButton = this.modal.querySelector(
