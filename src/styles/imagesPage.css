@@ -108,7 +108,7 @@
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 10;
+  z-index: 3000;
 
   background: rgba(229, 240, 234, 1);
   width: 100vw;
@@ -260,7 +260,7 @@
 .slider-modal__close-button {
   cursor: pointer;
   position: absolute;
-  z-index: 10;
+  z-index: 3001;
 
   width: 40px;
   height: 40px;
