@@ -33,7 +33,7 @@ previewDescription: "Simba Mbili: Potential Histories of the Maneaters of Tsavo
   transformative practices in and beyond museums and the International
   Inventories Programme (IIP)"
 ---
-"For as-yet-unknown uses"(1): Potential Histories and Futures of the Man-Eaters of Tsavo
+## "For as-yet-unknown uses"(1): Potential Histories and Futures of the Man-Eaters of Tsavo
 
 Sam Hopkins and Marian Nur Goni
 
