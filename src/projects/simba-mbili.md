@@ -2,7 +2,7 @@
 id: Qp9NWlK9XXEVQZhJWfSWp
 title: Simba Mbili
 dates: ongoing
-link: https://reconnecting.art/en/research-projects/the-lions
+link: https://www.transcript-verlag.de/978-3-8376-7194-0/virtuelle-tiere/?c=311033778
 collaborators: Marian Nur Goni
 cardDescription: A podcast/research project about the powerful imaginaries of
   the lions of Tsavo, the man-eaters who stalled the Kenya-Uganda railway in
@@ -36,12 +36,6 @@ previewDescription: "Simba Mbili: Potential Histories of the Maneaters of Tsavo
 "For as-yet-unknown uses"(1): Potential Histories and Futures of the Man-Eaters of Tsavo
 
 Sam Hopkins and Marian Nur Goni
-
-
-
-(originally published here: https://www.transcript-verlag.de/978-3-8376-7194-0/virtuelle-tiere/?c=311033778)
-
-
 
 
 
