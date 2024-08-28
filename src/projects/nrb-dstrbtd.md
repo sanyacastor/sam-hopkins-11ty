@@ -3,6 +3,7 @@ id: vDbPeVO3j1xeydEABqaBw
 title: NRB DSTRBTD
 dates: "2024"
 link: https///www.iwalewabooks.com/product-page/nrb-dstrbtd
+collaborators: ""
 cardDescription: An artist book which untangles political narratives of ethnic
   identity from the way in which identities are experienced in day to day life
 previewDescription: "Nairobi Distributed is book which tries to disentangle
