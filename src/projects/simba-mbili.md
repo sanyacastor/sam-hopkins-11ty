@@ -32,6 +32,7 @@ previewDescription: "Simba Mbili: Potential Histories of the Maneaters of Tsavo
   working.  -- Supported by: Reconnecting Objects - epistemic plurality and
   transformative practices in and beyond museums and the International
   Inventories Programme (IIP)"
+PDF File: /assets/03_simba-mbili_project-page.pdf
 ---
 ## "For as-yet-unknown uses"(1): Potential Histories and Futures of the Man-Eaters of Tsavo
 
