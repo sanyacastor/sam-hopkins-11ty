@@ -2,7 +2,7 @@
 id: ZajWPmOTRBb0QgBuWv4Wg
 title: 6 hours for 6 days
 dates: "2006"
-link: https://en.wikipedia.org/wiki/Artemis_2
+link: ""
 collaborators: ""
 cardDescription: " From 06.09.06 until 11.09.06 for 6 hours a day I sat on a
   bench in Kuznicza Street in Wroclaw"
@@ -20,10 +20,7 @@ previewDescription: My idea for this project was to explore the state of being
   in that particular space about ‘the guy on the bench’. The video presents this
   material; a spectrum of memories, encompassing the wildly inaccurate, the
   highly perceptive and those that simply do not look.
-relatedProjects:
-  - ZajWPmOTR332QgBuWv4Wg
-  - Qp9NWlK9XXEVQZhJWfSWp
-  - 97qYsNwiTFwI5P4S8EAdD
+relatedProjects: []
 ---
 ![](/assets/6-hours-for-6-day_01_video-documentation_still_2006_-c-hopkins-0.jpg "caption of the first image")
 
