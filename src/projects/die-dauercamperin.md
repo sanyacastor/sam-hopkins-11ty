@@ -29,7 +29,6 @@ previewDescription: "Die Dauercamperin stages the celebration of Lena Bauer and
   Supported By: Urbane Kunst Ruhr, Innogy Stiftung"
 PDF File: /assets/03_die-dauercamperin_project-page.pdf
 ---
-![]()
 
 ## "Die Dauercamperin" Script 
 
