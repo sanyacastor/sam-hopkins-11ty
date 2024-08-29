@@ -31,6 +31,7 @@ previewDescription: "The work A Topography of Loss (2021) inquires into the
   describe A Topography of Loss.  -- Thanks to: International Inventories
   Programme (Project) Invisible Inventories (Exhibition) Supported by: Goethe
   Institut Exzellenz Initiative, Kulturstiftung des Bundes"
+PDF File: /assets/03_a-topography-of-loss_-project-page.pdf
 ---
 ## S/he owes so much that even her/his eyelids are not her/his own. A reflection
 
