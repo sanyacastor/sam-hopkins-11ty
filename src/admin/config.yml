@@ -1,7 +1,7 @@
 backend:
   name: git-gateway
   branch: master
-#publish_mode: editorial_workflow
+  # publish_mode: editorial_workflow
 
 media_folder: 'src/assets'
 public_folder: '/assets'
@@ -13,7 +13,8 @@ collections:
     create: true
     slug: '{{slug}}'
     fields:
-      - { label: "ID",
+      - { 
+          label: "ID",
           name: "id",
           widget: "uuid"
         }
@@ -37,7 +38,7 @@ collections:
           widget: 'string',
           pattern: ['^.{0,140}$', "Must be 140 characters or fewer"]
         }
-      - { label: 'Preview description', name: 'previewDescription', widget: 'string' }
+      - { label: 'Preview description', name: 'previewDescription', widget: 'markdown' }
       - { label: 'Body', name: 'body', widget: 'markdown' }
       - { label: 'PDF', name: 'PDF File', widget: 'file', required: false }
       - label: 'Related projects'
@@ -56,6 +57,7 @@ collections:
             search_fields: ['title'],
             display_fields: ['title'],
           }
+
   - name: 'publication'
     label: 'Publication'
     folder: 'src/publications'
