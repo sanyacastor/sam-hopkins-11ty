@@ -81,7 +81,7 @@ title: Sam Hopkins | Projects {{ project.title}}
                           <div class="projectView_ScrollArticle" id="scrollArticle">
                             <!--scrollable main text content-->
                             <div class="hackColumn" id="firstHackColumn"></div>
-                            <h1 class="projectView_title">{{  title }}</h1>
+                            <h1 class="projectView_title">{{ customTitle | title }}</h1>
                             {%- if link %}
                               <a href="{{ link }}" class="projectView_link" id="projectView_link">original publication</a>
                             {%- endif %}
