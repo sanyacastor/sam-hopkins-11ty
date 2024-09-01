@@ -11,9 +11,10 @@ const readFiles = async filePaths => {
       if (path.extname(filePath) !== '.md') return
       try {
         const markdown = await fs.readFile(projectsPath + filePath, 'utf8')
-        const content = fm(markdown)
+        const { attributes } = fm(markdown)
         arr.push({
-          ...content.attributes,
+          ...attributes,
+          // previewDescription: preview.previewDescription,
           fileName: filePath.replace('.md', ''),
         })
       } catch (err) {

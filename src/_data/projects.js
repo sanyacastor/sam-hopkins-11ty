@@ -27,13 +27,16 @@ const readFiles = async filePaths => {
           token.children.forEach(child => {
             if (child.type === 'image') {
               const srcIndex = child.attrs.findIndex(attr => attr[0] === 'src')
-              const captionIndex = child.attrs.findIndex(attr => attr[0] === 'title')
+              const captionIndex = child.attrs.findIndex(
+                attr => attr[0] === 'title',
+              )
 
               if (srcIndex !== -1) {
                 currentProject.images.push({
                   url: child.attrs[srcIndex][1],
                   alt: child.content,
-                  caption: captionIndex !== -1 ? child.attrs[captionIndex][1] : '',
+                  caption:
+                    captionIndex !== -1 ? child.attrs[captionIndex][1] : '',
                 })
               }
             }

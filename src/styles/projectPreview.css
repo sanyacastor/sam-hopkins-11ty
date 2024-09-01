@@ -55,6 +55,7 @@
   white-space: normal;
 
   position: relative;
+  text-indent: 56px;
 }
 
 @media screen and (max-width: 878px) {
@@ -78,10 +79,6 @@
     column-gap: unset;
     background-color: var(--color-white);
   }
-}
-
-.projectPreview_ScrollArticle > font {
-  margin-left: 20px;
 }
 
 .projectPreview_phantomColumn {
