@@ -1,4 +1,5 @@
 backend:
+  # name: test-repo
   name: git-gateway
   branch: master
   # publish_mode: editorial_workflow
@@ -13,11 +14,7 @@ collections:
     create: true
     slug: '{{slug}}'
     fields:
-      - { 
-          label: "ID",
-          name: "id",
-          widget: "uuid"
-        }
+      - { label: 'ID', name: 'id', widget: 'uuid' }
       - { label: 'Title', name: 'title', widget: 'string' }
       - { label: 'Dates', name: 'dates', widget: 'string' }
       - {
@@ -36,11 +33,16 @@ collections:
           label: 'Card description',
           name: 'cardDescription',
           widget: 'string',
-          pattern: ['^.{0,140}$', "Must be 140 characters or fewer"]
+          pattern: ['^.{0,140}$', 'Must be 140 characters or fewer'],
         }
-      - { label: 'Preview description', name: 'previewDescription', widget: 'markdown', minimal: true }
       - {
-          label: 'Article title', 
+          label: 'Preview description',
+          name: 'previewDescription',
+          widget: 'markdown',
+          minimal: true,
+        }
+      - {
+          label: 'Article title',
           name: 'customTitle',
           widget: 'string',
           required: false,
@@ -70,7 +72,12 @@ collections:
     create: true
     slug: '{{slug}}'
     fields:
-      - { label: 'Title', name: 'title', widget: 'string', pattern: ['^.{0,140}$', "Must be 140 characters or fewer"]}
+      - {
+          label: 'Title',
+          name: 'title',
+          widget: 'string',
+          pattern: ['^.{0,140}$', 'Must be 140 characters or fewer'],
+        }
       - { label: 'Year', name: 'year', widget: 'string' }
       - { label: 'ISBN', name: 'isbn', widget: 'string' }
       - {
@@ -103,11 +110,11 @@ collections:
           name: 'description',
           widget: 'string',
         }
-      - { 
-          label: "Date",
-          name: "createdAt",
-          widget: "datetime",
-          date_format: "DD.MM.YYYY", 
+      - {
+          label: 'Date',
+          name: 'createdAt',
+          widget: 'datetime',
+          date_format: 'DD.MM.YYYY',
           picker_utc: false,
         }
   - name: 'video'
@@ -127,3 +134,56 @@ collections:
           widget: 'string',
           required: true,
         }
+
+  - name: 'about'
+    label: 'About'
+    folder: 'src/about'
+    slug: '{{slug}}'
+    create: true
+    fields:
+      - { label: 'Email', name: 'email', widget: 'string' }
+      - { label: 'Phone', name: 'phone', widget: 'string' }
+      - { label: 'Instagram link', name: 'instagram', widget: 'string' }
+      - { label: 'meduim', name: 'medium', widget: 'string' }
+      - label: 'Social media'
+        name: 'socialMediaLinks'
+        required: false
+        widget: 'list'
+        fields:
+          - { label: 'Title', name: 'title', widget: 'string' }
+          - { label: 'link', name: 'link', widget: 'string' }
+      - label: 'Education'
+        name: 'educationList'
+        required: false
+        widget: 'list'
+        field: { label: 'Item', name: 'listItem', widget: 'string' }
+      - label: 'Exhibitions'
+        name: 'exhibitionList'
+        required: false
+        widget: 'list'
+        field: { label: 'Item', name: 'listItem', widget: 'string' }
+      - label: 'Residencies'
+        name: 'residencyList'
+        required: false
+        widget: 'list'
+        field: { label: 'Item', name: 'listItem', widget: 'string' }
+      - label: 'Research'
+        name: 'researchList'
+        required: false
+        widget: 'list'
+        field: { label: 'Item', name: 'listItem', widget: 'string' }
+      - label: 'Teaching'
+        name: 'teachingList'
+        required: false
+        widget: 'list'
+        field: { label: 'Item', name: 'listItem', widget: 'string' }
+      - label: 'Conferences'
+        name: 'conferenceList'
+        required: false
+        widget: 'list'
+        field: { label: 'Item', name: 'listItem', widget: 'string' }
+      - label: 'Publications'
+        name: 'publicationList'
+        required: false
+        widget: 'list'
+        field: { label: 'Item', name: 'listItem', widget: 'string' }
