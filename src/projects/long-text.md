@@ -27,6 +27,7 @@ previewDescription: >-
 
 
   Together With: John Kamicha (Co-Director), Anke Trojan (Editor), Carlo Peters (Sound Design), Ronald Ronix (Camera), Kena, Mlambuzi, Mori, Shiro, Dagy (Actors)  Supported By: Iwalewahaus, Akademie Der Kuenste Der Welt, Cat Cologne, year:  2015-19
+customTitle: ALTERNATIVE TITLE TO SHOW
 relatedProjects:
   - vDbPeVO3j1xeydEABqaBw
 ---
