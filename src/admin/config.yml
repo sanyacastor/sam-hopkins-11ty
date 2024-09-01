@@ -39,6 +39,12 @@ collections:
           pattern: ['^.{0,140}$', "Must be 140 characters or fewer"]
         }
       - { label: 'Preview description', name: 'previewDescription', widget: 'markdown', minimal: true }
+      - {
+          label: 'Article title', 
+          name: 'customTitle',
+          widget: 'string',
+          required: false,
+        }
       - { label: 'Body', name: 'body', widget: 'markdown' }
       - { label: 'PDF', name: 'PDF File', widget: 'file', required: false }
       - label: 'Related projects'

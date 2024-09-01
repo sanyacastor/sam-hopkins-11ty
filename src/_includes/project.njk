@@ -31,6 +31,7 @@ title: Sam Hopkins | Projects {{ project.title}}
     data: {
       targetUrl: project.url,
       title: title,
+      customTitle: project.customTitle,
       dates: dates,
       collaborators: collaborators,
       cardDescription: cardDescription,
@@ -46,7 +47,6 @@ title: Sam Hopkins | Projects {{ project.title}}
 
   <!--link rel="stylesheet" href="bundle.css"-->
   <body>
-
       {% include 'header.njk' %}
       <article>
         <div class='container'>
@@ -64,16 +64,13 @@ title: Sam Hopkins | Projects {{ project.title}}
                       {% if project.title === title %}
                         {% for image in project.images %}
                           <div class="swiper-slide" caption="{{image.caption}}">
-                            {% image image.url,
-                            image.alt %}
+                            {% image image.url, image.alt %}
                           </div>
                           {%endfor%}
                           {%endif%}
                           {%endfor%}
                         </div>
                         <div class="swiper-button-close"></div>
-                        <!--div class="swiper-button-next"></div>
-              <div class="swiper-button-prev"></div-->
                         <div class="swiper-pagination"></div>
                       </div>
                     </div>
@@ -84,7 +81,7 @@ title: Sam Hopkins | Projects {{ project.title}}
                           <div class="projectView_ScrollArticle" id="scrollArticle">
                             <!--scrollable main text content-->
                             <div class="hackColumn" id="firstHackColumn"></div>
-                            <h1 class="projectView_title">{{ title }}</h1>
+                            <h1 class="projectView_title">{{  title }}</h1>
                             {%- if link %}
                               <a href="{{ link }}" class="projectView_link" id="projectView_link">original publication</a>
                             {%- endif %}
