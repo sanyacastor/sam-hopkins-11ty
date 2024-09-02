@@ -67,7 +67,7 @@ African kids in “kimonos” recreate Chinese cinema scenes on sandy ground in 
 
 The filmmaker Samantha Biffot, who commutes between Paris, South Korea and Libreville, accompanies her busy protagonist for five years in her documentary The African Who Wanted to Fly, completed in 2016. In Chinese competition stadiums, Luc demonstrated his “African drunken man style”, combined with reenactments, Fight scenes and slapstick. In 1994, representing Gabon, he won first place in the global Wushu competition: proud and lonely at the same time, because no compatriot could cheer him on. In the 2000s, a former Bruce Lee producer approached Luc Bendza - he can finally star in Chinese martial arts films such as the biopic The Legend of Bruce Lee.(6) Now he meets at the Shaolin Temple in Henan province on black muscular upper bodies and white Asian martial arts pants in a dance-like choreography. The Kung Fu pilgrims come from Congo, Senegal, Cameroon, Ivory Coast and Benin: China and Africa have now moved closer.
 
-![](/assets/kolik-film_sonderheft_becker_2020_the-qilin_-2019-_poster_-c-lalé-hopkins.jpg "Kolik Film_Sonderheft_Becker_2020_The Qilin_(2019)_Still_(c)Lalé/Hopkins")
+![](/assets/kolik-film_sonderheft_becker_2020_the-qilin_-2019-_poster_-c-lale-hopkins.jpg "Kolik Film_Sonderheft_Becker_2020_The Qilin_(2019)_Still_(c)Lale/Hopkins")
 
 Luc worked in the Wushu department(7) at the sports university in Beijing for 20 years: “For me, it was a big deal to introduce young Chinese people to their own culture.” But the students' parents distrusted him. Luc's Chinese wife talks about everyday Chinese racism and how her parents would never have allowed her to marry a stranger.
 
