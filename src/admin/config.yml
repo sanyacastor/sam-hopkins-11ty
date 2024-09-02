@@ -1,6 +1,6 @@
 backend:
-  name: test-repo
-  # name: git-gateway
+  # name: test-repo
+  name: git-gateway
   branch: master
   # publish_mode: editorial_workflow
 
@@ -159,6 +159,11 @@ collections:
         fields:
           - { label: 'Title', name: 'title', widget: 'string' }
           - { label: 'link', name: 'link', widget: 'string' }
+
+      - label: 'Main text'
+        name: 'mainText'
+        required: false
+        widget: 'markdown'
 
       - label: 'Education'
         name: 'educationList'
