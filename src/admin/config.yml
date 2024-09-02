@@ -1,5 +1,4 @@
 backend:
-  # name: test-repo
   name: git-gateway
   branch: master
   # publish_mode: editorial_workflow
@@ -141,10 +140,12 @@ collections:
     slug: '{{slug}}'
     create: true
     fields:
-      - { label: 'Email', name: 'email', widget: 'string' }
+      - label: 'Email'
+        name: 'email'
+        fields:
+          - { label: 'Email', name: 'title', widget: 'string' }
+          - { label: 'Title', name: 'value', widget: 'string' }
       - { label: 'Phone', name: 'phone', widget: 'string' }
-      - { label: 'Instagram link', name: 'instagram', widget: 'string' }
-      - { label: 'meduim', name: 'medium', widget: 'string' }
       - label: 'Social media'
         name: 'socialMediaLinks'
         required: false
@@ -155,8 +156,7 @@ collections:
       - label: 'Education'
         name: 'educationList'
         required: false
-        widget: 'list'
-        field: { label: 'Item', name: 'listItem', widget: 'string' }
+        widget: 'markdown'
       - label: 'Exhibitions'
         name: 'exhibitionList'
         required: false
