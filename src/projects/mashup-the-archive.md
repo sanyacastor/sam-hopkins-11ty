@@ -1,6 +1,6 @@
 ---
 id: 1SrrztD0Hmih1NLS0u319
-title: "Mashup the Archive "
+title: Mashup the Archive
 dates: 2013-15
 link: "Originally published in Sam Hopkins and Nadine Siegert (eds), Mashup the
   Archive. Revolver, Berlin: 2017"
