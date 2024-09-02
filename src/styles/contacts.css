@@ -152,6 +152,10 @@
 }
 
 /* Core styles/functionality */
+
+.tab {
+  margin-bottom: 8px;
+}
 .tab input {
   position: absolute;
   opacity: 0;
@@ -196,7 +200,7 @@
   /* border: 1px solid var(--color-primary); */
 
   justify-content: space-between;
-  margin-bottom: 14px;
+  margin-bottom: 8px;
 }
 
 .tab__content p {

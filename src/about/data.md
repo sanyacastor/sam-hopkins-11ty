@@ -23,9 +23,9 @@ mainText: Sam Hopkins is an artist and scholar who is attentive to the ways in
   Foreign Policy Magazine. He currently works as an Assistant Professor at the
   Academy of Media Arts in Cologne and continues to develop his research in
   Nairobi.
-educationList: >+
+educationList: >-
+  
   - 2012-18: University of the Arts London (Chelsea): Practice-based PhD
-
   Distributed: Co-producing Narratives of Belonging in Nairobi
 
   - 2005-2006: Bauhaus University: MFA in Public Art New Creative Strategies (Elective)
@@ -41,13 +41,13 @@ educationList: >+
   - 2000-2001: San Alejandro Art School, Cuba,: Sculpture, Portraiture (Elective)
 
   - 1995-1997: Sevenoaks School: International Baccalaureate (40 points)
-
 exhibitionList: >-
+  
   - 2021: Invisible Inventories, Nairobi National Museum/Rautenstrauch-Joest
   Museum, Weltkulturen Museum, Nairobi/Cologne/Frankfurt (KEN, GER)
 
   - 2020: Process as Resistance, Resilience and Regeneration, CAT Cologne, Cologne (GER)
-
+  
   - 2019: DOK Leipzig, German Competition Short Documentary and Animated Film (GER)
 
   Die Dauercamperin, Ruhr Ding, Urbane Künst Ruhr, Dortmund (GER)
@@ -117,7 +117,10 @@ exhibitionList: >-
   - 2008: A Kind of Ambiguity (solo), Otto Dix Sammlung, Gera, (GER)
 
   CPH:DOX, International Film Festival, Copenhagen (DEN)
+
+
 residencyList: >-
+  
   - 2018: Research Fellow — Smithsonian Artists Research Fellowship (SARF),
   Washington DC (US)
 
@@ -136,13 +139,17 @@ residencyList: >-
   - 2008: Artist in residence — Otto Dix Kunstsammlung / Gera city, Gera (GER)
 
   - 2004: Scholarship — AHRC Research Preparation Masters Scheme Award, Oxford (UK)
+
 researchList: >-
+  
   - 2022:	Participant — Re-connecting Objects: epistemic plurality and
   transformative practices in 	and 	beyond museums, VW Stiftung Research
   Project, 2 years (GER, SEN)
 
   - 2018:  Co-initiator — International Inventories Programme:  investigating a corpus of Kenyan 	objects held in cultural institutions across the globe, Goethe Excellenz Initiativ, 	Kulturstiftung des Bundes Project (four years) (GER, KEN)
+
 teachingList: >-
+ 
   - Current:	 Assistant Professor, Department of Art (Netze), Academy of Media
   Arts Cologne (GER)
 
@@ -159,7 +166,9 @@ teachingList: >-
   - 2013:	Research Fellow, Mashup the Archive: Remix und Aufruhr im Iwalewahaus, BA seminar 	(Dr. Nadine Siegert), Iwalewahaus, Universität Bayreuth (GER)
 
   - 2012:	Guest Lecturer, Public Space — Zeitgenössiche Kunstpraxen im Öffentlichen Raum, BA seminar (Dr. Nadine Siegert), Iwalewahaus, Universität Bayreuth (GER)
+
 conferenceList: >
+  
   - 2023:	Presentation — Temporality, Accessibility and Restitution: Strategies
   to Reflect on Long-Term 	Collaborative Film Projects, part of "What is the
   role of reflection and reflexive methods in 	Artistic Research?" React and
@@ -182,14 +191,17 @@ conferenceList: >
   - 2013:	Presentation – Mashup, Artists With(out) borders, Bern (CH) Presentation — Conceptualising Future, Bayreuth Academy of Advanced African Studies (GER) Presentation — Art as an Argument; with Brian O'Doherty and Eugen Gomringer, Bayreuth Kunsthalle, (GER)
 
   - 2012:	Presentation — The Memory of the Crowd, part of "Ueber(w)unden; Art in troubled times", 	Goethe Institut Johannesburg (SA)
+
 publicationList: >-
-  **Citations**
+  
+  Citations
+
 
   - 2020:	Nur Goni, Marian. 'Agents in motion: how objects make people move. An interview with 	Sam Hopkins and Simon Rittmeier' Third Text Africa, no. 12, August 2020 
 
   - 2016:	Bajorek, Jennifer. 'Beyond the “NGO Aesthetic”' Social Text 127, Vol. 34, No. 2, June 2016
 
-  Marcel, Olivier. "Ochuo, Du Bidonville Au Cube Blanc: Géographie D'une Rencontre 	Globale."Cahiers D'Études Africaines 56, no. 223 (2016)
+  Marcel, Olivier. "Ochuo, Du Bidonville Au Cube Blanc: Géographie D'une Rencontre Globale."Cahiers D'Études Africaines 56, no. 223 (2016)
 
   - 2015:	Vierke, Ulf. 'Archive, Art and Anarchy: From the Topological Archive to the Anarchic 	Archive', African Arts, vol. 48, no. 2 summer 2015
 
