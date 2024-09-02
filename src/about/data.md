@@ -1,5 +1,7 @@
 ---
-email: samhopkins(at)gmail(dot)com
+email: 
+  - title: samhopkins(at)gmail(dot)com
+  - value: samhopkins@gmail.com
 phone: '0123456789'
 socialMediaLinks:
   - link: https://www.instagram.com/

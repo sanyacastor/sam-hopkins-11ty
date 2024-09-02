@@ -1,5 +1,6 @@
 backend:
-  name: git-gateway
+  name: test-repo
+  # name: git-gateway
   branch: master
   # publish_mode: editorial_workflow
 
@@ -134,18 +135,23 @@ collections:
           required: true,
         }
 
+  ## ABOUT PAGE ##
   - name: 'about'
     label: 'About'
     folder: 'src/about'
-    slug: '{{slug}}'
+    slug: 'data'
     create: true
     fields:
       - label: 'Email'
         name: 'email'
+        widget: 'object'
         fields:
-          - { label: 'Email', name: 'title', widget: 'string' }
-          - { label: 'Title', name: 'value', widget: 'string' }
-      - { label: 'Phone', name: 'phone', widget: 'string' }
+          - { label: 'Title', name: 'title', widget: 'string' }
+          - { label: 'Value', name: 'value', widget: 'string' }
+      - label: 'Phone'
+        name: 'phone'
+        widget: 'string'
+
       - label: 'Social media'
         name: 'socialMediaLinks'
         required: false
@@ -153,37 +159,38 @@ collections:
         fields:
           - { label: 'Title', name: 'title', widget: 'string' }
           - { label: 'link', name: 'link', widget: 'string' }
+
       - label: 'Education'
         name: 'educationList'
         required: false
         widget: 'markdown'
+
       - label: 'Exhibitions'
         name: 'exhibitionList'
         required: false
-        widget: 'list'
-        field: { label: 'Item', name: 'listItem', widget: 'string' }
+        widget: 'markdown'
+
       - label: 'Residencies'
         name: 'residencyList'
         required: false
-        widget: 'list'
-        field: { label: 'Item', name: 'listItem', widget: 'string' }
+        widget: 'markdown'
+
       - label: 'Research'
         name: 'researchList'
         required: false
-        widget: 'list'
-        field: { label: 'Item', name: 'listItem', widget: 'string' }
+        widget: 'markdown'
+
       - label: 'Teaching'
         name: 'teachingList'
         required: false
-        widget: 'list'
-        field: { label: 'Item', name: 'listItem', widget: 'string' }
+        widget: 'markdown'
+
       - label: 'Conferences'
         name: 'conferenceList'
         required: false
-        widget: 'list'
-        field: { label: 'Item', name: 'listItem', widget: 'string' }
+        widget: 'markdown'
+
       - label: 'Publications'
         name: 'publicationList'
         required: false
-        widget: 'list'
-        field: { label: 'Item', name: 'listItem', widget: 'string' }
+        widget: 'markdown'

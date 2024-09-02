@@ -2,48 +2,49 @@
 title: Sam Hopkins | About & Contacts
 description: 'Contacts information and CV'
 layout: base.njk
-permalink: /about
-slug: about
+tags: about
+permalink: /about/
+templateEngineOverride: njk
 ---
 
 {% set about = collections.about | first %}
 
 <div class="container">
-  <div class="contacts_grid">
-    <div class="contacts_card">
-      <h3>Contact</h3>
-      <ul class="contacts__list">
-        <li class="contacts__listItem">
-          <a href="mailto:{{ about.data.email }}">{{ about.data.email }}</a>
-        </li>
-        <li class="contacts__listItem">
-          <a href="tel:{{ about.data.phone }}">tel: {{ about.data.phone }}</a>
-        </li>
+    <div class="contacts_grid">
+        <div class="contacts_card">
+            <h3>Contact</h3>
+            <ul class="contacts__list">
+                <li class="contacts__listItem">
+                    <a href="mailto:{{ about.data.email }}">{{ about.data.email }}</a>
+                </li>
+                <li class="contacts__listItem">
+                    <a href="tel:{{ about.data.phone }}">tel: {{ about.data.phone }}</a>
+                </li>
 
-        {% for s in about.data.socialMediaLinks %}
-          <li class="contacts__listItem contacts__listItem--underlined">
-            <a href="{{ s.link }}">{{ s.title }}</a>
-          </li>
-          {%endfor%}
+                {% for s in about.data.socialMediaLinks %}
+                    <li class="contacts__listItem contacts__listItem--underlined">
+                        <a href="{{ s.link }}">{{ s.title }}</a>
+                    </li>
+                    {%endfor%}
 
-        </ul>
-      </div>
+                </ul>
+            </div>
 
-      <div class="contacts__cvList">
-        <a href="#" class="contacts__cvListItem">
+            <div class="contacts__cvList">
+                <a href="#" class="contacts__cvListItem">
         CV 2023
         <div class='cvListItem__arrow-right'></div>
-        </a>
-        <a href="#" class="contacts__cvListItem">
+                </a>
+                <a href="#" class="contacts__cvListItem">
         CV 2022
         <div class='cvListItem__arrow-right'></div>
-        </a>
-        <a href="#" class="contacts__cvListItem">
+                </a>
+                <a href="#" class="contacts__cvListItem">
         CV 2021
         <div class='cvListItem__arrow-right'></div>
-        </a>
-      </div>
-      <div class="contacts__info">
+                </a>
+            </div>
+            <div class="contacts__info">
         Sam Hopkins is an artist and scholar who is attentive to the ways in
         which narratives and truths are encoded and produced by different media.
         His work is rooted in Kenya and engages with specific networks to
@@ -61,79 +62,79 @@ slug: about
         at the Academy of Media Arts in Cologne and continues to develop his
         research in Nairobi.
       </div>
-      <div class="contacts__cv">
-        <h3 class="contacts_cv_header">CV</h3>
-        <section class="accordion">
-          <div class="tab">
-            <input type="checkbox" name="accordion-1" id="cb1"/>
-            <label for="cb1" class="tab__label">Education</label>
-            <div class="tab__content">
-              <ul>
-                {% for el in about.data.educationList %}
-                  <li>{{ el }}</li>
-                  {%endfor%}
-                </ul>
-              </div>
-            </div>
-            <div class="tab">
-              <input type="checkbox" name="accordion-1" id="cb2"/>
-              <label for="cb2" class="tab__label"
+            <div class="contacts__cv">
+                <h3 class="contacts_cv_header">CV</h3>
+                <section class="accordion">
+                    <div class="tab">
+                        <input type="checkbox" name="accordion-1" id="cb1"/>
+                        <label for="cb1" class="tab__label">Education</label>
+                        <div class="tab__content">
+                            <ul>
+                                {% for el in about.data.educationList %}
+                                    <li>{{ el }}</li>
+                                    {%endfor%}
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="tab">
+                            <input type="checkbox" name="accordion-1" id="cb2"/>
+                            <label for="cb2" class="tab__label"
             >Exhibitions and Festivals (selection)</label
           >
-              <div class="tab__content">
-                <ul>
-                  {% for el in about.data.exhibitionList %}
-                    <li>{{ el }}</li>
-                    {%endfor%}
-                  </ul>
-                </div>
-              </div>
-              <div class="tab">
-                <input type="checkbox" name="accordion-1" id="cb3"/>
-                <label for="cb3" class="tab__label"
+                            <div class="tab__content">
+                                <ul>
+                                    {% for el in about.data.exhibitionList %}
+                                        <li>{{ el }}</li>
+                                        {%endfor%}
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="tab">
+                                <input type="checkbox" name="accordion-1" id="cb3"/>
+                                <label for="cb3" class="tab__label"
             >Residencies, Awards and Scholarships</label
           >
-                <div class="tab__content">
-                  <ul>
-                    {% for el in about.data.residencyList %}
-                      <li>{{ el }}</li>
-                      {%endfor%}
-                    </ul>
-                  </div>
-                </div>
-                <div class="tab">
-                  <input type="checkbox" name="accordion-1" id="cb4"/>
-                  <label for="cb4" class="tab__label">Research Projects</label>
-                  <div class="tab__content">
-                    <ul>
-                      {% for el in about.data.researchList %}
-                        <li>{{ el }}</li>
-                        {%endfor%}
-                      </ul>
-                    </div>
-                  </div>
-                  <div class="tab">
-                    <input type="checkbox" name="accordion-1" id="cb5"/>
-                    <label for="cb5" class="tab__label">Teaching</label>
-                    <div class="tab__content">
-                      <ul>
-                        {% for el in about.data.teachingList %}
-                          <li>{{ el }}</li>
-                          {%endfor%}
-                        </ul>
-                      </div>
-                    </div>
-                    <div class="tab">
-                      <input type="checkbox" name="accordion-1" id="cb6"/>
-                      <label for="cb6" class="tab__label"
+                                <div class="tab__content">
+                                    <ul>
+                                        {% for el in about.data.residencyList %}
+                                            <li>{{ el }}</li>
+                                            {%endfor%}
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="tab">
+                                    <input type="checkbox" name="accordion-1" id="cb4"/>
+                                    <label for="cb4" class="tab__label">Research Projects</label>
+                                    <div class="tab__content">
+                                        <ul>
+                                            {% for el in about.data.researchList %}
+                                                <li>{{ el }}</li>
+                                                {%endfor%}
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="tab">
+                                        <input type="checkbox" name="accordion-1" id="cb5"/>
+                                        <label for="cb5" class="tab__label">Teaching</label>
+                                        <div class="tab__content">
+                                            <ul>
+                                                {% for el in about.data.teachingList %}
+                                                    <li>{{ el }}</li>
+                                                    {%endfor%}
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="tab">
+                                            <input type="checkbox" name="accordion-1" id="cb6"/>
+                                            <label for="cb6" class="tab__label"
             >Conferences and Presentations</label
           >
-                      <div class="tab__content">
-                        <ul>
-                          {% for el in about.data.conferenceList %}
-                            <li>{{ el }}</li>
-                            {%endfor%}
-                            {# <li>
+                                            <div class="tab__content">
+                                                <ul>
+                                                    {% for el in about.data.conferenceList %}
+                                                        <li>{{ el }}</li>
+                                                        {%endfor%}
+                                                        {# <li>
                 2023: Presentation — Temporality, Accessibility and
                 Restitution: Strategies to Reflect on Long-Term Collaborative
                 Film Projects, part of "What is the role of reflection and
@@ -196,110 +197,110 @@ slug: about
                 "Ueber(w)unden; Art in troubled times", Goethe Institut
                 Johannesburg (SA)
               </li> #}
-                          </ul>
-                        </div>
-                      </div>
+                                                    </ul>
+                                                </div>
+                                            </div>
 
-                      <div class="tab">
-                        <input type="checkbox" name="accordion-1" id="cb7"/>
-                        <label for="cb7" class="tab__label"
+                                            <div class="tab">
+                                                <input type="checkbox" name="accordion-1" id="cb7"/>
+                                                <label for="cb7" class="tab__label"
             >Publications and Articles (selection)</label
           >
-                        <div class="tab__content">
-                          <ul>
-                            <span class="list__subtitle">Citations</span>
-                            <li>
+                                                <div class="tab__content">
+                                                    <ul>
+                                                        <span class="list__subtitle">Citations</span>
+                                                        <li>
                 2020: Nur Goni, Marian. 'Agents in motion: how objects make
                 people move. An interview with Sam Hopkins and Simon
                 Rittmeier' Third Text Africa, no. 12, August 2020
               </li>
-                            <li>
+                                                        <li>
                 2016: Bajorek, Jennifer. 'Beyond the “NGO Aesthetic”' Social
                 Text 127, Vol. 34, No. 2, June 2016
               </li>
-                            <li>
+                                                        <li>
                 Marcel, Olivier. "Ochuo, Du Bidonville Au Cube Blanc:
                 Géographie D'une Rencontre Globale."Cahiers D'Études
                 Africaines 56, no. 223 (2016)
               </li>
-                            <li>
+                                                        <li>
                 2015: Vierke, Ulf. 'Archive, Art and Anarchy: From the
                 Topological Archive to the Anarchic Archive', African Arts,
                 vol. 48, no. 2 summer 2015
               </li>
-                            <li>
+                                                        <li>
                 2013: Bounakoff, Pierre Nicholas, Katharina Greven and Nadine
                 Siegert eds, Iwalewa: Four Views into Contemporary Africa,
                 Iwalewahaus: Bayreuth
               </li>
-                            <li>
+                                                        <li>
                 2012: Hossfeld, Johannes. Mwangalio Tofauti: Nine Kenyan
                 Photographers, Nairobi, Native Intelligence
               </li>
-                            <li>
+                                                        <li>
                 Förster, Larissa, Christian Hanussek and Kerstin Pinter (eds).
                 Afropolis: City/Media/Art, Johannesburg: Jacana Media
               </li>
 
-                            <span class="list__subtitle">Authored</span>
-                            <li>
+                                                        <span class="list__subtitle">Authored</span>
+                                                        <li>
                 2023: Hopkins, Sam. Nairobi Distributed,
                 Johannesburg/Bayreuth: Iwalewa Books (upcoming)
               </li>
-                            <li>
+                                                        <li>
                 Hopkins, Sam and Simon Rittmeier. A Topography of Loss in
                 Marian Nur Goni (eds) Trouble Dans Les Collections (#4, March
                 2023),
               </li>
-                            <li>
+                                                        <li>
                 2021: Hopkins, Sam and Marian Nur Goni (eds), Invisible
                 Inventories — the zine,Jo'burg/Bayreuth: Iwalewa Books
               </li>
-                            <li>
+                                                        <li>
                 Hopkins, Sam. 'WTF is Gamification? A Brief and Biased
                 Overview' in Madhusree Dutta (ed) CC: (vol 2. 2021), Cologne:
                 Academy of the Arts of the World
               </li>
-                            <li>
+                                                        <li>
                 2020: Hopkins, Sam. 'Being Contemporary' in Hans Ulrich Reck
                 (ed), Journal der KHM #12, Cologne: Kunsthochschule für Medien
               </li>
-                            <li>
+                                                        <li>
                 2017: Hopkins, Sam and Nadine Siegert (eds). MASHUP The
                 Archive, Berlin: Revolver Books
               </li>
-                            <li>
+                                                        <li>
                 2016: Hopkins, Sam. The Rubbish Companion, Cologne:
                 Strezelecki Books
               </li>
-                            <li>
+                                                        <li>
                 2015: Hopkins, Sam and Simon Rittmeier. Letter to Lagat,
                 Cologne: Strzelecki Books
               </li>
-                            <li>
+                                                        <li>
                 Hopkins, Sam and Ulf Vierke (eds). Maasai Mbili: Contact Zones
                 (vol 13), Nairobi: Native Intelligence
               </li>
-                            <li>
+                                                        <li>
                 2012: Slum TV. Grassroots Upgraded: Reflection on Nairobi's
                 Eastlands, Oostkamp: Stichting Kunstboak,
               </li>
-                            <li>
+                                                        <li>
                 Cavallo, Vincenzo & Sam Hopkins 'Ghosts Provoke Violence' in
                 Heidenreich-Seleme, Lien and S O'Toole (eds), Über(W)unden:
                 Art in Troubled Times, Johannesburg: Jacana Media
               </li>
-                            <li>
+                                                        <li>
                 2011: Hopkins, Sam and Johannes Hossfeld. Sam Hopkins: Contact
                 Zones (vol 2), Nairobi: Native Intelligence
               </li>
-                          </ul>
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                  <div class="contacts_designedby">
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </section>
+                                    </div>
+                                    <div class="contacts_designedby">
         designed by: shoplift.design
       </div>
-                </div>
-              </div>
+                                </div>
+                            </div>
