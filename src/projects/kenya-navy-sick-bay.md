@@ -12,23 +12,7 @@ previewDescription: >-
   part projected fantasy, an imagined fable of the characters present these
   stamps. 
 
-
-  These were the stamps commissioned by clients, but then left behind. Exactly why they were not taken is not clear. This specific provenance of the stamps lends them a sense of intrigue and mystery. For some, such as the eponymous Kenya Navy Sick Bay stamp, it seems likely that the stamp was produced for a one-time, specific use, probably to forge a sick note. The stamps for other authority figures, school headmasters, police officers, lawyers and local politicians, could well have been used for similar uses. 
-
-
-  But not all the stamps fall so clearly into this category. Stamps for schools, self-help groups, businesses, buses and taxis. Stamps that simply say copy or paid. Stamps that seem total enigmas such as 'Hit Squad Ent' and 'Smarm'. For these stamps we can only guess at why they were commissioned, used once and then abandoned. Do these institutions even exist? Are these stamps all that is left behind? 
-
-
-  Seen as a whole, these stamps offer an intriguing perspective on a small part of Kenyan administration. On the one hand they represent a system of bureaucracy and protocol inherited from the British colonial past. On the other hand, they also seem to be the very opposite of that, a knowing appropriation of a very particular aesthetic and style. This sense of ambiguity makes this archive an imaginative space and a position from which to further reflect on an African-European encounter.  
-
-
-  \--
-
-
-  Thanks to: Martin Baasch, Elisa Liepsch
-
-
-  Supported by: Afropean - Mimicry and Mockery, Mousonturm Frankfurt
+  	These were the stamps commissioned by clients, but then left behind. Exactly why they were not taken is not clear. This specific provenance of the stamps lends them a sense of intrigue and mystery. For some, such as the eponymous Kenya Navy Sick Bay stamp, it seems likely that the stamp was produced for a one-time, specific use, probably to forge a sick note. The stamps for other authority figures, school headmasters, police officers, lawyers and local politicians, could well have been used for similar uses.	But not all the stamps fall so clearly into this category. Stamps for schools, self-help groups, businesses, buses and taxis. Stamps that simply say copy or paid. Stamps that seem total enigmas such as 'Hit Squad Ent' and 'Smarm'. For these stamps we can only guess at why they were commissioned, used once and then abandoned. Do these institutions even exist? Are these stamps all that is left behind?	Seen as a whole, these stamps offer an intriguing perspective on a small part of Kenyan administration. On the one hand they represent a system of bureaucracy and protocol inherited from the British colonial past. On the other hand, they also seem to be the very opposite of that, a knowing appropriation of a very particular aesthetic and style. This sense of ambiguity makes this archive an imaginative space and a position from which to further reflect on an African-European encounter. 	Thanks to: Martin Baasch, Elisa Liepsch. Supported by: Afropean - Mimicry and Mockery, Mousonturm Frankfurt
 customTitle: Afropean Mimicry & Mockery in Theatre, Performance & Visual Arts II
   28.10. – 1.11.2015
 PDF File: /assets/03_kenya-navy-sick-bay_project-page.pdf
