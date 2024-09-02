@@ -47,7 +47,9 @@ Chinese businessman: “Do you have a sample? I make it for you.” (from: The Q
 
 There are numerous reports about the economic and geopolitical impact of this project initiated by China. But what is everyday life like under transcontinental conditions? How far the “Chinese-African” relationship has penetrated into this was shown by the scandal surrounding a Chinese detergent television commercial that made the rounds on the African continent as well as in the diaspora via YouTube: A woman stuffs her African machismo into the washing machine at the end to conjure up a Chinese prince of the purest race.(3)
 
-Hallucinate the future
+
+
+1. Hallucinate the future
 
 Films always have a documentary component, offer a new splintered picture of the world and also offer the chance to let things and conditions be discussed in actual as well as inauthentic speech. A growing number of artistic and documentary film works, as well as “Nollywood” productions and action blockbusters from China, are reacting to the continental shifts.(4) The film Days of Cannibalism (2020) by the Lesotho-German filmmaker Teboho Edkins, which recently premiered at the Berlin Film Festival, starts in the southern Chinese trading metropolis of Guangzhou, only to suddenly land in a barren hilly landscape with wolf masks and extensive horse races. “Chinatown, where is that?” What is your city? “I’m from Lesotho,” begins a conversation between the local customer and the somewhat awkward Chinese boss of the wholesale store. Over the course of the film, Edkins traces a deep crisis of “Chinese African” efforts in the poor South African kingdom.
 
@@ -57,7 +59,9 @@ Films always have a documentary component, offer a new splintered picture of the
 
 The hybrid film The Qilin (2019) the British-Kenyan artist David Lalé and Sam Hopkins vibrates between silhouette-like animation and exaggerated documentary and immerses itself in the hustle and bustle of the southern Chinese trading and port city Guangzhou one. The one based on a fable. The film, named between an African giraffe and a Chinese dragon, leads through endless goods presentations, logistics hubs and container ports, interrupted by a chorus of interviews from the African traders, anonymized with black overpainting. “We are blessed with this entrepreneurial spirit. We have the ability to hallucinate the future. “We see something that others don’t see,” fantasizes an African trader. The awakening experience of African Pentecostal churches, which want to reconcile belief in God with economic success, meets Confucian neoliberalism in China.
 
-Flying legends
+
+
+2. Flying legends
 
 African kids in “kimonos” recreate Chinese cinema scenes on sandy ground in Gabon for their black and white home video. Luc Bendza saw so many kung fu films in his youth in Gabon that he wanted to leave the country when he was 14. “I’m going to China to fly,” he says, laughing. Because he expected there to be floating people with swords and pigtails on horses, just like he had seen in the movies. When he visited the Beijing Film Studio, he realized that five people on a rope(5) were jerkily pulling the kung fu actors into the air to make them fly: “Of course I was disappointed. I learned that different criteria applied in the cinema.”
 
@@ -69,7 +73,9 @@ Luc worked in the Wushu department(7) at the sports university in Beijing for 20
 
 They speak French to their “Chinese African” child. “What do the Chinese know about Africa? \[...] They see it like the Europeans: poverty, constant wars, nothing positive, just animals and thieves and diseases,” says the African comedian Francis Tchiégue. “Our image still needs to be rebuilt.” Luc is now training “future champions” in Gabon. But back home in Libreville, many people find it too Chinese. Relatives there are amazed at how backward China appears in the films: “China seemed extremely traditional. Films are always set in villages, and I didn't see China as a developed country. You never saw anyone driving a car or sitting on an airplane. I don't even know how to get there.” So while Luc wanted to discover the Wushu tradition that dates back 5,000 years and only found it in sports courses at his university in Beijing, his African relatives are amazed at its antiquity China, which doesn't correspond to their modern life in Gabon at all. The power of cinema brings the continents together, but sometimes also leads them astray.
 
-Black Maoism
+
+
+3. Black Maoism
 
 The concrete and everyday “Chinese African” encounters are preceded by individual as well as mass cultural experiences, mostly conveyed through popular arts. Vijay Prashad, director of the Tricontinental Institute for Social Research, describes the connections between Bruce Lee and black emancipation in his 2001 book Everybody Was Kung Fu Fighting(8). Even as a child in Calcutta, Bruce Lee promised Prashad liberation from an oppression to which one was defenseless. The author, who commutes between Delhi, Beirut and Northampton, suggests a cosmopolitan reading of Asian martial arts: “In the end, in the world of Kung Fu, non-whites dream of a bare-fisted revolution against the heavily armed fortress of white supremacy.” When Lee conquered screens around the globe with Enter the Dragon (9) in 1973, the Vietnam War had reached its decisive phase: “Bruce did this without weapons, with bare feet and fists, dressed in black, as is associated with the North Vietnamese army ." Two years later, "Bruce Lee would give us the perfect allegory of both Asian American radicalism and the Vietnam War with The Way of the Dragon," Prashad writes of his cinema-literate youth. “The liberation was not limited to the silver screen or the silver screen.” In the fight against the ultra-right martial arts actor Chuck Norris, “Bruce takes his time, but as he destroys him, the fight in the Roman Colosseum becomes a fight between the Western and Chinese civilization”. The setting combines the imperial ruins of Europe with colonial oppression in Hong Kong or Vietnam. Lee, who also serves as director here, uses Sergio Leone and his crazy zooms, close-ups and editing techniques. Even the Song of Death is played when Chuck Noris appears for the first time.
 
@@ -79,7 +85,9 @@ Resistant Kung Fu schools opened in the US ghettos, and the Black Panthers learn
 
 “One could say that martial arts traditions such as Kung Fu \[...] involved Kalarippayattu from Kerala, Capoeira Angola from Brazil and the various martial arts of Africa in complex ways. Kung fu is not far from Africa and not far from the favelas of Brazil." In Enter the Dragon, the African-American fighter (Jim Kelly) is heard saying, looking at the massive boat slum in Hong Kong Bay, that "Ghettos “the same everywhere in the world”. Prashad offers an anti-essentialist and “polycultural” reading of kung fu beyond simple identity politics. This means thinking and acting in an international of resistance, because today's "Afro-Asian and polycultural struggles indeed enable us to redeem a past that historians have carved up along ethnic lines." Across continents, this work of remembrance is shaped and driven by (pop) cultural interweavings.
 
-A Chinese Rambo saves Africa
+
+
+4. A Chinese Rambo saves Africa
 
 Wuxia films have been produced in Hong Kong since the 1920s. Popular martial arts fiction peaked in the 1960s to 1980s and gained widespread international attention beginning in the 1970s. In the wake of Crouching Tiger, Hidden Dragon (2000), the tradition of wuxia films was revived - now in China.(10) Kung Fu now increasingly serves as a technique to secure power and a state Chinese instrument of power, for which the most recent Wolf Warrior film is particularly popular. Series by and with Wu Jing is available. The Beijing-born Chinese martial arts star and Hong Kong resident studied at the Beijing Sport University at the age of six (maybe even with Luc Bendza?). His blockbuster Wolf Warrior 2 (2017) is considered the most successful Chinese film ever released. Leng Feng (Wu Jing), a soldier from the special unit “Wolf Warriors”, will not only stop the bulldozer-assisted eviction of the relatives when presenting the urn of a fallen man, but will also kill the building contractor. The hero is still on the side of the oppressed, but there is no longer much of the elegance of Bruce Lee. This also seems to be more of a relief scene, probably to put the constantly demonstrated patriotic commitment to the Chinese nation into perspective. Here, the patterns of military and weapons parade pathos perfected by Hollywood, such as in Rambo, are copied almost identically.
 
@@ -97,7 +105,9 @@ China's once emancipatory efforts in the 1960s and 1970s have given way to a pat
 
 ![](/assets/kolik-film_sonderheft_becker_2020_head-gone_-2014-_poster_-c-fasisi.jpg "Kolik Film_Sonderheft_Becker_2020_Head Gone_(2014)_Poster_(c)Fasisi.jpg")
 
-Daily Madness
+
+
+5. Daily Madness
 
 “Chinese Africa” and Kung Fu are also topics in the digital genre “Nollywood”, i.e. the everyday seismographic video film scene from Nigeria, which is already in third place in the world market in terms of production output after Hollywood and Bollywood. “Nollywood” was (and still is) distributed on roadside CDs, but also early on via streaming portals. The Nigeria premiere (14) of Head Gone by Nigerian-Swedish filmmaker Dare Fasisi took place at the end of 2014 in what was then the first and only multiplex cinema in Lagos. With its elaborate camera perspectives, animated sequences and split screens in the opening credits, the work is still considered a successful “Nollywood” film to this day. Towards the end, however, the film gets a little lost in its multiple narrative strands.
 
@@ -124,19 +134,11 @@ Right at the beginning of the film, the logo of the production company “Naija 
 7. This martial art form is now primarily aimed at exhibitions and competitions and includes acrobatic jumps and effects.
 8. Vijay Prashad, Everybody Was Kung Fu Fighting. Afro-Asian Connections and the Myth of Cultural Purity, Beacon Press 2001.
 9. The complete and feature-rich Bruce Lee collection is currently being released in the excellent Criterion Collection. His Greatest Hits with 7 DVDs.
-
 10. These include international successes such as Hero (2002), House of Flying Daggers (2004) and Reign of Assassins (2010).
-
 11. However, the scenes were primarily filmed in the townships of Soweto and Alexandra near Johannesburg later in the post-industrial desert of Hebei Province.
-
 12. Her father Roy Horan appeared in front of the camera in 1977's A Dragon Story and 1981's Game of Death II with Bruce Lee.
-
 13. The rusty industrial area is now being destroyed. The former ironworks in Zhaochuan served as the filming location Town in the Xuanhua District, where high-tech development zones are being created in real life - as before in the special economic zones around the Pearl River Delta, which in turn are considered models for outsourced industrial zones in Zambia, Nigeria or Ethiopia. In this respect, the martially presented end of the African “Rust Belt” is only consistent and is reminiscent of scenarios in RoboCop or Transformers, where industrial areas in Detroit or California are dismantled to fit the screen
-
 14. The world premiere organized by AfricAvenir previously took place in Berlin.
-
 15. Among others with 2Face (Tuface) Idibia, Alibaba, Zack Orji, IK Osakioduwa, Basketmouth, Papi Luwe, Peter Fatomilola,Eniola Badmus, Basong Tariha, Sound Sultan, Akpororo, Wale Ojo, Saka, Baba Dee, Segun Adefila and Tunde Obalana
-
 16. The Soviet Union also locked up dissidents in psychiatric hospitals.
-
 17. “\[Speaking another language]” appears regularly in the version found on YouTube when in Nigerian
