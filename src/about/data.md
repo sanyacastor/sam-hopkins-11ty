@@ -11,8 +11,10 @@ socialMediaLinks:
 cvList:
   - title: CV 2014
     link: /assets/sp-404_om.pdf
-  - title: CV 2014
+  - title: CV 2015
     link: /assets/sp-404_om.pdf
+  - title: "2015"
+    link: /assets/mpc1000_e3.pdf
 mainText: Sam Hopkins is an artist and scholar who is attentive to the ways in
   which narratives and truths are encoded and produced by different media. His
   work is rooted in Kenya and engages with specific networks to collectively
@@ -141,9 +143,9 @@ residencyList: >-
   - 2004: Scholarship — AHRC Research Preparation Masters Scheme Award, Oxford (UK)
 researchList: >-
   
-  - 2022:	Participant — Re-connecting Objects: epistemic plurality and transformative practices in 	and 	beyond museums, VW Stiftung Research Project, 2 years (GER, SEN)
+  - 2022:	Participant — Re-connecting Objects: epistemic plurality and transformative practices in and beyond museums, VW Stiftung Research Project, 2 years (GER, SEN)
 
-  - 2018:  Co-initiator — International Inventories Programme:  investigating a corpus of Kenyan 	objects held in cultural institutions across the globe, Goethe Excellenz Initiativ, 	Kulturstiftung des Bundes Project (four years) (GER, KEN)
+  - 2018: Co-initiator — International Inventories Programme:  investigating a corpus of Kenyan objects held in cultural institutions across the globe, Goethe Excellenz Initiativ, Kulturstiftung des Bundes Project (four years) (GER, KEN)
 teachingList: >-
   
   - Current: Assistant Professor, Department of Art (Netze), Academy of Media Arts Cologne (GER)
