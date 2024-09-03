@@ -8,11 +8,7 @@ socialMediaLinks:
     link: https://www.instagram.com/
   - title: Medium Blog
     link: https://medium.com/
-cvList:
-  - title: PDF 1
-    link: /assets/mpc1000_e3.pdf
-  - title: PDF2
-    link: /assets/sample.pdf
+cvList: []
 mainText: Sam Hopkins is an artist and scholar who is attentive to the ways in
   which narratives and truths are encoded and produced by different media. His
   work is rooted in Kenya and engages with specific networks to collectively
