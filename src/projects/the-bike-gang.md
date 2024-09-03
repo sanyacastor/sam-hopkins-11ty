@@ -21,13 +21,7 @@ previewDescription: >-
   The Bike Gang is a project that inquires into this emergent bicycle scene and its affiliated media practice. John Kamicha and I worked with a group of cyclists from the Offroad Base over a period of 3 years, extending an existing “filmmaking” practice to try and catalyse and distribute stories of belonging.
 
 
-  \----
-
-
-  Thanks to: John Kamicha (Co-Director), Anke Trojan (Editor), Carlo Peters (Sound Design), Ronald Ronix (Camera), Kena, Mlambuzi, Mori, Shiro, Dagy (Actors) 
-
-
-  Supported By: Iwalewahaus, Akademie Der Kuenste Der Welt, Cat Cologne
+  **Thanks to:** John Kamicha (Co-Director), Anke Trojan (Editor), Carlo Peters (Sound Design), Ronald Ronix (Camera), Kena, Mlambuzi, Mori, Shiro, Dagy (Actors). **Supported by:** Iwalewahaus, Akademie Der Kuenste Der Welt, Cat Cologne
 customTitle: "xcerpt from Distributed: Co-producing Narratives Of Belonging in
   Nairobi's Eastlands. PhD thesis, UAL, Supervisors: N. Cummings, J. Bajorek"
 PDF File: /assets/03_the-bike-gang_project-page.pdf
