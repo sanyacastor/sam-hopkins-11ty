@@ -166,8 +166,13 @@ collections:
         widget: 'list'
         fields:
           - { label: 'Title', name: 'title', widget: 'string' }
-          - { label: 'link', name: 'link', widget: 'file' }
-
+          - label: 'link'
+            name: 'link'
+            widget: 'file'
+            media_library:
+              config:
+                multiple: false
+                media_folder: 'src/about/pdf'
       - label: 'Main text'
         name: 'mainText'
         required: false
