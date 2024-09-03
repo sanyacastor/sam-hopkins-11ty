@@ -9,11 +9,7 @@ socialMediaLinks:
   - title: Medium Blog
     link: https://medium.com/
 cvList:
-  - title: CV 2014
-    link: /assets/sp-404_om.pdf
-  - title: CV 2015
-    link: /assets/sp-404_om.pdf
-  - title: "2015"
+  - title: PDF 1
     link: /assets/mpc1000_e3.pdf
 mainText: Sam Hopkins is an artist and scholar who is attentive to the ways in
   which narratives and truths are encoded and produced by different media. His
