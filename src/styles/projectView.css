@@ -102,6 +102,18 @@
   border: none;
 }
 
+.projectView_container a {
+  font-family: var(--font-family-karelia-regular);
+  font-size: 14px;
+  line-height: 18.94px;
+  font-weight: 400;
+  color: var(--color-primary);
+}
+
+.projectView_container a:visited {
+  color: var(--color-primary);
+}
+
 @media screen and (max-width: 800px) {
   .projectView_container {
     flex-direction: column;
