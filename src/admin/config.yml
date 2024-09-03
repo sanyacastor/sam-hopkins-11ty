@@ -69,6 +69,8 @@ collections:
   - name: 'publication'
     label: 'Publication'
     folder: 'src/publications'
+    media_folder: 'src/publications/assets',
+    public_folder: '/assets/publications'
     create: true
     slug: '{{slug}}'
     fields:
@@ -96,7 +98,6 @@ collections:
           name: 'image',
           widget: 'image',
           required: false,
-          media_folder: '/assets',
         }
   - name: 'news'
     label: 'News'
@@ -142,6 +143,8 @@ collections:
       - label: 'About Page'
         name: 'about'
         file: 'src/about/data.md'
+        media_folder: "src/about/pdf" 
+        public_folder: '/assets/about/'
         fields:
           - label: 'Email'
             name: 'email'
