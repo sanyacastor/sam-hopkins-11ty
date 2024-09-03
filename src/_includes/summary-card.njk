@@ -13,10 +13,10 @@
     {%- endif -%}
     <div class="cardcabinet_collaborators">
       {%- if card_data.data.collaborators.length > 0  -%} 
-            with: {{card_data.data.collaborators}}
+          with: {{card_data.data.collaborators}}
       {%- else -%}
-            personal
-          {%- endif -%}
+          -
+      {%- endif -%}
     </div>
     <div class="cardcabinet_cardDescriptionWrapper">
       <div class="cardcabinet_cardDescription">{{card_data.data.cardDescription}}</div>
