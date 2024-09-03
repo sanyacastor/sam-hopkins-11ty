@@ -15,18 +15,15 @@ permalink: /about/
 
       <ul class="contacts__list">
         <li class="contacts__listItem">
-          <a href="mailto:{{ about.data.email.value }}"
-            >{{ about.data.email.title }}</a
-          >
+          <a href="mailto:{{ about.data.email.value }}">{{ about.data.email.title }}</a>
         </li>
         <li class="contacts__listItem">
           <a href="tel:{{ about.data.phone }}">tel: {{ about.data.phone }}</a>
         </li>
-
         {% for s in about.data.socialMediaLinks %}
-        <li class="contacts__listItem contacts__listItem--underlined">
-          <a href="{{ s.link }}" target="_blank">{{ s.title }}</a>
-        </li>
+          <li class="contacts__listItem contacts__listItem--underlined">
+            <a href="{{ s.link }}" target="_blank">{{ s.title }}</a>
+          </li>
         {%endfor%}
       </ul>
     </div>
@@ -57,7 +54,7 @@ permalink: /about/
         <div class="tab">
           <input type="checkbox" name="accordion-1" id="cb2" />
           <label for="cb2" class="tab__label">Exhibitions and Festivals (selection)</label>
-          <div class="tab__content">{{- about.data.exhibitionList -}}</div>
+          <div class="tab__content"><ul>{{- about.data.exhibitionList -}}</ul></div>
         </div>
         <div class="tab">
           <input type="checkbox" name="accordion-1" id="cb3" />
