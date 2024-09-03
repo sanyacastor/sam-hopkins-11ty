@@ -8,6 +8,11 @@ socialMediaLinks:
     link: https://www.instagram.com/
   - title: Medium Blog
     link: https://medium.com/
+cvList:
+  - title: CV 2014
+    link: /assets/sp-404_om.pdf
+  - title: CV 2014
+    link: /assets/sp-404_om.pdf
 mainText: Sam Hopkins is an artist and scholar who is attentive to the ways in
   which narratives and truths are encoded and produced by different media. His
   work is rooted in Kenya and engages with specific networks to collectively
@@ -25,8 +30,7 @@ mainText: Sam Hopkins is an artist and scholar who is attentive to the ways in
   Nairobi.
 educationList: >-
   
-  - 2012-18: University of the Arts London (Chelsea): Practice-based PhD
-  Distributed: Co-producing Narratives of Belonging in Nairobi
+  - 2012-18: University of the Arts London (Chelsea): Practice-based PhD Distributed: Co-producing Narratives of Belonging in Nairobi
 
   - 2005-2006: Bauhaus University: MFA in Public Art New Creative Strategies (Elective)
 
@@ -43,11 +47,10 @@ educationList: >-
   - 1995-1997: Sevenoaks School: International Baccalaureate (40 points)
 exhibitionList: >-
   
-  - 2021: Invisible Inventories, Nairobi National Museum/Rautenstrauch-Joest
-  Museum, Weltkulturen Museum, Nairobi/Cologne/Frankfurt (KEN, GER)
+  - 2021: Invisible Inventories, Nairobi National Museum/Rautenstrauch-Joest Museum, Weltkulturen Museum, Nairobi/Cologne/Frankfurt (KEN, GER)
 
   - 2020: Process as Resistance, Resilience and Regeneration, CAT Cologne, Cologne (GER)
-  
+
   - 2019: DOK Leipzig, German Competition Short Documentary and Animated Film (GER)
 
   Die Dauercamperin, Ruhr Ding, Urbane Künst Ruhr, Dortmund (GER)
@@ -117,12 +120,9 @@ exhibitionList: >-
   - 2008: A Kind of Ambiguity (solo), Otto Dix Sammlung, Gera, (GER)
 
   CPH:DOX, International Film Festival, Copenhagen (DEN)
-
-
 residencyList: >-
   
-  - 2018: Research Fellow — Smithsonian Artists Research Fellowship (SARF),
-  Washington DC (US)
+  - 2018: Research Fellow — Smithsonian Artists Research Fellowship (SARF), Washington DC (US)
 
   - 2017: Artist in Residence — Visit Scholarship, Innogy Stiftung, Essen (GER)
 
@@ -139,42 +139,33 @@ residencyList: >-
   - 2008: Artist in residence — Otto Dix Kunstsammlung / Gera city, Gera (GER)
 
   - 2004: Scholarship — AHRC Research Preparation Masters Scheme Award, Oxford (UK)
-
 researchList: >-
   
-  - 2022:	Participant — Re-connecting Objects: epistemic plurality and
-  transformative practices in 	and 	beyond museums, VW Stiftung Research
-  Project, 2 years (GER, SEN)
+  - 2022:	Participant — Re-connecting Objects: epistemic plurality and transformative practices in 	and 	beyond museums, VW Stiftung Research Project, 2 years (GER, SEN)
 
   - 2018:  Co-initiator — International Inventories Programme:  investigating a corpus of Kenyan 	objects held in cultural institutions across the globe, Goethe Excellenz Initiativ, 	Kulturstiftung des Bundes Project (four years) (GER, KEN)
-
 teachingList: >-
- 
-  - Current:	 Assistant Professor, Department of Art (Netze), Academy of Media
-  Arts Cologne (GER)
+  
+  - Current: Assistant Professor, Department of Art (Netze), Academy of Media Arts Cologne (GER)
 
-  - 2023:	Guest Lecturer, Working Together: Tools, Strategies and Speculations, Methods Lab (Dr. 	Johanna Steindorf), Köln International School of Design (GER)
+  - 2023:	Guest Lecturer, Working Together: Tools, Strategies and Speculations, Methods Lab (Dr. Johanna Steindorf), Köln International School of Design (GER)
 
   - 2020:	Guest Lecturer, Postcolonial memory work; proposals, suggestions, experiments, MA seminar (Prof. Dr. Henrietta Günkel), Rühr-Universität Bochum (GER) 
 
   - 2018:	Guest Lecturer, Exhibit! Curating and Exhibitionary Practice Contextualised, MA seminar (Dr. Nadine Siegert) University of Bayreuth GER)
 
-  - 2016:	Guest Lecturer, I post there for I am — a practice-based workshop, Intermedia BA (Prof. Dr. Karina 	Nimmerfall), Faculty of Human Science, University of Cologne (GER)
+  - 2016:	Guest Lecturer, I post there for I am — a practice-based workshop, Intermedia BA (Prof. Dr. Karina Nimmerfall), Faculty of Human Science, University of Cologne (GER)
 
   - 2014:	Guest Lecturer, Documentary in Contemporary Art: A practice-based workshop, Visual Anthropology MA (Dr. Steffen Köhn) Freie Universität, Berlin (GER)
 
   - 2013:	Research Fellow, Mashup the Archive: Remix und Aufruhr im Iwalewahaus, BA seminar 	(Dr. Nadine Siegert), Iwalewahaus, Universität Bayreuth (GER)
 
   - 2012:	Guest Lecturer, Public Space — Zeitgenössiche Kunstpraxen im Öffentlichen Raum, BA seminar (Dr. Nadine Siegert), Iwalewahaus, Universität Bayreuth (GER)
-
 conferenceList: >
   
-  - 2023:	Presentation — Temporality, Accessibility and Restitution: Strategies
-  to Reflect on Long-Term 	Collaborative Film Projects, part of "What is the
-  role of reflection and reflexive methods in 	Artistic Research?" React and
-  Reflect, Hochschule für Musik und Tanz, Köln (GER)
+  - 2023:	Presentation — Temporality, Accessibility and Restitution: Strategies to Reflect on Long-Term 	Collaborative Film Projects, part of "What is the role of reflection and reflexive methods in 	Artistic Research?" React and Reflect, Hochschule für Musik und Tanz, Köln (GER)
 
-  - 2022:	Presentation — Re-connecting “Objects”, 12th Berlin Biennale, Kunstwerke, Berlin (GER) Presentation — Simba Mbili: Potential Histories of the Man-Eaters of Tsavo, Menagerie 	virtueller Tiere, Rühr Universität Bochum
+  - 2022:	Presentation — Re-connecting “Objects”, 12th Berlin Biennale, Kunstwerke, Berlin (GER) Presentation — Simba Mbili: Potential Histories of the Man-Eaters of Tsavo, Menagerie virtueller Tiere, Rühr Universität Bochum
 
   - 2021:  Symposium Co-organiser – Gamification vs Play, Times of Hands, The Academy of the Arts of the 	World, Cologne (GER)
 
@@ -191,7 +182,6 @@ conferenceList: >
   - 2013:	Presentation – Mashup, Artists With(out) borders, Bern (CH) Presentation — Conceptualising Future, Bayreuth Academy of Advanced African Studies (GER) Presentation — Art as an Argument; with Brian O'Doherty and Eugen Gomringer, Bayreuth Kunsthalle, (GER)
 
   - 2012:	Presentation — The Memory of the Crowd, part of "Ueber(w)unden; Art in troubled times", 	Goethe Institut Johannesburg (SA)
-
 publicationList: >-
   
   Citations
