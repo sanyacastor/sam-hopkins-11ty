@@ -20,10 +20,7 @@ previewDescription: >-
   This 'practice-based' artistic research is very different to, but works in tandem with, the academic research of the Iwalewahaus. It offers new perspective, positions and insights into artworks in the archive which the academic community of the house can then reflect on, and make sense with, in their discourse. This combination of artistic and academic enquiry is an agile and current approach to the study and display of African Art today. 
 
 
-  \--
-
-
-  Thanks to: Batida, Dj Raph, Otieno Gomba, Delio Jasse, Miss Eve, Nita., Thenjiwe Niki Nkosi, Simon Rittmeier, Kevo Stero, Pamela Phatsimo Sunstrum, Uche Uzorka, Iwalewahaus Bayreuth (artists), Nadine Siegert (co-curator). Supported by: Kulturstiftung des Bundes
+  **Thanks to:** Batida, Dj Raph, Otieno Gomba, Delio Jasse, Miss Eve, Nita., Thenjiwe Niki Nkosi, Simon Rittmeier, Kevo Stero, Pamela Phatsimo Sunstrum, Uche Uzorka, Iwalewahaus Bayreuth (artists), Nadine Siegert (co-curator). **Supported by:** Kulturstiftung des Bundes
 customTitle: Mashup the Archive - Introduction
 PDF File: /assets/03_mashup-the-archive_project-page.pdf
 relatedProjects: []
