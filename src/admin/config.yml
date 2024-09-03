@@ -1,6 +1,6 @@
 backend:
-  # name: test-repo
-  name: git-gateway
+  name: test-repo
+  # name: git-gateway
   branch: master
   # publish_mode: editorial_workflow
 
@@ -69,7 +69,7 @@ collections:
   - name: 'publication'
     label: 'Publication'
     folder: 'src/publications'
-    media_folder: 'src/publications/assets',
+    media_folder: 'src/publications/assets'
     public_folder: '/assets/publications'
     create: true
     slug: '{{slug}}'
@@ -143,7 +143,7 @@ collections:
       - label: 'About Page'
         name: 'about'
         file: 'src/about/data.md'
-        media_folder: "src/about/pdf" 
+        media_folder: 'src/about/pdf'
         public_folder: '/assets/about/'
         fields:
           - label: 'Email'
