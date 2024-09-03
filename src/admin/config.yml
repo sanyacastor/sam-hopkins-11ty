@@ -1,6 +1,6 @@
 backend:
-  # name: test-repo
-  name: git-gateway
+  name: test-repo
+  # name: git-gateway
   branch: master
   # publish_mode: editorial_workflow
 
@@ -135,80 +135,81 @@ collections:
           required: true,
         }
 
-  ## ABOUT PAGE ##
-  - name: 'about'
-    label: 'About'
-    folder: 'src/about'
-    slug: 'data'
-    create: true
-    fields:
-      - label: 'Email'
-        name: 'email'
-        widget: 'object'
+  ## PAGES CONTENT ##
+  - name: 'pages'
+    label: 'Pages content'
+    files:
+      - label: 'About Page'
+        name: 'about'
+        file: 'src/about/data.md'
         fields:
-          - { label: 'Title', name: 'title', widget: 'string' }
-          - { label: 'Value', name: 'value', widget: 'string' }
-      - label: 'Phone'
-        name: 'phone'
-        widget: 'string'
+          - label: 'Email'
+            name: 'email'
+            widget: 'object'
+            fields:
+              - { label: 'Title', name: 'title', widget: 'string' }
+              - { label: 'Value', name: 'value', widget: 'string' }
+          - label: 'Phone'
+            name: 'phone'
+            widget: 'string'
 
-      - label: 'Social media'
-        name: 'socialMediaLinks'
-        required: false
-        widget: 'list'
-        fields:
-          - { label: 'Title', name: 'title', widget: 'string' }
-          - { label: 'link', name: 'link', widget: 'string' }
+          - label: 'Social media'
+            name: 'socialMediaLinks'
+            required: false
+            widget: 'list'
+            fields:
+              - { label: 'Title', name: 'title', widget: 'string' }
+              - { label: 'link', name: 'link', widget: 'string' }
+          - label: 'CV'
+            name: 'cvList'
+            required: false
+            widget: 'list'
+            fields:
+              - label: 'Title'
+                name: 'title'
+                widget: 'string'
+              - label: 'link'
+                name: 'link'
+                widget: 'file'
+                media_library:
+                  config:
+                    media_folder: 'pdf/'
+          - label: 'Main text'
+            name: 'mainText'
+            required: false
+            widget: 'markdown'
 
-      - label: 'CV'
-        name: 'cvList'
-        required: false
-        widget: 'list'
-        fields:
-          - { label: 'Title', name: 'title', widget: 'string' }
-          - label: 'link'
-            name: 'link'
-            widget: 'file'
-            media_library:
-              config:
-                multiple: false
-                media_folder: 'src/about/pdf'
-      - label: 'Main text'
-        name: 'mainText'
-        required: false
-        widget: 'markdown'
+          - label: 'Education'
+            name: 'educationList'
+            required: false
+            widget: 'markdown'
 
-      - label: 'Education'
-        name: 'educationList'
-        required: false
-        widget: 'markdown'
+          - label: 'Exhibitions'
+            name: 'exhibitionList'
+            required: false
+            widget: 'markdown'
 
-      - label: 'Exhibitions'
-        name: 'exhibitionList'
-        required: false
-        widget: 'markdown'
+          - label: 'Residencies'
+            name: 'residencyList'
+            required: false
+            widget: 'markdown'
 
-      - label: 'Residencies'
-        name: 'residencyList'
-        required: false
-        widget: 'markdown'
+          - label: 'Research'
+            name: 'researchList'
+            required: false
+            widget: 'markdown'
 
-      - label: 'Research'
-        name: 'researchList'
-        required: false
-        widget: 'markdown'
+          - label: 'Teaching'
+            name: 'teachingList'
+            required: false
+            widget: 'markdown'
 
-      - label: 'Teaching'
-        name: 'teachingList'
-        required: false
-        widget: 'markdown'
+          - label: 'Conferences'
+            name: 'conferenceList'
+            required: false
+            widget: 'markdown'
 
-      - label: 'Conferences'
-        name: 'conferenceList'
-        required: false
-        widget: 'markdown'
-
-      - label: 'Publications'
-        name: 'publicationList'
-        required: false
-        widget: 'markdown'
+          - label: 'Publications'
+            name: 'publicationList'
+            required: false
+            widget: 'markdown'
