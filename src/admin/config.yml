@@ -164,7 +164,6 @@ collections:
         name: 'cvList'
         required: false
         widget: 'list'
-        media_folder: 'src/cv'
         fields:
           - { label: 'Title', name: 'title', widget: 'string' }
           - { label: 'link', name: 'link', widget: 'file' }

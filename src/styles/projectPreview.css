@@ -112,6 +112,10 @@ body::-webkit-scrollbar {
   width: 4px;
 }
 
+.projectPreview_ScrollArticle p {
+  margin: 0;
+}
+
 .projectPreview_ScrollArticle > p > img {
   display: none;
 }

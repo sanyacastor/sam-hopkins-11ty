@@ -62,7 +62,7 @@ pagination:
           <div class="projectPreview_textContainer">
             <div id="projectPreview_outer">
               <div class="projectPreview_ScrollArticle" id= "preview_scrollableContent">
-                {{ preview.previewDescription | safe }}
+                {{- preview.previewDescription | safe -}}
                 <a href="{{ "/projects/" ~ preview.title | slug }}" class="full-project-button--mobile">full project</a>
               </div>
               <div class="projectPreview_phantomColumn" id = "phantomColumn">
