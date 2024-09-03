@@ -56,6 +56,9 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy('./src/admin')
   eleventyConfig.addPassthroughCopy('./src/_scripts')
 
+  // About page: CV PDF's
+  eleventyConfig.addPassthroughCopy({ './src/about/pdf/': 'assets/about' })
+
   eleventyConfig.addExtension('css', {
     outputFileExtension: 'css',
     compile: async (inputContent, inputPath) => {

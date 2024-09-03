@@ -143,7 +143,7 @@ collections:
       - label: 'About Page'
         name: 'about'
         file: 'src/about/data.md'
-        media_folder: 'src/about/pdf'
+        media_folder: 'pdf/'
         public_folder: '/assets/about/'
         fields:
           - label: 'Email'
