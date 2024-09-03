@@ -16,17 +16,14 @@ previewDescription: >-
   fundamentally shaped the way the North has imagined Africa over the last 30
   years. 
 
-   
 
   In 1992 Kenneth Nnebue, a Lagos electronic merchant, shot a film and put it onto blank videocassettes. Living in Bondage, the story of a man struggling to make it in Lagos, was a huge success selling over 500,000 copies. This is credited as the birth of Nollywood. The following year Helen Ukpabio produced and starred in End of the Wicked staging Christian beliefs against traditional African religion. It sold hundreds of thousands of copies. Africans all over the continent identified with the stories and the characters represented in Nollywood. Today it is the dominant media presence on the African continent. 
-
-
 
 
   This film project imagines a future in which Hollywood and Nollywood, two very different industries and narrative projects, fuse and cross-fertilise. Emeka, our hero, is an outsider director in the Nollywood scene. He stumbles across the story of Out of Africa and finds the idea of a film about Africa with no Africans both repelling and intriguing. In this future (for reasons which are not entirely clear) this film has been banned. All Emeka can find is one minute of shredded footage which he painstakingly pieces together. He decides to remake ‘Out of Africa’ as a Nollywood film.
 
 
-  **Thanks to:** Lagos Photo 2015, AAF Lagos. **Supported by:** Goethe Insitut Lagos
+  Thanks to: Lagos Photo 2015, AAF Lagos. Supported by: Goethe Insitut Lagos
 customTitle: Re-imagining Out of Africa by Sam Hopkins (Concept Note, June 2014)
 PDF File: /assets/03_re-imagining-out-of-africa_project-page.pdf
 ---
