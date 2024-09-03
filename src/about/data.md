@@ -8,7 +8,9 @@ socialMediaLinks:
     link: https://www.instagram.com/
   - title: Medium Blog
     link: https://medium.com/
-cvList: []
+cvList:
+  - link: /assets/about/mpc1000_e3.pdf
+    title: EXAMPLE 1
 mainText: Sam Hopkins is an artist and scholar who is attentive to the ways in
   which narratives and truths are encoded and produced by different media. His
   work is rooted in Kenya and engages with specific networks to collectively
@@ -154,26 +156,26 @@ teachingList: >-
 
   - 2014:	Guest Lecturer, Documentary in Contemporary Art: A practice-based workshop, Visual Anthropology MA (Dr. Steffen Köhn) Freie Universität, Berlin (GER)
 
-  - 2013:	Research Fellow, Mashup the Archive: Remix und Aufruhr im Iwalewahaus, BA seminar 	(Dr. Nadine Siegert), Iwalewahaus, Universität Bayreuth (GER)
+  - 2013:	Research Fellow, Mashup the Archive: Remix und Aufruhr im Iwalewahaus, BA seminar (Dr. Nadine Siegert), Iwalewahaus, Universität Bayreuth (GER)
 
   - 2012:	Guest Lecturer, Public Space — Zeitgenössiche Kunstpraxen im Öffentlichen Raum, BA seminar (Dr. Nadine Siegert), Iwalewahaus, Universität Bayreuth (GER)
 conferenceList: >
   
-  - 2023:	Presentation — Temporality, Accessibility and Restitution: Strategies to Reflect on Long-Term 	Collaborative Film Projects, part of "What is the role of reflection and reflexive methods in 	Artistic Research?" React and Reflect, Hochschule für Musik und Tanz, Köln (GER)
+  - 2023:	Presentation — Temporality, Accessibility and Restitution: Strategies to Reflect on Long-Term Collaborative Film Projects, part of "What is the role of reflection and reflexive methods in Artistic Research?" React and Reflect, Hochschule für Musik und Tanz, Köln (GER)
 
   - 2022:	Presentation — Re-connecting “Objects”, 12th Berlin Biennale, Kunstwerke, Berlin (GER) Presentation — Simba Mbili: Potential Histories of the Man-Eaters of Tsavo, Menagerie virtueller Tiere, Rühr Universität Bochum
 
-  - 2021:  Symposium Co-organiser – Gamification vs Play, Times of Hands, The Academy of the Arts of the 	World, Cologne (GER)
+  - 2021:  Symposium Co-organiser – Gamification vs Play, Times of Hands, The Academy of the Arts of the World, Cologne (GER)
 
   - 2020:	Panel Chair — Object Movement Dialogue #3, International Inventories Programme (IIP), Rautenstrauch-Joest Museum, Cologne (GER)
 
   - 2018:	Presentation — Letter to Lagat, Invisible Inventories, part of "Contemporary African artistic 	practice: political forms and issues", Musée d’Aquitaine and LAM, Bordeaux (FRA)
 
-  - 2017: Presentation – The Bike Gang — Bikes and Belonging in the Off Road Base, part of "Mediating senses of belonging: Aesthetics, affects, ethnography", Congress for the Deutsche 	Gesellschaft für Völkerkunde (DGV), Berlin (GER)
+  - 2017: Presentation – The Bike Gang — Bikes and Belonging in the Off Road Base, part of "Mediating senses of belonging: Aesthetics, affects, ethnography", Congress for the Deutsche Gesellschaft für Völkerkunde (DGV), Berlin (GER)
 
-  - 2015: Roundtable co-organiser – "Mashup as Defiance: Culture, Appropriation, Post-colonialism" 	and "Aura: The Object in Postcolonial Art collections", Mashup exhibition, Bayreuth (GER)
+  - 2015: Roundtable co-organiser – "Mashup as Defiance: Culture, Appropriation, Post-colonialism" and "Aura: The Object in Postcolonial Art collections", Mashup exhibition, Bayreuth (GER)
 
-  - 2014:	Presentation — The Memory of the Crowd: The Potential of New Media Platforms to re-	imagine Narratives in Kenya, School of Oriental and African Studies, London (UK) Presentation — Channels through the institution — Undermining the colonial legacy of 	museums and expositions'', part of "Crawling Doubles. Colonial Collecting and Affect", 8th Berlin Biennale, Berlin (GER) 'Presentation — Mashup the Archive: Remix and Tumult at the Iwalewahaus, part of 	"Collecting Geographies – Global Programming and Museums of Modern Art", Stedelijk 	Museum Amsterdam (NL)
+  - 2014:	Presentation — The Memory of the Crowd: The Potential of New Media Platforms to re- imagine Narratives in Kenya, School of Oriental and African Studies, London (UK) Presentation — Channels through the institution — Undermining the colonial legacy of 	museums and expositions'', part of "Crawling Doubles. Colonial Collecting and Affect", 8th Berlin Biennale, Berlin (GER) 'Presentation — Mashup the Archive: Remix and Tumult at the Iwalewahaus, part of "Collecting Geographies – Global Programming and Museums of Modern Art", Stedelijk 	Museum Amsterdam (NL)
 
   - 2013:	Presentation – Mashup, Artists With(out) borders, Bern (CH) Presentation — Conceptualising Future, Bayreuth Academy of Advanced African Studies (GER) Presentation — Art as an Argument; with Brian O'Doherty and Eugen Gomringer, Bayreuth Kunsthalle, (GER)
 
@@ -189,28 +191,28 @@ publicationList: >-
 
   Marcel, Olivier. "Ochuo, Du Bidonville Au Cube Blanc: Géographie D'une Rencontre Globale."Cahiers D'Études Africaines 56, no. 223 (2016)
 
-  - 2015:	Vierke, Ulf. 'Archive, Art and Anarchy: From the Topological Archive to the Anarchic 	Archive', African Arts, vol. 48, no. 2 summer 2015
+  - 2015:	Vierke, Ulf. 'Archive, Art and Anarchy: From the Topological Archive to the Anarchic Archive', African Arts, vol. 48, no. 2 summer 2015
 
-  - 2013:	Bounakoff, Pierre Nicholas, Katharina Greven and Nadine Siegert eds, Iwalewa: Four Views 	into Contemporary Africa, Iwalewahaus: Bayreuth
+  - 2013:	Bounakoff, Pierre Nicholas, Katharina Greven and Nadine Siegert eds, Iwalewa: Four Views into Contemporary Africa, Iwalewahaus: Bayreuth
 
   - 2012:	Hossfeld, Johannes. Mwangalio Tofauti: Nine Kenyan Photographers, Nairobi, Native Intelligence
 
-  - Förster, Larissa, Christian Hanussek and Kerstin Pinter (eds). Afropolis: City/Media/Art, 	Johannesburg: Jacana Media
+  - Förster, Larissa, Christian Hanussek and Kerstin Pinter (eds). Afropolis: City/Media/Art, Johannesburg: Jacana Media
 
 
   Authored
 
-  - 2023:	Hopkins, Sam. Nairobi Distributed, Johannesburg/Bayreuth:  Iwalewa Books (upcoming)
+  - 2023:	Hopkins, Sam. Nairobi Distributed, Johannesburg/Bayreuth: Iwalewa Books (upcoming)
 
-  Hopkins, Sam and Simon Rittmeier. A Topography of Loss in Marian Nur Goni (eds) Trouble 	Dans Les Collections (#4, March 2023), 
+  Hopkins, Sam and Simon Rittmeier. A Topography of Loss in Marian Nur Goni (eds) Trouble Dans Les Collections (#4, March 2023), 
 
-  - 2021:	Hopkins, Sam and Marian Nur Goni (eds), Invisible Inventories — the zine,  Jo'burg/Bayreuth:  	Iwalewa Books
+  - 2021:	Hopkins, Sam and Marian Nur Goni (eds), Invisible Inventories — the zine,  Jo'burg/Bayreuth: Iwalewa Books
 
   Hopkins, Sam. 'WTF is Gamification? A Brief and Biased Overview' in Madhusree Dutta 	(ed) CC: (vol 2. 2021), Cologne: Academy of the Arts of the World
 
-  - 2020:  Hopkins, Sam. 'Being Contemporary' in Hans Ulrich Reck (ed), Journal der KHM #12, 	Cologne: Kunsthochschule für Medien
+  - 2020:  Hopkins, Sam. 'Being Contemporary' in Hans Ulrich Reck (ed), Journal der KHM #12, Cologne: Kunsthochschule für Medien
 
-  - 2017: 	Hopkins, Sam and Nadine Siegert (eds). MASHUP The Archive, Berlin: Revolver Books
+  - 2017: Hopkins, Sam and Nadine Siegert (eds). MASHUP The Archive, Berlin: Revolver Books
 
   - 2016:	Hopkins, Sam. The Rubbish Companion, Cologne: Strezelecki Books
 
@@ -220,7 +222,7 @@ publicationList: >-
 
   - 2012:	Slum TV. Grassroots Upgraded: Reflection on Nairobi's Eastlands, Oostkamp: Stichting Kunstboak, 
 
-  - Cavallo, Vincenzo & Sam Hopkins 'Ghosts Provoke Violence' in Heidenreich-Seleme, Lien 	and S O'Toole (eds), Über(W)unden: Art in Troubled Times, Johannesburg: Jacana Media
+  - Cavallo, Vincenzo & Sam Hopkins 'Ghosts Provoke Violence' in Heidenreich-Seleme, Lien and S O'Toole (eds), Über(W)unden: Art in Troubled Times, Johannesburg: Jacana Media
 
-  - 2011:	Hopkins, Sam and Johannes Hossfeld. Sam Hopkins: Contact Zones (vol 2), Nairobi: Native 	Intelligence
+  - 2011:	Hopkins, Sam and Johannes Hossfeld. Sam Hopkins: Contact Zones (vol 2), Nairobi: Native Intelligence
 ---
