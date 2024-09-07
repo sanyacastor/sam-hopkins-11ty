@@ -1,7 +1,8 @@
 ---
 id: -8VYchZd-I5VXQtBA3dDx
 title: A Life in the Day
-dates: 2011-2013
+customTitle: Jean Rouch, Collaborative Film and Performed Identities by Sam Hopkins
+dates: "2013"
 collaborators: Slum TV
 cardDescription: A series of video works which try to understand how ethnicity
   is experienced in everyday life in present-day Kenya
@@ -23,7 +24,6 @@ previewDescription: >-
 
 
   Thanks to: Ambrose, Carol, Humphrey, Lucy, Moroko, Omar. Supported by: Übersee Museum Bremen
-customTitle: Jean Rouch, Collaborative Film and Performed Identities by Sam Hopkins
 PDF File: /assets/03_a-life-in-the-day_project-page.pdf
 ---
 (Excerpt from Distributed: Co-producing Narratives Of Belonging in Nairobi's Eastlands. PhD thesis, UAL, Supervisors: N. Cummings, J. Bajorek)
