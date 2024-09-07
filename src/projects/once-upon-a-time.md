@@ -1,6 +1,7 @@
 ---
 id: vZ4pwp8sCHHaY7eBcE0g1
 title: Once upon a Time
+customTitle: Chapter Two: The Abayudaya - Maggie Yates
 dates: "2013"
 collaborators: Marcel Odenbach
 cardDescription: A video installation which explores belief and identity for
@@ -19,20 +20,17 @@ previewDescription: >-
    'Once upon a Time' (2013) is a 4 channel video installation which features interviews with 4 of these Rabbinical students. Whilst of course, each narrative is highly personal and very individual there is a certain coherence that emerges across all four stories. On the one hand, their seems to this quest for a belief system that makes sense in an almost pragmatic, everyday way, but on the other hand their is this powerful feeling of the existential nature of religion and of the spiritual resonance that Judaism has for these individuals.
 
   Thanks to: Carlo Peters (Sound Mix). Supported by: Goethe Institut Johannesburg
-customTitle: Chapter Two: The Abayudaya, by Maggie Yates
 PDF File: /assets/03_once-upon-a-time_project-page.pdf
 ---
 *Excerpt from 'Gather us Together as Jews From the Four Corners of the Earth: The Emergence and Endurance of the Abayudaya in Uganda.'*
 
-
-
-### Locating the Abayudaya
+#### Locating the Abayudaya
 
 The Abayudaya of Uganda are the only known Africans to have seemingly spontaneously converted to Judaism without external Jewish involvement or influence. In order to understand how and why this conversion occurred, it is crucial to discuss the historical circumstances that contributed to their conversion as well as the economic, political and social circumstances they currently navigate in order to maintain their Jewish observance. In this chapter I therefore, first outline a brief pre-colonial and colonial history of Uganda and then move to the Abayudaya’s historical development as a community. I have not attempted to triangulate all of the oral histories I collected from my informants in addition to the few histories published by scholars in order to write an objective history of the community. Instead, through this chapter, I attempt to present the Abayudaya’s understanding of their own history. In doing so, I invoke Liisa Malkki’s concept of a “mythico-history” in order to highlight the current significance of the Abayudaya’s constructed past (Malkki 1995). Once we have located the Abayudaya within Uganda’s pre-colonial and colonial history and identified the meaning of the community’s constructed history, we can begin to explore the factors that led the Abayudaya to a Jewish conversion. 
 
 
 
-### The Nation: A Brief History of Uganda 
+#### The Nation: A Brief History of Uganda
 
 Nestled in East Africa, Uganda is neighbored by The Democratic Republic of Congo to the west, Sudan to the north, Kenya to the east, and Rwanda and Tanzania to the South. Lake Victoria also constitutes most of the country’s southern border (Ofcansky 1996:3). The country is lush with tropical fauna due to its fertile land and ample rainfall. Uganda’s population of over 32 million consists of approximately 40 ethnic groups speaking over 30 languages that never considered themselves in pre-colonial times as single, unified nation (Ofcansky 1996:74).  The history of these groups and the antecedents of the nation of Uganda date back to the fourth century BCE when hunter gatherers, agriculturalists and pastoralists, originating from West Africa migrated to the forests surrounding Lake Victoria, while inhabitants from northern Africa settled in the northern and eastern regions of the country (Ofcansky 1996:14). 
 
@@ -56,7 +54,7 @@ Museveni remains in power today. In 1995, he ratified the constitution. Ten year
 
 ![](/assets/once-upon-a-time_01_production-still_rachmann_2013_-c-hopkins-odenbach-1.jpg "Once Upon A Time_01_Production Still_Rachmann_2013_(c)Hopkins/Odenbach-1")
 
-### The People: A Current Overview of the Abayudaya 
+#### The People: A Current Overview of the Abayudaya
 
 In the eastern region of Uganda near the border with Kenya, live the 1,050 members of the Abayudaya. The community, which consists of an amalgamation of several Ugandan ethnic groups is dispersed among eight villages that lie within 1 to 15 kilometers of each other and are primarily linked by dirt roads. Community members travel between villages or into Mbale, the nearest city, by foot or using public transportation, since they cannot afford the more expensive fare of motorcycle taxis. 
 
@@ -85,11 +83,7 @@ Every history is subjective. Yet it is important to understand a community’s s
 \--
 
 1. A member of the Baganda ethnic group, singular.
-
 2. Note for future research: The British archives may contain more detailed information about the Malakite sect and perhaps the Abayudaya’s formation as well.
-
 3. It is important to note that although Jews from several Western countries including Great Britain and Canada visit the Abayudaya each year, my fieldwork revolves around the role American organizations and Israeli politics play in the Abayudaya’s reality. As a result, my discussion in the following chapters regarding the activities of “Western” or “international Jewry” in the community focuses primary on the roles of American and Israeli actors.
-
 4. The documentary Yearning to Belong records the Abayudaya’s 2002 conversion (Gonsher, Vinik 2007)
-
 5. Conservative and Orthodox conversions are similar processes. Both instruct the convert about how to live as a Jew and both require the convert to be immersed in a ritual bath in addition to making an agreement to live by the Jewish commandments. Male converts also undergo the ritual circumcision. An Orthodox conversion requires, however, that the members of the jury who determine the sincerity of the convert must be Orthodox Jews. Additionally the tradition requires that an Orthodox rabbi must oversee the conversion. Orthodox Rabbis do not recognize conversions done by Conservative or Reform rabbis (Jewish Virtual Library 2010).
