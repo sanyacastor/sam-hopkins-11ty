@@ -1,7 +1,9 @@
 ---
 id: ROK1CONKqsnaRrNWKgGZt
 title: Made in Chinafrica
-dates: " 2019"
+customTitle: Have you ever seen Bruce Lee before? Cosmopolitan readings of
+  Chinese African films
+dates: " 2022"
 link: https://www.kolikfilm.at/sonderheft.php?edition=202033&content=inhalt
 collaborators: David Lalé
 cardDescription: An experimental documentary which tells the stories of African
@@ -32,8 +34,6 @@ previewDescription: >-
 
 
   Supported by Filmstiftung NRW, Arts Council UK
-customTitle: Have you ever seen Bruce Lee before? Cosmopolitan readings of
-  Chinese African films
 PDF File: /assets/03_made-in-chinafrica_project-page.pdf
 relatedProjects: []
 ---
