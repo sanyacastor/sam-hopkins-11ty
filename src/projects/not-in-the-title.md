@@ -1,6 +1,8 @@
 ---
 id: pzdCS4RLUbVoJpQebGJlW
 title: Not in the Title
+customTitle: Rewind to the beginning | A Prologue | Reflecting (Artist Statement
+  written in 2011) - Sam Hopkins
 dates: "2012"
 cardDescription: An immersive video and spatial installation that inserts fake
   Nollywood films into the Iwalewahaus Nollywood film collection
@@ -19,13 +21,11 @@ previewDescription: >-
    Could I take the Borges strategy of mixing real and apocryphal references and apply it to this archival Nollywood material? What would happen if I digitally manipulated the material to insert new characters? Could I destablize the idea that these films were somehow pure and authentic? And if I mixed this generated material with original material what would that do to the viewers experience? Could this openly-stated intention of mixing 'real' and 'fake' material start to question the nature and selection of the original material?
 
   Thanks to: Ulf Vierke and Nadine Siegert (curators). Supported by: Iwalewahaus
-customTitle: Rewind to the beginning | A Prologue | Reflecting - Sam Hopkins
 PDF File: /assets/03_not-in-the-title_project-page.pdf
+relatedProjects:
+  - vABrLIvMrhQEvGmX_lnQM
+  - YV0wkB3RFVSPjwnbY5CW1
 ---
-*Artist Statement written in 2011*
-
-
-
 When I was asked, sometime in 2010, by Ulf Vierke and Nadine Siegert if I was interested in making an artwork based on the archive at Iwalewa-Haus my initial idea was to explore and investigate the idea of authenticity in relation to cultural production. What happens to an object, an artefact, a work of art when it is transported from its original context to new one? From Africa to Europe, from South to North, from site of production to site of display? And not just a site of display, the artefacts and works of art in the Iwalewa-Haus exist in the context of a museum and an archive, both of which entail a certain set of power relations. How would these recalibrate the object/work of art in question? 
 
 With these ideas in mind I went to Bayreuth for a research trip. You could say I was conscious of the shape of the box but I did not know what would be inside. I had a vague idea that the collection at Iwalewa consisted of predominantly traditional artefacts, but beyond that I was not really sure what to expect. When I arrived Ulf explained to me that there were actually various collections, ranging from Contemporary Art, to traditional artefacts to textiles and music. They were all upstairs and I should go and explore myself. I decided to start from the beginning. I walked up the creaking wooden staircase to the top floor of Iwalewa-Haus, went to the end of the narrow corridor to the end room, then through the end room to the very last room. 
