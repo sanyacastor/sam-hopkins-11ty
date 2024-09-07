@@ -1,7 +1,8 @@
 ---
 id: 1SrrztD0Hmih1NLS0u319
 title: Mashup the Archive
-dates: 2013-15
+customTitle: Mashup the Archive - Introduction
+dates: "2015"
 link: "Originally published in Sam Hopkins and Nadine Siegert (eds), Mashup the
   Archive. Revolver, Berlin: 2017"
 collaborators: Nadine Siegert
@@ -21,7 +22,6 @@ previewDescription: >-
 
 
   **Thanks to:** Batida, Dj Raph, Otieno Gomba, Delio Jasse, Miss Eve, Nita., Thenjiwe Niki Nkosi, Simon Rittmeier, Kevo Stero, Pamela Phatsimo Sunstrum, Uche Uzorka, Iwalewahaus Bayreuth (artists), Nadine Siegert (co-curator). **Supported by:** Kulturstiftung des Bundes
-customTitle: Mashup the Archive - Introduction
 PDF File: /assets/03_mashup-the-archive_project-page.pdf
 relatedProjects: []
 ---
