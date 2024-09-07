@@ -1,7 +1,7 @@
 ---
 id: -8VYchZd-I5VXQtBA3dDx
 title: A Life in the Day
-customTitle: Jean Rouch, Collaborative Film and Performed Identities by Sam Hopkins
+customTitle: Jean Rouch, Collaborative Film and Performed Identities - Sam Hopkins
 dates: "2013"
 collaborators: Slum TV
 cardDescription: A series of video works which try to understand how ethnicity
@@ -25,12 +25,16 @@ previewDescription: >-
 
   Thanks to: Ambrose, Carol, Humphrey, Lucy, Moroko, Omar. Supported by: Übersee Museum Bremen
 PDF File: /assets/03_a-life-in-the-day_project-page.pdf
+relatedProjects:
+  - vDbPeVO3j1xeydEABqaBw
+  - 97qYsNwiTFwI5P4S8EAdD
+  - wxByk7jRApqwSRnDclD7v
 ---
-(Excerpt from Distributed: Co-producing Narratives Of Belonging in Nairobi's Eastlands. PhD thesis, UAL, Supervisors: N. Cummings, J. Bajorek)
+*Excerpt from Distributed: Co-producing Narratives Of Belonging in Nairobi's Eastlands. PhD thesis, UAL, Supervisors: N. Cummings, J. Bajorek*
 
 
 
-### Inscrutable Ethnicity And The Methods Of Jean Rouch 
+#### Inscrutable Ethnicity And The Methods Of Jean Rouch
 
 The Post Election Violence in Kenya revealed ethnicity-as-political identity to be an extremely emotive identity that could manifest in an explosive manner. This emerged in the particular context produced by the politicians and political events that surrounded the elections. But what about the much harder to locate ethnicity-as-cultural identity, which existed alongside it and independently of it? How did ethnicity manifest on a lived, practiced and mundane, day-to-day basis? 
 
@@ -54,7 +58,7 @@ This approach to making moving-image is defined by Bill Nichols as an ‘interac
 
 
 
-### Developing The Interactive Method As A Collaborative Mode
+#### Developing The Interactive Method As A Collaborative Mode
 
 “a) DAY 1 – On this day you will be asked to keep a diary describing what happens during that particular day. This could be at what time you clean your teeth in the morning, or it could describe what it is you thought about when you were having lunch. There is no right or wrong answer and it is your decision what you want to write down. I will not be with you and nothing will be filmed.”(7)
 
@@ -84,9 +88,7 @@ if we look at how they put it to use, we see that they actively and consciously 
 
 
 
-### Performing Identities. Performing Ethnicity?
-
-
+#### Performing Identities. Performing Ethnicity?
 
 “Mimi ni Humphrey Sodaba. Asabuhi nasoma Biblia yangu kwa luga ya Kiswahili vizuri sana”(11) (I am Humphrey Odaba. In the morning I read my Bible in fluent Swahili)
 
@@ -110,7 +112,7 @@ There is much more connecting the characters/participants in these performed hab
 
 
 
-### Reflecting On Ethnicity, Reflecting On Methods
+#### Reflecting On Ethnicity, Reflecting On Methods
 
 Kenyan politicians routinely appeal to the uniqueness and difference of the various ethnicities in Kenya.(17) But the visual references and the layer of spoken narration in these performed re-enactments point to a set of references, and habits, that are more global and universal than they are located in an ethnicity-specific set of practices. Yet references to ethnicity are not absent in day-to-day life in Kenya. In fact, they are ubiquitous, just extremely difficult to grasp and locate beyond cliché and stereotype. It is exactly this indeterminate nature that makes this form of ethnicity so intriguing (and perhaps also possible to manipulate by politicians). I hoped that the idealised realm of the re-enacted day would give a texture and a substance to how some individuals imagined their ethnic identity. The results were moving-image documents in which any reference to an ethnic identity is almost suspiciously absent.
 
@@ -129,37 +131,20 @@ Were these issues of self-censorship compounded by the acutely reflexive nature 
 \--
 
 1. See Mkenya Mzalendo, ‘Negative Stereotypes Are The Cancer Eating Kenya’, http:// www.monitor.co.ke/2015/04/09/negative- stereotypes-cancer-eating-kenya/ (March 1, 2018).
-
 2. As referenced in Chapter 1, this notion of ‘performativity’ stems from an observation of how Slum TV members were constantly acting out various identities, but it is subsequently informed by a constellation of positions that articulate the open, unmade nature of identity. See Judith Butler’s notion of gender as a verb not a noun, Paul Gilroy’s counsel that identities are inherently unstable and Stuart Hall’s idea 45 of identity as a process of formation. See Judith Butler, Gender Trouble: Feminism and the Subversion of Identity, p. 33, Paul Gilroy, The Black Atlantic: Modernity and Double Consciousness, p xi, Stuart Hall, Representation: Cultural Representations 46 and Signifying Practices, p. 47.
-
 3. For Sembène confrontation see Albert Cervoni, ‘A Historic Confrontation in 1965 between Jean Rouch and Ousmane Sembène: “You Look at Us as If We Were Insects”’ in Max Annas & Annett Busch (eds), Ousmane Sembène: Interviews (Jackson: University Press of Mississippi, 2008) pp 3-6. For racist stereotypes see Adolfo Colombres’ critique of Moi un Noir referenced in Fadwa el Guindi’s Visual Anthropology: Essential Method and Theory (Walnut Creek: Altamira, 2004) p. 41-43.
-
 4. “...the camera gains consciousness, and the mediating work of the filmmaker is itself put on screen as a way of making a work process explicit”. See Stephen Feld (ed) Ciné-Ethnography: Jean Rouch, p. 23. 
-
 5. See Jean Rouch with Enrico Fulchignoni, ‘Ciné-Anthropology’ in Stephen Feld (ed) Ciné-Ethnography: Jean Rouch, (Minneapolis, London: University of Minnesota Press, 2003) p. 176.
-
 6. Bill Nichols, Representing Reality (Indiana University Press: Bloomington, 1991) pp. 38-44.
-
 7. Information Sheet, see Appendix ii.
-
 8. Grant Kester, The One and the Many, p. 114.
-
 9. For example, the morning routine takes place at her home but Lucy asked if it would be ok 51 to shoot it at her friend’s house instead, as her parents did not support her fashion career.
-
 10. A Life in the Day_Humphrey (12.12.2012), min. 00:04.
-
 11. A Life in the Day_Lucy (11.10.2012), min. 01:16-01:40.
-
 12. A Life in the Day_Moroko (08.10.2012), min. 05:46-06:03.
-
 13. Comaroff and Comaroff, Ethnicity, Inc., p. 44.
-
 14. In this re-enacted context a cliché or stereotype about the habits of a particular group,such as the affinity of people from the Luo community for eating fish, could be appropriated as a sign of being Luo.
-
 15. A Life in the Day_Moroko (08.10.2012) min. 03:24-03:35.
-
 16. A Life in the Day_Lucy (11.10.2012) mins; 02:58, 05:27, 05:35, 05:55, 06:12, 06:31.
-
 17. “In the political sphere, leaders appeal to people of their own tribes when they want support, they also use their tribes as leverage when they bargain for positions and favors in government.” See ‘In Kenya, politics split on ethnic divide,’ October 26, 2017, http://www. dw.com/en/in-kenya-politics-split-on-ethnic- divide/a-37442394 (March 3, 2018).
-
 18. John Lonsdale frames this as a ‘moral ethnicity’: “...the common human instinct to create out of the daily habits of social intercourse and material labour a system of moral meaning and ethical reputation within a more or less imagined community... Ethnicity is always with us; it makes us moral, and thus social beings”. See John Lonsdale, ‘Moral Ethnicity and Political Tribalism,’ http://ojs.ruc.dk/index.php/ ocpa/article/view/3608/1790 (March 3, 2018).
