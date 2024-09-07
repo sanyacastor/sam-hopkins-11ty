@@ -1,6 +1,7 @@
 ---
 id: BrtO_wOsvoQDHFX6RIw-I
 title: "International Inventories Programme "
+customTitle: International Inventories Programme (IIP) Concept Paper (2018)
 dates: "2021"
 link: "Originally published here: https://www.inventoriesprogramme.org/concept-paper"
 collaborators: The Nest, SHIFT Collective, National Museums of Kenya,
@@ -34,12 +35,9 @@ PDF File: /assets/03_international-inventories-programme_project-page.pdf
 relatedProjects:
   - Qp9NWlK9XXEVQZhJWfSWp
   - eFcllqsX4vkqLhwGJij6G
+  - hmrv6g5WCVcxtH1E4szoK
 ---
-## International Inventories Programme (IIP) Concept Paper (2018)
-
-\--
-
-In brief
+#### In brief
 
 International Inventories Programme (2019 - 2021) is an artistic, research and curatorial project that investigates Kenyan objects held in cultural institutions outside of Kenya. It brings together a constellation of cultural entities; the National Museum of Kenya (NMK) in Nairobi, theRautenstrauch-Joest-  (RJM) in Cologne, the Weltkulturen Museum in Frankfurt and the artist collectives Nest (representatives: Jim Chuchu and Dr. Njoki Ngumi) and SHIFT (Sam Hopkins, Marian Nur Goni, Simon Rittmeier).
 
@@ -47,9 +45,7 @@ The explicit intention and question of International Inventories Programme is, h
 
 Clearly rooted in Nairobi, IIP radiates outwards towards affiliated object collections in the Global "North". This positioning of the project is explicit and conscious; in order to work through entangled colonial legacies, it is essential to move beyond the emerging institutional awareness of the “North” to engage with discourses and discussions from the "South". If we genuinely believe in ideas of shared heritage and histories, notions such as the "Universal Museum" should also be applicable to museums located outside of the heart of the former colonial empires. One of the aims of the project is to experiment the implications of this positioning from the testing ground of Nairobi.
 
-
-
-### Background
+#### Background
 
 International Inventories Programme is the follow up project to Letter to Lagat (2015), a book project by artists Sam Hopkins and Simon Rittmeier, which meditates on ownership, copies and agency, investigated through the lens of a collection of African objects and artefacts archived at the Iwalewahaus (Bayreuth, Germany). This project is part of a family of intentions developed over the course of the last few years by artists and scholars, mainly residing in Europe, that explored the manifold issues related to the sprawling collections (artefacts, artworks, human remains) and archives held in ethnographic museums in former empires’ capitals.(1) Indeed, increasingly, these institutions themselves call upon artists to address them, with the risk, as researcher Lotte Arndt astutely observes, “that (they) will appropriate these works cosmetically and evacuate fundamental power consideration”.(2) Raising these discussions and debates in the North, and from the perspective of its overfilled, silent storerooms, is necessary and urgent; they embody, and intersect with, legacies of colonial histories which European societies have only recently started to deal with. Yet, by approaching this topic from the perspective of Nairobi, International Inventories Programme opens an urgently required dialogue that affords a joint-research endeavour of researchers and artists from both the North and the South.
 
@@ -57,9 +53,7 @@ International Inventories Programme is the follow up project to Letter to Lagat 
 
 Many of the injustices of the colonial period cannot be undone, but the tangible area of dispossessed physical objects can be researched and addressed. In the current debates over object repatriations, particularly intense since the release of the Sarr/Savoy report to the French president Macron (November 23, 2018), IIP aspires to contribute to this public, much-needed discussion through engaging artworks which are informed by detailed academic research.
 
-
-
-### Conceptual Framework
+#### Conceptual Framework
 
 Twofold in its objectives, International Inventories Programme tries simultaneously to look backward and forward, and to fully take into account past, present and future stakes, in all their own material, technological and emotional dimensions.
 
@@ -69,9 +63,7 @@ Peering into the future; what other stories can these objects narrate today? And
 
 More broadly, given the colonial legacy of museums in Africa and Alpha Oumar Konaré’s famous statement delivered at ICOM in 1991, has the time finally come to invent new forms to preserve and enhance patrimonies, new modes which would be meaningful to local communities and societies? What new curatorial practices could this debate trigger?
 
-
-
-### The NMK in Nairobi - A Laboratory Platform
+#### The NMK in Nairobi - A Laboratory Platform
 
 Drawing inspiration from the arsenal of concepts coined by institutions holding  contested colonial object collections in the North, from the “universal” to notions of “shared heritage” - what would happen if we also started to consider museums situated in the South as “museums of the world for the world”? Not specifically in terms of the overarching collections they hold today but as places where we could very legitimately “re-examine cultural identities and explore the complex network of interconnected world cultures”(4) ?
 
@@ -79,9 +71,7 @@ Drawing inspiration from the arsenal of concepts coined by institutions holding 
 
 This becomes particularly evident if we look beyond the sole lens of the colonial encounter, and the North-South, top-down politico-cultural axis it shaped, at the rich historical connections that East Africa has established. The centuries-long Indian Ocean trade with the Arabian and Indian subcontinents, diplomatic connections with China in the fifteenth century and early commitment to the Non-Aligned Movement being just some examples of significant and powerful 'extra European' relationships. Contemporary Nairobi, a melting point of communities from all over the African continent, is further testament to this. Our idea is to turn the NMK into a huge, creative laboratory platform where these questions, mindful of history and the place from where they are formulated and imagined, could be reworked to be meaningful both for communities at local and global level. Indeed what do “shared” or “contested” heritages mean, when evaluated from the perspectives of communities in Kenya or of the NMK in Nairobi? We would like to re-examine these contested notions, starting with the Museum itself as a contested space in its own right, as productive sites to investigate historical, cultural and power relations in all their dimensions and dynamics but, first and foremost, in their interplays with local and “global” experiences.
 
-
-
-### Working method and approach
+#### Working method and approach
 
 International Inventories Programme consists of a constellation of artists, curators and academics with different backgrounds and mindful of the positions from which they speak and work, spanning various countries between Europe and Africa. Our working method and approach is structured to afford creative freedom and support to all participants. Our ambition is to produce accessible, discursive artworks which are rooted in Kenya but equally relevant to publics abroad.
 
@@ -96,9 +86,7 @@ Therefore, the aim of the IIP project is to:
 
 ![](/assets/international-inventories-programme_01_project_2021_-c-barasa-4.jpg "International Inventories Programme_01_Project_2021_(c)Barasa-4")
 
-
-
-### Project Timeline and Outputs
+#### Project Timeline and Outputs
 
 In July 2018, International Inventories Programme was awarded an Excellence Initiative grant by the Goethe-Institute in Munich, Germany.
 
@@ -108,9 +96,7 @@ In July 2018, International Inventories Programme was awarded an Excellence Init
 * Extensive public programmes will be developed for the exhibitions in both museums.
 * Different kinds of publications (academic paper, a catalogue, blog posts) will also be produced during and after the project.
 
-
-
-### Who we are
+#### Who we are
 
 The IIP project formalizes the research and artistic collaboration between:
 
@@ -118,16 +104,12 @@ The IIP project formalizes the research and artistic collaboration between:
 * SHIFT Collective (France / Germany), a collective of creative practitioners engaged in speculative imaginations about the cultural ebb and flow between the African continent and beyond. Participating members include: Sam Hopkins, PhD (Artist), Dr. Marian Nur Goni (Researcher) and Mr. Simon Rittmeier (Artist).
 * he Nest Collective (Kenya) - a Nairobi-based multi-disciplinary arts collective working with film, fashion, music and visual arts projects that explore Kenyan identities. Participating members include: Mr. Jim Chuchu (Director), Dr. Njoki Ngumi (Head of Learning and Development).
 
-
-
 Additional partners
 
 * Rautenstrauch-Joest-Museum (RJM), Cologne
 * Weltkulturenmuseum, Frankfurt
 * Goethe-Institut Nariobi, Kenya
 * French Institute for Research in Africa (IFRA), Nairobi
-
-
 
 Contact
 
@@ -156,7 +138,5 @@ Notes
 Paris / CAPC, Bordeaux, Kapwani Kiwanga’s 2014 The Maji Maji project, Jan Nikolai Nelles and Nora Al-Badri’s The Other Nefertiti etc.
 
 2. Lotte Arndt, « Vestiges of Oblivion – Sammy Baloji’s Works on Skulls in European Museum Collections », darkmatter in the ruins of imperial culture, November 2013
-
 3. "Hey, that's our stuff: Maasai tribespeople tackle Oxford's Pitt Rivers Museum”, The Guardian, December 4, 2018, online: https://www.theguardian.com/culture/2018/dec/04/pitt-rivers-museum-oxfordmaasai-colonial-artefacts
-
 4. Excerpt from a British Museum’s leaflet concerning the Parthenon Marbles, in Binns, « The Universal Museum: a neo-colonial device? », BA Archaeology, School of Humanities, University of Southampton, 2011, p. 57.
