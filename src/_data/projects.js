@@ -42,6 +42,15 @@ const readFiles = async filePaths => {
             }
           })
         })
+
+        attributes?.extraImages?.forEach(url =>
+          currentProject.images.push({
+            url,
+            alt: '',
+            caption: '',
+          }),
+        )
+
         projects.push({
           ...currentProject,
           images: currentProject.images,
