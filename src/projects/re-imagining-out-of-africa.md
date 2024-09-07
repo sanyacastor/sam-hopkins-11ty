@@ -1,7 +1,8 @@
 ---
 id: PyXW_iOcYuOP1nhC7igLE
 title: Re-imagining Out of Africa
-dates: 2014-2015
+customTitle: Re-imagining Out of Africa by Sam Hopkins (Concept Note, June 2014)
+dates: "2015"
 link: ""
 cardDescription: A project which imagines a future in which Hollywood and
   Nollywood fuse and cross-fertilise
@@ -24,7 +25,6 @@ previewDescription: >-
 
 
   Thanks to: Lagos Photo 2015, AAF Lagos. Supported by: Goethe Insitut Lagos
-customTitle: Re-imagining Out of Africa by Sam Hopkins (Concept Note, June 2014)
 PDF File: /assets/03_re-imagining-out-of-africa_project-page.pdf
 ---
 One of the strange things about growing up in Kenya as a white person has been witnessing the resilience of a certain mythology within the white Kenyan community; a mythology that speaks of pioneers, settlers and extravagance, yet says nothing of subjugation, suppression and exploitation. It is a somewhat selective rendering of Kenya, and one in which both the Postcolonial context and Postcolonial discourse are notably absent. What is particularly interesting in this distorted collective memory is the role that is assigned to Karen Blixen of being emblematic of the white settlers, somewhat ironic considering she saw herself as both different from, and an outsider to, that community. 
