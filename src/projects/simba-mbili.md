@@ -1,7 +1,7 @@
 ---
 id: Qp9NWlK9XXEVQZhJWfSWp
 title: Simba Mbili
-dates: ongoing
+dates: Ongoing
 link: https://www.transcript-verlag.de/978-3-8376-7194-0/virtuelle-tiere/?c=311033778
 collaborators: Marian Nur Goni
 cardDescription: A podcast/research project about the powerful imaginaries of
