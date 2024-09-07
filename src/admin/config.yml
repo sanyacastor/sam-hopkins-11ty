@@ -13,6 +13,8 @@ collections:
     folder: 'src/projects'
     create: true
     slug: '{{slug}}'
+    media_folder: 'src/assets/projects/{{fields.id}}'
+    public_folder: '/assets/projects/{{fields.id}}'
     fields:
       - { label: 'ID', name: 'id', widget: 'uuid' }
       - { label: 'Title', name: 'title', widget: 'string' }

@@ -32,8 +32,9 @@ const readFiles = async filePaths => {
               )
 
               if (srcIndex !== -1) {
+                const imageUrl = child.attrs[srcIndex][1].split('assets')[1]
                 currentProject.images.push({
-                  url: child.attrs[srcIndex][1],
+                  url: `/assets/projects/${attributes.id}${imageUrl}`,
                   alt: child.content,
                   caption:
                     captionIndex !== -1 ? child.attrs[captionIndex][1] : '',
