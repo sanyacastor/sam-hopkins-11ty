@@ -1,7 +1,7 @@
 ---
 id: BrtO_wOsvoQDHFX6RIw-I
 title: "International Inventories Programme "
-dates: 2018-21
+dates: "2021"
 link: "Originally published here: https://www.inventoriesprogramme.org/concept-paper"
 collaborators: The Nest, SHIFT Collective, National Museums of Kenya,
   Rautenstrauch-Joest Museum and the Welkulturen Museum
