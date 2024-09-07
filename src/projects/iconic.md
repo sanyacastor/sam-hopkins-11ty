@@ -28,6 +28,7 @@ previewDescription: >-
 PDF File: /assets/03_iconic_project-page.pdf
 relatedProjects:
   - OiN9NeFu_86xq5QADVbXJ
+  - NZq4LsJ995bQYu3xCS_AJ
 ---
 *Originally published as the Exhibition text at Goethe Institut Nairobi in 2011*
 
