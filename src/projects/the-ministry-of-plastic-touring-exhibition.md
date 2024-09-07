@@ -1,6 +1,8 @@
 ---
 id: 5k6ZtGffYD1VDZ48ehPC1
 title: The Ministry of Plastic (touring exhibition)
+customTitle: The Rubbish Companion - Introduction by Omer J. Groves of the
+  Plastic Harvesters Union
 dates: "2017 "
 link: https://www.strzelecki-books.com/texte/store-produkte-texte/
 cardDescription: An installation that stages a future in which there is no more
@@ -29,11 +31,8 @@ previewDescription: >-
 
 
   Supported by: Innogy Foundation, Artport,
-customTitle: The Plastic Companion (excerpt)
 PDF File: /assets/03_the-ministry-of-plastic-touring-exhibition-_project-page.pdf
 ---
-#### Omer J. Groves, Chairman of the Plastic Harvesters Union
-
 It is an honour, a pleasure and a joy to be called upon to write the introduction to The Rubbish Companion. Yet, I must admit to a certain degree of trepidation as I write these lines. Because what can someone like me say about such a momentous text? Is there anything that I can possibly add to this story? At risk of being both presumptuous and redundant, I will at least try. 
 
 The Book, as most of us now call The Rubbish Companion, is a simple work that had complex consequences. Single-handedly, it changed our worldview, triggered a Copernican shift in consciousness and finally made us see the wealth in front of us. We all know this story now, it is as familiar to us as the air that we breathe. But the familiar can be deceptive and perhaps today we are too familiar with this story. Do we really know why The Book changed our world view? Can we clearly answer the question of how, what is essentially a guidebook to plastic, effected global change? 
