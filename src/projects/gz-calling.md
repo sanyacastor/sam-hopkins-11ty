@@ -1,6 +1,8 @@
 ---
 id: doJ_zL_GRSnkQLPqNfZWh
 title: "GZ Calling "
+customTitle: Precariat’s Meeting (2017.11.08 Wed - 2018.01.07) - Ming
+  Contemporary Art Museum (McaM)
 dates: "2017"
 link: https://www.randian-online.com/np_event/precariats-meetingmcam/
 collaborators: David Lalé
@@ -22,13 +24,10 @@ previewDescription: >-
 
 
   Supported by: Film- Und Medien Stiftung NRW, British Council
-customTitle: "Precariat’s Meeting (2017.11.08 Wed - 2018.01.07) "
 PDF File: /assets/03_gz-calling_project-page.pdf
 relatedProjects:
   - ROK1CONKqsnaRrNWKgGZt
 ---
-#### Ming Contemporary Art Museum (McaM)
-
 We are not only living in an era that witnesses mass mobilization caused by globalization. From the migration of population driven by production, trade and war to people who are forced to move due to the appearance of deathtrap and backwater, it seems that globalization has never achieved the vision of the word “globe” assumed to be. On the contrary, in today’s context, globalization rapidly transcends the traditional logic of “production – consumption”, and with the support from the financial, arithmetic and legal perspectives, the control over mobility is becoming increasingly precise and inconspicuous. In the meantime, ideological struggles have never recessed; instead, they have permeated every aspect of life in the face of “amiable” contemporary lifestyle.
 
 Art, inevitably, is an integral part of all that. As part of the city’s urban planning, in the past few years art activities from all over the globe have been “diverted” to different specific areas of the city in a highly precise manner. Such “diversion” no longer appears as some kind of violent interference. Rather, under the guidance on the finance and policy levels, such activities in fact become an integral element of the cultural and economic planning under the global context, networking the seemingly connected but actually isolated individuals and institutes. Moreover, as David Harvey pointed out in his Rebel Cities: from the Right to the City to the Urban Revolution,“capital has ways to appropri­ate and extract surpluses from local differences, local cultural variations, and aesthetic meanings of no matter what origin.” The flexibility of capital is constantly digesting the locality and individuality of artistic practice, making them become more and more stable and controllable.
