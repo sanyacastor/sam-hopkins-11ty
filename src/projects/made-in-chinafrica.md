@@ -2,7 +2,7 @@
 id: ROK1CONKqsnaRrNWKgGZt
 title: Made in Chinafrica
 customTitle: Have you ever seen Bruce Lee before? Cosmopolitan readings of
-  Chinese African films
+  Chinese African films - Jochen Becker
 dates: " 2022"
 link: https://www.kolikfilm.at/sonderheft.php?edition=202033&content=inhalt
 collaborators: David Lalé
@@ -35,10 +35,9 @@ previewDescription: >-
 
   Supported by Filmstiftung NRW, Arts Council UK
 PDF File: /assets/03_made-in-chinafrica_project-page.pdf
-relatedProjects: []
+relatedProjects:
+  - doJ_zL_GRSnkQLPqNfZWh
 ---
-### Jochen Becker
-
 African pastor: “Do you know Jesus?”
 
 Chinese businessman: “Do you have a sample? I make it for you.” (from: The Qilin, 2019, R: David Lalé, Sam Hopkins)
@@ -49,7 +48,7 @@ There are numerous reports about the economic and geopolitical impact of this pr
 
 
 
-1. Hallucinate the future
+#### Hallucinate the future
 
 Films always have a documentary component, offer a new splintered picture of the world and also offer the chance to let things and conditions be discussed in actual as well as inauthentic speech. A growing number of artistic and documentary film works, as well as “Nollywood” productions and action blockbusters from China, are reacting to the continental shifts.(4) The film Days of Cannibalism (2020) by the Lesotho-German filmmaker Teboho Edkins, which recently premiered at the Berlin Film Festival, starts in the southern Chinese trading metropolis of Guangzhou, only to suddenly land in a barren hilly landscape with wolf masks and extensive horse races. “Chinatown, where is that?” What is your city? “I’m from Lesotho,” begins a conversation between the local customer and the somewhat awkward Chinese boss of the wholesale store. Over the course of the film, Edkins traces a deep crisis of “Chinese African” efforts in the poor South African kingdom.
 
@@ -61,7 +60,7 @@ The hybrid film The Qilin (2019) the British-Kenyan artist David Lalé and Sam H
 
 
 
-2. Flying legends
+#### Flying legends
 
 African kids in “kimonos” recreate Chinese cinema scenes on sandy ground in Gabon for their black and white home video. Luc Bendza saw so many kung fu films in his youth in Gabon that he wanted to leave the country when he was 14. “I’m going to China to fly,” he says, laughing. Because he expected there to be floating people with swords and pigtails on horses, just like he had seen in the movies. When he visited the Beijing Film Studio, he realized that five people on a rope(5) were jerkily pulling the kung fu actors into the air to make them fly: “Of course I was disappointed. I learned that different criteria applied in the cinema.”
 
@@ -75,7 +74,7 @@ They speak French to their “Chinese African” child. “What do the Chinese k
 
 
 
-3. Black Maoism
+#### Black Maoism
 
 The concrete and everyday “Chinese African” encounters are preceded by individual as well as mass cultural experiences, mostly conveyed through popular arts. Vijay Prashad, director of the Tricontinental Institute for Social Research, describes the connections between Bruce Lee and black emancipation in his 2001 book Everybody Was Kung Fu Fighting(8). Even as a child in Calcutta, Bruce Lee promised Prashad liberation from an oppression to which one was defenseless. The author, who commutes between Delhi, Beirut and Northampton, suggests a cosmopolitan reading of Asian martial arts: “In the end, in the world of Kung Fu, non-whites dream of a bare-fisted revolution against the heavily armed fortress of white supremacy.” When Lee conquered screens around the globe with Enter the Dragon (9) in 1973, the Vietnam War had reached its decisive phase: “Bruce did this without weapons, with bare feet and fists, dressed in black, as is associated with the North Vietnamese army ." Two years later, "Bruce Lee would give us the perfect allegory of both Asian American radicalism and the Vietnam War with The Way of the Dragon," Prashad writes of his cinema-literate youth. “The liberation was not limited to the silver screen or the silver screen.” In the fight against the ultra-right martial arts actor Chuck Norris, “Bruce takes his time, but as he destroys him, the fight in the Roman Colosseum becomes a fight between the Western and Chinese civilization”. The setting combines the imperial ruins of Europe with colonial oppression in Hong Kong or Vietnam. Lee, who also serves as director here, uses Sergio Leone and his crazy zooms, close-ups and editing techniques. Even the Song of Death is played when Chuck Noris appears for the first time.
 
@@ -87,7 +86,7 @@ Resistant Kung Fu schools opened in the US ghettos, and the Black Panthers learn
 
 
 
-4. A Chinese Rambo saves Africa
+#### A Chinese Rambo saves Africa
 
 Wuxia films have been produced in Hong Kong since the 1920s. Popular martial arts fiction peaked in the 1960s to 1980s and gained widespread international attention beginning in the 1970s. In the wake of Crouching Tiger, Hidden Dragon (2000), the tradition of wuxia films was revived - now in China.(10) Kung Fu now increasingly serves as a technique to secure power and a state Chinese instrument of power, for which the most recent Wolf Warrior film is particularly popular. Series by and with Wu Jing is available. The Beijing-born Chinese martial arts star and Hong Kong resident studied at the Beijing Sport University at the age of six (maybe even with Luc Bendza?). His blockbuster Wolf Warrior 2 (2017) is considered the most successful Chinese film ever released. Leng Feng (Wu Jing), a soldier from the special unit “Wolf Warriors”, will not only stop the bulldozer-assisted eviction of the relatives when presenting the urn of a fallen man, but will also kill the building contractor. The hero is still on the side of the oppressed, but there is no longer much of the elegance of Bruce Lee. This also seems to be more of a relief scene, probably to put the constantly demonstrated patriotic commitment to the Chinese nation into perspective. Here, the patterns of military and weapons parade pathos perfected by Hollywood, such as in Rambo, are copied almost identically.
 
@@ -107,7 +106,7 @@ China's once emancipatory efforts in the 1960s and 1970s have given way to a pat
 
 
 
-5. Daily Madness
+#### Daily Madness
 
 “Chinese Africa” and Kung Fu are also topics in the digital genre “Nollywood”, i.e. the everyday seismographic video film scene from Nigeria, which is already in third place in the world market in terms of production output after Hollywood and Bollywood. “Nollywood” was (and still is) distributed on roadside CDs, but also early on via streaming portals. The Nigeria premiere (14) of Head Gone by Nigerian-Swedish filmmaker Dare Fasisi took place at the end of 2014 in what was then the first and only multiplex cinema in Lagos. With its elaborate camera perspectives, animated sequences and split screens in the opening credits, the work is still considered a successful “Nollywood” film to this day. Towards the end, however, the film gets a little lost in its multiple narrative strands.
 
