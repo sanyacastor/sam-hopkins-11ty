@@ -2,6 +2,9 @@
 id: c5d7Mhrq0r3fGV-C4Rj-h
 title: "Logos Of Non-profit Organisations Working In Kenya (Some of Which Are
   Imaginary) "
+customTitle: "The Exchange: Sam Hopkins and Michela Wrong on Africa’s New
+  Missionaries - How has Western aid shaped Africa and its institutions? - FP
+  Staff"
 dates: "2012"
 link: https://foreignpolicy.com/2015/12/10/the-exchange-sam-hopkins-and-michela-wrong-on-africas-new-missionaries/
 cardDescription: A series of silk screen prints which mixes real and fake Kenyan NGO logos
@@ -18,10 +21,10 @@ previewDescription: >-
 
 
   Thanks to: Pony Pedro Silk Screen Workshop, Goethe Institut Nairobi
-customTitle: "The Exchange: Sam Hopkins and Michela Wrong on Africa’s New
-  Missionaries - How has Western aid shaped Africa and its institutions? by FP
-  Staff"
 PDF File: /assets/03_logos-of-non-profit-organisations_project-page.pdf
+relatedProjects:
+  - wxByk7jRApqwSRnDclD7v
+  - YV0wkB3RFVSPjwnbY5CW1
 ---
 For more than two decades, writer, reporter, and Foreign Policy contributor Michela Wrong has covered government corruption, Western aid, and the heroes and villains that created modern Africa. After penning three nonfiction books about the continent, she entered the world of fiction this summer with her first novel, Borderlines, a land-dispute thriller set in a fictionalized Eritrea called North Darrar. This intersection — and, at times, blurring — of fact and fiction in Africa is also the focus of visual artist Sam Hopkins. Raised in Britain and Kenya, Hopkins, named a 2014 Global Thinker, explores in his work the implications of development. At the 2014 Dak’Art biennale in Senegal, he exhibited a screen-print collection of logos of both real and invented international aid organizations, challenging viewers’ perceptions and understanding of these institutions. Wrong and Hopkins recently connected in Foreign Policy’s recording studio in Washington to talk about African aid, art, and literature.
 
