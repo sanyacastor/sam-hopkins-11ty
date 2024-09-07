@@ -1,10 +1,9 @@
 ---
 id: 1SrrztD0Hmih1NLS0u319
 title: Mashup the Archive
-customTitle: Mashup the Archive - Introduction
+customTitle: Mashup the Archive - Introduction - Sam Hopkins and Nadine Siegert
 dates: "2015"
-link: "Originally published in Sam Hopkins and Nadine Siegert (eds), Mashup the
-  Archive. Revolver, Berlin: 2017"
+link: ""
 collaborators: Nadine Siegert
 cardDescription: A series of festivals and exhibitions with Africa-based artists
   in residence dedicated to activating the archive of the Iwalewahaus
@@ -23,9 +22,12 @@ previewDescription: >-
 
   **Thanks to:** Batida, Dj Raph, Otieno Gomba, Delio Jasse, Miss Eve, Nita., Thenjiwe Niki Nkosi, Simon Rittmeier, Kevo Stero, Pamela Phatsimo Sunstrum, Uche Uzorka, Iwalewahaus Bayreuth (artists), Nadine Siegert (co-curator). **Supported by:** Kulturstiftung des Bundes
 PDF File: /assets/03_mashup-the-archive_project-page.pdf
-relatedProjects: []
+relatedProjects:
+  - YV0wkB3RFVSPjwnbY5CW1
+  - vABrLIvMrhQEvGmX_lnQM
+  - pzdCS4RLUbVoJpQebGJlW
 ---
-#### Sam Hopkins and Nadine Siegert
+*Originally published in Sam Hopkins and Nadine Siegert (eds), Mashup the Archive. Revolver, Berlin: 2017*
 
 In the town of Bayreuth, located in Upper Franconia, Northern Bavaria, Southern Germany, there is a house, a space and an environment dedicated to the research and exhibition of modern and contemporary African art; the Iwalewahaus. The archives of the Iwalewahaus reveal, and seal, a rich and variegated collection, from modernist artists El Anatsui and Ibrahim El-Salahi to sign paintings by Congolese and Nigerian artists such as Moke and Middle Art, to one of the biggest museum collections of 1990s Nollywood VHS tapes, to a vast slide collection of camels from the German ethnographer Gerd Spittler, to name but a few. The history of the institution is as detailed and textured as its collections that are themselves a manifestation of the interests, tastes and predilections of its former directors. But there has always been one constant: its location. It is not of course that Bayreuth is provincial, but that it is in Germany. This unique and idiosyncratic collection of cultural production is located far away from where most of these objects were produced, many of which are produced by artists and artisans living in countries on the African continent.  
 
