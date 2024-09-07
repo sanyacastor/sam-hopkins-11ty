@@ -27,6 +27,10 @@ previewDescription: >-
 
   Thanks to: Slum TV members (see website). Supported by: Africalia, Goethe Institut Nairobi, Film Aid
 PDF File: /assets/03_slum-tv_project-page.pdf
+relatedProjects:
+  - -8VYchZd-I5VXQtBA3dDx
+  - 97qYsNwiTFwI5P4S8EAdD
+  - vDbPeVO3j1xeydEABqaBw
 ---
 *Excerpt from Distributed: Co-producing Narratives Of Belonging in Nairobi's Eastlands. PhD thesis, UAL, Supervisors: N. Cummings, J. Bajorek*
 
@@ -58,8 +62,6 @@ A market logic governed everything from the real estate (the huts closer to the 
 
 In Planet of Slums, Mike Davies argues that the huge presence and proliferation of slums on a global scale (an estimated one billion people live in slums worldwide) is both a consequence of specific Neoliberal policies, imposed on the South through Structural Adjustment Policies (SAPs) and the International Monetary Fund (IMF) and a characteristic of a broad Neoliberal system.(12) I had the sensation that Mathare was permeated by a Neoliberal logic, that it was an extension of this system as much as a result of it.(13)
 
-
-
 #### Slum TV As A Mode Of Working Together
 
 Slum TV is a participatory media collective based in Mathare that I co-initiated in 2007 with Julius Mwelu, Fred Otieno, Alex Nikolic and Lukas Pusch. Although we registered it as a Trust the following year, we always referred to Slum TV as a participatory collective. In doing so we were consciously allying ourselves with a rich heritage of visual practice and a broad, contemporary field of socially-engaged artworks.(14) I mentioned in the introduction that participation is evoked by artists to describe a spectrum of modes of ‘working together’ ranging from humble gestures (eating soup together in a gallery), to sustained social work with a particular community (engaging drug addicts in recycling workshops) to exploitative acts that meditate on the limits of participation itself (being paid to have your hair bleached).(15) As project initiators we came from different backgrounds and hence also had a broad range of influences for what we understood as participation.(16)
@@ -82,8 +84,6 @@ Although there were three distinct groups within Slum TV, there was a fluid natu
 
 For instance, it was the members who managed to organise our night time screenings in Mathare by using their interpersonal networks to negotiate our use of a rare piece of public space informally managed by a football coach called Austin. This arrangement, and his custodianship of the screenings and our equipment, would have been impossible for either the trustees or the initiators to organise as these were networks that we did not share.
 
-
-
 #### Participation And Editorial Control
 
 The practical centre, and sacred cornerstone, of Slum TV were the monthly editorial meetings where members proposed, discussed and debated the content for the upcoming ‘newsreel’, the compilation of stories produced by the members. Slum TV would crowd together in the small office and suggest story ideas for the next newsreel. The selection process was based on consensus. A member would propose a story, it would then be voted on by all the members, and if it was selected then individuals would come together to form a production team of 2-3 people which would research, shoot and edit it. At the end of the month these stories would be collated onto the newsreel, which would be projected in public spaces at different locations around Mathare and the Eastlands.(20)
@@ -99,8 +99,6 @@ For example, we were working in Mathare when Kenyan police instigated Operation 
 This notion of a participatory counter-narrative is underpinned by two different notions of representation. Firstly it suggests that Slum TV members, being from Mathare, know the neighbourhood better and hence can represent it with a greater degree of fidelity and refined sense of nuance. This then implies that there is a stable, agreed upon and autonomous meaning that exists in Mathare, and that as the Slum TV members are close to Mathare, they are also proximal to this ‘essential’ meaning.(22) But what are the agreed upon meanings in Mathare? If we return to the anecdote about the indistinguishable nature of the criminals and the police, both are armed, protect those who conform to their sense of justice and punish those who transgress it. There is no shared territory of meaning at all so what would be an authentic counter- representation? Just because Slum TV members were more knowledgeable about the environment of Mathare does not mean that their perspective was more authentic, or closer to an essential meaning. So rather than correcting an incorrect representation, it is more accurate to say that Slum TV proposed an alternative representation of Mathare within a broader media ecology.
 
 Of critical importance is that this alternative representation of Mathare was authored by young men and women from the neighbourhood. Hence Slum TV engages in the fundamentally political project of representation—representing individuals from Mathare, as authors and subjects in the Slum TV material. Slum TV was both about the representation of a reality, Mathare, but also about the representation of an identity and taking ownership of that representation. Understanding the project in this light reframes the participatory gesture of Slum TV as one of catalysing potential political agency. It was precisely this potential for political representation that we saw as lacking in the ‘media for development’ and ‘edutainment’ projects in and around Mathare and the Eastlands. For example, by predefining content along the lines of policy-reform, capacity building and awareness change, projects such as Development Through Media (DTM) circumscribe editorial decisions and remove the possibility for participants to freely represent themselves, their wishes, their desires and their identity.(23)
-
-
 
 #### Slum TV Content
 
@@ -128,8 +126,6 @@ At the time this really concerned me as I was worried that I was shaping the mov
 
 However, if it did not exist in parallel to time spent with the project and with the members, for example, if I was writing whilst in Europe, then I observed that I became entrenched in my positions. It was vital to write and to experience. Through this process of back and forth I started to develop a sensibility to notions of agency, the extent to which it is not always immediately palpable, and how it is filtered, mediated and complicated by notions of identity.
 
-
-
 #### Practitioners of language
 
 “Garbage littering is a health hazard in our community. Lack of efficiency and accountability by the local authority has led to garbage littering all over. In efforts to clean our environment, different stakeholders and different companies take part. We talked to a few of the many who participate in the cleaning of the environment who believe that garbage littering can cause diseases, among other things”.(34)
@@ -149,73 +145,37 @@ By practising the NGO rhetoric, Slum TV members reminded me that we were always 
 \--
 
 1. Mathare Valley has been populated since before the Second World War. At Kenya’s independence in 1963 the population was counted in the thousands and it has grown steadily ever since. Nevertheless, on many maps of Nairobi, including Google maps, there is a cartographic void where Mathare Valley is located. https://goo.gl/ maps/w6Krcw9JkJt (Feb 22, 2018). See Jens C. Andvig and Tiberius Barasa, A Political Economy of Slum Spaces: Mathare Valley (Oslo: Norwegian Institute of International Affairs, 2014), https://brage.bibsys.no/ xmlui/bitstream/handle/11250/277609/ NUPI+WP-838-Andvig.pdf?sequence=3 (Feb 23, 2018), p 46.
-
 2. The population of Mathare, as with many slums, is difficult to estimate as many of the residents are either unwilling, or unable, to be registered. During the time I was working there regularly (2007-2011) most people 4 referred to a number of about 600,000. See, for example, ‘About Mathare Slums,’ https://matharesiokenya.wordpress.com/ about-mathare-valley-slums/ (February 22, 2018). However, the National Census in 2009 put the figure at 87,097. This discrepancy between the estimate and the official figure led to allegations of miscounting. On the one hand the government was accused of trying to minimise the problem, on the other hand it was suggested that NGOs and aid organisations had a vested interest in an inflated population figure. See Muchiri Karanja, ‘Myth Shattered; Kibera numbers fail to add up’ http://www.nation.co.ke/ News/Kibera%20numbers%20fail%20 to%20add%20up/-/1056/1003404/-/13ga38xz/-/index.html. (November 1, 2014). Since the census, the figure of 200,000 is commonly referred to. See ‘Mathare Population Structure’ http://matharevalley. wordpress.com/2014/02/26/mathare- population-structure/ (February 22, 2018) unsubstantiated figures of 500,000.
-
 3. There is a persistent and prevalent local newspaper narrative that Mathare is the most dangerous neighbourhood in Nairobi. But, due to the informal nature of Mathare, and the fact that many thefts, robberies or acts of violence are not reported, it is difficult to obtain crime statistics from Mathare. In fact, the police are often more dangerous than the criminals. For a stereotyped imaged of Mathare see Christabell James Top 10 Most Dangerous Estates in Nairobi - Number 1 will Shock You,’ https://buzzkenya.com/ top-10-most-dangerous-estates-in-nairobi- number-1-will-shock-you/ (February 22, 2018). For examples of police brutality see ‘We demand justice for Alex Mwangi Wangari (19 ) killed by officer Rashid!,’ http://www. matharesocialjustice.org/eje-campaign/we- demand-justice-for-alex-mwangi-wangari-19- killed-by-officer-rashid/ (February 22, 2018).
-
-4. A fairly typical example of this journalistic register: ‘Mathare Valley spreads north from Kenya’s capital, a running sore of poverty covered in corrugated iron, where street children use machetes and guns to survive
-
-in an environment of murder, rape, TB and cholera.’ Kevin Mitchell, ‘The Pope, Bono and... Mathare United FC,’ http://www. theguardian.com/football/2003/oct/05/ sport.comment2 (November 1, 2014). See also; Faith Nyamai, ‘Scandal of the Children who take Chang’aa for Breakfast,’ http:// nairobinews.nation.co.ke/learners/ (Feb 10, 2014).
-
+4. A fairly typical example of this journalistic register: ‘Mathare Valley spreads north from Kenya’s capital, a running sore of poverty covered in corrugated iron, where street children use machetes and guns to survive in an environment of murder, rape, TB and cholera.’ Kevin Mitchell, ‘The Pope, Bono and... Mathare United FC,’ http://www. theguardian.com/football/2003/oct/05/ sport.comment2 (November 1, 2014). See also; Faith Nyamai, ‘Scandal of the Children who take Chang’aa for Breakfast,’ http:// nairobinews.nation.co.ke/learners/ (Feb 10, 2014).
 5. See ‘Restoring Dignity,’ http://www. africanslumjournal.com/restoring-dignity/, (Feb 22, 2018).
-
 6. There are some community-based initiatives to counter these various forms of exclusion such as the community mapping project Map Kibera (in Mathare). See; http://mapkibera. org/work/locations/#mathare (Feb 22, 2018).
-
 7. Andvig and Barasa, A Political Economy of Slum Spaces: Mathare Valley p. 12.
-
 8. Naomi van Stapele, Respectable ‘Illegality’: Gangs, Masculinities and Belonging in a Nairobi Ghetto, Doctoral Thesis, https://pure.uva.nl/ws/ files/2483038/166658_Stapele_thesis\_def\_ complete.pdf (Feb 23, 2018) pp. 1-14.
-
 9. There are various, legendary, policeman in Mathare and the Eastlands that appear to have a free reign to operate a shoot to kill policy. ‘Meet the police officer who BOLDLY executed two teenage gang members in 11 Eastleigh’ https://www.tuko.co.ke/235675- meet-police-officer-boldly-executed-teenage- 12 gang-members-eastleigh.html#235675, (Feb 22, 2018). For a sense of how this is 13 incorporated within local legend see Roomah, http://www.samhopkins.org/roomah.html, (Feb 22, 2018), mins 07:50-8:30.
-
 10. The UN Habitat report The Challenge of Slums offers the following ‘Operational definition of Slums’: “inadequate access to water; inadequate access to sanitation and other infrastructure; poor structural quality of housing; overcrowding; insecure residential status”. UN Habitat, The Challenge of Slums: Global Report on Human Settlements 2003, https://www.un.org/ruleoflaw/files/ Challenge%20of%20Slums.pdf (Feb 22, 2018) p. 12.
-
 11. This amounts to 16, 32 and 40 Euro cents at todays exchange rate, xe.com (March 12, 2018).
-
 12. Mike Davis,Planet of Slums (London and New York: Verso, 2006) pp.15-16.
-
 13. I understand Neoliberalism as the extension of a free market logic into all spheres of life, private and public. See Kean Birch, ‘What exactly is neoliberalism,’ https://theconversation.com/ what-exactly-is-neoliberalism-84755 (Feb 23, 2018).
-
 14. Slum TV was registered as a Kenyan Trust in 2008 and amended its status to a Non Governmental Organisation (NGO) in 2016. The project is currently managed by Ephantus Kariuki, a former member, and is an accredited organisation, training 20 young people per year in digital video production. For more information see https://www.slumtv. org (February 22, 2018).
-
 15. Referring respectively to the works of Rirkrit Tiravanija, Wochenklausur and Santiago Sierra. See Anthony Downey, ‘An Ethics of Engagement: Collaborative Art Practices and the Return of the Ethnographer’, Third Text, 23:5, pp. 594-5.
-
 16. I was nurturing an art practice that explored spaces and audiences beyond gallery contexts and often in public space. See ‘The Seduction of Completion’, 577,4 - The Distance Between, https://www.uni-weimar. de/mfa/downloads/577,4%20the%20 distance%20between.pdf (February 26, 2018). pp 48-9. Alex Nikolic had been developing a socially-engaged, emancipatory art practice. See ‘Under the Bridge Beograd’, Postism.org, http://an.postism.org/cv/under-the- bridge-beograd/ (February 26, 2018). Lukas Pusch was developing a series of provocative interventions in the tradition of Vienna Actionism. See Economy Class – Lukas Pusch, http://www.nyartsmagazine.com/economy- class-lukas-pusch/(February 26, 2018). Julius Mwelu was honing a photojournalistic practice. See ‘Julius Mwelu, 22, ‘We are proud of who we are despite where we live’, April 11, 2007, http://www.irinnews.org/ report/71561/kenya-julius-mwelu-22-we- are-proud-who-we-are-despite-where-we-live (February 26, 2018).
-
 17. For Thomas Hirschorn Monument series: Michael Rush, ‘ART/ARCHITECTURE; Art That Gives Meaning To Bits of This and That’, OCT. 27, 2002, http://www. nytimes.com/2002/10/27/arts/art- architecture-art-that-gives-meaning-to-bits- of-this-and-that.html (February 26, 2018). For The Battle of Orgreave - http://www. jeremydeller.org/TheBattleOfOrgreave/ TheBattleOfOrgreave_Video.php (February 26, 2018). For Park Fiction - http://urban- matters.org/projectsbyindividuals/park- fiction (February 26, 2018). For Superflex’s internet TV - ‘Superchannel’, http://www. superflex.net/tools/superchannel (February 26, 2018). For Francis Alys’ collective performances - ‘Francis Alÿs, When Faith Moves Mountains, 2002’, https://www. moma.org/collection/works/109922 (February 26, 2018).
-
 18. Slum TV members showed a remarkable, albeit often begrudging, tolerance for cases of petty theft by other members. In only 2 cases that I can remember (out of perhaps 50) did members vote to expel the guilty party. Perhaps in a situation of constant financial pressures there is more widespread empathy for why friends might steal from one another. The consequences of not having money are also extreme; failure to pay the rent can result in your house being broken into by the landlord and your belongings removed and left on the road outside. See City of Choice (Trailer), directed by Arne Birkenstock & Sam Hopkins (Cologne & Nairobi: Slum TV & Fruitmarket Films, 2013), https:// vimeo.com/233562703, password ‘mathare’ (February 22, 2018) mins. 08-09:30. Public theft in Mathare is dealt with even more extremely, with regular incidents of so-called ‘mob justice’ in which the thief is beaten, and in some cases killed, by a public crowd. See Edwin Odhiambo, ‘Thug Burned to Death in Mathare 3C Area’, https://gnnkenya. wordpress.com/2015/01/03/thug-burned-to- death-in-mathare-3c-area/ (February 22, 2018) 
-
 19. Ian Mwangi was starting to manage the accounts from 2009 and by 2012 the entire project was mainly run by former members (Ephantus Kariuki as Project Manager, Beatrice Wanjiku in charge of Finance and Idah Opolloh as head of Training) with assistance from an external Project Manager, Kenneth Wendo.
-
 20. The material is collated and screened on a monthly basis in public space in Mathare. Thus it functions like a ‘newsreel’ and affords the slum dwellers a form of local news. Having been screened locally, the content is then uploaded onto the website, which functions both as an archive of this oral history and a means to access a secondary, international audience.” Sam Hopkins quoted by Basia Lewandowska Cummings in ‘Five alternative filmmaking collectives’, http://africasacountry.com/2012/07/ five-alternative-filmmaking-collectives/ (February 22, 2018). After the first workshop in April 2007 we then started theming the newsreels such as The Environment Newsreel (Nairobi: Slum TV, 2007), The Peace Newsreel (Nairobi: Slum TV, 2008), The Water Newsreel (Nairobi: Slum TV, 2009) and The Superlatives Newsreel (Nairobi: Slum TV, 2009). Typically the newsreel would have 5-7 “mini- documentaries” and 1 “drama”, a short acted film by Slum TV. (Nairobi: Slum TV, 2009).
-
 21. Karen Allen, ‘Kenyan terror at gang crackdown’, June 8, 2007, http://news.bbc. co.uk/2/hi/africa/6733879.stm (Jan 12, 2018).
-
 22. In the words of Stuart Hall, it assumes the problem to be the ‘re’ of ‘representing’. Stuart Hall, ‘Representation and the Media’, https://www.youtube.com/ watch?v=aTzMsPqssOY&t=7s (February 22, 2018) mins. 10:00-12:30.
-
 23. See ‘About DTM’, http://dtmafrica.com/ about-us/about-dtm/ (Jan 12, 2019). For a further example of how the discourse of ‘empowerment’ does not involve the constituencies they work with in an empowering manner, see ‘Appropriation of ICTs by young women living in informal slums’, November 24, 2009, http://mediea. ruc.dk/projects/appropriation-of-icts-by-young-women/ (February 26, 2018).
-
 24. For the state of Mathare River see ‘Mathare: Slum River Pollution Puts Lives at Risk’, https://rising.globalvoices.org/ blog/2012/08/28/mathare-slum-river- pollution-puts-lives-at-risk/ (February 22, 2018). On chickens being fed Antiretroviral drugs (ARVs) see ‘How Kenyans are misusing antiretroviral drugs (ARVs)’, https://www. kenyaplex.com/resources/10130-how- kenyans-are-misusing-antiretroviral-drugs- arvs.aspx, (February 22, 2018). About 37 the unequal opportunities for secondary schooling, Molly Warrington and Susan Kiragu, ‘”It makes more sense to educate a boy”: Girls ‘against the odds’ in Kajiado, Kenya’, International Journal of Educational Development, Volume 32, Issue 2, pp. 301-309.
-
 25. I credit the term NGO aesthetic to Alex Nikolic.
-
 26. See ‘Doing Whatever It Takes to Save Every Last Child | Save the Children’, https://www.youtube.com/watch?time_ continue=39&v=Cmtg7v9I2JQ (Jan 13, 2019).
-
 27. The experience of the dominant discourse of NGOs in Mathare has led to a series of critical artistic engagements with the logos produced and disseminated by the Non Governmental Organisations (NGOs) in Kenya. See Jennifer Bajorek, ‘Beyond the NGO Aesthetic’, in Social Text 127, pp 93-102. See also ‘Deconstructing Logos - Kimani wa Wanjiru talks with Sam Hopkins’, May 21, 2014, http://www.contemporaryand.com/ magazines/deconstructing-logos-of-non-profit-organisations/ (March 12, 2018).
-
 28. For further discussion of this see ‘The Exchange: Sam Hopkins and Michela Wrong on Africa’s New Missionaries’, Dec 10, 2015, https://foreignpolicy.com/2015/12/10/the- exchange-sam-hopkins-and-michela-wrong- on-africas-new-missionaries/ (Jan 13, 2019).
-
 29. The term of ‘positive stories’ emerged again and again both from the members in Slum TV, from donors and from journalists that came to feature the Slum TV project. Slum 41 TV as the ‘positive’ representation of Mathare was an extremely persistent image.
-
 30. Slum TV, ‘Home Made Toys’, Grassroots Upgraded Newsreel (Nairobi: Slum TV, 2011), https://vimeo.com/260200625 (March 16, 2018).
-
 31. Many of the different areas in Mathare were 42 named after foreign countries or cities. As well as Nigeria, there is Kampala, Jamaica, Bosnia, Vietnam and Kosovo. See Melissa Wangui Wanjiru and Kosuke Matsubara, ‘Slum toponymy in Nairobi, Kenya; A case study analysis of Kibera, Mathare and Mukuru’, Urban and Regional Planning Review Vol. 4, 2017, https://www.jstage.jst.go.jp/ article/urpr/4/0/4_21/_pdf (February 26, 2017) p. 36.
-
 32. The Superlative Newsreel, (Nairobi: Slum TV, 2009) generated stories from Mathare such as the fastest minibus driver, the best cart- puller, the smartest kid in Mathare. https:// nairobinow.wordpress.com/2009/03/19/ slum-tv-screening-mar-20th-2009-mathare/ (November 8, 2014).
-
 33. For example, “Strongly related to this issue of responsibility is, of course, an issue of power relations. How ‘free’ are the decisions of the participants here? To what extent am I unwittingly influencing the outcome of the meetings?” Sam Hopkins, ‘Working Title’ in Slum TV in Belgrade and Novisad, (Belgrade, Anonymous said, 2008).
-
 34. Benson Kamau’s voiceover, ‘Garbage collection from our environment’, The Environment Newsreel (Nairobi: Slum TV, 2007).
-
 35. Benson’s conception and appropriation of the Development rhetoric, and his positioning of himself in relation to an imaginary, yet seemingly defined, audience, resonate strongly with de Certeau’s notion of enunciation and clearly informs this perspective on how Slum TV members use the language of the Development industry. See Michel de Certeau The Practice of Everyday Life (London and Berkeley: University of California Press, 1984) p. 33.
