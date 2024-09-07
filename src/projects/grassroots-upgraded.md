@@ -1,6 +1,7 @@
 ---
 id: OiN9NeFu_86xq5QADVbXJ
 title: Grassroots Upgraded
+customTitle: "Lomo Photography in Mathare: “You Think You Know.”  - Wambui Mwangi"
 dates: " 2011"
 collaborators: Slum TV
 cardDescription: "A photography book of LOMO photos, unconventional and
@@ -24,8 +25,10 @@ previewDescription: >-
 
 
   Thanks to: Slum TV. Supported by: Africalia, Goethe Institut Nairobi
-customTitle: "Lomo Photography in Mathare: “You Think You Know.”  - Wambui Mwangi"
 PDF File: /assets/03_grassroots-upgraded_project-page.pdf
+relatedProjects:
+  - wxByk7jRApqwSRnDclD7v
+  - vDbPeVO3j1xeydEABqaBw
 ---
 *Originally published in Slum TV, Grassroots Upgraded. Brüssels: Stichting Kunstboek, 2011*
 
