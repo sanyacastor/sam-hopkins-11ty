@@ -22,6 +22,10 @@
   max-width: 228px;
 }
 
+.full-project-button.hidden {
+  display: none;
+}
+
 @media screen and (max-width: 800px) {
   .full-project-button {
     top: 8px;

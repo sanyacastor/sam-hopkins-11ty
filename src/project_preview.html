@@ -63,7 +63,7 @@ pagination:
             <div id="projectPreview_outer">
               <div class="projectPreview_ScrollArticle" id= "preview_scrollableContent">
                 {{- preview.previewDescription | safe -}}
-                <a href="{{ "/projects/" ~ preview.title | slug }}" class="full-project-button--mobile">full project</a>
+                <a href="{{ "/projects/" ~ preview.title | slug }}" class="full-project-button--mobile {% if preview.dates === '2006' %} hidden {% endif %}">full project</a>
               </div>
               <div class="projectPreview_phantomColumn" id = "phantomColumn">
                 <div class="projectPreview_phantomTrigger"  id = "phantomTrigger"></div>
@@ -77,7 +77,7 @@ pagination:
               <button class="navigation-button close-button" id="preview_descriptionNavButton_close"></button>
             </div>
           </div>
-          <a href="{{ "/projects/" ~ preview.title | slug }}" class="full-project-button" id="preview_buttonFullProject">full project</a>
+          <a href="{{ "/projects/" ~ preview.title | slug }}" class="full-project-button {% if preview.dates === '2006' %} hidden {% endif %}" id="preview_buttonFullProject">full project</a>
         </div>
       </div>
     </div>
