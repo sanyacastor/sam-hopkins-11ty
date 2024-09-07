@@ -1,7 +1,7 @@
 ---
 id: 97qYsNwiTFwI5P4S8EAdD
 title: The Bike Gang
-customTitle: "xcerpt from Distributed: Co-producing Narratives Of Belonging in
+customTitle: "Excerpt from Distributed: Co-producing Narratives Of Belonging in
   Nairobi's Eastlands. PhD thesis, UAL, Supervisors: N. Cummings, J. Bajorek"
 dates: "2018"
 link: https://contemporaryand.com/fr/exhibition/film-screening-and-talk-sam-hopkins-john-kamicha-the-bike-gang/
