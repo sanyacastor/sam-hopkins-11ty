@@ -1,5 +1,5 @@
 ---
 description: 011_The Bike Gang_JIMMY and why everyone calls him Daggy (2015-18)
   - with John Kamicha
-link: https://youtu.be/lso8HsJl180
+link: <iframe width="560" height="315" src="https://www.youtube.com/embed/lso8HsJl180?si=6yGboZnf9UHhm63R" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 ---
