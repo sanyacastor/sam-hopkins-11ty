@@ -12,7 +12,6 @@ const eleventyImage = require('markdown-it-eleventy-img')
 const IMAGE_CONFIG = {
   widths: [300, 600, 1000],
   formats: ['avif', 'jpeg'],
-  outputDir: './public/img/',
   filenameFormat: function (_, src, width, format) {
     const extension = path.extname(src)
     const name = path.basename(src, extension)
@@ -26,6 +25,7 @@ const IMAGE_SIZES = '(min-width: 320px) 50vw, 100vw'
 const markdownIt = require('markdown-it')({
   html: true,
 }).use(eleventyImage, {
+  urlPath: '/assets/projects',
   imgOptions: IMAGE_CONFIG,
   resolvePath: (filepath, env) => path.join('./src/', filepath),
   globalAttributes: {
@@ -43,7 +43,6 @@ module.exports = function (eleventyConfig) {
 
   // Assets
   eleventyConfig.addPassthroughCopy('./src/assets/icons')
-  eleventyConfig.addPassthroughCopy('img')
 
   // Fonts
   eleventyConfig.addPassthroughCopy('./src/fonts/KareliaWeb-Bold.woff2')
@@ -96,9 +95,13 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addShortcode(
     'image',
-    async function (src, alt, className, sizes) {
+    async function (src, alt, className, sizes, ...rest) {
+      const projectID = src.split('/')[3]
       try {
-        const metadata = await Image(`src${src}`, IMAGE_CONFIG)
+        const metadata = await Image(`src${src}`, {
+          ...IMAGE_CONFIG,
+          outputDir: `public/assets/projects/${projectID}`,
+        })
         const imageAttributes = {
           alt: alt || '',
           sizes: sizes || IMAGE_SIZES,
