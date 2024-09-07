@@ -1,45 +1,36 @@
 ---
 id: eFcllqsX4vkqLhwGJij6G
 title: "A Topography of Loss "
+customTitle: S/he owes so much that even her/his eyelids are not her/his own. A
+  reflection - Sam Hopkins and Simon Rittmeier
 dates: "2021"
-link: Originally published on Troubles Dans les Collections (En hériter, 2023)
-  https://troublesdanslescollections.fr/2022/12/21/article-3-e/
+link: https://troublesdanslescollections.fr/2022/12/21/article-3-e/
 collaborators: Simon Rittmeier
 cardDescription: An inquiry into the agency of the Kenyan objects encountered in
   the storage depot of the Rautenstrauch-Joest Museum in Cologne
-previewDescription: "The work A Topography of Loss (2021) inquires into the
-  agency of the objects we encountered in the storage depot of the
-  Rautenstrauch-Joest Museum, an ethnographic museum in Cologne.  The storage
-  depot of the Rautenstrauch-Joest Museum is deep underground, in a cavernous
-  room of polished concrete floors and walls filled with a fully automated,
-  five-metre high stainless storage system. In each of these shelves, in sheets
-  of foam cut to precisely 120x80cm, we found the objects of the collection.
-  Approximately 65,000 objects lie in hand-cut, material-lined
-  depressions.   These negative spaces appeared to describe the loss of the
-  objects from their communities of origin, both literally but also
-  metaphorically. The immense number of depressions, each of which had been
-  individually tailored to a particular object, seemed to speak of a museum
-  approach which was both almost industrial in scale, yet was individually
-  applied to unique artefacts. These negative spaces were not only bespoke
-  prison cells, they also seemed to us like footprints that the objects had left
-  behind.  We started to explore the particular depressions left by the
-  eighty-three Kenyan objects that the museum has in its collection. We began to
-  imagine these depressions as hills and mountains—as a kind of landscape of
-  loss. And, as our ideas evolved, these hills became islands scattered in a
-  vast ocean, a way for us to start to think through and represent the knowledge
-  that was lost when these objects were taken from Kenya. They seemed to
-  describe A Topography of Loss.  -- Thanks to: International Inventories
-  Programme (Project) Invisible Inventories (Exhibition) Supported by: Goethe
-  Institut Exzellenz Initiative, Kulturstiftung des Bundes"
+previewDescription: >-
+  The work A Topography of Loss (2021) inquires into the agency of the objects
+  we encountered in the storage depot of the Rautenstrauch-Joest Museum, an
+  ethnographic museum in Cologne.  
+
+
+  The storage depot of the Rautenstrauch-Joest Museum is deep underground, in a cavernous room of polished concrete floors and walls filled with a fully automated, five-metre high stainless storage system. In each of these shelves, in sheets of foam cut to precisely 120x80cm, we found the objects of the collection. Approximately 65,000 objects lie in hand-cut, material-lined depressions.   
+
+
+  These negative spaces appeared to describe the loss of the objects from their communities of origin, both literally but also metaphorically. The immense number of depressions, each of which had been individually tailored to a particular object, seemed to speak of a museum approach which was both almost industrial in scale, yet was individually applied to unique artefacts. These negative spaces were not only bespoke prison cells, they also seemed to us like footprints that the objects had left behind.  
+
+
+  We started to explore the particular depressions left by the eighty-three Kenyan objects that the museum has in its collection. We began to imagine these depressions as hills and mountains—as a kind of landscape of loss. And, as our ideas evolved, these hills became islands scattered in a vast ocean, a way for us to start to think through and represent the knowledge that was lost when these objects were taken from Kenya. They seemed to describe A Topography of Loss.
+
+
+  Thanks to: International Inventories Programme (Project) Invisible Inventories (Exhibition). Supported by: Goethe Institut Exzellenz Initiative, Kulturstiftung des Bundes
 PDF File: /assets/03_a-topography-of-loss_-project-page.pdf
+relatedProjects:
+  - Qp9NWlK9XXEVQZhJWfSWp
+  - BrtO_wOsvoQDHFX6RIw-I
+  - hmrv6g5WCVcxtH1E4szoK
 ---
-## S/he owes so much that even her/his eyelids are not her/his own. A reflection
-
-Sam Hopkins and Simon Rittmeier
-
-\--
-
-### Sensing Agency and Charting Loss
+#### Sensing Agency and Charting Loss
 
 The work A Topography of Loss (2021) is a further inquiry into the agency of objects which we started to explore in our book project Letter to Lagat (Strzelecki Books, 2015). The book explores the site of an empty ethnographic and African art collection, and examines the question of what would be left when all the objects return home. We took a forensic approach to the museum and by envisaging it as a kind of crime scene we highlighted the power and agency of these objects and the multiple traces they left behind.1
 
@@ -61,7 +52,7 @@ The Kikonde belts are from the Kamba community in Kenya and were wrongly labelle
 
 
 
-### The Kanga as Medium, the Museum as Membrane
+#### The Kanga as Medium, the Museum as Membrane
 
 So far, we have shown A Topography of Loss three times, at the National Museums of Kenya (Nairobi), at the Rautenstrauch-Joest Museum (Cologne) and the Weltkulturen Museum (Frankfurt am Main). But we remained inside the museum’s intellectual cosmos. The kanga was a first step out of this, an attempt to pierce through the museum’s membrane and find different ways where the ideas can travel. It’s an open, yet very physical manifestation of a thought.
 
@@ -73,9 +64,7 @@ The saying “S/he owes so much that even her/his eyelids are not her/his own”
 
 So, in a sense, the kanga’s saying speaks simultaneously to various parties: the museum in Cologne where the work was first conceived, us and citizens of Cologne, but also more generally to other city’s museums in Germany and the North. For us, it leads to a further question: What can a white artist from the North add to the debates around restitution? We have not lived the emotional impact, nor experienced the generational shockwaves of the aftermath of colonialism, something that The Nest Collective, our colleagues within the International Inventories Programme have spoken powerfully about.2 And we are part of the society who owns these collections. Next to our houses, collections which often have a violent history, are quietly hidden.
 
-
-
-### Artistic Research as a Common Good
+#### Artistic Research as a Common Good
 
 We understand our way of working as a form of research, in that it is a sustained inquiry into a framed, specified area. But it is artistic research in which our research findings are often embodied and experienced by us personally in a very subjective way. So our art practice is both the vehicle of our research (the method) and the manifestation of that research (the form).
 
@@ -90,5 +79,4 @@ Although we met plenty of inspiring individuals working in museums, we have beco
 \--
 
 1. See Marian Nur Goni, « Agents in motion: how objects make people move. An interview with Sam Hopkins and Simon Rittmeier », Third Text Africa, n. 12, 2020, pp. 73-83 \[online].
-
 2. See the project’s magazine (Iwalewabooks, Bayreuth/Johannesburg, 2021) and reader, What Can a Group of Citizens Do? Eight Nairobi-Driven Conversations on Restitution (Iwalewabooks, Bayreuth/Johannesburg), forthcoming.
