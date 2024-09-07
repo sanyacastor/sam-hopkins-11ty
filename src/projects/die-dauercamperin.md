@@ -1,7 +1,7 @@
 ---
 id: eRIVxdRSLj-iVlfw5Kz4k
 title: Die Dauercamperin
-dates: 2017-19
+dates: "2019"
 collaborators: Jens Mühlhoff
 cardDescription: Die Dauercamperin stages a dystopic future to ask how agency
   and independence of the individual can manifest in a networked world
