@@ -1,6 +1,8 @@
 ---
 id: vABrLIvMrhQEvGmX_lnQM
 title: Not in the Title too
+customTitle: Not in the Title too | Anticipating (Concept Note written in 2013)
+  - Sam Hopkins
 dates: "2013"
 collaborators: Sophia Bauer
 cardDescription: Inquiry into a Nigerian video archive, part 2. We commissioned
@@ -22,11 +24,12 @@ previewDescription: >-
 
 
   Thanks to: Sophia Bauer (co-artist), Robbie Bresson (Director). Supported by: Iwawlewahaus
-customTitle: Not in the Title too | Anticipating, by Sam Hopkins
 PDF File: /assets/03_not-in-the-title-too_project-page.pdf
+relatedProjects:
+  - 1SrrztD0Hmih1NLS0u319
+  - PyXW_iOcYuOP1nhC7igLE
+  - pzdCS4RLUbVoJpQebGJlW
 ---
-*Concept Note, 2013*
-
 I am not sure whether it is perfectionism or laziness, but I am always reluctant to say that a work is finished, complete and cannot be further developed. When the opportunity emerged to show Not in the Title (1) again for this exhibition in Bordeaux, I was both immediately interested and determined not to simply 'exhibit' a replica of the work again. There were elements of the work that I believed could be more successfully resolved but, perhaps more even more importantly, I think the exciting part about the project is the experimentation, the process and the unknown results. When Not in the Title becomes fixed and static then for me it would lose something. 
 
 Alongside my intention of exploring the construction of authenticity in this archive of Nollywood videos, I am of course also interested in questioning how new cultural production can enter the now sacred space of the archive. If I was to abandon this 'process' element of Not in the Title, then the project itself becomes complicit in making these borders rigid rather than semi-permeable. In this context I think the idea of 'an iteration' can be useful; that a work can have several versions which are contingent on the time and place in which it is produced/exhibited. A work is thus not fixed in form, but rather in the set of ideas and intentions that it performs. 
