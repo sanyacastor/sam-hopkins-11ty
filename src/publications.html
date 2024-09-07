@@ -13,11 +13,11 @@ slug: publications
         <div class="publication__isbn">ISBN: {{ publication.data.isbn }}</div>
         <div class="publication__description">{{ publication.data.description }}</div>
         <a class="publication__link" href="{{ publication.data.link }}">link to publication</a>
+        {% if publication.data.image %}
+          <div class="publication__image publications-popup">
+            <img src="{{ publication.data.image }}" alt="Publication Image">
+          </div>
+        {% endif %}
       </li>
     {% endfor %}
   </ul>
-
-  <div id="publication-publication-popup-img-container">
-    <img id="publication-popup-img" src="/img/6-hours-for-6-day_01_video-documentation_still_2006_-c-hopkins-0-300w.avif" alt="Publication Image">
-  </div>
-  <script src="/_scripts/publications_image_popup.js">

@@ -9,4 +9,5 @@ description:
   identity from the way in which identities are actually experienced, performed
   and practised in day to day life.'
 link: https://kitsolynn.wordpress.com/publications/letter-to-lagat/
+image: /assets/2024-05-29-20.42.10.png
 ---

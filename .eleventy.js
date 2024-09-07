@@ -43,6 +43,7 @@ module.exports = function (eleventyConfig) {
 
   // Assets
   eleventyConfig.addPassthroughCopy('./src/assets/icons')
+  eleventyConfig.addPassthroughCopy({ './src/publications/assets': 'assets' })
   eleventyConfig.addPassthroughCopy('img')
 
   // Fonts

@@ -177,6 +177,7 @@
   overflow: scroll;
   overflow-x: hidden;
   overflow-y: auto;
+  min-height: 48px;
 }
 
 @media screen and (max-width: 800px) {
