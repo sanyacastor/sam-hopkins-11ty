@@ -1,6 +1,7 @@
 ---
 id: CuFa7I82wZj-DB-cNpuHy
 title: Iconic
+customTitle: Willy Photos - Sam Hopkins and Franziska Lukas
 dates: "2011 "
 collaborators: Franziska Lukas
 cardDescription: "The first solo exhibition of Peter Mwangi Irungu, a
@@ -24,8 +25,9 @@ previewDescription: >-
 
 
   Thanks to: Peter Mwangi Irungu (Photographer), Franziska Lukas (Co-curator). Supported by: Goethe Institut Nairobi
-customTitle: Willy Photos - Sam Hopkins and Franziska Lukas
 PDF File: /assets/03_iconic_project-page.pdf
+relatedProjects:
+  - OiN9NeFu_86xq5QADVbXJ
 ---
 *Originally published as the Exhibition text at Goethe Institut Nairobi in 2011*
 
