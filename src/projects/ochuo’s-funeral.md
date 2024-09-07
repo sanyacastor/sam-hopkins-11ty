@@ -1,6 +1,8 @@
 ---
 id: lozaevv3WYHiYuxxuEBA3
 title: Ochuo’s Funeral
+customTitle: Ochuo, from the shantytown to the white cube Geography of a global
+  encounter - Olivier Marcel
 dates: "2011"
 link: https://journals.openedition.org/etudesafricaines/18457
 collaborators: Kevo Stero
@@ -24,13 +26,9 @@ previewDescription: >-
 
 
   Thanks to: Maasai Mbili. Supported by: Goethe Institut Nairobi
-customTitle: Ochuo, from the shantytown to the white cube Geography of a global
-  encounter - Olivier Marcel
 PDF File: /assets/03_ochuo-s-funeral_project-page.pdf
 ---
 *translated from French*
-
-
 
 From October 2012 to January 2013, the Austrian art center Kunsthaus Bregenz (KUB Arena) exhibited a work dedicated to a resident of the Kibera slum: “Ochuo’s Funeral”, by Kevin Irungu and Sam Hopkins. This work, whose ideological foundation is to articulate the anti-world of the African city (Houssay-Holzschuch 2006) to one of the high places of globalization, is exemplary of Western cultural cooperation in Africa, just as much as a figure of success. As such, it gives a particularly good account of the transnationalization of the field of contemporary art and the reciprocal interactions that it gives rise to. As its acronym and architecture indicate, the KUB Arena is representative of the “white cube ideology” (O’Doherty 1999). Dominant paradigm of contemporary museography, the white cube confines the work between immaculate walls and separates it from the geographical context in which it is born, even when its authors claim the “contextual” or “relational”(1) character of their work . Taking this artistic posture literally, this article follows the idea that the socio-spatial modalities of such a “global encounter” (White 2011) carry meaning, not only in the specific context of a work and a city, but also more broadly on the organization of the field – that of contemporary African art – in which they participate. Indeed, since the 1990s, the Kenyan artistic scene has been redefined in terms of the integration of an African segment into contemporary art institutions, in parallel with the opening of the country to capital from developmentalist foundations. which accompanies democratization policies (Marcel 2014).
 
@@ -39,8 +37,6 @@ How does a group of artists based in Kibera, one of the symbols of poverty in Af
 ![](/assets/ochuo-s-funeral_01_production-still_2011_-c-hopkins-stero-1.jpg "Ochuo's Funeral_01_Production Still_2011_(c)Hopkins/Stero-1")
 
 The approach proposed here is to observe the deployment in space of the resources of capable and competent actors (Genard & Cantelli 2007), simultaneously located and mobile. It is a question of restoring the circulation of the work by letting oneself be guided by its movements. Based on a multi-sited methodology and interviews conducted with around ten actors, this investigation links Germany, Kenya and Austria and is based on a geographical reading of discourses and tactics of actors, that is to say by indexing their analysis on the places practiced and the spatial imaginations summoned. In this respect, the geographical approach, attentive to places and mobility, can contribute to the understanding of the new circulations and interdependencies that are being shaped by the globalization of art. The challenge is to overcome both media stories, which are often content with a blissful reading that overvalues the individuality and talent of marginal artists, and those of an economicist approach, which reduce artistic exchanges to the expansion of United States-European domination (such as Quemin \[2002]). The article first traces the meetings which led artists from Kibera to exhibit on the shores of Lake Constance. This progression then allows us to question the effects of mobility on artists and their work.
-
-
 
 #### Contemporary art meets Ochuo
 
@@ -51,8 +47,6 @@ This article focuses more specifically on a piece resulting from this north-sout
 ![](/assets/ochuo-s-funeral_01_production-still_2011_-c-hopkins-stero-2.jpg "Ochuo's Funeral_01_Production Still_2011_(c)Hopkins/Stero-2")
 
 After thirty days of matanga, community funeral rituals and festive fundraising, the money evaporates in alcohol and the group is forced to bribe the morgue keeper to avoid cremation. After a lap of honor to expose the body in Kibera, the convoy arrives not without confusion at its destination, but in the middle of the night and in pouring rain. After forcing the cemetery gate, the burial ended in drunkenness with a general fight with crosses torn off in the Langata cemetery (3). The Ochuo story, which began as a local news story, later became a folk tale told in local drinking establishments before being taken over by a collective of artists. The work is presented in the form of a video installation borrowing the codes of the police investigation to narrate this news item: it includes the video of a reconstruction of the funeral orchestrated by the artists (Sam Hopkins and Kevin Irungu) and a series of conflicting testimonies from witnesses to the event.
-
-
 
 #### Sam Hopkins and his creative periphery
 
@@ -65,8 +59,6 @@ As a white artist, he is the first to reject the link between his trajectory and
 It is therefore hardly surprising that Hopkins relied largely on foreign centers (Goethe-Institut) or subsidized by Western foundations (Kuona Trust), which for him are anchor points in the city as much as possible relays in the world of contemporary art. Hopkins himself works mainly in the poor informal neighborhoods of the city (the slums of Mathare or Kibera), reproducing the pattern of occupation of the same developmental NGOs that he vilifies, which he tries to justify by personal affinities5, but is better explained by the spatial logic of his investment in Kenya and the notion of creative periphery.
 
 When he talks about “Ochuo’s Funeral”, the artist’s references are mainly taken from the world of contemporary art. He cites, for example, Francis Alÿs, a Belgian artist renowned for his work on the materialization of rumors, and emphasizes his residence in Germany, where he said he was “impressed by the discovery of very advanced commemorative practices and the very conceptual approach to memory” (6). We can therefore say that the Conversation in Silence project was born intellectually in the North. From then on, his approach is geographically clear: “Bring these German commemorative practices to Kenyan terrain and rework them with local artists”7. From the original idea to the exhibition in Austria, the work results from a series of meetings and collaborations between individual actors, each with their own motivations, sincerities and expectations.
-
-
 
 #### A circulation made of encounters
 
@@ -102,8 +94,6 @@ The beginnings of this artistic project are consistent with the definition given
 
 The deployment of the work confronts a diversity of socio-spatial configurations. Ochuo, a figure of the Nairobi sub-proletariat, was, so to speak, reincarnated in several distinct events and exhibition venues: the reconstitution by Sam Hopkins and the artists of Maasai Mbili, in situ performance; the exhibition in downtown Nairobi, a moment of crystallization of different socio-spatial positions; and finally export to a contemporary art museum in Austria. Each of these places activates distinct networks and gives rise to sometimes opposing readings of the work.
 
-
-
 #### A triple set of scales
 
 When Kevin Irungu guided Hopkins into the belly of Kibera, Ochuo existed only as an urban legend circulating in the neighborhood's informal drinking establishments (busaa clubs). It was in these bars that the two artists unearthed the story. What follows is a series of breaks in scale that go hand in hand with the mobility of the work. The father The first reincarnation is that of in situ reconstitution, a performative gesture aimed at transforming an urban legend into a work of art. The network mobilized is that of proximity and neighborhood. Indeed, Hopkins and Irungu appeal to people who participated in the real funeral, seeking to generate popular enthusiasm. A procession of slum residents returns to the Langata cemetery and reproduces the general brawl, this time in front of Hopkins' camera.
@@ -123,8 +113,6 @@ The triple play of sociological instances identified by Nathalie Heinich respond
 ![](/assets/ochuo-s-funeral_01_production-still_2011_-c-hopkins-stero-9.jpg "Ochuo's Funeral_01_Production Still_2011_(c)Hopkins/Stero-9")
 
 This allows them to be associated with the formation of a value chain of which the KUB Arena is the culmination, a place where the international dimension of the artist is enshrined. On the other hand, this artistic project brings together representatives of different scales of action. The latter then serve as a resource in the play of actors and explain the logic of alliance and reciprocal instrumentalization. We can then wonder how the circulation in this play of scales affects the very meaning of the work.
-
-
 
 #### Mobility and translation
 
@@ -147,85 +135,46 @@ The arrangement of such a transcultural project, typical of artistic exchange in
 \-- 
 
 1. Or, according to N. BOURRIAUD (1998: 117), a “set of artistic practices which take human relations and their social context as their theoretical and practical starting point, rather than an autonomous and private space”.
-
 2. There is a reinforced concrete pillar built in the heart of Kibera (Monument to the future, by Dusica Drazic), an interactive reflection on public space and memorial practices (Celebrating Hilton Square by Irene Izquierdo), or even photographs piles of potatoes against a background of Nairobian skyscrapers, complemented by a film praising the skills of street vendors (Kenyan pyramids by James Muriuki and Karolina Freino).
-
 3. The Langata cemetery, in the southwest of the city, is one of the few cemeteries in use in Nairobi. It is divided into two parts. The second, dedicated to the most modest, experiences a sustained turnover: each square of land is rented for six months, after which the coffin and the cross are dislodged.
-
 4. In his exhibition Sketches, at the Goethe-Institut in Nairobi in 2010, one of the works presented a patchwork of real and imaginary logos of NGOs working in Kenya, a way for him to raise the absurdity of certain developmentalist approaches in Kenya . He thus stood as a critic of the compromising relationship between development NGOs and cultural production.
-
 5. Interview with Sam Hopkins, Chai House, Nairobi, August 2011.
-
 6. “There was an elaborate discourse about commemorative practices and I was
 
 impressed by a really advanced conceptual approach to memory” (ibid.).
 
 7. “I wanted to take this legacy of German commemorative practices and work it with Kenyan artists” (ibid.).
-
 8. Funding was shared between Bauhaus University and the Goethe-Institut.
-
 9. Elimo Njau and Joy Mboya are respectively the founders of the Paa ya Paa art center in 1965 and the GoDown Arts Center in 2003, two figures and milestones essentials of the history of Kenyan art.
-
 10. The 1980s in particular were a dark period for artistic creation Kenyan. Censorship and political repression lead many to silence or exile, like the famous playwright Ngugi wa Thiong’o. The Goethe-Institut and the French Cultural Center then constitute refuges of freedom of expression where intellectuals and artists meet. On the other hand, since the political change and the coming to power of Mwai Kibaki in 2003, this justification no longer applies. However, in 2010, foreign cultural centers alone represented almost a third of the artistic events published on the NairobiNow cultural calendar.
-
 11. This explains why during my fieldwork, Johannes Hossfeld was a key figure for many Nairobian artists.
-
 12. He was notably one of the initiators of the Re-membering Kenya conference in 2008, the proceedings of which he published (MUNGAI & GONA 2010).
-
 13. “We want to bring the local artists up with the international art scene”; “We work exclusively with artists who are connected or connectable with the international art circuit” (interview with Johannes Hossfeld, Goethe-Institut, June 2010).
-
 14. The years following the post-electoral violence of 2007-2008 were marked by the development of new forms of identification, particularly among young urban dwellers, which can be described as post-ethnic. In Nairobi, this was manifested by the appearance of cultural and artistic cybercafes focused on the cohesion of civil society (Pawa254, iHub, The Nest), which emerged with the support of international cooperation and of developmental foundations.
-
 15. “Forms which commemoration and remembering take within different sections of Kenyan society” and “the extent to which artists can investigate a collective memory—forge one if needed—and develop commemorative artworks”: S. Hopkins and N. Matathia, Conversations in Silence, draft published on the literary forum “Concerned Kenyan Writers”, 2010.
-
 16. “Celebrate”, “speak to” or “invent” memorial narratives for Kenya, outside of the “government reports” and the “official record” (ibid.).
-
 17. When the Bauhaus University artists arrived, Hopkins organized a group tour of the Nyayo Monument, the building honoring former President Daniel arap Moi, in the city center. The project’s argument harshly judges these state policies: “childish and two dimensional”.
-
 18. “It challenges the way you define yourself, especially in the urban setting. We come to look for money and livelihood but every Christmas and Easter, we go back home. The urban area becomes like a sort of illusion” (interview with Gor Soudan, in his studio at Kuona Trust, September 2011).
-
 19. For example, he produced the portraits of Pets of Kibera (2010) or the curatorial project on African megacities Afropolis (2010), in which he associated the Kibera collective.
-
 20. It will be noted that on the annual reports of Kuona Trust, he was given the “UK” identity in the early 2000s and was then assimilated to Kenyan artists.
-
 21. A “ground person” who “knows local stories” (interview with Kevin Irungu at the Maasai Mbili studio, August 2011).
-
 22. Ibid.
-
 23. The Maasai Mbili speak of “art materials”, a joke to evoke the alcoholic per diem substitute they demand in return for their participation.
-
 24. “The notion of “global encounters” refers to situations in which individuals from radically different traditions or worldviews come into contact and interact with one another based on limited information about one another’s values, resources, and intentions. »
-
 25. “We had a rupture with Mr. Hopkins over ethics and content”, specifies a public press release from C. Matathia, February 2011.
-
 26. “You can’t just give Maasai Mbili alcohol and miraa and ask them to do any old stupid thing because they won’t refuse—it’s just wrong”; “The word taboo actually means something locally”; “This is only showing their nakedness” (interview with Charles Matathia, Storymoja Festival, September 2011).
-
 27. “We are forcing that kind of language on M2”; “The ghetto has become glorified. It’s a brand being sold to the world”; “It is making a memory of accepting to be poor” (interview with Gor Soudan, in his studio at Kuona Trust, September 2011).
-
 28. “We’ve probably elevated a criminal to some folk hero status” (interview with Sam Hopkins, Chai House, Nairobi, August 2011).
-
 29. In 2014, Eva Birkenstock was selected by the Goethe-Institut for a one-year residency in an exhibition space in Manhattan, a professional opportunity which is not unrelated to the reception of the Kenyan delegation, under the aegis of the Nairobi branch of the German cultural network.
-
 30. This international mobility takes place in a dematerialized format since the coffin and the crosses – the only material elements of the video installation – are reproduced on site.
-
 31. “As Sam told you, we are showing the work within an exhibition in Bregenz and would be very interested in reading your text, and if possible, would like to give it to the art mediators to prepare for their tours” (email communication with Eva Birkenstock, then curator of the KUB Arena, October 2012).
-
 32. “For me its humor \[...] I want it to be funny, I want people to laugh” (interview with Kevin Irungu at the Maasai Mbili studio, August 2011).
-
 33. “Enigmatic”, “tragic”, “celebratory”, “surreal”, “touching”, “melancholic” (Sam Hopkins interview, Chai House, Nairobi, August 2011).
-
 34. “In Kibera, everyone loved it. It’s normal, it’s our culture”; “We created a monument on Ochuo” (interview Kevin Irungu at the Maasai Mbili studio, August 2011).
-
 35. “It’s a piece on African urban dwellers”, “what people are hanging on to” (interview with Gor Soudan, in his studio at Kuona Trust, September 2011).
-
 36. A “ghetto fable”, a “ghetto narrative”; “not really about him as an individual in this other layer he is existing in \[...] it is not a monument to Ochuo but one for a social-political context that allows this to happen” (interview Sam Hopkins, Chai House, Nairobi, August 2011).
-
 37. “A picture of Nairobi with reference to the ensemble of relationships, temporalities, and spaces that constitute the city’s present and its history”, presentation of the exhibition Nairobi — A State of Mind by the KUB Arena.
-
 38. “If people don’t fight at your funeral, they will forget you forever. It’s normal here” (Kevin Irungu interview at the Maasai Mbili studio, August 2011). Irungu refers to the luo tero buru ceremony, literally “bringing to dust” in Dholuo, where deviant behavior such as drinking and hysteria are more or less accepted.
-
 39. “Luo funerals have these ceremonies for chasing the spirits away, and most people in Kibera are Luo”; “Ochuo’s friends did this in their own urban way” (interview with Gor Soudan, in his studio at Kuona Trust, September 2011).
-
 40. “Ideally, the work exists beyond the context” (Hopkins cited in HOSSFELD 2011: 12).
-
 41. The same architects responsible for the exhibition hall of the Goethe-Institut were also summoned to Austria in order to recompose the staging of the exhibition. They are Naeem Biviji and Bethan Rayner of Studio Propolis, based in Nairobi.
