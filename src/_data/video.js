@@ -18,7 +18,7 @@ const readFiles = async filePaths => {
         const content = fm(markdown)
 
         const regex = /\/embed\/([^?]+)/
-        const hash = content.attributes.link.match(regex)[1]
+        const hash = content.attributes.link.match(regex)?.[1]
 
         arr.push({
           ...content.attributes,
