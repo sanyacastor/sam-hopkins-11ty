@@ -1,7 +1,9 @@
 ---
 id: UtmiHDDtiZPngkOWgPstE
 title: Dead Insects In My Parents Pool
-dates: 2011-2013
+customTitle: "Calculated depth of field: Dead Insects in My Parents Pool (2013)
+  by Fabian Lehmann"
+dates: "2013"
 cardDescription: A series of quasi scientific photos (light boxes) of dead
   insects found in my parents swimming pool
 previewDescription: >-
@@ -23,8 +25,6 @@ previewDescription: >-
 
 
   Thanks to: Mwangalio Tofauti, Iwalewahaus, Roots Contemporary
-customTitle: "Calculated depth of field: Dead Insects in My Parents Pool (2013)
-  by Fabian Lehmann"
 PDF File: /assets/03_dead-insects-in-my-parents-pool_project-page.pdf
 ---
 *(translated from the German original)*
