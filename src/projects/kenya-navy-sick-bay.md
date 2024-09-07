@@ -1,6 +1,8 @@
 ---
 id: YV0wkB3RFVSPjwnbY5CW1
 title: "Kenya Navy Sick Bay "
+customTitle: Afropean Mimicry & Mockery in Theatre, Performance & Visual Arts II
+  28.10. – 1.11.2015
 dates: "2015"
 link: https://www.mousonturm.de/projects/projekteafropean-mimicry-mockery-2/
 cardDescription: An installation based on a vernacular archive of 300 hand-made,
@@ -13,9 +15,11 @@ previewDescription: >-
   stamps. 
 
   	These were the stamps commissioned by clients, but then left behind. Exactly why they were not taken is not clear. This specific provenance of the stamps lends them a sense of intrigue and mystery. For some, such as the eponymous Kenya Navy Sick Bay stamp, it seems likely that the stamp was produced for a one-time, specific use, probably to forge a sick note. The stamps for other authority figures, school headmasters, police officers, lawyers and local politicians, could well have been used for similar uses.	But not all the stamps fall so clearly into this category. Stamps for schools, self-help groups, businesses, buses and taxis. Stamps that simply say copy or paid. Stamps that seem total enigmas such as 'Hit Squad Ent' and 'Smarm'. For these stamps we can only guess at why they were commissioned, used once and then abandoned. Do these institutions even exist? Are these stamps all that is left behind?	Seen as a whole, these stamps offer an intriguing perspective on a small part of Kenyan administration. On the one hand they represent a system of bureaucracy and protocol inherited from the British colonial past. On the other hand, they also seem to be the very opposite of that, a knowing appropriation of a very particular aesthetic and style. This sense of ambiguity makes this archive an imaginative space and a position from which to further reflect on an African-European encounter. 	Thanks to: Martin Baasch, Elisa Liepsch. Supported by: Afropean - Mimicry and Mockery, Mousonturm Frankfurt
-customTitle: Afropean Mimicry & Mockery in Theatre, Performance & Visual Arts II
-  28.10. – 1.11.2015
 PDF File: /assets/03_kenya-navy-sick-bay_project-page.pdf
+relatedProjects:
+  - 1SrrztD0Hmih1NLS0u319
+  - vABrLIvMrhQEvGmX_lnQM
+  - pzdCS4RLUbVoJpQebGJlW
 ---
 Featuring theatre, performance, video, literature and music, the second edition of Afropean Mimicry & Mockery is dedicated to the relationship between Africa and Europe, particularly from an African per- spective: in his masterpiece Le Socle des Vertiges (The Foundation of Vertigo), Congolese author, director and actor Dieudonné Niangouna deals with growing up in the midst of a civil war, ways of handling this experience and the simultaneous need to participate in the reinvention of a social and public order. Another focus lies on the “dissection” of whiteness. In what ways are relationships of power and the gaze con- nected? Where and by whom are Western points of view called into question? Artist Simone Dede Ayivi explores such issues in Performing Back. 
 
@@ -25,7 +29,7 @@ A one-day research atelier presents artistic and academic projects on questions 
 
 
 
-Facing the Mockery
+#### Facing the Mockery
 
 Exhibition with works by Sam Hopkins (Nairobi), Simon Rittmeier (Paris), Yves Sambu (Kinshasa) and Otieno Gomba (Nairobi)
 
