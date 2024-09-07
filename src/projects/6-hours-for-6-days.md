@@ -19,6 +19,10 @@ previewDescription: >-
 
 
   Thanks to: Karolina Freino, Usually4, Zosia Jarosz, Marius Jodko. Supported by: Gallery Entropia
+extraImages:
+  - /assets/6-hours-for-6-day_01_video-documentation_still_2006_-c-hopkins-11.jpg
+  - /assets/6-hours-for-6-day_01_video-documentation_still_2006_-c-hopkins-5.jpg
+  - /assets/___6-hours-for-6-day_01_video-documentation_still_2006_-c-hopkins-8.jpg
 ---
 ![](/assets/6-hours-for-6-day_01_video-documentation_still_2006_-c-hopkins-0.jpg "6 hours for 6 day_01_Video Documentation_Still_2006_(c)Hopkins-0")
 
