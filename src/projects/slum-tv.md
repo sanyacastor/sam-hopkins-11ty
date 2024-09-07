@@ -1,7 +1,8 @@
 ---
 id: wxByk7jRApqwSRnDclD7v
 title: "Slum TV "
-dates: 2007-ongoing
+customTitle: Collaborative Content and Practising the NGO Aesthetic - Sam Hopkins
+dates: Ongoing
 collaborators: Julius Mwelu, Alex Nikolic, Fred Otieno, Lukas Pusch
 cardDescription: A grassroots media collective based in Mathare, Nairobi
 previewDescription: >-
@@ -25,7 +26,6 @@ previewDescription: >-
 
 
   Thanks to: Slum TV members (see website). Supported by: Africalia, Goethe Institut Nairobi, Film Aid
-customTitle: Collaborative Content and Practising the NGO Aesthetic - Sam Hopkins
 PDF File: /assets/03_slum-tv_project-page.pdf
 ---
 *Excerpt from Distributed: Co-producing Narratives Of Belonging in Nairobi's Eastlands. PhD thesis, UAL, Supervisors: N. Cummings, J. Bajorek*
