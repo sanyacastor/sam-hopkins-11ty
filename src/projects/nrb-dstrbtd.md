@@ -1,40 +1,37 @@
 ---
 id: vDbPeVO3j1xeydEABqaBw
 title: NRB DSTRBTD
+customTitle: Nairobi Distributed - Introduction (excerpt)
 dates: "2024"
 link: https///www.iwalewabooks.com/product-page/nrb-dstrbtd
 collaborators: ""
 cardDescription: An artist book which untangles political narratives of ethnic
   identity from the way in which identities are experienced in day to day life
-previewDescription: "Nairobi Distributed is book which tries to disentangle
-  political narratives of ethnic identity from the way in which identities are
-  actually experienced, performed and practised in day to day life. I approach
-  the question indirectly, through critically reflecting on a number of
-  collaborative art projects in Eastlands, Nairobi.  To abbreviate a complex
-  situation: politicians in Kenya instrumentalise ethnic identity to encourage
-  political allegiances along ethnic lines. This flattened version of belonging
-  bears little relationship to the complexity of Kenyan lives. Nevertheless, as
-  identity is a powerful sentiment and because ethnicity is a fundamental
-  element of being Kenyan, politicians have established a dominant narrative in
-  which ethnicity and identity are flattened into one another.  In this context,
-  telling stories that reveal multiple Kenyan identities is a vital political
-  act; it chips away at a corrosive political rhetoric. Alongside a
-  constellation of artists, scholars and activists, I have co-developed projects
-  in Nairobi which seek to co-represent counter-narratives of Kenyan identity.
-  These projects, ranging from media collectives such as Slum TV (2007-) to
-  videos projects like The Bike Gang (2015-17), testify to the ways in which
-  young Nairobians constantly engage in changing and overlapping
-  identities.  Nairobi Distributed reflects on this practice, exploring the
-  significance of performance, Sheng (the slang of Nairobi) and Nairobi’s
-  decentralised networks (matatus, video booths and bazes) in the construction
-  of belonging among young Nairobians. -- Thanks to: La Villa Hermosa (Design)
-  Iwalewabooks (Publisher) Twaweza Communications (Co-publisher) Wangui Kimari
-  (Editor) Marian Nur Goni (Editor) Supported by: Kunststiftung NRW,
-  Kunsthochschule für Medien Köln"
----
-## Nairobi Distributed - Introduction (excerpt)
+previewDescription: >-
+  Nairobi Distributed is book which tries to disentangle political narratives of
+  ethnic identity from the way in which identities are actually experienced,
+  performed and practised in day to day life. I approach the question
+  indirectly, through critically reflecting on a number of collaborative art
+  projects in Eastlands, Nairobi.  
 
-A Prelude
+
+  To abbreviate a complex situation: politicians in Kenya instrumentalise ethnic identity to encourage political allegiances along ethnic lines. This flattened version of belonging bears little relationship to the complexity of Kenyan lives. Nevertheless, as identity is a powerful sentiment and because ethnicity is a fundamental element of being Kenyan, politicians have established a dominant narrative in which ethnicity and identity are flattened into one another.  
+
+
+  In this context, telling stories that reveal multiple Kenyan identities is a vital political act; it chips away at a corrosive political rhetoric. Alongside a constellation of artists, scholars and activists, I have co-developed projects in Nairobi which seek to co-represent counter-narratives of Kenyan identity. These projects, ranging from media collectives such as Slum TV (2007-) to videos projects like The Bike Gang (2015-17), testify to the ways in which young Nairobians constantly engage in changing and overlapping identities.  
+
+
+  Nairobi Distributed reflects on this practice, exploring the significance of performance, Sheng (the slang of Nairobi) and Nairobi’s decentralised networks (matatus, video booths and bazes) in the construction of belonging among young Nairobians.
+
+
+  Thanks to: La Villa Hermosa (Design) Iwalewabooks (Publisher) Twaweza Communications (Co-publisher) Wangui Kimari (Editor) Marian Nur Goni (Editor). Supported by: Kunststiftung NRW, Kunsthochschule für Medien Köln
+PDF File: /assets/03_nairobi-re-distributed_project-page.pdf
+relatedProjects:
+  - 97qYsNwiTFwI5P4S8EAdD
+  - -8VYchZd-I5VXQtBA3dDx
+  - wxByk7jRApqwSRnDclD7v
+---
+#### A Prelude
 
 Sometime in early 2013 I was walking home along State House Road. It was late afternoon and the traffic was heavy. I walked uphill past the YMCA, past the University of Nairobi and as I neared the corner of Arboretum Drive I passed a small lane on my right, where a number of Bodaboda drivers waited with their motorbikes. I nodded a greeting and carried on walking, but out of the corner of my eye I noticed that one of the drivers was wearing a new vest. It was red, and on the back was written "DNA ni TNA". It took me a few steps to decipher the letters; it was a new political slogan. TNA stood for The National Alliance, a newly-branded political party in Kenya which brought together the former rivals William Ruto and Uhuru Kenyatta. And DNA is, well DNA, the building blocks of our genetic code. 
 
@@ -46,7 +43,9 @@ Witnessing the excitement and euphoric celebrations around me when individuals a
 
 I start with these brief snapshots of Nairobi life because they seem to encapsulate the fundamental questions about ethnic identity and belonging which are at the heart of this book. On the one hand, there is a political sphere which is typified by a highly-politicised idea that an ethnic identity is a fixed characteristic that you are born with, and which defines you for the rest of your life. And on the other hand there is the clamour and complexity of urban existence which consists of many ways of being and multiple forms of belonging. How does the former relate to the latter? It is complicated, because the political realm is not separate from the everyday, but enmeshed within it and ethnic identities are not just simple political tools, they are complex, lived realities. Indeed the more you look into Kenyan ethnicity, the more complicated it appears, because it is simultaneously totally different things; invented and inherited, political and cultural, experienced and imagined. 
 
-The Premise
+
+
+#### The Premise
 
 This book is an attempt to try and disentangle political narratives of ethnic identity from the way in which identities are actually experienced, performed and practised in day to day life. I approach the question indirectly, through a number of collaborative art projects in Eastlands, Nairobi. These projects explore digital video as a form of collective story-telling, hence they offer an invaluable perspective on how young people chose to represent themselves and their environment. Furthermore these collaborative endeavours, which were complicated and often flawed, were nonetheless sustained collective processes which took place over months and sometimes years. I reflect on the films we made, the way in which we made them, and the broader experience of these projects to make a number of proposals about the contextual and situational nature of belonging in Nairobi's Eastlands. 
 
