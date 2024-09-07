@@ -1,6 +1,8 @@
 ---
 id: Qp9NWlK9XXEVQZhJWfSWp
 title: Simba Mbili
+customTitle: '"For as-yet-unknown uses"(1): Potential Histories and Futures of
+  the Man-Eaters of Tsavo - Sam Hopkins and Marian Nur Goni'
 dates: Ongoing
 link: https://www.transcript-verlag.de/978-3-8376-7194-0/virtuelle-tiere/?c=311033778
 collaborators: Marian Nur Goni
@@ -22,13 +24,12 @@ previewDescription: >-
 
   	Supported by: Reconnecting Objects - epistemic plurality and transformative practices in and beyond museums and the International Inventories Programme (IIP)
 PDF File: /assets/03_simba-mbili_project-page.pdf
-relatedProjects: []
+relatedProjects:
+  - eFcllqsX4vkqLhwGJij6G
+  - BrtO_wOsvoQDHFX6RIw-I
+  - hmrv6g5WCVcxtH1E4szoK
 ---
-## "For as-yet-unknown uses"(1): Potential Histories and Futures of the Man-Eaters of Tsavo
-
-Sam Hopkins and Marian Nur Goni
-
-Typically, the story is told like this: 
+#### Typically, the story is told like this: 
 
 In 1898, when the British were building the Uganda Railway to connect the port of Mombasa with Lake Victoria–a major imperial infrastructure between present-day Kenya and Uganda–they encountered two man-eating lions in a territory known as Tsavo. These lions terrorised the African labourers and the Indian indentured workers building the railway, killing dozens of individuals and bringing the construction to halt (2). The engineer responsible for building the bridge over the Tsavo river, Colonel John Henry Patterson, eventually killed the lions in late 1898. Their death was announced in the House of Lords in London and the lions were immortalised in Patterson's book The Man-eaters of Tsavo and other East-African adventures (1907), praised by US President Roosevelt as “the most remarkable account of which we have any record.”(3)
 
