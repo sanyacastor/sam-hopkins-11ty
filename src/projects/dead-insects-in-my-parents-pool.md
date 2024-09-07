@@ -2,7 +2,7 @@
 id: UtmiHDDtiZPngkOWgPstE
 title: Dead Insects In My Parents Pool
 customTitle: "Calculated depth of field: Dead Insects in My Parents Pool (2013)
-  by Fabian Lehmann"
+  - Fabian Lehmann"
 dates: "2013"
 cardDescription: A series of quasi scientific photos (light boxes) of dead
   insects found in my parents swimming pool
