@@ -1,7 +1,9 @@
 ---
 id: 97qYsNwiTFwI5P4S8EAdD
 title: The Bike Gang
-dates: 2015-2018
+customTitle: "xcerpt from Distributed: Co-producing Narratives Of Belonging in
+  Nairobi's Eastlands. PhD thesis, UAL, Supervisors: N. Cummings, J. Bajorek"
+dates: "2018"
 link: https://contemporaryand.com/fr/exhibition/film-screening-and-talk-sam-hopkins-john-kamicha-the-bike-gang/
 collaborators: John Kamicha
 cardDescription: A series of collectively-produced video clips which re-enact
@@ -22,8 +24,6 @@ previewDescription: >-
 
 
   **Thanks to:** John Kamicha (Co-Director), Anke Trojan (Editor), Carlo Peters (Sound Design), Ronald Ronix (Camera), Kena, Mlambuzi, Mori, Shiro, Dagy (Actors). **Supported by:** Iwalewahaus, Akademie Der Kuenste Der Welt, Cat Cologne
-customTitle: "xcerpt from Distributed: Co-producing Narratives Of Belonging in
-  Nairobi's Eastlands. PhD thesis, UAL, Supervisors: N. Cummings, J. Bajorek"
 PDF File: /assets/03_the-bike-gang_project-page.pdf
 relatedProjects:
   - vDbPeVO3j1xeydEABqaBw
