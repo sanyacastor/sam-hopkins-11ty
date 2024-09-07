@@ -1,6 +1,8 @@
 ---
 id: hmrv6g5WCVcxtH1E4szoK
 title: Letter to Lagat
+customTitle: "Agents in motion: how objects make people move. An interview with
+  Sam Hopkins and Simon Rittmeier - Marian Nur Goni (1)"
 dates: "2015"
 link: https://asai.co.za/wp-content/uploads/2020/08/Agents-in-motion-how-objects-make-people-move.-An-interview-with-Sam-Hopkins-and-Simon-Rittmeier.pdf
 collaborators: Simon Rittmeier
@@ -18,19 +20,17 @@ previewDescription: >-
   	But what do these facsimiles mean, and what is their relationship to the original? These empty and uncanny replicas seem to function as memorials to an absence, rather than substitutions for an original. The replicas allude to a blank space, a historical break, a zaesur.
 
   	Thanks to: Hannes Wiedemann (Photos) Nieves de la Fuente Gutierrez (3D Replicas) Kitso Lynn Lelliot (Essay), Iwalewahaus, Bayreuth. Supported by: Kulturstiftung des Bundes
-customTitle: "Agents in motion: how objects make people move. An interview with
-  Sam Hopkins and Simon Rittmeier "
 PDF File: /assets/03_letter-to-lagat_project-page.pdf
+relatedProjects:
+  - Qp9NWlK9XXEVQZhJWfSWp
+  - eFcllqsX4vkqLhwGJij6G
+  - BrtO_wOsvoQDHFX6RIw-I
 ---
-#### Marian Nur Goni (1)
-
 This interview explores the research and artistic work leading to the artist book Letter to Lagat by Sam Hopkins and Simon Rittmeier which critically examines issues related to cultural flows and colonial violence, objects’ agency, presence and absence, through a reflection on traces, digital copies and 3D replicas.(2) Letter to Lagat employs a poetic and speculative approach to these questions: the starting point of the book is the sudden and total disappearance of the entire collection of objects from a museum in Southern Germany. But who is Lagat, to whom the artists address their book? And what do digital reproductions of objects do to the issue of the loss of objects? What do they embody effectively? In the course of the conversations, the artists speak honestly about how they tried to navigate these complex issues, not eluding difficult questions, doubts and shifting positions.
 
 Since its publication, Letter to Lagat has acted as the foundational base for a new, ongoing, collective project — International Inventories Programme (2018/2021) — in which the two artists join forces with other artists (The Nest collective in Nairobi), researchers and museum professionals from the National Museums of Kenya in Nairobi, the Rautenstrauch-Joest Museum in Cologne and the Weltkulturen Museum in Frankfurt/Main to gather and investigate a corpus of Kenyan cultural objects held in institutions outside the country.
 
-
-
-##### \#1 - ON THE AGENCY OF OBJECTS
+#### \#1 - ON THE AGENCY OF OBJECTS
 
 ‘The lines of desire (legible) in the corridor.’(3)
 
@@ -46,11 +46,9 @@ Simon Rittmeier: Yes, exactly. I would like to add that the motivation to think 
 
 
 
-##### \#2 - ON A ʻCRIME SCENEʼ, ON ʻFORENSIC METHODSʼ
+#### \#2 - ON A ʻCRIME SCENEʼ, ON ʻFORENSIC METHODSʼ
 
 ‘What information could we piece together about them? What stories lay hidden, waiting to be revealed?’
-
-
 
 MNG: It is interesting that you speak about the archaeologists, Simon, precisely because I wanted to evoke the idea of ‘characters’ in the book. Weren’t you somehow playing the archaeologists in the rooms of the Iwalewahaus? Over the pages, we also have a sense of you being detectives in a space that acts like a crime scene, while Sam just recalled the forensic methodology that you adopted in the book.
 
@@ -70,11 +68,9 @@ SH: I'm glad you raised this point. Iwalewahaus primarily deals with modern and 
 
 ![](/assets/letter-to-lagat_01_book-image_2015_hopkins-rittmeier_-c-wiedemann-3.jpg "Letter to Lagat_01_Book Image_2015_Hopkins/Rittmeier_(c)Wiedemann-3")
 
-##### \#3 - ON A VANISHED COLLECTION. ON FORMS AND VOICES
+#### \#3 - ON A VANISHED COLLECTION. ON FORMS AND VOICES
 
 ‘Would their absence produce a vacuum here in this small German town?’
-
-
 
 MNG: You both just recalled how the terms of the debate on restitution have dramatically changed since 2013 and you also evoked the real/imaginary vanished collection which you faced when the objects were moved from the former premises of the Iwalewahaus in Bayreuth to the new one. This is really interesting because the idea of the empty museum as a consequence of repatriation is still strongly expressed by those individuals who believe that these objects belong in the museums of the North and should remain there. In this argument, the empty museum is the expression of a fear, while you employ this metaphor in a very open way, which allows for the opening of many quietly-stated questions and speculations. Also, I just realised that these are often put on the bottom side of the page, written in small fonts. Actually, they act like footnotes. I was wondering then about the structure of the book: letter, footnotes...
 
@@ -88,7 +84,7 @@ SR: Our book has a clear starting point: a collection in Southern Germany. If we
 
 
 
-##### \#4 - ON PITFALLS. ON WORKING AS ARTISTS WITHIN AN INSTITUTION
+#### \#4 - ON PITFALLS. ON WORKING AS ARTISTS WITHIN AN INSTITUTION
 
 MNG: Retrospectively, and in the storm of the current debates about restitution issues, do you see shortcomings in the book?
 
@@ -116,7 +112,7 @@ I think it happens to every collection that objects disappear. Nobody knows wher
 
 
 
-##### \#5 - ON REPLICAS
+#### \#5 - ON REPLICAS
 
 ‘These replicas resemble ghosts, an eerie representation not of the objects, but of the knowledge that disappeared with the epistemic violence of the colonial project.’
 
@@ -140,7 +136,7 @@ SH: Definitely. Talking about pitfalls: Lagat in the book is a character. He doe
 
 
 
-##### \#6 – ON WHO AND HOW TO TALK ABOUT THESE OBJECTS
+#### \#6 – ON WHO AND HOW TO TALK ABOUT THESE OBJECTS
 
 SR: Indeed, it was a starting point for a conversation. It is like saying: “Look, this is where we are, this is how we feel about this issue”. But it is a complex one... I personally cannot really talk about the loss, of what has been lost through the removal of these objects from the African continent, because I am not from a community where objects were stolen, or forcibly removed, or sold in doubtful circumstances. So, how can I talk about these objects then?
 
@@ -153,23 +149,13 @@ SH: No, what I mean is that, in the way that Letter to Lagat engages with the re
 \--
 
 1. Excerpts from conversations held between June and November 2019.
-
 2. Sam Hopkins and Simon Rittmeier, Letter to Lagat, (Cologne: Strzelecki Books, 2015). Produced in conjunction with the Iwalewahaus Bayreuth, Germany.
-
 3. All quotes inserted at inception of sections are from Letter to Lagat.
-
 4. The research and art centre in Bayreuth where the two artists were working. 
-
 5. The objects were moved to a new building.
-
 6. Trinh T. Minh-ha, Reassemblage (1982, 40 mins).
-
 7. For more information about the ‘Mashup the Archive’ project, curated by Sam Hopkins at the Iwalewahaus, see Sam Hopkins and Na- dine Siegert, Mashup the Archive (Berlin: Revolver Publishing, 2017).
-
 8. See Sam Hopkins, “Mashup Iwalewahaus: a conversation with Otieno Gomba and Kevo Stero,” Third Text Africa, vol. 4 (2015), 5.
-
 9. For Abungu’s response to the “Declaration on the importance and value of universal museums” signed by eighteen museums in the North, see George Abungu, “The Declaration: a contested issue,” ICOM News, no.1 (2004), http://archives.icom.museum/pdf/E_news2004/p4_2004-1.pdf
-
 10. Curated by Joost Fontein with Craig Halliday, see https://nairobinow.wordpress.com/2015/10/19/remains-waste-and-metonymy- oct-24-2015-british-institute-in-eastern-africa/.
-
 11. Members work in Kenya, Germany and France.
