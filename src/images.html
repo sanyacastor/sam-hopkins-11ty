@@ -19,7 +19,8 @@ tags: images
         {% for image in project.images %}
           <div
       class="images-list__item images-list__item--container"
-      data-project="{{ project.title }}"
+      data-title="{{ project.title }}"
+      data-slug="{{ project.title | slugify }}"
     >
             {% image image.url image.alt 'preview_image' '(min-width: 0) 100px, 600px' %}
           </div>

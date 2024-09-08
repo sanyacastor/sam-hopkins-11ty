@@ -11,14 +11,14 @@ title: Sam Hopkins | Projects {{ project.title}}
     <!-- Open Graph Meta Tags for Social Media Sharing -->
     <meta property="og:title" content="Project: {{ title }}">
     <meta property="og:description" content="{{ cardDescription }}">
-    <meta property="og:url" content="https://{{ env.DOMAIN_NAME }}/project/{{ title | slug }}">
+    <meta property="og:url" content="https://{{ env.DOMAIN_NAME }}/project/{{ title | slugify }}">
     <meta property="og:type" content="website">
 
     <!-- Author Information -->
     <meta name="author" content="Sam Hopkins">
 
     <!-- Canonical URL -->
-    <link rel="canonical" href="https://{{ env.DOMAIN_NAME }}/project/{{ title | slug }}">
+    <link rel="canonical" href="https://{{ env.DOMAIN_NAME }}/project/{{ title | slugify }}">
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>

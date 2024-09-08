@@ -8,8 +8,8 @@ slug: projects
     <div class="cardcabinet_grid">
       {% assign sortedProjects = collections.project | sortByDate | reverse %}
       {% for project in sortedProjects %}
-        {% assign previewURL = project.data.title | slug %}
-        {% assign previewURL = '/preview/' | append: previewURL %}
+        {% assign s = project.data.title | slugify %}
+        {% assign previewURL = '/preview/' | append: s %}
         {% assign card_data = project %}
         <a href="{{previewURL}}" class="summary-card-wrap dynamic-wrap">
           {% include "summary-card.njk" with card_data %}

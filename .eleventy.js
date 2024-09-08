@@ -81,18 +81,11 @@ module.exports = function (eleventyConfig) {
   // Sort projects by dates filter
   eleventyConfig.addFilter('sortByDate', function (collection) {
     return collection.sort((a, b) => {
-      if (a.data.dates === 'ongoing' && b.data.dates === 'ongoing') {
-        return 0
-      } else if (a.data.dates === 'ongoing') {
-        return 1
-      } else if (b.data.dates === 'ongoing') {
+      if (a.data.dates === 'Ongoing') {
         return -1
-      } else {
-        let [aStart, aEnd] = a.data.dates?.split('-')
-        let [bStart, bEnd] = b.data.dates?.split('-')
-        return parseInt(aEnd) - parseInt(bEnd)
       }
-    })
+      return parseInt(b.data.dates) - parseInt(a.data.dates)
+    }).reverse()
   })
 
   eleventyConfig.addShortcode(

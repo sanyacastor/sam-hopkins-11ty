@@ -21,7 +21,7 @@
       {%- endif -%}
 
       {%- if mustBeShown -%}
-        {% set qpreviewURL = collection_project.data.title | slug %}
+        {% set qpreviewURL = collection_project.data.title | slugify %}
         {%- set qpreviewURLfull = '/preview/' + qpreviewURL -%}
 
         {%- set card_data = { 

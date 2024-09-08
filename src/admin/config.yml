@@ -7,6 +7,10 @@ backend:
 media_folder: 'src/assets'
 public_folder: '/assets'
 
+slug:
+  encoding: 'ascii'
+  clean_accents: true
+
 collections:
   - name: 'project'
     label: 'Project'
@@ -49,7 +53,7 @@ collections:
         }
       - { label: 'Body', name: 'body', widget: 'markdown' }
       - { label: 'PDF', name: 'PDF File', widget: 'file', required: false }
-      - { 
+      - {
           label: 'Additional images',
           name: 'extraImages',
           required: false,
